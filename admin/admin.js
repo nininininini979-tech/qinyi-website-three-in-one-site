@@ -83,6 +83,8 @@
   const customerOrderLabels = ["询盘状态","报价","确认价格","提供文件","排版确认","下单打样","样品确认","下大货单","安排订金","大货生产","支付尾款","订单发货"];
   const productionOrderStages = ["order_received","production_order_created","materials_prepared","prepress_layout","materials_issued","printing","surface_finishing","laminating","die_cutting","stamping","box_assembly","packing","dispatched"];
   const productionOrderLabels = ["接到客户订单","开生产单","备料","排版","发料","印刷","表面工艺处理","裱合","啤切","冲压","包盒","包装","出货"];
+  const orderExceptionLabels = { pause: "订单暂停", cancel: "订单取消", sample_rework: "样品返工", partial_shipment: "部分发货", payment_reversal: "付款撤销", production_incident: "生产异常" };
+  const orderExceptionTypes = Object.entries(orderExceptionLabels);
 
   function orderProgress(labels, currentIndex) {
     return `<div class="row-list">${labels.map((label, index) => `<div class="row-item"><div class="row-main"><strong>${index + 1}. ${Ops.escapeHtml(label)}</strong></div>${Ops.statusBadge(index < currentIndex ? "complete" : index === currentIndex ? "active" : "pending", index < currentIndex ? "已完成" : index === currentIndex ? "当前" : "待处理")}</div>`).join("")}</div>`;
@@ -93,7 +95,9 @@
     if (!order) return setHtml("orderDetail", Ops.emptyState("请选择一个订单"));
     const nextCustomer = customerOrderStages[order.stageIndex + 1];
     const nextProduction = order.productionStageIndex == null ? null : productionOrderStages[order.productionStageIndex + 1];
-    setHtml("orderDetail", `<div class="detail-section"><h3>${Ops.escapeHtml(order.title)}</h3><dl class="detail-list"><div><dt>订单编号</dt><dd>${Ops.escapeHtml(order.id)}</dd></div><div><dt>客户手机</dt><dd>${Ops.escapeHtml(order.customerPhoneMasked)}</dd></div><div><dt>当前阶段</dt><dd>${Ops.escapeHtml(customerOrderLabels[order.stageIndex] || order.stage)}</dd></div><div><dt>关联询价</dt><dd>${Ops.escapeHtml(order.quoteId || "未关联")}</dd></div></dl></div>
+    const exceptions = Ops.list(order.exceptions);
+    const exceptionPanel = `<div class="detail-section"><h3>受控异常事件</h3>${exceptions.length ? `<div class="row-list">${exceptions.map((item) => `<div class="row-item"><div class="row-main"><strong>${Ops.escapeHtml(orderExceptionLabels[item.type] || item.type)}</strong><small>${Ops.formatTime(item.openedAt, true)}${item.resolvedAt ? ` · ${Ops.formatTime(item.resolvedAt, true)}` : ""}</small></div><div class="row-meta">${Ops.statusBadge(item.status, item.status === "open" ? "待处理" : item.status === "resolved" ? "已解决" : "已记录")}${item.status === "open" ? `<button class="button button--secondary button--small" type="button" data-order-exception-resolve="${Ops.escapeHtml(item.id)}">解决</button>` : ""}</div></div>`).join("")}</div>` : `<p class="cell-subtitle">暂无异常事件</p>`}${order.status === "active" ? `<div class="form-actions"><select id="orderExceptionType" aria-label="选择异常类型">${orderExceptionTypes.map(([id, label]) => `<option value="${id}">${label}</option>`).join("")}</select><button class="button button--secondary button--small" type="button" data-order-exception-open>登记异常</button></div>` : ""}</div>`;
+    setHtml("orderDetail", `<div class="detail-section"><h3>${Ops.escapeHtml(order.title)}</h3><dl class="detail-list"><div><dt>订单编号</dt><dd>${Ops.escapeHtml(order.id)}</dd></div><div><dt>客户手机</dt><dd>${Ops.escapeHtml(order.customerPhoneMasked)}</dd></div><div><dt>当前阶段</dt><dd>${Ops.escapeHtml(customerOrderLabels[order.stageIndex] || order.stage)}</dd></div><div><dt>运行状态</dt><dd>${Ops.escapeHtml(order.operationalStatus || "normal")}</dd></div><div><dt>关联询价</dt><dd>${Ops.escapeHtml(order.quoteId || "未关联")}</dd></div></dl></div>${exceptionPanel}
       <div class="detail-section"><h3>客户订单流程</h3>${orderProgress(customerOrderLabels, order.stageIndex)}${nextCustomer ? `<button class="button" type="button" data-order-advance="${Ops.escapeHtml(nextCustomer)}">推进至：${Ops.escapeHtml(customerOrderLabels[order.stageIndex + 1])}</button>` : ""}</div>
       ${order.productionStageIndex == null ? "" : `<div class="detail-section"><h3>工厂生产流程</h3>${orderProgress(productionOrderLabels, order.productionStageIndex)}${nextProduction ? `<button class="button button--secondary" type="button" data-production-advance="${Ops.escapeHtml(nextProduction)}">推进至：${Ops.escapeHtml(productionOrderLabels[order.productionStageIndex + 1])}</button>` : ""}</div>`}`);
   }
@@ -101,8 +105,9 @@
   function renderOrders() {
     const active = orderItems.filter((item) => item.status === "active").length;
     const production = orderItems.filter((item) => item.stage === "bulk_production").length;
-    setHtml("orderMetrics", `${metricCard("全部订单", orderItems.length, "", "已建立")}${metricCard("进行中", active, "", "当前")}${metricCard("大货生产", production, "", "当前阶段")}`);
-    setHtml("orderTable", orderItems.length ? `<div class="table-wrap"><table class="data-table"><thead><tr><th>订单</th><th>客户</th><th>阶段</th><th>生产</th><th>更新时间</th></tr></thead><tbody>${orderItems.map((item) => `<tr data-order-id="${Ops.escapeHtml(item.id)}" tabindex="0"><td><span class="cell-title">${Ops.escapeHtml(item.title)}</span><span class="cell-subtitle">${Ops.escapeHtml(item.id)}</span></td><td>${Ops.escapeHtml(item.customerPhoneMasked)}</td><td>${Ops.statusBadge("active", customerOrderLabels[item.stageIndex] || item.stage)}</td><td>${Ops.escapeHtml(item.productionStageIndex == null ? "未开始" : productionOrderLabels[item.productionStageIndex])}</td><td>${Ops.formatTime(item.updatedAt, true)}</td></tr>`).join("")}</tbody></table></div>` : Ops.emptyState("暂无订单", "可从询价确认后建立订单。"));
+    const onHold = orderItems.filter((item) => item.operationalStatus === "on_hold").length;
+    setHtml("orderMetrics", `${metricCard("全部订单", orderItems.length, "", "已建立")}${metricCard("进行中", active, "", "当前")}${metricCard("大货生产", production, "", "当前阶段")}${metricCard("异常暂停", onHold, "", "需人工处理")}`);
+    setHtml("orderTable", orderItems.length ? `<div class="table-wrap"><table class="data-table"><thead><tr><th>订单</th><th>客户</th><th>阶段</th><th>生产</th><th>运行状态</th><th>更新时间</th></tr></thead><tbody>${orderItems.map((item) => `<tr data-order-id="${Ops.escapeHtml(item.id)}" tabindex="0"><td><span class="cell-title">${Ops.escapeHtml(item.title)}</span><span class="cell-subtitle">${Ops.escapeHtml(item.id)}</span></td><td>${Ops.escapeHtml(item.customerPhoneMasked)}</td><td>${Ops.statusBadge(item.status === "cancelled" ? "negative" : "active", customerOrderLabels[item.stageIndex] || item.stage)}</td><td>${Ops.escapeHtml(item.productionStageIndex == null ? "未开始" : productionOrderLabels[item.productionStageIndex])}</td><td>${Ops.statusBadge(item.operationalStatus === "on_hold" ? "warning" : item.status === "cancelled" ? "negative" : "healthy", item.operationalStatus === "on_hold" ? "异常暂停" : item.status === "cancelled" ? "已取消" : "正常")}</td><td>${Ops.formatTime(item.updatedAt, true)}</td></tr>`).join("")}</tbody></table></div>` : Ops.emptyState("暂无订单", "可从询价确认后建立订单。"));
     setHtml("orderQuoteQueue", orderQuotes.length ? `<div class="row-list">${orderQuotes.map((quote) => `<div class="row-item"><div class="row-main"><strong>${Ops.escapeHtml(quote.name || quote.company || quote.id)}</strong><small>${Ops.escapeHtml(quote.id)} · ${Ops.escapeHtml(quote.product || "产品待补充")} · ${Ops.escapeHtml(quote.quantity || "数量待补充")}</small></div><button class="button button--secondary button--small" type="button" data-order-use-quote="${Ops.escapeHtml(quote.id)}">带入</button></div>`).join("")}</div>` : Ops.emptyState("暂无待转订单询价"));
     const select = document.getElementById("orderQuoteId");
     const selected = select.value;
@@ -174,6 +179,22 @@
     const note = window.prompt("本次推进备注（可留空）") || "";
     const path = production ? `/api/admin/orders/${endpointId(activeOrderId)}/production/advance` : `/api/admin/orders/${endpointId(activeOrderId)}/advance`;
     try { await Ops.request(path, { method: "POST", body: { targetStage, note } }); await loadOrders(); Ops.toast("订单进度已更新"); }
+    catch (error) { Ops.toast(error.message, "negative"); }
+  }
+
+  async function openOrderException() {
+    if (!activeOrderId) return;
+    const type = document.getElementById("orderExceptionType")?.value;
+    const note = window.prompt("请输入异常说明");
+    if (!type || !note || !note.trim()) return;
+    try { await Ops.request(`/api/admin/orders/${endpointId(activeOrderId)}/exceptions`, { method: "POST", body: { type, note: note.trim() } }); await loadOrders(); Ops.toast("异常事件已登记"); }
+    catch (error) { Ops.toast(error.message, "negative"); }
+  }
+
+  async function resolveOrderException(exceptionId) {
+    const resolution = window.prompt("请输入处理结果");
+    if (!resolution || !resolution.trim()) return;
+    try { await Ops.request(`/api/admin/orders/${endpointId(activeOrderId)}/exceptions/${endpointId(exceptionId)}/resolve`, { method: "POST", body: { resolution: resolution.trim() } }); await loadOrders(); Ops.toast("异常已解决"); }
     catch (error) { Ops.toast(error.message, "negative"); }
   }
 
@@ -1032,7 +1053,7 @@
     document.getElementById("orderQuoteId").addEventListener("change", (event) => { if (event.currentTarget.value) useOrderQuote(event.currentTarget.value); });
     document.getElementById("orderTable").addEventListener("click", (event) => { const row = event.target.closest("[data-order-id]"); if (row) { activeOrderId = row.dataset.orderId; renderOrders(); } });
     document.getElementById("orderTable").addEventListener("keydown", (event) => { const row = event.target.closest("[data-order-id]"); if (row && ["Enter", " "].includes(event.key)) { event.preventDefault(); activeOrderId = row.dataset.orderId; renderOrders(); } });
-    document.getElementById("orderDetail").addEventListener("click", (event) => { const customer = event.target.closest("[data-order-advance]"); const production = event.target.closest("[data-production-advance]"); if (customer) advanceOrder(customer.dataset.orderAdvance, false); if (production) advanceOrder(production.dataset.productionAdvance, true); });
+    document.getElementById("orderDetail").addEventListener("click", (event) => { const customer = event.target.closest("[data-order-advance]"); const production = event.target.closest("[data-production-advance]"); const openException = event.target.closest("[data-order-exception-open]"); const resolveException = event.target.closest("[data-order-exception-resolve]"); if (customer) advanceOrder(customer.dataset.orderAdvance, false); if (production) advanceOrder(production.dataset.productionAdvance, true); if (openException) openOrderException(); if (resolveException) resolveOrderException(resolveException.dataset.orderExceptionResolve); });
     document.getElementById("importantForm").addEventListener("submit", saveImportant);
     document.getElementById("importantPreviewButton").addEventListener("click", previewImportant);
     document.getElementById("contentSearch").addEventListener("input", renderContent);

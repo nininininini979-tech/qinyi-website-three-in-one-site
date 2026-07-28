@@ -64,7 +64,7 @@
     ["developerOrderMetrics", "developerCustomerStages", "developerProductionStages"].forEach((id) => Ops.setBusy(document.getElementById(id)));
     try {
       const data = await Ops.request("/api/developer/order-system");
-      setHtml("developerOrderMetrics", `${metricCard("全部订单", data.orders?.total, "", "持久化记录")}${metricCard("进行中", data.orders?.active, "", "当前")}${metricCard("短信登录", data.sms?.configured ? "已配置" : "待补充", "", data.sms?.provider || "")}`);
+      setHtml("developerOrderMetrics", `${metricCard("全部订单", data.orders?.total, "", "持久化记录")}${metricCard("进行中", data.orders?.active, "", "当前")}${metricCard("异常暂停", data.orders?.onHold, "", "需处理")}${metricCard("已取消", data.orders?.cancelled, "", "受控异常")}${metricCard("短信登录", data.sms?.configured ? "已配置" : "待补充", "", data.sms?.provider || "")}`);
       const rows = (items) => `<div class="row-list">${Ops.list(items).map((item) => `<div class="row-item"><div class="row-main"><strong>${item.index + 1}. ${Ops.escapeHtml(item.labelZh)}</strong><small>${Ops.escapeHtml(item.labelEn)} · ${Ops.escapeHtml(item.id)}</small></div>${Ops.statusBadge("healthy", "固定")}</div>`).join("")}</div>`;
       setHtml("developerCustomerStages", rows(data.customerStages));
       setHtml("developerProductionStages", rows(data.productionStages));
@@ -215,9 +215,21 @@
   async function loadEnvironment() {
     ["environmentList", "integrationList", "configurationTable"].forEach((id) => Ops.setBusy(document.getElementById(id)));
     try {
-      const data = await Ops.request("/api/ops/developer/environment");
+      const [data, connectors, outbox] = await Promise.all([
+        Ops.request("/api/ops/developer/environment"),
+        Ops.request("/api/developer/integrations"),
+        Ops.request("/api/developer/integration-outbox?limit=40")
+      ]);
       setHtml("environmentList", rows(Ops.list(data.environments), "暂无环境信息"));
-      setHtml("integrationList", rows(Ops.list(data.integrations), "暂无集成信息"));
+      const connectorRows = Ops.list(connectors).map((item) => ({
+        id: item.id,
+        name: `${item.labelZh || item.id} · ${item.labelEn || ""}`,
+        detail: `${item.mode || "outbox_only"} · 优先级 ${item.priority || "--"}`,
+        status: item.status,
+        statusLabel: item.status === "waiting_configuration" ? "待补充" : item.status === "ready" ? "已就绪" : item.status
+      }));
+      const outboxItems = Ops.list(outbox);
+      setHtml("integrationList", `${rows([...connectorRows, ...Ops.list(data.integrations)], "暂无集成信息")}${outboxItems.length ? `<section class="detail-section"><h3>事件 outbox</h3>${rows(outboxItems.slice(0, 8).map((item) => ({ id: item.id, name: item.eventType, detail: `${item.aggregateType}:${item.aggregateId} · ${item.targets?.length || 0} 个目标`, status: item.status, statusLabel: item.status === "blocked" ? "等待配置" : item.status })), "暂无待同步事件")}</section>` : ""}`);
       const config = Ops.list(data.configuration);
       setHtml("configurationTable", config.length ? `<div class="table-wrap"><table class="data-table"><thead><tr><th>配置项</th><th>环境</th><th>状态</th><th>最后验证</th><th>说明</th></tr></thead><tbody>${config.map((item) => `<tr><td>${Ops.escapeHtml(item.name || item.key)}</td><td>${Ops.escapeHtml(item.environment || "全部")}</td><td>${Ops.statusBadge(item.configured === false ? "warning" : item.status || "healthy", item.configured === false ? "未配置" : item.statusLabel)}</td><td>${Ops.relativeTime(item.checkedAt)}</td><td>${Ops.escapeHtml(item.detail || "密钥值不会在此显示")}</td></tr>`).join("")}</tbody></table></div>` : Ops.emptyState("暂无配置检查结果"));
     } catch (error) { ["environmentList", "integrationList", "configurationTable"].forEach((id) => setHtml(id, Ops.errorState(error, "environment"))); }
