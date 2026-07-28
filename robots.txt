@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nininininini979-tech.github.io/qinyi-website-three-in-one/sitemap.xml
+Sitemap: https://nininininini979-tech.github.io/qinyi-website-three-in-one-site/sitemap.xml

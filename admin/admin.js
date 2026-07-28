@@ -969,15 +969,40 @@
 
   function renderAudit() {
     const query = document.getElementById("auditSearch").value.trim().toLowerCase();
-    const action = document.getElementById("auditActionFilter").value;
-    const items = auditItems.filter((item) => (!query || [item.actor, item.action, item.target, item.summary].some((value) => String(value || "").toLowerCase().includes(query))) && (!action || String(item.category || item.action || "").includes(action)));
+    const items = auditItems.filter((item) => !query || [item.actor, item.action, item.target, item.summary].some((value) => String(value || "").toLowerCase().includes(query)));
     setHtml("auditTable", items.length ? `<div class="table-wrap"><table class="data-table"><thead><tr><th>时间</th><th>操作人</th><th>操作</th><th>对象</th><th>说明</th><th>结果</th></tr></thead><tbody>${items.map((item) => `<tr><td>${Ops.formatTime(item.createdAt, true)}</td><td>${Ops.escapeHtml(item.actor || "系统")}</td><td>${Ops.escapeHtml(item.actionLabel || item.action || "--")}</td><td>${Ops.escapeHtml(item.target || "--")}</td><td>${Ops.escapeHtml(item.summary || "--")}</td><td>${Ops.statusBadge(item.result || "active", item.resultLabel || "已记录")}</td></tr>`).join("")}</tbody></table></div>` : Ops.emptyState("没有符合条件的操作记录", "调整搜索或筛选条件。"));
+  }
+
+  function localDateValue(date) {
+    return new Date(date.getTime() - date.getTimezoneOffset() * 60_000).toISOString().slice(0, 10);
+  }
+
+  function auditQuery(format, limit) {
+    const fromValue = document.getElementById("auditFromDate").value;
+    const toValue = document.getElementById("auditToDate").value;
+    const kind = document.getElementById("auditKindFilter").value;
+    const params = new URLSearchParams({ format, limit: String(limit) });
+    if (fromValue) params.set("from", new Date(`${fromValue}T00:00:00.000`).toISOString());
+    if (toValue) params.set("to", new Date(`${toValue}T23:59:59.999`).toISOString());
+    if (kind) params.set("kind", kind);
+    return params.toString();
   }
 
   async function loadAudit() {
     Ops.setBusy(document.getElementById("auditTable"));
-    try { const data = await Ops.request("/api/ops/audit?limit=200"); auditItems = Ops.list(data); renderAudit(); }
+    try { const data = await Ops.request(`/api/ops/audit?${auditQuery("json", 200)}`); auditItems = Ops.list(data); renderAudit(); }
     catch (error) { setHtml("auditTable", Ops.errorState(error, "audit")); }
+  }
+
+  async function exportAudit() {
+    const button = document.getElementById("exportAuditButton");
+    const format = document.getElementById("auditExportFormat").value === "json" ? "json" : "csv";
+    button.disabled = true;
+    try {
+      await Ops.download(`/api/ops/audit/export?${auditQuery(format, 5000)}`, `qinyi-audit.${format}`);
+      Ops.toast("审计记录已生成");
+    } catch (error) { Ops.toast(error.message, "negative"); }
+    finally { button.disabled = false; }
   }
 
   function onView(view) {
@@ -1053,8 +1078,13 @@
     document.getElementById("rulesTestButton").addEventListener("click", testRules);
     document.getElementById("rulesHistory").addEventListener("click", (event) => { const button = event.target.closest("[data-rules-restore]"); if (button) restoreRules(button.dataset.rulesRestore); });
     document.getElementById("auditSearch").addEventListener("input", renderAudit);
-    document.getElementById("auditActionFilter").addEventListener("change", renderAudit);
-    document.getElementById("exportAuditButton").addEventListener("click", () => { void Ops.download("/api/ops/audit/export?format=csv", "qinyi-audit.csv").catch((error) => Ops.toast(error.message, "negative")); });
+    const now = new Date();
+    document.getElementById("auditToDate").value = localDateValue(now);
+    document.getElementById("auditFromDate").value = localDateValue(new Date(now.getTime() - 29 * 24 * 60 * 60 * 1000));
+    document.getElementById("auditKindFilter").addEventListener("change", loadAudit);
+    document.getElementById("auditFromDate").addEventListener("change", loadAudit);
+    document.getElementById("auditToDate").addEventListener("change", loadAudit);
+    document.getElementById("exportAuditButton").addEventListener("click", exportAudit);
   }
 
   bindEvents();

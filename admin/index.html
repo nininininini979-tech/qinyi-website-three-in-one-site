@@ -160,7 +160,7 @@
 
           <section class="view" data-view="audit" aria-labelledby="auditTitle" hidden>
             <div class="page-heading"><div><h1 id="auditTitle">操作记录</h1><p>查询内容发布、规则修改、会话接管和权限相关操作。</p></div><div class="page-actions"><button class="button button--secondary" type="button" id="exportAuditButton">导出记录</button></div></div>
-            <div class="filterbar"><input class="search-input" id="auditSearch" type="search" placeholder="搜索人员、对象或说明" aria-label="搜索操作记录" /><select id="auditActionFilter" aria-label="筛选操作类型"><option value="">全部操作</option><option value="content">内容</option><option value="session">会话</option><option value="rules">规则</option><option value="access">权限</option></select></div>
+            <div class="filterbar"><input class="search-input" id="auditSearch" type="search" placeholder="搜索人员、对象或说明" aria-label="搜索操作记录" /><select id="auditKindFilter" aria-label="筛选记录来源"><option value="">全部来源</option><option value="audit">业务审计</option><option value="agent">Agent</option><option value="support">访客事件</option><option value="emergency">应急操作</option></select><label class="filter-field"><span>开始日期</span><input id="auditFromDate" type="date" /></label><label class="filter-field"><span>结束日期</span><input id="auditToDate" type="date" /></label><select id="auditExportFormat" aria-label="导出格式"><option value="csv">CSV 表格</option><option value="json">JSON 数据</option></select></div>
             <section class="panel"><div class="panel-body panel-body--flush" id="auditTable"></div></section>
           </section>
         </main>
