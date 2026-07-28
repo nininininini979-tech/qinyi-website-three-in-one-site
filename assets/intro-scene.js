@@ -6,6 +6,23 @@ const CONFIG = {
   desktop: { columns: 6, rows: 5, dust: 88, webSegments: 17, pixelRatio: 1.75 },
   mobile: { columns: 3, rows: 6, dust: 42, webSegments: 11, pixelRatio: 1.35 },
 };
+const INTRO_SESSION_KEY = 'qinyi-intro-seen';
+
+function sessionIntroSeen() {
+  try {
+    return window.sessionStorage.getItem(INTRO_SESSION_KEY) === 'true';
+  } catch {
+    return false;
+  }
+}
+
+function markSessionIntroSeen() {
+  try {
+    window.sessionStorage.setItem(INTRO_SESSION_KEY, 'true');
+  } catch {
+    // The intro remains usable when storage is blocked.
+  }
+}
 
 const clamp = (value, min = 0, max = 1) => Math.min(max, Math.max(min, value));
 const lerp = (from, to, progress) => from + (to - from) * progress;
@@ -100,8 +117,9 @@ async function captureViewport() {
 function createStage() {
   const stage = document.createElement('div');
   stage.className = 'puzzle-intro-stage';
-  stage.setAttribute('aria-hidden', 'true');
-  stage.innerHTML = '<canvas aria-hidden="true"></canvas>';
+  const isChinese = document.documentElement.lang.toLowerCase().startsWith('zh');
+  const skipLabel = isChinese ? '跳过动画' : 'Skip intro';
+  stage.innerHTML = `<canvas aria-hidden="true"></canvas><button class="puzzle-intro-skip" type="button">${skipLabel}</button>`;
   document.body.appendChild(stage);
   return stage;
 }
@@ -205,6 +223,7 @@ class PuzzleIntro {
     this.handlePageHide = this.handlePageHide.bind(this);
     this.handleSkip = this.handleSkip.bind(this);
     this.skipLink = document.querySelector('.skip-link');
+    this.skipButton = stage.querySelector('.puzzle-intro-skip');
   }
 
   init() {
@@ -213,6 +232,7 @@ class PuzzleIntro {
     this.buildScene(this.snapshot);
     this.setupScroll();
     this.skipLink?.addEventListener('click', this.handleSkip);
+    this.skipButton?.addEventListener('click', this.handleSkip);
     window.addEventListener('resize', this.handleResize, { capture: true, passive: true });
     window.addEventListener('pagehide', this.handlePageHide);
     this.render(0);
@@ -602,6 +622,7 @@ class PuzzleIntro {
     this.stage.style.opacity = String(1 - handoff);
     this.stage.style.visibility = this.progress >= .9998 ? 'hidden' : 'visible';
     this.stage.dataset.progress = this.progress.toFixed(3);
+    if (this.skipButton) this.skipButton.hidden = this.progress >= .997;
     this.setInteractive(this.progress >= .997);
     this.renderer.render(this.scene, this.camera);
   }
@@ -743,6 +764,7 @@ class PuzzleIntro {
     window.removeEventListener('resize', this.handleResize, true);
     window.removeEventListener('pagehide', this.handlePageHide);
     this.skipLink?.removeEventListener('click', this.handleSkip);
+    this.skipButton?.removeEventListener('click', this.handleSkip);
     this.teardownScroll();
     this.disposeScene();
     this.renderer.dispose();
@@ -758,11 +780,14 @@ function revealPage() {
 
 async function startIntro() {
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const forceIntro = new URLSearchParams(window.location.search).get('intro') === '1';
+  const mobile = window.innerWidth <= 760;
   const hero = document.querySelector('.hero');
   const header = document.querySelector('.site-header');
   const dependenciesReady = window.html2canvas && window.gsap && window.ScrollTrigger;
+  const preRevealed = document.documentElement.classList.contains('intro-ready');
 
-  if (reducedMotion || location.hash || !hero || !header || !dependenciesReady || !supportsWebGL()) {
+  if ((!forceIntro && (preRevealed || mobile || sessionIntroSeen())) || reducedMotion || location.hash || !hero || !header || !dependenciesReady || !supportsWebGL()) {
     revealPage();
     return;
   }
@@ -773,6 +798,7 @@ async function startIntro() {
     const stage = createStage();
     const intro = new PuzzleIntro(stage, snapshot, hero, header);
     intro.init();
+    markSessionIntroSeen();
     window.__qinyiPuzzleIntro = intro;
     revealPage();
   } catch {

@@ -69,11 +69,11 @@
     overlay.id = "opsLoginOverlay";
     overlay.className = "login-overlay";
     const surface = document.body.dataset.surface === "developer" ? "developer" : "admin";
-    const portal = surface === "developer" ? { title: "勤益开发者登录", subtitle: "系统、Agent 与发布治理", accounts: "developer01–developer04", switchHref: "../admin/", switchLabel: "切换至管理员界面" } : { title: "勤益管理员登录", subtitle: "客服、内容与经营管理", accounts: "admin01–admin20", switchHref: "../developer/", switchLabel: "切换至开发者界面" };
+    const portal = surface === "developer" ? { title: "勤益开发者登录", subtitle: "系统、Agent 与发布治理", switchHref: "../admin/", switchLabel: "切换至管理员界面" } : { title: "勤益管理员登录", subtitle: "客服、内容与经营管理", switchHref: "../developer/", switchLabel: "切换至开发者界面" };
     overlay.innerHTML = `<form class="login-dialog" id="opsLoginForm">
       <div class="login-brand"><span class="brand-mark" aria-hidden="true">勤</span><div><strong>${portal.title}</strong><span>${portal.subtitle}</span></div><span class="login-portal-tag">${surface === "developer" ? "开发者" : "管理员"}</span></div>
       <div class="login-progress" id="opsLoginProgress"><span class="is-active">账号密码登录</span></div>
-      <div class="login-account-range"><strong>个人账号</strong><span>${portal.accounts}</span><small>${surface === "developer" ? "名称固定；拥有更深层系统权限" : "20名管理员平级；登录后只能修改自己的名称"}</small></div>
+      <div class="login-account-range"><strong>个人账号</strong><span>由负责人线下分配</span><small>${surface === "developer" ? "开发者拥有更深层系统权限；账号清单不在公开页面展示" : "管理员业务权限平级；账号清单不在公开页面展示"}</small></div>
       <div id="opsLoginStep"></div>
       <div class="login-error" id="opsLoginError" role="alert" hidden></div>
       <button class="button" id="opsLoginSubmit" type="submit">继续</button>
@@ -113,7 +113,7 @@
     async function authRequest(path, body) {
       const response = await fetch(apiUrl(path), {
         method: "POST",
-        credentials: "same-origin",
+        credentials: "include",
         headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(body),
       });
@@ -142,8 +142,8 @@
           password: form.password.value
         });
         enforcePortal(payload);
-        if (!payload.token) throw new Error("认证服务未返回登录会话。");
-        storeSessionToken(payload.token);
+        if (!payload.cookieSession && !payload.token) throw new Error("认证服务未返回登录会话。");
+        if (payload.token && !payload.cookieSession) storeSessionToken(payload.token);
         window.location.reload();
       } catch (error) {
         showError(error.message || "登录失败。");
@@ -160,7 +160,7 @@
     try {
       const response = await fetch(apiUrl(path), {
         method: settings.method || "GET",
-        credentials: "same-origin",
+        credentials: "include",
         headers: {
           Accept: "application/json",
           ...(sessionToken() ? { Authorization: `Bearer ${sessionToken()}` } : {}),
@@ -201,7 +201,7 @@
     try {
       const response = await fetch(apiUrl(path), {
         method: "POST",
-        credentials: "same-origin",
+        credentials: "include",
         headers: {
           Accept: "application/json",
           ...(sessionToken() ? { Authorization: `Bearer ${sessionToken()}` } : {})
@@ -230,7 +230,7 @@
 
   async function download(path, filename) {
     const response = await fetch(apiUrl(path), {
-      credentials: "same-origin",
+      credentials: "include",
       headers: sessionToken() ? { Authorization: `Bearer ${sessionToken()}` } : {}
     });
     if (!response.ok) {
@@ -257,7 +257,7 @@
     if (preview) preview.opener = null;
     try {
       const response = await fetch(apiUrl(path), {
-        credentials: "same-origin",
+        credentials: "include",
         headers: {
           Accept: "text/html",
           ...(sessionToken() ? { Authorization: `Bearer ${sessionToken()}` } : {})
@@ -373,6 +373,25 @@
     const sections = new Map(Array.from(document.querySelectorAll("[data-view]"), (section) => [section.dataset.view, section]));
     const navItems = Array.from(document.querySelectorAll("[data-nav]"));
     const defaultView = settings.defaultView || navItems[0]?.dataset.nav;
+    const moreButton = document.querySelector("[data-mobile-more]");
+    const moreSheet = document.querySelector("[data-mobile-more-sheet]");
+    const shell = document.querySelector(".ops-shell");
+
+    function closeMobileMore(restoreFocus) {
+      if (!moreSheet || moreSheet.hidden) return;
+      moreSheet.hidden = true;
+      moreButton?.setAttribute("aria-expanded", "false");
+      if (shell) shell.inert = false;
+      if (restoreFocus) moreButton?.focus();
+    }
+
+    function openMobileMore() {
+      if (!moreSheet || !moreButton) return;
+      moreSheet.hidden = false;
+      moreButton.setAttribute("aria-expanded", "true");
+      if (shell) shell.inert = true;
+      moreSheet.querySelector("[data-nav]")?.focus();
+    }
 
     function activate(view, pushState) {
       const target = sections.has(view) ? view : defaultView;
@@ -383,15 +402,39 @@
         if (active) item.setAttribute("aria-current", "page");
         else item.removeAttribute("aria-current");
       });
+      if (moreButton && moreSheet) moreButton.classList.toggle("is-active", Boolean(moreSheet.querySelector(`[data-nav="${CSS.escape(target)}"]`)));
       const title = navItems.find((item) => item.dataset.nav === target)?.dataset.title;
       const mobileTitle = document.getElementById("mobileViewTitle");
       if (mobileTitle && title) mobileTitle.textContent = title;
       if (pushState) history.replaceState(null, "", `#${target}`);
+      closeMobileMore(false);
       window.scrollTo({ top: 0, behavior: "auto" });
       if (typeof settings.onView === "function") settings.onView(target);
     }
 
     navItems.forEach((item) => item.addEventListener("click", () => activate(item.dataset.nav, true)));
+    moreButton?.addEventListener("click", () => moreSheet?.hidden ? openMobileMore() : closeMobileMore(true));
+    moreSheet?.querySelectorAll("[data-mobile-more-close]").forEach((button) => button.addEventListener("click", () => closeMobileMore(true)));
+    document.addEventListener("keydown", (event) => {
+      if (!moreSheet || moreSheet.hidden) return;
+      if (event.key === "Escape") {
+        event.preventDefault();
+        closeMobileMore(true);
+        return;
+      }
+      if (event.key !== "Tab") return;
+      const focusable = Array.from(moreSheet.querySelectorAll("button:not([disabled])"));
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last?.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first?.focus();
+      }
+    });
+    window.addEventListener("resize", () => { if (window.innerWidth > 860) closeMobileMore(false); });
     document.querySelectorAll("[data-logout]").forEach((button) => button.addEventListener("click", logout));
     document.addEventListener("click", (event) => {
       const retry = event.target.closest("[data-retry]");

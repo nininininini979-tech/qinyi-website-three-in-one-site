@@ -61,6 +61,22 @@ html.intro-ready .intro-boot-curtain { visibility: hidden; opacity: 0; }
   will-change: opacity;
 }
 .puzzle-intro-stage canvas { width: 100%; height: 100%; display: block; }
+.puzzle-intro-skip {
+  position: absolute;
+  inset-inline-end: max(20px, env(safe-area-inset-right));
+  top: max(20px, env(safe-area-inset-top));
+  z-index: 2;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid rgba(255,255,255,.72);
+  border-radius: 4px;
+  background: rgba(6,8,7,.78);
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+  pointer-events: auto;
+}
+.puzzle-intro-skip:hover { background: white; color: var(--ink); }
 .puzzle-intro-stage[hidden] { display: none; }
 body.intro-running .site-header,
 body.intro-running #main,

@@ -720,9 +720,9 @@
       "sourceHash": "f97e9da0e3b879f0"
     },
     "contact.prepare_contact_email": {
-      "value": "접촉 이메일 준비",
+      "value": "Submit contact enquiry",
       "status": "needs_review",
-      "sourceHash": "c835173bae1ece7a"
+      "sourceHash": "ad1ddd3b2b5b493b"
     },
     "contact.product_question": {
       "value": "제품 질문",
@@ -760,9 +760,9 @@
       "sourceHash": "faac2fd130a4370c"
     },
     "contact.this_form_prepares_an_email_in_your": {
-      "value": "이 형식은 당신의 이메일 액플에 대한 이메일을 준비합니다. 이 단계에서 보안적인 디자인 파일이나 생산 파일을 포함하지 마세요.",
+      "value": "This form sends a structured enquiry to Qinyi's protected business queue. Do not include confidential artwork or production files at this stage.",
       "status": "needs_review",
-      "sourceHash": "4275110d5ed24ad9"
+      "sourceHash": "d8f7745ea4fa51f4"
     },
     "contact.topic": {
       "value": "제목",
@@ -2469,6 +2469,11 @@
       "status": "needs_review",
       "sourceHash": "9c912597d27011ed"
     },
+    "index.replay_puzzle_intro": {
+      "value": "Replay puzzle intro",
+      "status": "needs_review",
+      "sourceHash": "78027fe490ccf985"
+    },
     "index.request_a_manufacturing_review": {
       "value": "제조 검토 요청",
       "status": "needs_review",
@@ -3285,9 +3290,9 @@
       "sourceHash": "bc19db130213e082"
     },
     "privacy.how_the_web_form_works_2": {
-      "value": "웹 양식의 정보 처리 방식",
-      "status": "reviewed",
-      "sourceHash": "43e60c675ce6d04c"
+      "value": "How the web forms work",
+      "status": "needs_review",
+      "sourceHash": "0079e5179666be5a"
     },
     "privacy.information_is_kept_only_for_as_long": {
       "value": "정보는 문의, 비즈니스 관계, 분쟁 처리 및 관련 기록 보관 의무에 합리적으로 필요한 기간 동안만 보관됩니다. 보존 기간은 프로젝트의 성격과 상태에 따라 다를 수 있습니다.",
@@ -3355,9 +3360,9 @@
       "sourceHash": "a3bbac2687499901"
     },
     "privacy.the_quote_and_contact_forms_prepare_an_2": {
-      "value": "견적 및 문의 양식은 사용자의 이메일 앱에서 보낼 메일을 준비합니다. 웹사이트는 입력 내용을 업로드하거나 저장하지 않습니다. Qinyi는 사용자가 내용을 검토하고 이메일을 보낸 후에만 정보를 받습니다. 단, 위의 공동 기획 기능으로 사용자가 명시적으로 보낸 맞춤 제작 요약은 예외입니다.",
-      "status": "reviewed",
-      "sourceHash": "529053a269caf698"
+      "value": "The quote and contact forms send structured enquiry details to Qinyi's protected business queue. The server records the privacy-notice version and submission time for audit. Optional public-reference files submitted with a quote use the protected upload channel; confidential production files should still be shared only after the recipient and transfer method are confirmed.",
+      "status": "needs_review",
+      "sourceHash": "15e2dded0ce4f99b"
     },
     "privacy.this_notice_explains_what_happens_when_a": {
       "value": "본 고지는 잠재 고객 또는 비즈니스 연락처가 Qinyi Printing에 문의나 프로젝트 자료를 보낼 때 발생하는 상황을 설명합니다.",

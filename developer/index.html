@@ -120,15 +120,26 @@
       </div>
     </div>
 
-    <nav class="mobile-bottom-nav" style="--mobile-nav-count:7" aria-label="移动端导航">
+    <nav class="mobile-bottom-nav" style="--mobile-nav-count:5" aria-label="移动端导航">
       <button type="button" data-nav="systems" data-title="系统状态"><span class="nav-icon">态</span><span>状态</span></button>
       <button type="button" data-nav="traces" data-title="Agent 追踪"><span class="nav-icon">链</span><span>追踪</span></button>
       <button type="button" data-nav="analytics" data-title="访问指标"><span class="nav-icon">数</span><span>数据</span></button>
-      <button type="button" data-nav="releases" data-title="发布审批"><span class="nav-icon">发</span><span>发布</span></button>
-      <button type="button" data-nav="environment" data-title="环境与集成"><span class="nav-icon">接</span><span>集成</span></button>
-      <button type="button" data-nav="seo" data-title="SEO与GEO"><span class="nav-icon">搜</span><span>SEO</span></button>
-      <button type="button" data-nav="emergency" data-title="移动应急"><span class="nav-icon">急</span><span>应急</span></button>
+      <button type="button" data-nav="orders" data-title="订单系统"><span class="nav-icon">单</span><span>订单</span></button>
+      <button type="button" data-mobile-more aria-expanded="false" aria-controls="developerMobileMore"><span class="nav-icon">⋯</span><span>更多</span></button>
     </nav>
+    <div class="mobile-more-sheet" id="developerMobileMore" data-mobile-more-sheet hidden>
+      <button class="mobile-more-scrim" type="button" data-mobile-more-close aria-label="关闭更多功能"></button>
+      <section role="dialog" aria-modal="true" aria-label="开发者更多功能">
+        <header><strong>更多功能</strong><button type="button" data-mobile-more-close aria-label="关闭更多功能">×</button></header>
+        <div class="mobile-more-grid">
+          <button type="button" data-nav="releases" data-title="发布审批"><span>发</span>发布审批</button>
+          <button type="button" data-nav="environment" data-title="环境与集成"><span>接</span>环境与集成</button>
+          <button type="button" data-nav="seo" data-title="SEO与GEO"><span>搜</span>SEO与GEO</button>
+          <button type="button" data-nav="emergency" data-title="移动应急"><span>急</span>移动应急</button>
+          <button type="button" data-nav="schedule" data-title="工作时间"><span>班</span>工作时间</button>
+        </div>
+      </section>
+    </div>
     <div class="ops-toast" id="opsToast" role="status" aria-live="polite" hidden></div>
     <script src="./operations-config.js"></script>
     <script src="./operations-common.js"></script>

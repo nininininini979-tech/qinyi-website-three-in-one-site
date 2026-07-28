@@ -21,6 +21,42 @@ const currentPage = window.location.pathname.split('/').filter(Boolean).pop()?.e
 const scriptUrl = new URL(document.currentScript.src);
 const siteRoot = new URL('../', scriptUrl);
 const API_BASE_URL = (window.__QINYI_SUPPORT_CONFIG__?.apiBaseUrl || '').replace(/\/+$/, '');
+const focusableSelector = 'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),iframe,[tabindex]:not([tabindex="-1"])';
+
+function createModalFocusManager(layer, dialog) {
+  let background = [];
+  const trap = (event) => {
+    if (event.key !== 'Tab' || layer.hidden) return;
+    const focusable = Array.from(dialog.querySelectorAll(focusableSelector)).filter((node) => !node.hidden && node.getAttribute('aria-hidden') !== 'true');
+    if (!focusable.length) {
+      event.preventDefault();
+      return;
+    }
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  };
+  return {
+    activate() {
+      background = Array.from(document.body.children)
+        .filter((node) => node !== layer && node.tagName !== 'SCRIPT')
+        .map((node) => ({ node, inert: node.inert }));
+      background.forEach(({ node }) => { node.inert = true; });
+      document.addEventListener('keydown', trap);
+    },
+    deactivate() {
+      document.removeEventListener('keydown', trap);
+      background.forEach(({ node, inert }) => { node.inert = inert; });
+      background = [];
+    },
+  };
+}
 
 function visitorClientId() {
   const key = 'qinyi-support-client-id';
@@ -113,20 +149,60 @@ if (navLinks) {
 }
 
 if (menuButton) {
+  let menuBackground = [];
+  const setMenuBackground = (isOpen) => {
+    if (isOpen) {
+      menuBackground = Array.from(document.querySelectorAll('main, footer, .mobile-rfq, .qinyi-support-launcher'))
+        .map((node) => ({ node, inert: node.inert }));
+      menuBackground.forEach(({ node }) => { node.inert = true; });
+      return;
+    }
+    menuBackground.forEach(({ node, inert }) => { node.inert = inert; });
+    menuBackground = [];
+  };
+  const closeMenu = (restoreFocus = false) => {
+    if (!document.body.classList.contains('menu-open')) return;
+    document.body.classList.remove('menu-open');
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.setAttribute('aria-label', t('common.menu.open'));
+    setMenuBackground(false);
+    if (restoreFocus) menuButton.focus();
+  };
   menuButton.setAttribute('aria-controls', 'primary-navigation');
   menuButton.setAttribute('aria-label', t('common.menu.open'));
   menuButton.addEventListener('click', () => {
     const isOpen = document.body.classList.toggle('menu-open');
     menuButton.setAttribute('aria-expanded', String(isOpen));
     menuButton.setAttribute('aria-label', t(isOpen ? 'common.menu.close' : 'common.menu.open'));
+    setMenuBackground(isOpen);
+    if (isOpen) navLinks?.querySelector('a')?.focus();
   });
   document.querySelectorAll('.nav-links a').forEach((link) => {
     link.addEventListener('click', () => trackAnonymous('navigation_click', link.getAttribute('href') || '', 'navigation'));
-    link.addEventListener('click', () => {
-      document.body.classList.remove('menu-open');
-      menuButton.setAttribute('aria-expanded', 'false');
-      menuButton.setAttribute('aria-label', t('common.menu.open'));
-    });
+    link.addEventListener('click', () => closeMenu(false));
+  });
+  document.addEventListener('keydown', (event) => {
+    if (!document.body.classList.contains('menu-open')) return;
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      closeMenu(true);
+      return;
+    }
+    if (event.key !== 'Tab') return;
+    const links = Array.from(navLinks?.querySelectorAll('a') || []).filter((link) => link.offsetParent !== null);
+    const focusable = [menuButton, ...links];
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 760) closeMenu(false);
   });
 }
 
@@ -170,6 +246,15 @@ document.querySelectorAll('[data-localized-text]').forEach((element) => {
   if (value) element.textContent = value;
 });
 
+const introReplayLabels = {
+  en: 'Replay puzzle intro', 'zh-CN': '观看拼图动画', es: 'Ver animación del rompecabezas',
+  de: 'Puzzle-Intro ansehen', fr: "Voir l'animation du puzzle", ja: 'パズル演出を見る',
+  ko: '퍼즐 인트로 보기', ar: 'عرض مقدمة الأحجية',
+};
+document.querySelectorAll('[data-intro-replay]').forEach((link) => {
+  link.textContent = introReplayLabels[i18n.locale] || introReplayLabels.en;
+});
+
 document.querySelectorAll('[data-model-mode-workbench]').forEach((workbench) => {
   const studio = workbench.querySelector('[data-qinyi-customizer]');
   const placeholder = workbench.querySelector('[data-model-mode-placeholder]');
@@ -196,9 +281,10 @@ document.querySelectorAll('[data-enquiry-form]').forEach((form) => {
     const status = form.querySelector('.form-status');
     const fileInput = form.querySelector('input[type="file"]');
     const isQuote = form.dataset.enquiryForm === 'quote';
+    const isContact = form.dataset.enquiryForm === 'contact';
     const clientId = isQuote ? visitorClientId() : '';
     let uploadedFile;
-    if (isQuote) submitButton.disabled = true;
+    if (isQuote || isContact) submitButton.disabled = true;
     if (isQuote && fileInput?.files?.[0]) {
       const upload = new FormData();
       upload.append('purpose', 'quote');
@@ -226,6 +312,7 @@ document.querySelectorAll('[data-enquiry-form]').forEach((form) => {
     }
     if (isQuote) {
       const fieldValue = (name) => String(form.elements.namedItem(name)?.value || '').trim();
+      const consentField = form.elements.namedItem('privacy consent');
       const quote = {
         name: fieldValue('name'),
         company: fieldValue('company'),
@@ -243,6 +330,10 @@ document.querySelectorAll('[data-enquiry-form]').forEach((form) => {
         publicReferenceUrl: fieldValue('public reference link'),
         locale: i18n.locale,
         attachmentIds: uploadedFile ? [uploadedFile.id] : [],
+        consent: {
+          accepted: consentField instanceof HTMLInputElement && consentField.checked,
+          privacyVersion: consentField instanceof HTMLElement ? consentField.dataset.privacyVersion || '' : '',
+        },
       };
       if (status) {
         status.textContent = i18n.locale === 'zh-CN' ? '正在提交询价资料…' : 'Submitting your quote request…';
@@ -276,29 +367,49 @@ document.querySelectorAll('[data-enquiry-form]').forEach((form) => {
       }
       return;
     }
-    const reference = `QY-${new Date().toISOString().slice(0, 10).replaceAll('-', '')}-${Math.random().toString(36).slice(2, 7).toUpperCase()}`;
-    const lines = [t('common.form.enquiry_title', { reference }), ''];
-    Array.from(form.elements).filter((field) => field.name && field.type !== 'file' && localizedFieldValue(field).trim()).forEach((field) => {
-      const label = form.querySelector(`label[for="${CSS.escape(field.id)}"]`)?.textContent?.trim() || field.name;
-      lines.push(`${label}: ${localizedFieldValue(field)}`);
-    });
-    if (uploadedFile) lines.push(`${i18n.locale === 'zh-CN' ? '已上传文件编号' : 'Uploaded file reference'}: ${uploadedFile.id} (${uploadedFile.filename})`);
-    const product = form.elements.namedItem('product');
-    const productValue = product ? localizedFieldValue(product) : t('common.form.default_product');
-    const subject = encodeURIComponent(`${reference}: ${productValue || t('common.form.default_product')}`);
-    const body = encodeURIComponent(lines.join('\n'));
-    if (status) {
-      status.textContent = t('common.form.reference_created', { reference });
-      status.classList.add('visible');
+    if (isContact) {
+      const fieldValue = (name) => String(form.elements.namedItem(name)?.value || '').trim();
+      const consentField = form.elements.namedItem('privacy consent');
+      const inquiry = {
+        name: fieldValue('name'),
+        company: fieldValue('company'),
+        email: fieldValue('email'),
+        country: fieldValue('country'),
+        topic: fieldValue('product'),
+        message: fieldValue('message'),
+        privacyConsent: consentField instanceof HTMLInputElement && consentField.checked,
+        privacyVersion: consentField instanceof HTMLElement ? consentField.dataset.privacyVersion || '' : '',
+        sourcePage: window.location.pathname,
+        locale: i18n.locale,
+      };
+      if (status) {
+        status.textContent = i18n.locale === 'zh-CN' ? '正在提交联系信息…' : 'Submitting your contact enquiry…';
+        status.classList.add('visible');
+      }
+      try {
+        const response = await fetch(`${API_BASE_URL}/api/support/contact-inquiries`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'X-Client-Id': visitorClientId() },
+          body: JSON.stringify(inquiry),
+          credentials: 'omit',
+        });
+        const payload = await response.json().catch(() => ({}));
+        if (!response.ok || !payload.id) throw new Error(payload.error || `Submission failed (${response.status})`);
+        if (status) status.textContent = i18n.locale === 'zh-CN'
+          ? `联系信息已提交，编号：${payload.id}`
+          : `Your enquiry was submitted. Reference: ${payload.id}`;
+        trackAnonymous('contact_submitted', payload.id, 'contact');
+        form.reset();
+      } catch (error) {
+        if (status) status.textContent = `${i18n.locale === 'zh-CN' ? '提交失败，请稍后重试' : 'Submission failed. Please try again'}：${error.message}`;
+      } finally {
+        submitButton.disabled = false;
+      }
+      return;
     }
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: 'contact_email_handoff',
-      product_type: product?.value || t('common.form.not_specified'),
-    });
-    trackAnonymous('contact_submitted', form.dataset.enquiryForm || 'contact', 'content');
+    // Every supported enquiry form has an explicit API branch above. Keep
+    // unsupported forms inert so they cannot silently fall back to email.
     submitButton.disabled = false;
-    window.location.href = `mailto:hello@qinyiprinting.com?subject=${subject}&body=${body}`;
   });
 });
 
@@ -363,11 +474,13 @@ function installSupportWidget() {
   const frame = layer.querySelector('.qinyi-support-frame');
   const closeButton = layer.querySelector('.qinyi-support-close');
   const scrim = layer.querySelector('.qinyi-support-scrim');
+  const supportModal = createModalFocusManager(layer, layer.querySelector('.qinyi-support-dialog'));
 
   function closeSupport() {
     layer.hidden = true;
     document.body.classList.remove('support-open');
     launcher.setAttribute('aria-expanded', 'false');
+    supportModal.deactivate();
     launcher.focus();
   }
 
@@ -384,6 +497,7 @@ function installSupportWidget() {
     layer.hidden = false;
     document.body.classList.add('support-open');
     launcher.setAttribute('aria-expanded', 'true');
+    supportModal.activate();
     closeButton.focus();
   }
 
@@ -446,6 +560,7 @@ function installOrderPortal() {
   </section>`;
   document.body.appendChild(layer);
   const body = layer.querySelector('.order-portal-body');
+  const orderModal = createModalFocusManager(layer, layer.querySelector('.order-portal-dialog'));
   const api = async (path, options = {}) => {
     const response = await fetch(`${API_BASE_URL}${path}`, {
       method: options.method || 'GET', credentials: 'omit',
@@ -542,8 +657,8 @@ function installOrderPortal() {
     });
   }
 
-  const close = () => { layer.hidden = true; document.body.classList.remove('order-portal-open'); trigger.focus(); };
-  trigger.addEventListener('click', () => { layer.hidden = false; document.body.classList.add('order-portal-open'); renderOrders(); layer.querySelector('.order-portal-close').focus(); });
+  const close = () => { layer.hidden = true; document.body.classList.remove('order-portal-open'); orderModal.deactivate(); trigger.focus(); };
+  trigger.addEventListener('click', () => { layer.hidden = false; document.body.classList.add('order-portal-open'); orderModal.activate(); renderOrders(); layer.querySelector('.order-portal-close').focus(); });
   layer.querySelector('.order-portal-close').addEventListener('click', close);
   layer.querySelector('.order-portal-scrim').addEventListener('click', close);
   document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && !layer.hidden) close(); });

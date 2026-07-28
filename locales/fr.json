@@ -720,9 +720,9 @@
       "sourceHash": "f97e9da0e3b879f0"
     },
     "contact.prepare_contact_email": {
-      "value": "Préparez un email d'information sur contact",
+      "value": "Submit contact enquiry",
       "status": "needs_review",
-      "sourceHash": "c835173bae1ece7a"
+      "sourceHash": "ad1ddd3b2b5b493b"
     },
     "contact.product_question": {
       "value": "Question de produit",
@@ -760,9 +760,9 @@
       "sourceHash": "faac2fd130a4370c"
     },
     "contact.this_form_prepares_an_email_in_your": {
-      "value": "Ce formulaire prépare un email dans votre application d'e-mail. Ne pas inclure à ce stade les œuvres d'art confidentielles ou les fichiers de production",
+      "value": "This form sends a structured enquiry to Qinyi's protected business queue. Do not include confidential artwork or production files at this stage.",
       "status": "needs_review",
-      "sourceHash": "4275110d5ed24ad9"
+      "sourceHash": "d8f7745ea4fa51f4"
     },
     "contact.topic": {
       "value": "Sujet",
@@ -2469,6 +2469,11 @@
       "status": "needs_review",
       "sourceHash": "9c912597d27011ed"
     },
+    "index.replay_puzzle_intro": {
+      "value": "Replay puzzle intro",
+      "status": "needs_review",
+      "sourceHash": "78027fe490ccf985"
+    },
     "index.request_a_manufacturing_review": {
       "value": "Demander une évaluation de fabrication",
       "status": "needs_review",
@@ -3285,9 +3290,9 @@
       "sourceHash": "bc19db130213e082"
     },
     "privacy.how_the_web_form_works_2": {
-      "value": "Fonctionnement du formulaire web",
-      "status": "reviewed",
-      "sourceHash": "43e60c675ce6d04c"
+      "value": "How the web forms work",
+      "status": "needs_review",
+      "sourceHash": "0079e5179666be5a"
     },
     "privacy.information_is_kept_only_for_as_long": {
       "value": "Les informations ne sont conservées que le temps raisonnablement nécessaire pour la demande, la relation commerciale, le traitement des litiges et les obligations de conservation applicables. La durée de conservation peut varier selon la nature et l'état du projet.",
@@ -3355,9 +3360,9 @@
       "sourceHash": "a3bbac2687499901"
     },
     "privacy.the_quote_and_contact_forms_prepare_an_2": {
-      "value": "Les formulaires de devis et de contact préparent un e-mail dans votre propre application. Le site ne téléverse ni ne stocke ces informations. Qinyi ne les reçoit qu’après votre vérification et l’envoi de l’e-mail, sauf pour un brief de personnalisation transmis volontairement par l’action de co-création décrite ci-dessus.",
-      "status": "reviewed",
-      "sourceHash": "529053a269caf698"
+      "value": "The quote and contact forms send structured enquiry details to Qinyi's protected business queue. The server records the privacy-notice version and submission time for audit. Optional public-reference files submitted with a quote use the protected upload channel; confidential production files should still be shared only after the recipient and transfer method are confirmed.",
+      "status": "needs_review",
+      "sourceHash": "15e2dded0ce4f99b"
     },
     "privacy.this_notice_explains_what_happens_when_a": {
       "value": "Cet avis explique ce qui se passe lorsqu'un client potentiel ou un contact professionnel envoie une demande ou un projet à Qinyi Printing.",

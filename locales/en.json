@@ -2,7 +2,7 @@
   "locale": "en",
   "languageName": "English",
   "direction": "ltr",
-  "updatedAt": "2026-07-28",
+  "updatedAt": "2026-07-29",
   "messages": {
     "about.a_manufacturing_team_for_custom_paper_products": {
       "value": "A manufacturing team for custom paper products.",
@@ -720,9 +720,9 @@
       "sourceHash": "f97e9da0e3b879f0"
     },
     "contact.prepare_contact_email": {
-      "value": "Prepare contact email",
+      "value": "Submit contact enquiry",
       "status": "source",
-      "sourceHash": "c835173bae1ece7a"
+      "sourceHash": "ad1ddd3b2b5b493b"
     },
     "contact.product_question": {
       "value": "Product question",
@@ -760,9 +760,9 @@
       "sourceHash": "faac2fd130a4370c"
     },
     "contact.this_form_prepares_an_email_in_your": {
-      "value": "This form prepares an email in your own email application. Do not include confidential artwork or production files at this stage.",
+      "value": "This form sends a structured enquiry to Qinyi's protected business queue. Do not include confidential artwork or production files at this stage.",
       "status": "source",
-      "sourceHash": "4275110d5ed24ad9"
+      "sourceHash": "d8f7745ea4fa51f4"
     },
     "contact.topic": {
       "value": "Topic",
@@ -2469,6 +2469,11 @@
       "status": "source",
       "sourceHash": "9c912597d27011ed"
     },
+    "index.replay_puzzle_intro": {
+      "value": "Replay puzzle intro",
+      "status": "source",
+      "sourceHash": "78027fe490ccf985"
+    },
     "index.request_a_manufacturing_review": {
       "value": "Request a manufacturing review",
       "status": "source",
@@ -3285,9 +3290,9 @@
       "sourceHash": "bc19db130213e082"
     },
     "privacy.how_the_web_form_works_2": {
-      "value": "How the web form works",
+      "value": "How the web forms work",
       "status": "source",
-      "sourceHash": "43e60c675ce6d04c"
+      "sourceHash": "0079e5179666be5a"
     },
     "privacy.information_is_kept_only_for_as_long": {
       "value": "Information is kept only for as long as reasonably needed for the enquiry, business relationship, dispute handling and applicable record-keeping obligations. Retention can vary by the nature and status of the project.",
@@ -3355,9 +3360,9 @@
       "sourceHash": "a3bbac2687499901"
     },
     "privacy.the_quote_and_contact_forms_prepare_an_2": {
-      "value": "The quote and contact forms prepare an email in your own email application. The website does not upload or store those form entries. Information is received by Qinyi only when you review and send the email, except for a customization brief deliberately sent through the human co-creation action described above.",
+      "value": "The quote and contact forms send structured enquiry details to Qinyi's protected business queue. The server records the privacy-notice version and submission time for audit. Optional public-reference files submitted with a quote use the protected upload channel; confidential production files should still be shared only after the recipient and transfer method are confirmed.",
       "status": "source",
-      "sourceHash": "529053a269caf698"
+      "sourceHash": "15e2dded0ce4f99b"
     },
     "privacy.this_notice_explains_what_happens_when_a": {
       "value": "This notice explains what happens when a prospective customer or business contact sends Qinyi Printing an enquiry or project material.",

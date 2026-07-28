@@ -167,15 +167,29 @@
       </div>
     </div>
 
-    <nav class="mobile-bottom-nav mobile-bottom-nav--admin" style="--mobile-nav-count:7" aria-label="移动端主要导航">
+    <nav class="mobile-bottom-nav mobile-bottom-nav--admin" style="--mobile-nav-count:5" aria-label="移动端主要导航">
       <button type="button" data-nav="dashboard" data-title="工作台"><span class="nav-icon">首</span><span>工作台</span></button>
       <button type="button" data-nav="sessions" data-title="实时会话"><span class="nav-icon">聊</span><span>会话</span></button>
+      <button type="button" data-nav="orders" data-title="订单管理"><span class="nav-icon">单</span><span>订单</span></button>
       <button type="button" data-nav="content" data-title="网站内容"><span class="nav-icon">文</span><span>内容</span></button>
-      <button type="button" data-nav="analytics" data-title="访问与转化"><span class="nav-icon">数</span><span>数据</span></button>
-      <button type="button" data-nav="seo" data-title="SEO与GEO"><span class="nav-icon">搜</span><span>SEO</span></button>
-      <button type="button" data-nav="schedule" data-title="排班与值班"><span class="nav-icon">班</span><span>值班</span></button>
-      <button type="button" data-nav="rules" data-title="客服规则"><span class="nav-icon">规</span><span>规则</span></button>
+      <button type="button" data-mobile-more aria-expanded="false" aria-controls="adminMobileMore"><span class="nav-icon">⋯</span><span>更多</span></button>
     </nav>
+    <div class="mobile-more-sheet" id="adminMobileMore" data-mobile-more-sheet hidden>
+      <button class="mobile-more-scrim" type="button" data-mobile-more-close aria-label="关闭更多功能"></button>
+      <section role="dialog" aria-modal="true" aria-label="管理员更多功能">
+        <header><strong>更多功能</strong><button type="button" data-mobile-more-close aria-label="关闭更多功能">×</button></header>
+        <div class="mobile-more-grid">
+          <button type="button" data-nav="important" data-title="重要信息"><span>要</span>重要信息</button>
+          <button type="button" data-nav="analytics" data-title="访问与转化"><span>数</span>访问与转化</button>
+          <button type="button" data-nav="seo" data-title="SEO与GEO"><span>搜</span>SEO与GEO</button>
+          <button type="button" data-nav="schedule" data-title="排班与值班"><span>班</span>排班与值班</button>
+          <button type="button" data-nav="profile" data-title="我的账号"><span>我</span>我的账号</button>
+          <button type="button" data-nav="notifications" data-title="通知设置"><span>铃</span>通知设置</button>
+          <button type="button" data-nav="rules" data-title="客服规则"><span>规</span>客服规则</button>
+          <button type="button" data-nav="audit" data-title="操作记录"><span>记</span>操作记录</button>
+        </div>
+      </section>
+    </div>
     <div class="ops-toast" id="opsToast" role="status" aria-live="polite" hidden></div>
     <script src="./operations-config.js"></script>
     <script src="./operations-common.js"></script>
