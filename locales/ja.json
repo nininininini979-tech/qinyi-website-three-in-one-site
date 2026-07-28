@@ -1,0 +1,5318 @@
+{
+  "locale": "ja",
+  "languageName": "日本語",
+  "direction": "ltr",
+  "updatedAt": "2026-07-27",
+  "messages": {
+    "about.a_manufacturing_team_for_custom_paper_products": {
+      "value": "カスタム紙製品の生産チームについて",
+      "status": "needs_review",
+      "sourceHash": "73d01dfab56e6ee4"
+    },
+    "about.about_qinyi": {
+      "value": "Qinyi Printingについて",
+      "status": "needs_review",
+      "sourceHash": "583a24fd3cbf68ef"
+    },
+    "about.about_qinyi_dongguan_paper_product_manufacturer": {
+      "value": "Qinyi Printing | 東莞紙製品メーカー",
+      "status": "needs_review",
+      "sourceHash": "087efa71ac13a31b"
+    },
+    "about.brand": {
+      "value": "ブランド",
+      "status": "needs_review",
+      "sourceHash": "090ed4316f1d99fd"
+    },
+    "about.bring_product_components_instructions_and_packaging_into": {
+      "value": "組み立てられた商品の部品、手順書、包装を合意されたパッケージ形式に取り込む",
+      "status": "needs_review",
+      "sourceHash": "e711496de2a21ad0"
+    },
+    "about.chashan_dongguan": {
+      "value": "チャシャン，東莞",
+      "status": "needs_review",
+      "sourceHash": "c8c12701d8316d89"
+    },
+    "about.coinshin": {
+      "value": "Coinshin / 可燊礼品",
+      "status": "needs_review",
+      "sourceHash": "845917a49ab96912"
+    },
+    "about.coinshin_gift_brand_launched_in_2020": {
+      "value": "2020年に Coinshin の贈り物ブランドが発表されました",
+      "status": "needs_review",
+      "sourceHash": "171909114ba50bc5"
+    },
+    "about.company_profile": {
+      "value": "会社の概要",
+      "status": "needs_review",
+      "sourceHash": "cd9a67fca2a5477e"
+    },
+    "about.contact_qinyi": {
+      "value": "Qinyi に連絡する",
+      "status": "needs_review",
+      "sourceHash": "dd4ca363e97795b5"
+    },
+    "about.contact_the_company": {
+      "value": "会社について",
+      "status": "needs_review",
+      "sourceHash": "4aaa2c05b5f7f95c"
+    },
+    "about.coordinate_prepress_printing_tooling_die_cutting_and": {
+      "value": "印前、印刷、工具、型抜きと表面加工の総合的な協力",
+      "status": "needs_review",
+      "sourceHash": "bd5b2558d1b65c32"
+    },
+    "about.creative_technical_and_commercial_decisions_move_together": {
+      "value": "創造的、技術的、商業的な決定が一緒に進む。",
+      "status": "needs_review",
+      "sourceHash": "e86e011077966c8f"
+    },
+    "about.custom_puzzles_and_printed_paper_products_displayed": {
+      "value": "Qinyi showroomで展示されるカスタムパズルと印刷紙製品",
+      "status": "needs_review",
+      "sourceHash": "fd6c31603e93cffc"
+    },
+    "about.deliver": {
+      "value": "発送",
+      "status": "needs_review",
+      "sourceHash": "a62b8fdf7f62ef72"
+    },
+    "about.dongguan_qinyi_co_ltd": {
+      "value": "Dongguan Qinyi Printing Co., Ltd.",
+      "status": "needs_review",
+      "sourceHash": "ffbc239a8f8e7186"
+    },
+    "about.dongguan_qinyi_co_ltd_uses_qinyi_as": {
+      "value": "Dongguan Qinyi Printing Co., Ltd.は、英語の会社名としてQinyi Printingを使用しています。Coinshin / 可燊礼品は、2020年から展開しているクリエイティブな紙製ギフトのブランドです。",
+      "status": "needs_review",
+      "sourceHash": "f88f04f011880505"
+    },
+    "about.dongguan_qinyi_co_ltd_was_established_in": {
+      "value": "Dongguan Qinyi Printing Co., Ltd.は1998年に設立され、中国・東莞に約5,000m²の紙製品工場を構え、80名以上のスタッフが在籍しています。",
+      "status": "needs_review",
+      "sourceHash": "a722a31ed8d118fc"
+    },
+    "about.each_project_begins_with_its_audience_intended": {
+      "value": "每个项目始于其受众、预期用途、数量、目标市场和时间。",
+      "status": "needs_review",
+      "sourceHash": "afd7a4dc5e8d9273"
+    },
+    "about.explore_product_range": {
+      "value": "製品ラインナップを探索",
+      "status": "needs_review",
+      "sourceHash": "d1d50b2cbac7497b"
+    },
+    "about.exterior_of_qinyi_s_factory_in_dongguan": {
+      "value": "Qinyi Printingの東莞工場外観（広東省）",
+      "status": "needs_review",
+      "sourceHash": "faf47884722ebe10"
+    },
+    "about.from_artwork_to_a_finished_object": {
+      "value": "アートワークから完成品まで",
+      "status": "needs_review",
+      "sourceHash": "9f851a6f011f9c62"
+    },
+    "about.from_prepress_and_printing_to_die_cutting": {
+      "value": "プレプリントと印刷から型抜き、仕上げ、手作業工程、梱包までの連携生産段階が、アートワークを先導し、複数の部品で構成される多機能製品の一つのプロジェクト要件に応じて提供されます。",
+      "status": "needs_review",
+      "sourceHash": "1ebbc19cc3eca6b8"
+    },
+    "about.identity_brand": {
+      "value": "アイデンティティとブランド",
+      "status": "needs_review",
+      "sourceHash": "36fc2ce414144131"
+    },
+    "about.location": {
+      "value": "場所",
+      "status": "needs_review",
+      "sourceHash": "15b61974b2707a7b"
+    },
+    "about.manufacture": {
+      "value": "生産",
+      "status": "needs_review",
+      "sourceHash": "8f1f17218cb16cb4"
+    },
+    "about.no_10_jianmin_1st_road_shangyuan_village": {
+      "value": "中国广东省东莞市沙田镇上渊村第10号101国道",
+      "status": "needs_review",
+      "sourceHash": "36aa73125c99ac2d"
+    },
+    "about.paper_product_manufacturing_since_1998": {
+      "value": "紙製品の生産は1998年から開始されています。",
+      "status": "needs_review",
+      "sourceHash": "b90a6c653dea1a5b"
+    },
+    "about.print_converting": {
+      "value": "印刷と変換",
+      "status": "needs_review",
+      "sourceHash": "507475324bb30fd9"
+    },
+    "about.qinyi_coinshin": {
+      "value": "Qinyi Printing / Coinshin",
+      "status": "needs_review",
+      "sourceHash": "d6aab0159c72e0fc"
+    },
+    "about.qinyi_develops_and_manufactures_custom_puzzles_paper": {
+      "value": "Qinyi Printing develops and manufactures custom puzzles, paper games, cards, and printed packaging in Dongguan, China. The approximately 5,000 m² operation has more than 80 team members.",
+      "status": "needs_review",
+      "sourceHash": "acc43608f0aa6d5a"
+    },
+    "about.qinyi_is_located_at_no_10_jianmin": {
+      "value": "Qinyi Printingは中国広東省東莞市茶山鎮上元村建民一路10号に所在しています。製品詳細を以下に送付してください",
+      "status": "needs_review",
+      "sourceHash": "341301e4c4fac022"
+    },
+    "about.review_factory_scope": {
+      "value": "工場の範囲を確認",
+      "status": "needs_review",
+      "sourceHash": "5193c6ea6e1175d5"
+    },
+    "about.talk_to_the_manufacturing_team": {
+      "value": "製造チームと話す。",
+      "status": "needs_review",
+      "sourceHash": "19b639a6c54e441a"
+    },
+    "about.the_gift_products_identity_for_puzzles_games": {
+      "value": "2020年よりパズル、ゲーム、クリエイティブな紙製品のギフト製品アイデンティティ。",
+      "status": "needs_review",
+      "sourceHash": "4dc69f72661bcbe3"
+    },
+    "about.the_manufacturing_business_for_printing_converting_assembly": {
+      "value": "印刷、加工、組立、包装サービスの製造事業。",
+      "status": "needs_review",
+      "sourceHash": "91c0d74a335f634d"
+    },
+    "about.the_product_range_includes_jigsaw_and_3d": {
+      "value": "製品範囲にはジグソーパズル、3Dペーパーパズル、ボードゲーム、カードゲーム、教育用紙製品、カラーボックス、ギフトボックス、紙袋、タグ、説明書が含まれます。",
+      "status": "needs_review",
+      "sourceHash": "b76b9a242f808b24"
+    },
+    "about.translate_supplied_artwork_references_and_product_goals": {
+      "value": "提供されたアートワーク、参考資料、製品目標を製造可能な形式に変換します。",
+      "status": "needs_review",
+      "sourceHash": "484e95c9591f0d18"
+    },
+    "about.verified_company_facts": {
+      "value": "確認済みの会社情報",
+      "status": "needs_review",
+      "sourceHash": "d6c1c08e812c575e"
+    },
+    "about.visit_or_start_with_a_project_brief": {
+      "value": "プロジェクト要約またはプロジェクト要約から始めます。",
+      "status": "needs_review",
+      "sourceHash": "79873b88fc8ff184"
+    },
+    "about.what_we_make": {
+      "value": "私たちが作る",
+      "status": "needs_review",
+      "sourceHash": "0edbdcc8640fe963"
+    },
+    "about.working_model": {
+      "value": "作業モデル",
+      "status": "needs_review",
+      "sourceHash": "b44f3b00d878f483"
+    },
+    "common.about": {
+      "value": "会社概要",
+      "status": "needs_review",
+      "sourceHash": "4efca0d10c5feb8e"
+    },
+    "common.artists_galleries_museums": {
+      "value": "アーティスト、ギャラリーと美術館",
+      "status": "needs_review",
+      "sourceHash": "822a65f5a27d9c13"
+    },
+    "common.artwork_structure": {
+      "value": "作品構造",
+      "status": "needs_review",
+      "sourceHash": "2c908cadfa3204b7"
+    },
+    "common.assembly_packing": {
+      "value": "組立と梱包",
+      "status": "needs_review",
+      "sourceHash": "61223e5fb8862c33"
+    },
+    "common.buyer_faq": {
+      "value": "購入者FAQ",
+      "status": "needs_review",
+      "sourceHash": "5bee56f7f11b9ab1"
+    },
+    "common.can_qinyi_support_a_project_from_concept": {
+      "value": "コンセプトからパッキングまでQinyiがサポートできますか？",
+      "status": "needs_review",
+      "sourceHash": "c0a7b6342aa8990a"
+    },
+    "common.coinshin": {
+      "value": "Coinshin",
+      "status": "needs_review",
+      "sourceHash": "9bdc3e411e7045b1"
+    },
+    "common.coinshin_creative_paper_goods": {
+      "value": "Coinshinの創造的な紙商品",
+      "status": "needs_review",
+      "sourceHash": "573c265d6f198590"
+    },
+    "common.cultural_puzzle_gift_set_with_illustrated_packaging": {
+      "value": "文化 Puzzle 贈品セット に 描画された 包装",
+      "status": "needs_review",
+      "sourceHash": "aa0b3920730be747"
+    },
+    "common.custom_puzzles_paper_games_and_printed_gift": {
+      "value": "カスタムパズル、ペーパーゲーム、印刷ギフト包装を中国東莞で開発・製造。",
+      "status": "needs_review",
+      "sourceHash": "e65a471be4576e0d"
+    },
+    "common.custom_solutions": {
+      "value": "カスタムソリューション",
+      "status": "needs_review",
+      "sourceHash": "71414fb92a52d351"
+    },
+    "common.customization_quote": {
+      "value": "カスタマイズと見積もり",
+      "status": "reviewed",
+      "sourceHash": "cf8ce130fa26ee10"
+    },
+    "common.deutsch": {
+      "value": "Deutsch",
+      "status": "needs_review",
+      "sourceHash": "801cfe0fa1182664"
+    },
+    "common.develop": {
+      "value": "開発",
+      "status": "needs_review",
+      "sourceHash": "7576b5e7f2107fbc"
+    },
+    "common.dongguan_guangdong_china": {
+      "value": "中国広東省東莞市",
+      "status": "needs_review",
+      "sourceHash": "3b3baf0d0d616c1b"
+    },
+    "common.download_capability_matrix": {
+      "value": "ダウンロード能力マトリクス",
+      "status": "needs_review",
+      "sourceHash": "fb626dfb6f274250"
+    },
+    "common.education_children": {
+      "value": "教育 & 子どもたち",
+      "status": "needs_review",
+      "sourceHash": "2f26804fba8623a9"
+    },
+    "common.email": {
+      "value": "メール",
+      "status": "needs_review",
+      "sourceHash": "969ccbd3cf6300ec"
+    },
+    "common.english": {
+      "value": "英語",
+      "status": "needs_review",
+      "sourceHash": "ba118bf7fc9c1aed"
+    },
+    "common.es": {
+      "value": "ES",
+      "status": "needs_review",
+      "sourceHash": "ce344a418127968f"
+    },
+    "common.espa_ol": {
+      "value": "Español",
+      "status": "needs_review",
+      "sourceHash": "94b382b61b9dde0f"
+    },
+    "common.explore": {
+      "value": "探索",
+      "status": "needs_review",
+      "sourceHash": "3b73900b8d29f963"
+    },
+    "common.floating.quote": {
+      "value": "見積もりを依頼",
+      "status": "reviewed",
+      "sourceHash": "724f2336bf690001"
+    },
+    "common.form.default_product": {
+      "value": "カスタマイズされた紙製品",
+      "status": "needs_review",
+      "sourceHash": "b256be5bd56c9f76"
+    },
+    "common.form.enquiry_title": {
+      "value": "Qinyi Printing お問い合わせ {reference}",
+      "status": "needs_review",
+      "sourceHash": "676a71a47307a4e3"
+    },
+    "common.form.not_specified": {
+      "value": "未指定",
+      "status": "needs_review",
+      "sourceHash": "f850f10e90e92461"
+    },
+    "common.form.reference_created": {
+      "value": "参考 {reference} を作成しました。次にメールアプリケーションを開きます；問い合わせは送信後に入力されます。",
+      "status": "needs_review",
+      "sourceHash": "020f05ef3303fb56"
+    },
+    "common.format": {
+      "value": "フォーマット",
+      "status": "needs_review",
+      "sourceHash": "2f343666aaa88c44"
+    },
+    "common.fran_ais": {
+      "value": "フランス語",
+      "status": "needs_review",
+      "sourceHash": "e495d53b967a7b04"
+    },
+    "common.gallery": {
+      "value": "Galery",
+      "status": "needs_review",
+      "sourceHash": "352cfc749e55222e"
+    },
+    "common.guangdong": {
+      "value": "广东",
+      "status": "needs_review",
+      "sourceHash": "4ffee2d54b3a15c1"
+    },
+    "common.home": {
+      "value": "ホーム",
+      "status": "needs_review",
+      "sourceHash": "3a78695388b38b5c"
+    },
+    "common.i_have_read_the": {
+      "value": "この情報を読みました。",
+      "status": "needs_review",
+      "sourceHash": "6b1badac9c85614a"
+    },
+    "common.industries": {
+      "value": "業界",
+      "status": "needs_review",
+      "sourceHash": "a8da99328cf977fa"
+    },
+    "common.insights": {
+      "value": "洞察",
+      "status": "needs_review",
+      "sourceHash": "2a932f90172e99ea"
+    },
+    "common.language": {
+      "value": "言語",
+      "status": "needs_review",
+      "sourceHash": "a4fe65264ef7dbb3"
+    },
+    "common.language.label": {
+      "value": "サイトの言語",
+      "status": "needs_review",
+      "sourceHash": "dcdd2d4c15caffd2"
+    },
+    "common.manufacturing": {
+      "value": "製造",
+      "status": "needs_review",
+      "sourceHash": "c6838ed989fd7d93"
+    },
+    "common.materials": {
+      "value": "材料",
+      "status": "reviewed",
+      "sourceHash": "fd10a146e9625bfd"
+    },
+    "common.menu.close": {
+      "value": "メニューを閉じる",
+      "status": "needs_review",
+      "sourceHash": "6ccd5c7856042d36"
+    },
+    "common.menu.open": {
+      "value": "開くメニュー",
+      "status": "needs_review",
+      "sourceHash": "b40b3713b43dc702"
+    },
+    "common.ms_xiao": {
+      "value": "小xiao",
+      "status": "needs_review",
+      "sourceHash": "b0e857b0af3be591"
+    },
+    "common.name": {
+      "value": "名前",
+      "status": "needs_review",
+      "sourceHash": "dcd1d5223f73b3a9"
+    },
+    "common.nav.company": {
+      "value": "会社情報",
+      "status": "needs_review",
+      "sourceHash": "de4743c879734dc3"
+    },
+    "common.nav.contact": {
+      "value": "お問い合わせ",
+      "status": "needs_review",
+      "sourceHash": "2b5c3d26721ae9c3"
+    },
+    "common.nav.custom_quote": {
+      "value": "カスタマイズ・見積もり依頼",
+      "status": "reviewed",
+      "sourceHash": "bbf75a9ec534e238"
+    },
+    "common.nav.manufacturing": {
+      "value": "製造・品質管理",
+      "status": "needs_review",
+      "sourceHash": "00323f62107bd572"
+    },
+    "common.nav.privacy": {
+      "value": "プライバシー・ファイル保護",
+      "status": "needs_review",
+      "sourceHash": "4c95d0efd3badc30"
+    },
+    "common.nav.products": {
+      "value": "製品",
+      "status": "needs_review",
+      "sourceHash": "4edc8bfafc6bd936"
+    },
+    "common.nav.projects": {
+      "value": "導入事例",
+      "status": "needs_review",
+      "sourceHash": "545fab8e6a83ecec"
+    },
+    "common.nav.quote": {
+      "value": "見積もりを依頼",
+      "status": "reviewed",
+      "sourceHash": "724f2336bf690001"
+    },
+    "common.nav.trade": {
+      "value": "OEM・取引パートナーシップ",
+      "status": "needs_review",
+      "sourceHash": "8618b518cedc08b3"
+    },
+    "common.no_10_jianmin_1st_road_shangyuan_village": {
+      "value": "中国広東省東莞市茶山鎮上元村建民一路10号",
+      "status": "needs_review",
+      "sourceHash": "2906014578fa3553"
+    },
+    "common.no_10_jianmin_1st_road_shangyuan_village_2": {
+      "value": "建民一路10号、上元村、茶山鎮",
+      "status": "needs_review",
+      "sourceHash": "e3efb6276cfdf649"
+    },
+    "common.oem_trade": {
+      "value": "OEM & 貿易",
+      "status": "needs_review",
+      "sourceHash": "482b1ca4c1185c5d"
+    },
+    "common.optional": {
+      "value": "(任意)",
+      "status": "needs_review",
+      "sourceHash": "0059798b7f7023e4"
+    },
+    "common.prepress": {
+      "value": "プリプレス",
+      "status": "needs_review",
+      "sourceHash": "b9a25622911d7542"
+    },
+    "common.primary_navigation": {
+      "value": "メインナビゲーション",
+      "status": "needs_review",
+      "sourceHash": "e1bfe7eccc45465f"
+    },
+    "common.printing": {
+      "value": "印刷",
+      "status": "needs_review",
+      "sourceHash": "c0f169737344e28e"
+    },
+    "common.privacy_file_security_notice": {
+      "value": "プライバシーやファイルセキュリティの通知",
+      "status": "needs_review",
+      "sourceHash": "12b72c2ff856a2fc"
+    },
+    "common.product_gallery": {
+      "value": "製品ギャラリー",
+      "status": "needs_review",
+      "sourceHash": "06b7aa5d7c3fdcf6"
+    },
+    "common.product_specifications_and_document_scope_are_confirmed": {
+      "value": "プロジェクトレビュー中に製品仕様と文書範囲の確認が行われています。",
+      "status": "needs_review",
+      "sourceHash": "d2ded14d37ec627b"
+    },
+    "common.production_files": {
+      "value": "生産ファイル",
+      "status": "needs_review",
+      "sourceHash": "bc0646a1545c4065"
+    },
+    "common.projects": {
+      "value": "プロジェクト",
+      "status": "needs_review",
+      "sourceHash": "04e2a9728af75840"
+    },
+    "common.qinyi": {
+      "value": "Qinyi Printing",
+      "status": "needs_review",
+      "sourceHash": "84a6bd96758b5dee"
+    },
+    "common.qinyi_2": {
+      "value": "Qinyi Printing。",
+      "status": "needs_review",
+      "sourceHash": "736f5788e8ebc28b"
+    },
+    "common.qinyi_all_rights_reserved": {
+      "value": "Qinyi Printing. 所有权利保留。",
+      "status": "needs_review",
+      "sourceHash": "60214f09ff4e9b7b"
+    },
+    "common.qinyi_home": {
+      "value": "Qinyi Printing ホーム",
+      "status": "needs_review",
+      "sourceHash": "fad4e208d7c0450b"
+    },
+    "common.quality": {
+      "value": "品質",
+      "status": "needs_review",
+      "sourceHash": "1b2c08a8733d7ff1"
+    },
+    "common.request_an_nda": {
+      "value": "NDAを要求します",
+      "status": "needs_review",
+      "sourceHash": "a42c1070c7c308a1"
+    },
+    "common.rfq.production_brief": {
+      "value": "RFQ / 生産要望",
+      "status": "needs_review",
+      "sourceHash": "e51c3c7f18e459d0"
+    },
+    "common.skip_to_content": {
+      "value": "コンテンツをスキップする",
+      "status": "needs_review",
+      "sourceHash": "ac576a66d4563e60"
+    },
+    "common.solutions": {
+      "value": "ソリューション",
+      "status": "needs_review",
+      "sourceHash": "900fe12faa2658c3"
+    },
+    "common.specifications_subject_to_project_review": {
+      "value": "プロジェクトレビューに合わせたスペック",
+      "status": "needs_review",
+      "sourceHash": "0b81b84af0a03417"
+    },
+    "common.start_the_two_step_rfq": {
+      "value": "二ステップのRFQ開始",
+      "status": "needs_review",
+      "sourceHash": "a6b60ed7683bc90f"
+    },
+    "common.tooling": {
+      "value": "工具",
+      "status": "needs_review",
+      "sourceHash": "71ef53929575897b"
+    },
+    "common.tourism_cultural_gifts": {
+      "value": "観光と文化品",
+      "status": "needs_review",
+      "sourceHash": "26bc9eece67b8943"
+    },
+    "common.trade": {
+      "value": "貿易",
+      "status": "needs_review",
+      "sourceHash": "9709653fc80ceb83"
+    },
+    "common.trade_manufacturing": {
+      "value": "製造貿易",
+      "status": "needs_review",
+      "sourceHash": "cf300a9801b7391b"
+    },
+    "common.what_products_does_qinyi_manufacture": {
+      "value": "Qinyiはどのような製品を製造しますか？",
+      "status": "needs_review",
+      "sourceHash": "bf6407e7bf9d31ec"
+    },
+    "common.which_files_should_i_send": {
+      "value": "あなたが送信すべきファイルは何ですか？",
+      "status": "needs_review",
+      "sourceHash": "e94cb1ff46787f00"
+    },
+    "common.work_email": {
+      "value": "業務メール",
+      "status": "needs_review",
+      "sourceHash": "932f815786ae75ab"
+    },
+    "contact.address": {
+      "value": "住所",
+      "status": "needs_review",
+      "sourceHash": "56ef8f20955f2564"
+    },
+    "contact.and_consent_to_qinyi_using_these_details": {
+      "value": "Qinyi Printing をこれらの詳細を使用して私の問い合わせに応答するよう同意します。",
+      "status": "needs_review",
+      "sourceHash": "08a43622d261f3fa"
+    },
+    "contact.company_contact": {
+      "value": "会社の連絡先",
+      "status": "needs_review",
+      "sourceHash": "9bac69c04c0d90e6"
+    },
+    "contact.company_verification": {
+      "value": "会社の確認",
+      "status": "needs_review",
+      "sourceHash": "a8db0717d73cd78b"
+    },
+    "contact.compliance_document_request": {
+      "value": "法令文書の要求",
+      "status": "needs_review",
+      "sourceHash": "11226a9e466de020"
+    },
+    "contact.contact_qinyi": {
+      "value": "Qinyi Printing に連絡してください",
+      "status": "needs_review",
+      "sourceHash": "9b00cda5bd81a108"
+    },
+    "contact.contact_qinyi_dongguan_qinyi_co_ltd_about": {
+      "value": "Qinyi Printing, DONGGUAN QINYI PRINTING CO., LTD. のための特別なパズル、紙ゲーム、カード、印刷包装に関するご質問について",
+      "status": "needs_review",
+      "sourceHash": "b2d5fb828624cf9c"
+    },
+    "contact.contact_qinyi_in_dongguan_china": {
+      "value": "中国・東莞のQinyi Printingへのお問い合わせ",
+      "status": "needs_review",
+      "sourceHash": "5d6b0b7ba07d675c"
+    },
+    "contact.contact_the_manufacturing_team": {
+      "value": "製造チームに連絡してください",
+      "status": "needs_review",
+      "sourceHash": "0bae0f43aa92f910"
+    },
+    "contact.country": {
+      "value": "国",
+      "status": "needs_review",
+      "sourceHash": "701d021d08c54579"
+    },
+    "contact.dongguan_china": {
+      "value": "中国东莞市",
+      "status": "needs_review",
+      "sourceHash": "3f79e9ff28682bc7"
+    },
+    "contact.factory_location": {
+      "value": "工厂位置",
+      "status": "needs_review",
+      "sourceHash": "f35574c0e0182dcc"
+    },
+    "contact.factory_visit": {
+      "value": "工厂访问",
+      "status": "needs_review",
+      "sourceHash": "c3d73b4b66d43974"
+    },
+    "contact.for_a_manufacturing_quotation_use_the_two": {
+      "value": "制造报价，使用两步RFQ。对于公司、文档或一般产品问题，请直接联系小赵。",
+      "status": "needs_review",
+      "sourceHash": "928e36c51f2e739a"
+    },
+    "contact.legal_name": {
+      "value": "法律名称",
+      "status": "needs_review",
+      "sourceHash": "07f883c3b610740f"
+    },
+    "contact.manufacturing_enquiry": {
+      "value": "制造询价",
+      "status": "needs_review",
+      "sourceHash": "2b084ce1df0f6f0f"
+    },
+    "contact.manufacturing_in_dongguan": {
+      "value": "在东莞制造",
+      "status": "needs_review",
+      "sourceHash": "5cf1e4e6abe6509f"
+    },
+    "contact.message": {
+      "value": "消息",
+      "status": "needs_review",
+      "sourceHash": "2f77668a9dfbf8d5"
+    },
+    "contact.other": {
+      "value": "其他",
+      "status": "needs_review",
+      "sourceHash": "f97e9da0e3b879f0"
+    },
+    "contact.prepare_contact_email": {
+      "value": "準備連絡電郵",
+      "status": "needs_review",
+      "sourceHash": "c835173bae1ece7a"
+    },
+    "contact.product_question": {
+      "value": "產品問卷",
+      "status": "needs_review",
+      "sourceHash": "ac3a36a0bb862629"
+    },
+    "contact.qinyi_factory_exterior_in_dongguan": {
+      "value": "Qinyi Printing 厂場在東莞市的東莞鎮",
+      "status": "needs_review",
+      "sourceHash": "eab4c374d83517d6"
+    },
+    "contact.select_a_topic": {
+      "value": "選擇主題",
+      "status": "needs_review",
+      "sourceHash": "18c35f29f2dcd7c3"
+    },
+    "contact.start_a_manufacturing_rfq": {
+      "value": "開始製造RFQ",
+      "status": "needs_review",
+      "sourceHash": "bf56d21a70815c06"
+    },
+    "contact.telephone": {
+      "value": "電話",
+      "status": "needs_review",
+      "sourceHash": "84ecd6328b8064e6"
+    },
+    "contact.tell_us_what_you_need_and_how": {
+      "value": "告訴我們你需要什麼，以及我們可以如何回應",
+      "status": "needs_review",
+      "sourceHash": "0ccb474091094f97"
+    },
+    "contact.the_factory_is_located_in_chashan_town": {
+      "value": "該廠位於東莞市的東莞鎮，屬於珠江三角洲製造業區內。提前與團隊安排訪問。",
+      "status": "needs_review",
+      "sourceHash": "faac2fd130a4370c"
+    },
+    "contact.this_form_prepares_an_email_in_your": {
+      "value": "此表單準備您的電郵，請勿在此階段包含機密作品或生產文件",
+      "status": "needs_review",
+      "sourceHash": "4275110d5ed24ad9"
+    },
+    "contact.topic": {
+      "value": "主題",
+      "status": "needs_review",
+      "sourceHash": "7e61847d61d65d9e"
+    },
+    "customizer.action.back": {
+      "value": "戻る",
+      "status": "reviewed",
+      "sourceHash": "76900f1bfd16c8d4"
+    },
+    "customizer.action.confirm": {
+      "value": "選択を確定",
+      "status": "reviewed",
+      "sourceHash": "9ce9c379f3f4b337"
+    },
+    "customizer.action.edit": {
+      "value": "編集",
+      "status": "reviewed",
+      "sourceHash": "464c4ffd019e1e96"
+    },
+    "customizer.action.finish": {
+      "value": "コンセプト概要を完成",
+      "status": "reviewed",
+      "sourceHash": "f704e27d24ce5bf8"
+    },
+    "customizer.action.next": {
+      "value": "続ける",
+      "status": "reviewed",
+      "sourceHash": "31fbef162594de01"
+    },
+    "customizer.action.reset": {
+      "value": "選択をリセット",
+      "status": "reviewed",
+      "sourceHash": "a53881ba69df563d"
+    },
+    "customizer.action.start": {
+      "value": "開始",
+      "status": "reviewed",
+      "sourceHash": "e4bb9f1ece9af926"
+    },
+    "customizer.brief.audience": {
+      "value": "対象者",
+      "status": "reviewed",
+      "sourceHash": "685b100332e1d6af"
+    },
+    "customizer.brief.audience_placeholder": {
+      "value": "誰が受け取り、購入し、使用する製品ですか？",
+      "status": "reviewed",
+      "sourceHash": "718f247c7bb85722"
+    },
+    "customizer.brief.budget": {
+      "value": "参考予算",
+      "status": "reviewed",
+      "sourceHash": "8549fe0c32f90bbe"
+    },
+    "customizer.brief.budget_placeholder": {
+      "value": "予算範囲と通貨を入力",
+      "status": "reviewed",
+      "sourceHash": "54f6a2ec160833c8"
+    },
+    "customizer.brief.delivery": {
+      "value": "希望納期",
+      "status": "reviewed",
+      "sourceHash": "48abddfa2566f81c"
+    },
+    "customizer.brief.delivery_placeholder": {
+      "value": "目標日または期間を入力",
+      "status": "reviewed",
+      "sourceHash": "f9435a85abf69ddf"
+    },
+    "customizer.brief.intro": {
+      "value": "概算情報でも役立ちます。未確定項目は相談事項として残せます。",
+      "status": "reviewed",
+      "sourceHash": "bd02dd3cced86b00"
+    },
+    "customizer.brief.notes": {
+      "value": "補足事項",
+      "status": "reviewed",
+      "sourceHash": "5871e1abaa639712"
+    },
+    "customizer.brief.notes_placeholder": {
+      "value": "寸法、包装、ファイル要件、その他の詳細を入力",
+      "status": "reviewed",
+      "sourceHash": "1d3cc2ac67057106"
+    },
+    "customizer.brief.quantity": {
+      "value": "数量の目安",
+      "status": "reviewed",
+      "sourceHash": "cb0e79f4d8d3c34f"
+    },
+    "customizer.brief.quantity_placeholder": {
+      "value": "おおよその数量を入力",
+      "status": "reviewed",
+      "sourceHash": "7f166f6508c82ea7"
+    },
+    "customizer.brief.reference": {
+      "value": "スタイル参考",
+      "status": "reviewed",
+      "sourceHash": "880786a97e903197"
+    },
+    "customizer.brief.reference_placeholder": {
+      "value": "スタイルを説明するか、公開可能な参考リンクを追加",
+      "status": "reviewed",
+      "sourceHash": "9193edc379a9ba67"
+    },
+    "customizer.brief.title": {
+      "value": "プロジェクトの希望情報",
+      "status": "reviewed",
+      "sourceHash": "f64732d495f71fc2"
+    },
+    "customizer.brief.use_case": {
+      "value": "用途・利用シーン",
+      "status": "reviewed",
+      "sourceHash": "fdc8eab73a9c0950"
+    },
+    "customizer.brief.use_case_placeholder": {
+      "value": "例：企業ギフト、教育、店頭販売、個人利用",
+      "status": "reviewed",
+      "sourceHash": "b425df88aa51b9a9"
+    },
+    "customizer.complete": {
+      "value": "完了",
+      "status": "reviewed",
+      "sourceHash": "143b270a32602d41"
+    },
+    "customizer.finish.board_description": {
+      "value": "紙らしさが見える温かい手触り",
+      "status": "reviewed",
+      "sourceHash": "7c5babc52618bee3"
+    },
+    "customizer.finish.emboss": {
+      "value": "エンボス・デボス",
+      "status": "reviewed",
+      "sourceHash": "2ac2f3e7a1e8a454"
+    },
+    "customizer.finish.emboss_description": {
+      "value": "浮き出しまたは押し込みによる触覚的な奥行き",
+      "status": "reviewed",
+      "sourceHash": "a1344072151181ce"
+    },
+    "customizer.finish.foil": {
+      "value": "箔押し",
+      "status": "reviewed",
+      "sourceHash": "a2903b0ec16ef8b8"
+    },
+    "customizer.finish.foil_description": {
+      "value": "重要な細部に制御された金属調アクセント",
+      "status": "reviewed",
+      "sourceHash": "2529154a0987bc78"
+    },
+    "customizer.finish.lamination": {
+      "value": "マット・グロスラミネート",
+      "status": "reviewed",
+      "sourceHash": "145850ffec2558c0"
+    },
+    "customizer.finish.lamination_description": {
+      "value": "耐久性のあるマットまたは光沢表面",
+      "status": "reviewed",
+      "sourceHash": "8504b165b8ade421"
+    },
+    "customizer.finish.spot_uv": {
+      "value": "部分 UV",
+      "status": "reviewed",
+      "sourceHash": "911e6c1f3f9a2619"
+    },
+    "customizer.finish.spot_uv_description": {
+      "value": "印刷部分に選択的な光沢コントラスト",
+      "status": "reviewed",
+      "sourceHash": "4467728fb381289d"
+    },
+    "customizer.finish.unsure": {
+      "value": "表面加工は未定",
+      "status": "reviewed",
+      "sourceHash": "dbd32129faa63f33"
+    },
+    "customizer.free_model": {
+      "value": "オープンコンセプト",
+      "status": "reviewed",
+      "sourceHash": "ed2b36c0c6d2cccc"
+    },
+    "customizer.handoff_ready": {
+      "value": "担当者への相談依頼を作成しました：{ticket}",
+      "status": "reviewed",
+      "sourceHash": "67fea34244d06647"
+    },
+    "customizer.home.body": {
+      "value": "製品タイプ、構造、素材、ビジュアルスタイルを選び、相談しながら編集できる初期概要を作成します。",
+      "status": "reviewed",
+      "sourceHash": "f8e8e6e43065d2d4"
+    },
+    "customizer.home.cta": {
+      "value": "カスタマイズを始める",
+      "status": "reviewed",
+      "sourceHash": "dc4313d81678924e"
+    },
+    "customizer.home.eyebrow": {
+      "value": "ガイド付きカスタマイズ",
+      "status": "reviewed",
+      "sourceHash": "f80d654f7a96b53a"
+    },
+    "customizer.home.secondary_cta": {
+      "value": "見積もりフォームへ直接進む",
+      "status": "reviewed",
+      "sourceHash": "49eaeff513cfa46c"
+    },
+    "customizer.home.title": {
+      "value": "まだ具体的な企画がなくても、ひとつのアイデアから始められます。",
+      "status": "reviewed",
+      "sourceHash": "b5724c23db303151"
+    },
+    "customizer.human.failed": {
+      "value": "送信できませんでした。再試行するか、見積もりフォームへ進んでください。",
+      "status": "reviewed",
+      "sourceHash": "742ec913c58aa0de"
+    },
+    "customizer.human.request": {
+      "value": "担当者に企画相談を依頼",
+      "status": "reviewed",
+      "sourceHash": "bd1f92625f3bd20c"
+    },
+    "customizer.human.sending": {
+      "value": "相談依頼を送信しています...",
+      "status": "reviewed",
+      "sourceHash": "b8f4f372213666e9"
+    },
+    "customizer.human.sent": {
+      "value": "相談依頼を送信しました",
+      "status": "reviewed",
+      "sourceHash": "23055c7086f79c66"
+    },
+    "customizer.material.greyboard": {
+      "value": "紙貼りグレーボード",
+      "status": "reviewed",
+      "sourceHash": "b876994ecaa7f417"
+    },
+    "customizer.material.recycled": {
+      "value": "再生紙",
+      "status": "reviewed",
+      "sourceHash": "de5f0927b7c8c8da"
+    },
+    "customizer.material.special_paper": {
+      "value": "ファンシーペーパー・特殊紙",
+      "status": "reviewed",
+      "sourceHash": "39cf1cc501ce0af5"
+    },
+    "customizer.material.unsure": {
+      "value": "素材は未定",
+      "status": "reviewed",
+      "sourceHash": "c925a396530a16cc"
+    },
+    "customizer.model_paper_3d": {
+      "value": "3D 紙製品コンセプト",
+      "status": "reviewed",
+      "sourceHash": "788d8ccf070c769f"
+    },
+    "customizer.model_paper_goods": {
+      "value": "紙製品コンセプト",
+      "status": "reviewed",
+      "sourceHash": "14889fb99ebbb0ce"
+    },
+    "customizer.model_puzzle": {
+      "value": "パズルコンセプト",
+      "status": "reviewed",
+      "sourceHash": "a9775a1f025dd11a"
+    },
+    "customizer.name": {
+      "value": "アイデア・カスタマイズスタジオ",
+      "status": "reviewed",
+      "sourceHash": "a0a63e2ff2bf34f9"
+    },
+    "customizer.open": {
+      "value": "未定",
+      "status": "reviewed",
+      "sourceHash": "ed077f3d8125d60d"
+    },
+    "customizer.page.eyebrow": {
+      "value": "ガイド付きカスタマイズ",
+      "status": "reviewed",
+      "sourceHash": "f80d654f7a96b53a"
+    },
+    "customizer.page.intro": {
+      "value": "製品の方向性を組み立て、作成した概要をそのまま見積もり依頼に引き継げます。",
+      "status": "reviewed",
+      "sourceHash": "341ced65bd204b53"
+    },
+    "customizer.page.title": {
+      "value": "カスタマイズ・見積もり依頼",
+      "status": "reviewed",
+      "sourceHash": "914fa00fd22fe0d9"
+    },
+    "customizer.preview": {
+      "value": "プレビュー：{name}",
+      "status": "reviewed",
+      "sourceHash": "b654b8c2f035bc83"
+    },
+    "customizer.preview.disclaimer": {
+      "value": "この表示はコンセプト確認用であり、量産サンプルまたは確定見積もりではありません。素材、加工、寸法、実現可能性、価格、納期は技術確認後に確定します。",
+      "status": "reviewed",
+      "sourceHash": "37904f64e1571d5d"
+    },
+    "customizer.preview.label": {
+      "value": "コンセプトプレビュー",
+      "status": "reviewed",
+      "sourceHash": "305245dc4d0b1d69"
+    },
+    "customizer.preview.waiting": {
+      "value": "選択内容に合わせてプレビューが変化します。",
+      "status": "reviewed",
+      "sourceHash": "0c9b59fd05330d9f"
+    },
+    "customizer.product.game_packaging": {
+      "value": "紙製ゲーム・ギフトパッケージ",
+      "status": "reviewed",
+      "sourceHash": "80abc0fbdd753ea1"
+    },
+    "customizer.product.game_packaging.help": {
+      "value": "カード、紙製ゲーム、ギフトボックス、または統一したパッケージの方向性です。",
+      "status": "reviewed",
+      "sourceHash": "f918dfabe78fb79f"
+    },
+    "customizer.product.other": {
+      "value": "その他のアイデア",
+      "status": "reviewed",
+      "sourceHash": "fcf8f9c1348b06ae"
+    },
+    "customizer.product.other_help": {
+      "value": "アイデアを自由に記入してください。担当者による企画相談も依頼できます。",
+      "status": "reviewed",
+      "sourceHash": "625fae54bedad1f2"
+    },
+    "customizer.product.other_label": {
+      "value": "アイデアを説明してください",
+      "status": "reviewed",
+      "sourceHash": "57260354e46c06f7"
+    },
+    "customizer.product.other_placeholder": {
+      "value": "作りたいもの、使い方、表現したい雰囲気をお知らせください。",
+      "status": "reviewed",
+      "sourceHash": "293c11f6f332424c"
+    },
+    "customizer.product.paper_3d": {
+      "value": "3D 紙・ボードパズル",
+      "status": "reviewed",
+      "sourceHash": "2e6b0b30a4c5e0ca"
+    },
+    "customizer.product.paper_3d.help": {
+      "value": "印刷した紙・ボード部品を組み立てる立体物です。",
+      "status": "reviewed",
+      "sourceHash": "e1e4369c60d8798d"
+    },
+    "customizer.product.puzzle": {
+      "value": "ジグソーパズル作品",
+      "status": "reviewed",
+      "sourceHash": "b88139a844b20251"
+    },
+    "customizer.product.puzzle.help": {
+      "value": "平面ジグソー、またはビジュアルを主役にしたアートパズル形式です。",
+      "status": "reviewed",
+      "sourceHash": "10052c3003986642"
+    },
+    "customizer.progress": {
+      "value": "4 ステップ中 {current} ステップ目",
+      "status": "reviewed",
+      "sourceHash": "13888e65d912ca4a"
+    },
+    "customizer.quote.continue": {
+      "value": "見積もりフォームへ進む",
+      "status": "reviewed",
+      "sourceHash": "1ea448ef463e1d9e"
+    },
+    "customizer.quote.notice": {
+      "value": "価格は自動計算されません。実現可能性、価格、納期は技術確認後に確定します。",
+      "status": "reviewed",
+      "sourceHash": "1738117808396fb2"
+    },
+    "customizer.quote.prepare": {
+      "value": "見積もり依頼を準備",
+      "status": "reviewed",
+      "sourceHash": "4dc72476c633b6bd"
+    },
+    "customizer.shaped": {
+      "value": "4 項目中 {count} 項目を設定",
+      "status": "reviewed",
+      "sourceHash": "8d51fb1a609d609f"
+    },
+    "customizer.shaped_open": {
+      "value": "4 項目中 {count} 項目を設定・{open} 項目は未定",
+      "status": "reviewed",
+      "sourceHash": "dc5a80986d48c4f6"
+    },
+    "customizer.status.missing": {
+      "value": "続けるには必須項目を入力してください。",
+      "status": "reviewed",
+      "sourceHash": "81ba99d232a725f2"
+    },
+    "customizer.status.optional": {
+      "value": "任意",
+      "status": "reviewed",
+      "sourceHash": "59be71333c960fd0"
+    },
+    "customizer.status.required": {
+      "value": "必須",
+      "status": "reviewed",
+      "sourceHash": "4850b174b713d88c"
+    },
+    "customizer.status.summary_ready": {
+      "value": "概要を確認できます",
+      "status": "reviewed",
+      "sourceHash": "1d260cf23fb46cf7"
+    },
+    "customizer.step.material.help": {
+      "value": "希望する素材と表面加工を選択してください。複数選択や未定のままにすることもできます。",
+      "status": "reviewed",
+      "sourceHash": "15f7f8cf7757417d"
+    },
+    "customizer.step.material.number": {
+      "value": "03 / 素材",
+      "status": "reviewed",
+      "sourceHash": "44209ec2bc2663ea"
+    },
+    "customizer.step.material.title": {
+      "value": "素材と表面加工",
+      "status": "reviewed",
+      "sourceHash": "a9009aa83f05e541"
+    },
+    "customizer.step.product.help": {
+      "value": "アイデアに最も近い出発点を選んでください。詳細は後から追加できます。",
+      "status": "reviewed",
+      "sourceHash": "76ede206e4f6d72a"
+    },
+    "customizer.step.product.number": {
+      "value": "01 / 方向性",
+      "status": "reviewed",
+      "sourceHash": "73db3d0b375247c4"
+    },
+    "customizer.step.product.title": {
+      "value": "製品の方向性",
+      "status": "reviewed",
+      "sourceHash": "f9edf99021c87e0b"
+    },
+    "customizer.step.structure.help": {
+      "value": "最初の構造方向を選択してください。技術的な実現可能性は後で確認します。",
+      "status": "reviewed",
+      "sourceHash": "c02088ee961f4578"
+    },
+    "customizer.step.structure.number": {
+      "value": "02 / 構造",
+      "status": "reviewed",
+      "sourceHash": "9cc74b99824b51a0"
+    },
+    "customizer.step.structure.title": {
+      "value": "構造と形状",
+      "status": "reviewed",
+      "sourceHash": "0495e4d69aa7e85b"
+    },
+    "customizer.step.visual.help": {
+      "value": "希望する仕上がりに最も近いビジュアル方向を選択してください。",
+      "status": "reviewed",
+      "sourceHash": "3a1c892512953df2"
+    },
+    "customizer.step.visual.number": {
+      "value": "04 / ビジュアル",
+      "status": "reviewed",
+      "sourceHash": "c4bd690b234f407b"
+    },
+    "customizer.step.visual.title": {
+      "value": "ビジュアルスタイルと個性",
+      "status": "reviewed",
+      "sourceHash": "b36632c96b2e0285"
+    },
+    "customizer.structure.cards_description": {
+      "value": "カード、仕切り、専用印刷箱",
+      "status": "reviewed",
+      "sourceHash": "2466624ad6ea91cd"
+    },
+    "customizer.structure.classic_description": {
+      "value": "バランスのよいかみ合わせと馴染みのある組み立て方",
+      "status": "reviewed",
+      "sourceHash": "a717249b1199797c"
+    },
+    "customizer.structure.custom_shape": {
+      "value": "オリジナル形状・輪郭",
+      "status": "reviewed",
+      "sourceHash": "65c539d36a665fd8"
+    },
+    "customizer.structure.custom_shape_description": {
+      "value": "丸みのある接続またはオリジナル製品輪郭",
+      "status": "reviewed",
+      "sourceHash": "0dbea09755bcb6f9"
+    },
+    "customizer.structure.flat": {
+      "value": "クラシックな平面形式",
+      "status": "reviewed",
+      "sourceHash": "ec80c9fbfa1c6fd6"
+    },
+    "customizer.structure.foldable": {
+      "value": "折り・組み立て構造",
+      "status": "reviewed",
+      "sourceHash": "ba1ea3a1fd7b3404"
+    },
+    "customizer.structure.foldable_description": {
+      "value": "折り、差し込み、簡単な組み立てで部品を接続",
+      "status": "reviewed",
+      "sourceHash": "afac25cc1bf1b047"
+    },
+    "customizer.structure.game_description": {
+      "value": "ボード、カード、ルール、包装を一つのセットに構成",
+      "status": "reviewed",
+      "sourceHash": "ac4782a3742253c5"
+    },
+    "customizer.structure.hybrid_description": {
+      "value": "2 種類以上の紙製品を組み合わせる",
+      "status": "reviewed",
+      "sourceHash": "bb6bb5f2ef91dbef"
+    },
+    "customizer.structure.layered": {
+      "value": "多層立体構造",
+      "status": "reviewed",
+      "sourceHash": "8a472aa4e2990128"
+    },
+    "customizer.structure.layered_description": {
+      "value": "印刷した層でボリュームと奥行きを形成",
+      "status": "reviewed",
+      "sourceHash": "3706e4b14855cabc"
+    },
+    "customizer.structure.open_description": {
+      "value": "共同開発のため構造を未定にする",
+      "status": "reviewed",
+      "sourceHash": "9ea0f4b9d8784e18"
+    },
+    "customizer.structure.pack_description": {
+      "value": "統一した中仕切りを備えたプレゼンテーションボックス",
+      "status": "reviewed",
+      "sourceHash": "f4cfb1d9d63a83f4"
+    },
+    "customizer.structure.reference_description": {
+      "value": "既存の物品や画像から開発を始める",
+      "status": "reviewed",
+      "sourceHash": "2ae2df3a134b37dc"
+    },
+    "customizer.structure.set": {
+      "value": "組み合わせセット",
+      "status": "reviewed",
+      "sourceHash": "fda06b3868af6fe8"
+    },
+    "customizer.structure.set_description": {
+      "value": "複数の部品を一つの統一製品に構成",
+      "status": "reviewed",
+      "sourceHash": "92cbf799eeeab50b"
+    },
+    "customizer.structure.unsure": {
+      "value": "未定",
+      "status": "reviewed",
+      "sourceHash": "31d17eb884e6f3fe"
+    },
+    "customizer.structure.unsure_description": {
+      "value": "特殊な形状や構造を技術確認まで未定にする",
+      "status": "reviewed",
+      "sourceHash": "75ad0b48d3c354f2"
+    },
+    "customizer.summary.audience": {
+      "value": "対象者",
+      "status": "reviewed",
+      "sourceHash": "545c02357695a6ff"
+    },
+    "customizer.summary.body": {
+      "value": "選択内容は暫定要件として整理され、見積もり依頼前に編集できます。",
+      "status": "reviewed",
+      "sourceHash": "b81f15279fbab226"
+    },
+    "customizer.summary.budget": {
+      "value": "予算",
+      "status": "reviewed",
+      "sourceHash": "1c6225ec7092ad2f"
+    },
+    "customizer.summary.delivery": {
+      "value": "希望納期",
+      "status": "reviewed",
+      "sourceHash": "4a4bd27030d2deaa"
+    },
+    "customizer.summary.empty": {
+      "value": "いくつかの項目を選ぶと概要が作成されます。",
+      "status": "reviewed",
+      "sourceHash": "625c95a62181912d"
+    },
+    "customizer.summary.finish": {
+      "value": "表面加工",
+      "status": "reviewed",
+      "sourceHash": "426962884f1959a2"
+    },
+    "customizer.summary.generated_label": {
+      "value": "カスタマイズ概要",
+      "status": "reviewed",
+      "sourceHash": "d3cb1ae47c969dc8"
+    },
+    "customizer.summary.material": {
+      "value": "素材",
+      "status": "reviewed",
+      "sourceHash": "fd10a146e9625bfd"
+    },
+    "customizer.summary.notes": {
+      "value": "補足事項",
+      "status": "reviewed",
+      "sourceHash": "5871e1abaa639712"
+    },
+    "customizer.summary.open_items": {
+      "value": "未確定項目",
+      "status": "reviewed",
+      "sourceHash": "d6b347f2ce7fad0c"
+    },
+    "customizer.summary.product": {
+      "value": "製品の方向性",
+      "status": "reviewed",
+      "sourceHash": "f9edf99021c87e0b"
+    },
+    "customizer.summary.quantity": {
+      "value": "数量",
+      "status": "reviewed",
+      "sourceHash": "822bab8d41bca8d7"
+    },
+    "customizer.summary.reference": {
+      "value": "スタイル参考",
+      "status": "reviewed",
+      "sourceHash": "880786a97e903197"
+    },
+    "customizer.summary.structure": {
+      "value": "構造と形状",
+      "status": "reviewed",
+      "sourceHash": "0495e4d69aa7e85b"
+    },
+    "customizer.summary.suggestion_tag": {
+      "value": "参考提案",
+      "status": "reviewed",
+      "sourceHash": "24306b958b9f88da"
+    },
+    "customizer.summary.title": {
+      "value": "プロジェクト概要",
+      "status": "reviewed",
+      "sourceHash": "1f4e77e98ac6f838"
+    },
+    "customizer.summary.uncertain_tag": {
+      "value": "要確認",
+      "status": "reviewed",
+      "sourceHash": "4237b3b44dd9a860"
+    },
+    "customizer.summary.use_case": {
+      "value": "用途",
+      "status": "reviewed",
+      "sourceHash": "046def25f5b077ca"
+    },
+    "customizer.summary.visual": {
+      "value": "ビジュアルスタイル",
+      "status": "reviewed",
+      "sourceHash": "e00cf1143c6cdbec"
+    },
+    "customizer.visual.bold": {
+      "value": "大胆・エネルギッシュ",
+      "status": "reviewed",
+      "sourceHash": "004d57d44d441713"
+    },
+    "customizer.visual.bold_description": {
+      "value": "力強いリズムと明確な色面",
+      "status": "reviewed",
+      "sourceHash": "e7f44751bba93b4d"
+    },
+    "customizer.visual.brand": {
+      "value": "既存ブランドの表現を踏襲",
+      "status": "reviewed",
+      "sourceHash": "d656149d90fb64ec"
+    },
+    "customizer.visual.brand_description": {
+      "value": "名称、シンボル、アイデンティティを視覚的な焦点にする",
+      "status": "reviewed",
+      "sourceHash": "a046acb0cef23d16"
+    },
+    "customizer.visual.illustrated": {
+      "value": "遊び心のあるイラスト",
+      "status": "reviewed",
+      "sourceHash": "ade644603a96efe4"
+    },
+    "customizer.visual.illustrated_description": {
+      "value": "製品全体に展開するビジュアルストーリー",
+      "status": "reviewed",
+      "sourceHash": "be3e3e703d348e27"
+    },
+    "customizer.visual.minimal": {
+      "value": "ミニマル・モダン",
+      "status": "reviewed",
+      "sourceHash": "1936ec5e5270d5e3"
+    },
+    "customizer.visual.minimal_description": {
+      "value": "明確な情報階層と抑制したディテール",
+      "status": "reviewed",
+      "sourceHash": "a63549201fb8b7b4"
+    },
+    "customizer.visual.natural": {
+      "value": "自然な素材感",
+      "status": "reviewed",
+      "sourceHash": "de8526a5163c4ec6"
+    },
+    "customizer.visual.refined": {
+      "value": "上質・洗練",
+      "status": "reviewed",
+      "sourceHash": "27eaa3b7d753bd09"
+    },
+    "customizer.waiting": {
+      "value": "方向性を選択",
+      "status": "reviewed",
+      "sourceHash": "c1120f24153bd83e"
+    },
+    "faq.01_company_manufacturing_fit": {
+      "value": "01 / 会社と製造の適合性",
+      "status": "needs_review",
+      "sourceHash": "24bbd6a23c5afadf"
+    },
+    "faq.02_product_scope_moq_timing": {
+      "value": "02 / 産品範囲、MOQとスケジュール",
+      "status": "needs_review",
+      "sourceHash": "63dd26f6eb259049"
+    },
+    "faq.03_files_colour_approvals": {
+      "value": "03 / ファイル、色と承認",
+      "status": "needs_review",
+      "sourceHash": "5d6ab4414be1f195"
+    },
+    "faq.04_quality_testing_compliance": {
+      "value": "04 / 設定、テストと適合性",
+      "status": "needs_review",
+      "sourceHash": "5f06ba71d048f174"
+    },
+    "faq.05_commercial_terms_logistics": {
+      "value": "05 / 商業条件と物流",
+      "status": "needs_review",
+      "sourceHash": "ca1628beb287fe02"
+    },
+    "faq.06_confidentiality_ip_tooling": {
+      "value": "06 / こたつ、IP とツールの秘密性",
+      "status": "needs_review",
+      "sourceHash": "f2afcad9382cac52"
+    },
+    "faq.a_mutual_or_buyer_provided_nda_can": {
+      "value": "Qinyi Printing、Coinshin、MOQ、RFQはすべての事実と置換が保持されています。契約書に定める秘密情報、許可された受取人、セキュリティ方法、有効期限、返却または削除、除外条件および適用条項を含む契約のレビュー前に未発表のデザイン、顧客の識別情報や生産ファイルが共有されることが確認できます。",
+      "status": "needs_review",
+      "sourceHash": "f2d99d816afdbd7c"
+    },
+    "faq.a_mutual_or_buyer_provided_nda_can_2": {
+      "value": "互換性または購入者が提供するNDAは、未公開のデザイン、顧客の識別情報や生産ファイルが共有される前にレビューされます。 Signed agreementには、秘密保護範囲、許可された受取人、有効期間と適用条項を記載する必要があります。",
+      "status": "needs_review",
+      "sourceHash": "445ef8d53354569e"
+    },
+    "faq.a_reliable_schedule_is_issued_after_artwork": {
+      "value": "信頼性の高いスケジュールは、アートワーク、構造、数量、材料、仕上げ、テストとパッキングが定義された後に行われます。スケジュールを要求してファイルレビュー、サンプル承認、材料準備、生産、検査、予約と運送を分けることができます。",
+      "status": "needs_review",
+      "sourceHash": "50c248f14cfcd050"
+    },
+    "faq.a_reliable_schedule_is_issued_after_artwork_2": {
+      "value": "...",
+      "status": "needs_review",
+      "sourceHash": "90c32081505aeb7e"
+    },
+    "faq.agree_what_the_production_record_must_link": {
+      "value": "生産記録にリンクさせる項目を合意する：注文書、承認済みファイルリビジョン、材料ロット、製造日またはロット番号、検査報告書、カートン識別。必要な保管期間と記録へのアクセスは品質契約に含める。",
+      "status": "needs_review",
+      "sourceHash": "b7adff7cf9ff401c"
+    },
+    "faq.answers_before_files_samples_and_purchase_orders": {
+      "value": "ファイル、サンプル、注文書の前に回答。",
+      "status": "needs_review",
+      "sourceHash": "b0137ef0505f21f3"
+    },
+    "faq.buyer_answers_covering_product_fit_moq_samples": {
+      "value": "バイヤーからの回答：製品適合性、MOQ、サンプル、ファイル、品質、コンプライアンス文書、支払い、インコタームズ、物流、知的財産、金型、受託製造。",
+      "status": "needs_review",
+      "sourceHash": "5b70fdf52ffec4e2"
+    },
+    "faq.buyer_due_diligence": {
+      "value": "バイヤーのデューデリジェンス",
+      "status": "needs_review",
+      "sourceHash": "b203d496eb8960a7"
+    },
+    "faq.can_another_factory_subcontract_only_part_of": {
+      "value": "別の工場が一部のみを下請けすることは可能ですか？",
+      "status": "needs_review",
+      "sourceHash": "dd5c7db7b2ec239b"
+    },
+    "faq.can_i_order_a_sample": {
+      "value": "サンプルを注文できますか？",
+      "status": "needs_review",
+      "sourceHash": "3c15ffffc30a4dcf"
+    },
+    "faq.can_qinyi_arrange_destination_market_testing": {
+      "value": "Qinyi Printingで仕向け市場向けテストを手配できますか？",
+      "status": "needs_review",
+      "sourceHash": "0cd75c19388e778c"
+    },
+    "faq.can_qinyi_arrange_product_testing": {
+      "value": "Qinyi Printingで製品テストを手配できますか？",
+      "status": "needs_review",
+      "sourceHash": "d0680f528ac9f9d6"
+    },
+    "faq.can_qinyi_sign_an_nda": {
+      "value": "Qinyi PrintingはNDAに署名できますか？",
+      "status": "needs_review",
+      "sourceHash": "fdcebba555b72b71"
+    },
+    "faq.can_qinyi_sign_an_nda_before_we": {
+      "value": "ファイルを共有する前にQinyi PrintingはNDAに署名できますか？",
+      "status": "needs_review",
+      "sourceHash": "4320f6acde28f1fd"
+    },
+    "faq.can_qinyi_work_with_our_freight_forwarder": {
+      "value": "Qinyi Printingは当社のフォワーダーと連携できますか？",
+      "status": "needs_review",
+      "sourceHash": "4b7ec5f0ed965460"
+    },
+    "faq.can_qinyi_work_with_our_nominated_freight": {
+      "value": "Qinyi Printingは当社の指定フォワーダーと連携できますか？",
+      "status": "needs_review",
+      "sourceHash": "a175c87c9cfcd306"
+    },
+    "faq.can_we_arrange_a_factory_visit_or": {
+      "value": "工場見学やサプライヤー監査を手配できますか？",
+      "status": "needs_review",
+      "sourceHash": "58189ce50a786e41"
+    },
+    "faq.can_we_specify_aql_or_our_own": {
+      "value": "AQLや当社独自の検査基準を指定できますか？",
+      "status": "needs_review",
+      "sourceHash": "9b978ae5a96abce9"
+    },
+    "faq.commercial_quality_and_document_scope_is_controlled": {
+      "value": "商業、品質、文書の範囲は発行された見積書と契約書によって管理されます。",
+      "status": "needs_review",
+      "sourceHash": "166e9a5e0f03e9f4"
+    },
+    "faq.contact_the_team_with_the_buyer_organisation": {
+      "value": "バイヤー組織、監査目的、希望日程、参加者リスト、必要書類を添えてチームに連絡。訪問時期、機密保持ルール、写真撮影、生産エリアへのアクセスは到着前に合意します。",
+      "status": "needs_review",
+      "sourceHash": "2ad684c87f440877"
+    },
+    "faq.control_the_production_handoff": {
+      "value": "生産の引き継ぎを管理する。",
+      "status": "needs_review",
+      "sourceHash": "189b83db3419f3ba"
+    },
+    "faq.currency_deposit_and_balance_milestones_beneficiary_details": {
+      "value": "通貨、デポジットと残金のマイルストーン、受取人詳細、選択されたインコタームズ2020ルールは見積書またはプロフォーマインボイスに記載。バイヤーは支払い前に銀行口座の変更を独自に確認すべきです。",
+      "status": "needs_review",
+      "sourceHash": "965e37a1564bc099"
+    },
+    "faq.currency_deposit_and_balance_milestones_tooling_charges": {
+      "value": "通貨、デポジットと残金のマイルストーン、金型費用、サンプル費用、受取人詳細は見積書またはプロフォーマインボイスに記載。受取人が合意された契約形態と一致することを確認し、支払い前に銀行口座の変更を独自に確認してください。",
+      "status": "needs_review",
+      "sourceHash": "3050dce9dc7a32ff"
+    },
+    "faq.custom_jigsaw_and_educational_puzzles_1000_piece": {
+      "value": "カスタムジグソーパズル、教育用パズル、1000ピースパズル、アートパズル、3Dペーパーパズル、ボードゲーム、ゲームカード、トランプ、カラーボックス、ギフトボックス、折り畳みカートン、紙袋、タグ、取扱説明書。",
+      "status": "needs_review",
+      "sourceHash": "f73f9658cfa333ff"
+    },
+    "faq.custom_puzzle_game_manufacturing_faq_qinyi": {
+      "value": "カスタムパズル・ゲーム製造FAQ | Qinyi Printing",
+      "status": "needs_review",
+      "sourceHash": "77fea1cc71930be5"
+    },
+    "faq.define_acceptance_before_production": {
+      "value": "生産前に受入基準を定義する。",
+      "status": "needs_review",
+      "sourceHash": "8a5c827a1b59dabc"
+    },
+    "faq.define_dimensions_and_tolerances_materials_colour_reference": {
+      "value": "寸法と公差、材料、色基準、印刷と仕上げの受入基準、ピース数、組み立てテスト、包装、バーコード、カートン要件を定義。重要欠陥、主要欠陥、軽微欠陥を分類し、各検査ポイントで必要な証拠を特定する。",
+      "status": "needs_review",
+      "sourceHash": "50f0f415c0fc0728"
+    },
+    "faq.define_units_per_inner_and_master_carton": {
+      "value": "内箱とマスターカートンあたりのユニット数、向き、保護包装、総重量または寸法制限、パレットルール、バーコード配置、原産国表示、ニュートラルまたはブランド付き出荷マークを定義。大量梱包開始前に梱包仕様を承認する。",
+      "status": "needs_review",
+      "sourceHash": "3a892e19e94889a3"
+    },
+    "faq.do_you_publish_fixed_prices_or_production": {
+      "value": "固定価格や生産能力をオンラインで公開していますか？",
+      "status": "needs_review",
+      "sourceHash": "794812f03fb5af1c"
+    },
+    "faq.do_you_support_white_label_and_non": {
+      "value": "ホワイトラベルや迂回防止契約に対応していますか？",
+      "status": "needs_review",
+      "sourceHash": "41e076efe1340b69"
+    },
+    "faq.dongguan_qinyi_co_ltd_is_located_at": {
+      "value": "Dongguan Qinyi Printing Co., Ltd.は中国広東省東莞市茶山鎮上元村建民一路10号に所在しています。",
+      "status": "needs_review",
+      "sourceHash": "e0ce8747edcbad7d"
+    },
+    "faq.how_are_colour_expectations_communicated": {
+      "value": "色の期待値はどのように伝達されますか？",
+      "status": "needs_review",
+      "sourceHash": "d5f20b0052543b35"
+    },
+    "faq.how_are_export_packing_and_carton_marks": {
+      "value": "輸出梱包とカートンマークはどのように合意されますか？",
+      "status": "needs_review",
+      "sourceHash": "d519c1b92985ad3e"
+    },
+    "faq.how_are_file_revisions_and_engineering_changes": {
+      "value": "ファイルリビジョンと設計変更はどのように管理されますか？",
+      "status": "needs_review",
+      "sourceHash": "1e8134d61cbf5c49"
+    },
+    "faq.how_are_production_files_and_revisions_controlled": {
+      "value": "生産ファイルと改訂はどのように管理されますか？",
+      "status": "needs_review",
+      "sourceHash": "07dfffd93d0a5411"
+    },
+    "faq.how_is_traceability_handled": {
+      "value": "トレーサビリティはどのように処理されますか？",
+      "status": "needs_review",
+      "sourceHash": "8ba7873f16bd99f1"
+    },
+    "faq.how_long_are_project_files_and_samples": {
+      "value": "プロジェクトファイルとサンプルはどのくらいの期間保管されますか？",
+      "status": "needs_review",
+      "sourceHash": "e321611ee1131e64"
+    },
+    "faq.how_long_do_sampling_and_production_take": {
+      "value": "サンプリングと生産にはどのくらいの時間がかかりますか？",
+      "status": "needs_review",
+      "sourceHash": "a822acda129d1ae7"
+    },
+    "faq.how_long_does_production_take": {
+      "value": "生産にはどのくらいの時間がかかりますか？",
+      "status": "needs_review",
+      "sourceHash": "58db1c5e4dd34ffb"
+    },
+    "faq.how_should_quality_requirements_be_specified": {
+      "value": "品質要件はどのように指定すべきですか？",
+      "status": "needs_review",
+      "sourceHash": "53da88c30d6606c3"
+    },
+    "faq.identify_critical_brand_colours_and_supply_the": {
+      "value": "重要なブランドカラーを特定し、承認済み校正、指定スポットカラーのターゲット、または物理サンプルなど、意図したカラーリファレンスを提供してください。見積書には校正方法と、どの承認リファレンスが生産を管理するかを明記する必要があります。",
+      "status": "needs_review",
+      "sourceHash": "f18b449944f1a215"
+    },
+    "faq.list_every_board_card_face_and_back": {
+      "value": "すべてのボード、カードの表面と裏面、トークン、説明書、インサート、パッケージファイルを、ファイル名、改訂、寸法、言語、セットあたりの数量とともにリストアップしてください。BOMには、調達品またはバイヤー支給のアクセサリーを別途明記する必要があります。",
+      "status": "needs_review",
+      "sourceHash": "e1ddc07887aca1ec"
+    },
+    "faq.list_the_commercial_invoice_packing_list_transport": {
+      "value": "商業送り状、パッキングリスト、運送書類、および仕向地で必要とされる注文固有の申告書、原産地証明書、試験書類をリストアップしてください。輸入者または通関業者が分類と現地の輸入要件を確認する必要があります。",
+      "status": "needs_review",
+      "sourceHash": "5dadc83df6d642eb"
+    },
+    "faq.make_cost_and_delivery_responsibility_explicit": {
+      "value": "コストと配送責任を明確にしてください。",
+      "status": "needs_review",
+      "sourceHash": "0f53417ad13d6caa"
+    },
+    "faq.no_price_and_available_capacity_depend_on": {
+      "value": "いいえ。価格と利用可能な生産能力は、現在の生産計画と承認された仕様に依存します。可能であれば数量ラダーを送ってください。例えば、初回注文とそれ以上の数量シナリオを提示し、比較可能な単価と工具効果を確認できるようにしてください。",
+      "status": "needs_review",
+      "sourceHash": "dd2db44425a401d6"
+    },
+    "faq.ownership_does_not_follow_from_payment_alone": {
+      "value": "所有権は、書類に明記されていない限り、支払いだけでは移転しません。見積書または工具契約書に、各アイテムの資金提供者と所有者、保管場所、使用権限、保守と再注文の権利、保管期間、移転費用、廃棄指示を明記してください。",
+      "status": "needs_review",
+      "sourceHash": "9d1a99e2fed9069a"
+    },
+    "faq.page_to_set_the_boundary": {
+      "value": "境界を設定するページ。",
+      "status": "needs_review",
+      "sourceHash": "c43dee443b2dcdbf"
+    },
+    "faq.pre_existing_ip_remains_with_its_owner": {
+      "value": "既存の知的財産はその所有者に帰属します。バイヤーは生産を許可できることを保証し、契約は提供されたアートワークの使用を承認されたプロジェクトに限定する必要があります。マーケティングやポートフォリオでの使用には別途書面による許可が必要です。",
+      "status": "needs_review",
+      "sourceHash": "efdc1c9a475d83f9"
+    },
+    "faq.pre_existing_ip_remains_with_its_owner_2": {
+      "value": "既存の知的財産はその所有者に帰属します。適応された生産ファイル、ダイ、プレート、金型、サンプルの所有権と許可された使用は、見積書または契約書に明記され、保管、保守、再注文アクセス、廃棄を含みます。",
+      "status": "needs_review",
+      "sourceHash": "15bd87f606ba2113"
+    },
+    "faq.preserve_samples_carton_and_lot_details_and": {
+      "value": "サンプル、カートン、ロット詳細を保存し、承認された仕様に対して問題を報告してください。封じ込め、根本原因のレビュー、および合意された是正措置は、一般的なウェブサイトの約束ではなく、購入契約に基づいて処理されます。",
+      "status": "needs_review",
+      "sourceHash": "10ab2f9054b4d9fe"
+    },
+    "faq.preserve_samples_photos_carton_labels_quantities_and": {
+      "value": "サンプル、写真、カートンラベル、数量、ロット詳細を保存し、承認された仕様に対して問題を報告してください。合意されたプロセスは、封じ込め、選別、根本原因分析、是正措置、および商業的処分をカバーする必要があります。手直し、再製造、交換、またはクレジットは、証拠と購入契約に基づいて決定されます。",
+      "status": "needs_review",
+      "sourceHash": "411b08751457c5b7"
+    },
+    "faq.products_page": {
+      "value": "製品ページ",
+      "status": "needs_review",
+      "sourceHash": "12a343542f21c810"
+    },
+    "faq.protect_unreleased_work_and_channel_relationships": {
+      "value": "未公開の作品とチャネル関係を保護してください。",
+      "status": "needs_review",
+      "sourceHash": "4befe82972212c71"
+    },
+    "faq.provide_booking_instructions_forwarder_contact_destination_carton": {
+      "value": "予約指示、フォワーダー連絡先、仕向地、カートンとパレットの制約、出荷マーク、必要書類を提供してください。引き渡しポイント、輸出責任、現地費用は、合意されたインコタームズと予約確認に従います。",
+      "status": "needs_review",
+      "sourceHash": "d04bf08f9d4048a7"
+    },
+    "faq.provide_company_and_contact_details_product_type": {
+      "value": "会社と連絡先の詳細、製品タイプ、完成寸法、ピースまたはカード数、数量、材料の方向、印刷と仕上げ、パッケージング、ターゲット市場、仕向地、希望納期、利用可能なファイルを提供してください。不明なフィールドは「推奨が必要」とマークし、推測しないでください。",
+      "status": "needs_review",
+      "sourceHash": "227beddb5a5ca6a6"
+    },
+    "faq.provide_the_forwarder_s_booking_instructions_destination": {
+      "value": "フォワーダーの予約指示、仕向地、カートンとパレットの制約、出荷マーク、書類要件を提供してください。引き渡しポイントとコスト責任は、合意されたインコタームズに従います。",
+      "status": "needs_review",
+      "sourceHash": "5aa33b2840ae2908"
+    },
+    "faq.provides_the_individual_size_examples_tool_condition": {
+      "value": "個別のサイズ例を提供します。工具の状態、ダイライン、正確な在庫状況は、見積もり前に再確認されます。",
+      "status": "needs_review",
+      "sourceHash": "cc5022a7dd529f56"
+    },
+    "faq.qualify_the_project_before_quotation": {
+      "value": "見積もり前にプロジェクトを評価してください。",
+      "status": "needs_review",
+      "sourceHash": "9cf16386f65501f3"
+    },
+    "faq.ready_to_turn_the_answers_into_a": {
+      "value": "回答を管理されたRFQに変える準備はできましたか？",
+      "status": "needs_review",
+      "sourceHash": "50dc81dcbef61ef8"
+    },
+    "faq.regular_jigsaw_projects_typically_start_at_300": {
+      "value": "通常のジグソーパズルプロジェクトは、通常300セットから始まります。これは普遍的なMOQではありません。ゲーム、カード、3D構造、パッケージングは、寸法、基材、印刷レイアウト、工具、仕上げ、部品調達、組み立てによって異なります。",
+      "status": "needs_review",
+      "sourceHash": "60e0ecb1de381737"
+    },
+    "faq.regular_jigsaw_projects_typically_start_at_300_2": {
+      "value": "通常のジグソーパズルプロジェクトは、通常300セットから始まります。ゲーム、カード、3D構造、パッケージングのMOQは、寸法、材料、印刷、工具、仕上げ、組み立てに依存します。",
+      "status": "needs_review",
+      "sourceHash": "23dac40bdcc0e2cd"
+    },
+    "faq.review_trade_manufacturing_terms": {
+      "value": "貿易製造条件を確認する",
+      "status": "needs_review",
+      "sourceHash": "b8814f72e53c1102"
+    },
+    "faq.send_available_artwork_dielines_drawings_bom_card": {
+      "value": "利用可能なアートワーク、ダイライン、図面、BOM、カードリスト、ルール、カラーリファレンス、検査基準、参考写真、または物理サンプルを送ってください。数量、仕向地市場、希望納期を含めてください。生産ファイル形式はプリプレスレビュー中に確認されます。",
+      "status": "needs_review",
+      "sourceHash": "d680596f788f390e"
+    },
+    "faq.send_available_artwork_dielines_drawings_bom_card_2": {
+      "value": "利用可能なアートワーク、ダイライン、図面、BOM、カードリスト、ルール、カラーリファレンス、検査基準、参考写真またはサンプル、さらに数量、仕向地、希望納期を送ってください。",
+      "status": "needs_review",
+      "sourceHash": "1864ee898a640414"
+    },
+    "faq.set_a_retention_period_for_quote_files": {
+      "value": "見積書ファイル、承認済み生産ファイル、検査記録、金型、ゴールデンサンプル、余剰材料の保存期間を契約書またはNDAで設定します。また、承認された削除または返却プロセスを定義します。合意された転送方法が確認されるまで、機密ファイルをアップロードしないでください。",
+      "status": "needs_review",
+      "sourceHash": "b667f712e6ccd44c"
+    },
+    "faq.state_the_destination_country_intended_user_and": {
+      "value": "RFQ段階で、仕向国、想定ユーザー、要求規格を明記します。責任試験所、サンプル選定、試験範囲、費用、再試験プロセス、報告書の所有権は、その後書面で確認されます。必要な場合、会社証明書は製品固有の試験の代用にはなりません。",
+      "status": "needs_review",
+      "sourceHash": "c05be6798e9faedd"
+    },
+    "faq.state_the_destination_country_intended_user_and_2": {
+      "value": "RFQ段階で、仕向国、想定ユーザー、要求規格を明記します。責任試験所、サンプル選定、試験範囲、費用、報告書の所有権は、その後書面で確認されます。",
+      "status": "needs_review",
+      "sourceHash": "0fe7d84369df8650"
+    },
+    "faq.state_the_preferred_incoterms_2020_rule_named": {
+      "value": "RFQとともに、希望するIncoterms 2020ルール、指定場所または港、仕向地を明記します。対応可能な条件と費用負担範囲は見積書で確認されます。3文字の条件を、指定場所とバージョンなしで使用しないでください。",
+      "status": "needs_review",
+      "sourceHash": "f0a9b7c9b5e749b4"
+    },
+    "faq.submit_a_project_brief": {
+      "value": "プロジェクト概要を提出する",
+      "status": "needs_review",
+      "sourceHash": "b3fe9f702144f0de"
+    },
+    "faq.the_company_portfolio_presents_qinyi_as_the": {
+      "value": "会社ポートフォリオでは、Qinyi Printingを製造会社、Coinshin / 可燊礼品をそのクリエイティブな紙製ギフトのブランドとして紹介しています。見積書、契約書、請求書、受取人情報は、取引の責任法人を明示する必要があります。",
+      "status": "needs_review",
+      "sourceHash": "a1c88f7ffbe833dd"
+    },
+    "faq.the_documented_workflow_includes_design_and_development": {
+      "value": "文書化されたワークフローには、設計・開発、プリプレス、印刷、金型製作、型抜き、表面加工、組立、包装が含まれます。見積書と生産仕様書は、Qinyiが担当する工程と、購入者が提供するインプットを特定します。",
+      "status": "needs_review",
+      "sourceHash": "8321a20578f54da1"
+    },
+    "faq.the_documented_workflow_includes_design_and_development_2": {
+      "value": "文書化されたワークフローには、設計・開発、プリプレス、印刷、金型製作、型抜き、表面加工、組立、包装が含まれます。各工程の責任は、見積書と生産仕様書で合意されます。",
+      "status": "needs_review",
+      "sourceHash": "540ee4edcf46441c"
+    },
+    "faq.the_handoff_should_use_named_files_revision": {
+      "value": "引き渡しには、名前付きファイル、リビジョン番号、承認記録を使用する必要があります。承認後の変更は、金型、材料、コスト、スケジュールへの影響を評価した上でリリースされます。",
+      "status": "needs_review",
+      "sourceHash": "e1b1cddfb48ede5b"
+    },
+    "faq.the_purchase_contract_should_identify_the_controlling": {
+      "value": "購入契約書は、管理用アートワーク、ダイライン、BOM、材料、仕上げ、包装方法、署名済みサンプルまたはプルーフ、品質計画を特定する必要があります。1つの項目の承認は、他のコンポーネントや代替材料を自動的に承認するものではありません。",
+      "status": "needs_review",
+      "sourceHash": "a4cd602ba48fa33a"
+    },
+    "faq.the_supplied_business_materials_identify_dongguan_qinyi": {
+      "value": "提供される事業資料には、Dongguan Qinyi Printing Co., Ltd.、所在地：No. 10 Jianmin 1st Road, Shangyuan Village, Chashan Town, Dongguan, Guangdong, Chinaと記載されています。サプライヤーオンボーディング時には、管理された営業許可証の写しを請求してください。",
+      "status": "needs_review",
+      "sourceHash": "26071e4d3f000476"
+    },
+    "faq.the_supplied_company_portfolio_includes_business_registration": {
+      "value": "提供される会社ポートフォリオには、事業登録、ISO 9001品質管理、FSCコースト・オブ・カストディ、SMETA是正措置文書、製品試験記録への参照が含まれています。デューデリジェンスのために、該当する法人名、範囲、証明書番号、有効期限を示す最新の管理写しを請求してください。適用性は実際の製品と注文に照らして判断されます。",
+      "status": "needs_review",
+      "sourceHash": "40842e7baef50984"
+    },
+    "faq.the_supplied_company_portfolio_includes_business_registration_2": {
+      "value": "提供される会社ポートフォリオには、事業登録、ISO 9001、FSCコースト・オブ・カストディ、SMETA是正措置、製品試験記録への参照が含まれています。最新の管理写し、範囲、証明書番号、有効期限は、要求に応じて注文に照らして提供されます。",
+      "status": "needs_review",
+      "sourceHash": "188bc5a18352ffd0"
+    },
+    "faq.the_supplied_company_portfolio_lists_existing_formats": {
+      "value": "提供される会社ポートフォリオには、24ピースから1000ピースまでの既存フォーマット（正方形、長方形、フロアパズル、円形）が記載されています。",
+      "status": "needs_review",
+      "sourceHash": "6abdcf321dbd1920"
+    },
+    "faq.the_supplied_company_portfolio_lists_stock_formats": {
+      "value": "提供される会社ポートフォリオには、24ピースから1000ピースまでの在庫フォーマット（正方形、長方形、フロアパズル、円形）が記載されています。正確な寸法は製品ページに記載されており、金型の状況は見積もり前に再確認されます。",
+      "status": "needs_review",
+      "sourceHash": "f6b9d4aa3ae1425b"
+    },
+    "faq.trade_contract_manufacturing": {
+      "value": "OEM / 契約製造",
+      "status": "needs_review",
+      "sourceHash": "eb04ee4d7b3f9408"
+    },
+    "faq.trade_projects_can_define_neutral_packing_project": {
+      "value": "OEMプロジェクトでは、ニュートラル包装、プロジェクトの機密保持、顧客の隔離、迂回防止を定義できます。保護対象のアカウント、連絡先、期間、例外、救済措置は、署名されたOEM契約に明記する必要があります。",
+      "status": "needs_review",
+      "sourceHash": "a54853f3cd81d857"
+    },
+    "faq.trade_projects_can_define_neutral_packing_restricted": {
+      "value": "OEMプロジェクトでは、ニュートラル包装、プロジェクトアクセスの制限、顧客の隔離、迂回防止を定義できます。保護対象のアカウントと連絡先、期間、許可された通信、例外、救済措置は、署名されたOEM契約に明記する必要があります。",
+      "status": "needs_review",
+      "sourceHash": "d468aa925a8235c2"
+    },
+    "faq.use_named_files_revision_numbers_and_a": {
+      "value": "名前付きファイル、リビジョン番号、書面による承認記録を使用します。サンプルまたは金型承認後の変更は、廃棄材料、金型、コスト、スケジュールへの影響を評価した上でリリースされます。口頭での変更は、管理された仕様書に記録する必要があります。",
+      "status": "needs_review",
+      "sourceHash": "e57dfab532b4cef7"
+    },
+    "faq.use_this_guide_to_prepare_an_rfq": {
+      "value": "このガイドを使用してRFQを作成し、契約を定義します。製品固有の価格、生産能力、リードタイム、検査基準、書類の有効期限は、レビューされた仕様書に基づいてのみ発行されます。",
+      "status": "needs_review",
+      "sourceHash": "4118e6330b35f374"
+    },
+    "faq.what_counts_as_final_approval": {
+      "value": "最終承認とは何ですか？",
+      "status": "needs_review",
+      "sourceHash": "93cb68313bb5ea48"
+    },
+    "faq.what_happens_if_goods_do_not_match": {
+      "value": "商品が承認された仕様と一致しない場合はどうなりますか？",
+      "status": "needs_review",
+      "sourceHash": "e16f7049aec4bc39"
+    },
+    "faq.what_information_is_needed_for_a_useful": {
+      "value": "有用な最初の見積もりにはどのような情報が必要ですか？",
+      "status": "needs_review",
+      "sourceHash": "e65f4fa4c977d258"
+    },
+    "faq.what_is_the_minimum_order_quantity": {
+      "value": "最小注文数量（MOQ）はいくらですか？",
+      "status": "needs_review",
+      "sourceHash": "492d9064fbc8e619"
+    },
+    "faq.what_is_the_relationship_between_qinyi_and": {
+      "value": "Qinyi PrintingとCoinshinの関係は何ですか？",
+      "status": "needs_review",
+      "sourceHash": "a5692ca01a758948"
+    },
+    "faq.what_should_a_board_game_or_card": {
+      "value": "ボードゲームまたはカードゲームのファイルレジスターには何を含めるべきですか？",
+      "status": "needs_review",
+      "sourceHash": "c0665f165fad8971"
+    },
+    "faq.where_is_the_company_located": {
+      "value": "会社の所在地はどこですか？",
+      "status": "needs_review",
+      "sourceHash": "daa630ddaaf89fbe"
+    },
+    "faq.where_is_the_factory_and_what_is": {
+      "value": "工場の所在地と法的な会社名は何ですか？",
+      "status": "needs_review",
+      "sourceHash": "a7e9bc3dee65e79a"
+    },
+    "faq.which_certificates_and_company_documents_are_available": {
+      "value": "どのような証明書と会社文書が利用可能ですか？",
+      "status": "needs_review",
+      "sourceHash": "fd95b803f3961615"
+    },
+    "faq.which_compliance_documents_are_available": {
+      "value": "どのようなコンプライアンス文書が利用可能ですか？",
+      "status": "needs_review",
+      "sourceHash": "7112d1e76d39f837"
+    },
+    "faq.which_incoterms_can_be_used": {
+      "value": "どのインコタームズが使用できますか？",
+      "status": "needs_review",
+      "sourceHash": "9a74ea18db129bd0"
+    },
+    "faq.which_jigsaw_sizes_and_piece_counts_are": {
+      "value": "どのジグソーパズルのサイズとピース数が既に文書化されていますか？",
+      "status": "needs_review",
+      "sourceHash": "ede8783585529fb0"
+    },
+    "faq.which_jigsaw_sizes_are_already_documented": {
+      "value": "どのジグソーパズルのサイズが既に文書化されていますか？",
+      "status": "needs_review",
+      "sourceHash": "35b235a9fce14914"
+    },
+    "faq.which_payment_terms_and_incoterms_are_available": {
+      "value": "どの支払条件とインコタームズが利用可能ですか？",
+      "status": "needs_review",
+      "sourceHash": "33bd4c0df85ec389"
+    },
+    "faq.which_payment_terms_are_available": {
+      "value": "どの支払条件が利用可能ですか？",
+      "status": "needs_review",
+      "sourceHash": "637fa8509c62764a"
+    },
+    "faq.which_shipping_documents_should_be_listed_on": {
+      "value": "注文書に記載すべき船積書類は何ですか？",
+      "status": "needs_review",
+      "sourceHash": "dde2963c71caacef"
+    },
+    "faq.who_owns_artwork_production_files_and_tooling": {
+      "value": "アートワーク、生産ファイル、金型の所有権は誰にありますか？",
+      "status": "needs_review",
+      "sourceHash": "3950dfa8d7193e34"
+    },
+    "faq.who_owns_dies_plates_moulds_and_adapted": {
+      "value": "ダイ、プレート、金型、および修正された生産ファイルの所有権は誰にありますか？",
+      "status": "needs_review",
+      "sourceHash": "7b1aa7d7e9b19e9c"
+    },
+    "faq.who_owns_our_artwork_and_product_ip": {
+      "value": "当社のアートワークと製品IPの所有権は誰にありますか？",
+      "status": "needs_review",
+      "sourceHash": "cd49c5a337f88a04"
+    },
+    "faq.who_you_are_buying_from": {
+      "value": "購入先について。",
+      "status": "needs_review",
+      "sourceHash": "a1a312f42a2e17f5"
+    },
+    "faq.yes_after_the_files_and_construction_are": {
+      "value": "はい。ファイルと構造がレビューされた後、見積書は適切なサンプルルート、その証明内容、コスト、タイミング、および生産用金型や最終材料が含まれるかどうかを特定します。ビジュアルプロトタイプは、明記されていない限り、量産材料の証明として扱われるべきではありません。",
+      "status": "needs_review",
+      "sourceHash": "22de59b62b4be3c5"
+    },
+    "faq.yes_subject_to_process_fit_and_available": {
+      "value": "はい、プロセスの適合性と利用可能な生産スケジュールによります。トレードブリーフでは、フル生産、印刷のみ、金型と型抜き、仕上げ、部品準備、組立、梱包、または定義された組み合わせをカバーできます。",
+      "status": "needs_review",
+      "sourceHash": "b30b16f61fbab626"
+    },
+    "faq.yes_supply_the_sampling_level_aql_values": {
+      "value": "はい。サンプリングレベル、AQL値、欠陥定義、機能テスト、レポート形式をRFQとともに提供してください。規格が提供されない場合、生産前にプロジェクト検査計画を当事者間で合意する必要があります。普遍的なAQLは想定されていません。",
+      "status": "needs_review",
+      "sourceHash": "674a0f87490860fa"
+    },
+    "faq.yes_supply_the_sampling_level_defect_classes": {
+      "value": "はい。サンプリングレベル、欠陥クラス、許容差、レポート形式をRFQとともに提供してください。規格が提供されない場合、生産前にプロジェクト検査計画を当事者間で合意する必要があります。普遍的なAQLは想定されていません。",
+      "status": "needs_review",
+      "sourceHash": "2cad32ade9c2468f"
+    },
+    "faq.yes_the_appropriate_sample_route_is_selected": {
+      "value": "はい、ファイルと構造のレビュー後に適切なサンプルルートが選択されます。見積書は、サンプルが証明する内容、コスト、タイミング、および金型や生産材料が含まれるかどうかを特定します。",
+      "status": "needs_review",
+      "sourceHash": "1e0c024930d2fb2c"
+    },
+    "index.01_art_editions": {
+      "value": "01 / アートエディション",
+      "status": "needs_review",
+      "sourceHash": "72a7133bdd852107"
+    },
+    "index.01_artwork_ready": {
+      "value": "01 / アートワーク準備完了",
+      "status": "needs_review",
+      "sourceHash": "b9745d3b0b4943a9"
+    },
+    "index.02_sample_ready": {
+      "value": "02 / サンプル準備完了",
+      "status": "needs_review",
+      "sourceHash": "ad012789fa0aaec6"
+    },
+    "index.02_structure": {
+      "value": "02 / 構造",
+      "status": "needs_review",
+      "sourceHash": "9cc74b99824b51a0"
+    },
+    "index.03_early_concept": {
+      "value": "03 / 初期コンセプト",
+      "status": "needs_review",
+      "sourceHash": "a2e8a1e1a11d4c3b"
+    },
+    "index.03_play": {
+      "value": "03 / プレイ",
+      "status": "needs_review",
+      "sourceHash": "7a66214b29521dcd"
+    },
+    "index.04_cards": {
+      "value": "04 / カード",
+      "status": "needs_review",
+      "sourceHash": "c4aa9d6afbb85771"
+    },
+    "index.300_sets_is_a_typical_starting_quantity": {
+      "value": "* 300セットは、当社の通常のジグソーパズル製品範囲における標準的な開始数量です。MOQはサイズ、素材、仕上げ、包装、組立によって異なります。すべてのプロジェクトは見積もり前にレビューされます。",
+      "status": "needs_review",
+      "sourceHash": "2a7569a36ee645c9"
+    },
+    "index.3d_paper_puzzles": {
+      "value": "3Dペーパーパズル",
+      "status": "needs_review",
+      "sourceHash": "b39cfcbed57298fb"
+    },
+    "index.a_practical_route_from_the_initial_product": {
+      "value": "初期製品定義から包装された紙製品までの実用的なルート。",
+      "status": "needs_review",
+      "sourceHash": "1b164ffaa2d81636"
+    },
+    "index.answers_before_the_quote": {
+      "value": "見積もり前の回答。",
+      "status": "needs_review",
+      "sourceHash": "9dee3f4cda8e0cb1"
+    },
+    "index.art_into_play": {
+      "value": "アートを遊びに",
+      "status": "needs_review",
+      "sourceHash": "719e669a6d8b5d86"
+    },
+    "index.artwork_finish_edge_quality_puzzle_construction_and": {
+      "value": "アートワーク、仕上げ、エッジ品質、パズル構造、および小売包装は、一貫したエディションとして調和する必要があります。",
+      "status": "needs_review",
+      "sourceHash": "19286da76d720f8b"
+    },
+    "index.artwork_led_puzzles_cards_and_cultural_retail": {
+      "value": "アートワーク主導のパズル、カード、およびカルチャー小売製品。",
+      "status": "needs_review",
+      "sourceHash": "20cd94da1f6106b2"
+    },
+    "index.assembled_pirate_ship_made_from_printed_die": {
+      "value": "印刷された型抜き紙部品から作られた組み立て済み海賊船",
+      "status": "needs_review",
+      "sourceHash": "defeab01d65c6298"
+    },
+    "index.board_games": {
+      "value": "ボードゲーム",
+      "status": "needs_review",
+      "sourceHash": "ba991e9202b03c86"
+    },
+    "index.boards_cards_instructions_and_packaging_from_supplied": {
+      "value": "指定された仕様に基づくボード、カード、説明書、パッケージ。",
+      "status": "needs_review",
+      "sourceHash": "0751a8dd13d81f85"
+    },
+    "index.built_around_your_artwork": {
+      "value": "あなたのアートワークを中心に構築。",
+      "status": "needs_review",
+      "sourceHash": "4b7dd92761a0787b"
+    },
+    "index.cards_packaging": {
+      "value": "カード＆パッケージ",
+      "status": "needs_review",
+      "sourceHash": "9fd70d293cdea61c"
+    },
+    "index.close_up_detail_of_custom_printed_puzzle": {
+      "value": "カスタム印刷パズルピースのクローズアップ詳細",
+      "status": "needs_review",
+      "sourceHash": "5fd9faa1194eac9a"
+    },
+    "index.company_facts": {
+      "value": "会社概要",
+      "status": "needs_review",
+      "sourceHash": "5e87e8870107d768"
+    },
+    "index.components_brought_together_in_the_final_packaging": {
+      "value": "最終パッケージ形態にまとめられたコンポーネント。",
+      "status": "needs_review",
+      "sourceHash": "8f2344a42151c516"
+    },
+    "index.contact_details": {
+      "value": "連絡先",
+      "status": "needs_review",
+      "sourceHash": "9681395de456c72b"
+    },
+    "index.creative_files_dielines_and_physical_construction_reviewed": {
+      "value": "クリエイティブファイル、ダイライン、物理的構造を一緒にレビュー。",
+      "status": "needs_review",
+      "sourceHash": "235778d9ac126e50"
+    },
+    "index.creative_work_with_commercial_purpose": {
+      "value": "商業目的のクリエイティブワーク。",
+      "status": "needs_review",
+      "sourceHash": "a6881e83b27656e3"
+    },
+    "index.custom_board_game_kit_with_board_cards": {
+      "value": "ボード、カード、ピース、印刷パッケージ付きカスタムボードゲームキット",
+      "status": "needs_review",
+      "sourceHash": "49f0210a573e6f98"
+    },
+    "index.custom_card_game_with_illustrated_cards_and": {
+      "value": "イラスト入りカードと印刷ボックス付きカスタムカードゲーム",
+      "status": "needs_review",
+      "sourceHash": "c2d506a0f525a1ce"
+    },
+    "index.custom_floral_keepsake_puzzle_shown_assembled_boxed": {
+      "value": "組み立て、箱詰め、額装されたカスタムフローラルキープセイクパズル",
+      "status": "needs_review",
+      "sourceHash": "c25cc0a379aeb8a9"
+    },
+    "index.custom_format": {
+      "value": "カスタムフォーマット",
+      "status": "needs_review",
+      "sourceHash": "8ac9a7770a163094"
+    },
+    "index.custom_jigsaw_puzzles_children_s_educational_puzzles": {
+      "value": "カスタムジグソーパズル、子供向け教育パズル、1000ピース＆アートパズル、3Dペーパーパズル、ボードゲーム、ゲームカード、トランプ、カラーボックス、ギフトボックス、紙袋、タグ、説明書。",
+      "status": "needs_review",
+      "sourceHash": "90e9c0e01a62f110"
+    },
+    "index.custom_oem_odm": {
+      "value": "カスタムOEM＆ODM",
+      "status": "needs_review",
+      "sourceHash": "f3fa723d9dc650ae"
+    },
+    "index.custom_printed": {
+      "value": "カスタム印刷",
+      "status": "needs_review",
+      "sourceHash": "4113381fdb3c751c"
+    },
+    "index.custom_puzzle_paper_game_manufacturer_qinyi": {
+      "value": "カスタムパズル＆ペーパーゲームメーカー | Qinyi Printing",
+      "status": "needs_review",
+      "sourceHash": "d0433e4c560bbc31"
+    },
+    "index.custom_puzzles_paper_games": {
+      "value": "カスタムパズル、ペーパーゲーム",
+      "status": "needs_review",
+      "sourceHash": "e4ea45eb3a804fe0"
+    },
+    "index.define_the_product_together": {
+      "value": "一緒に製品を定義する",
+      "status": "needs_review",
+      "sourceHash": "929fe97add044afe"
+    },
+    "index.destination_imagery_translated_into_tactile_souvenirs": {
+      "value": "目的地のイメージを触覚的なお土産に変換。",
+      "status": "needs_review",
+      "sourceHash": "d752fb7853a5c8c7"
+    },
+    "index.develop_from_a_reference": {
+      "value": "参考サンプルから開発",
+      "status": "needs_review",
+      "sourceHash": "adf6bc2d4eb60ab1"
+    },
+    "index.die_cut_paper": {
+      "value": "型抜き紙",
+      "status": "needs_review",
+      "sourceHash": "3af138c1cc72866b"
+    },
+    "index.die_cutting_and_finishing_selected_for_the": {
+      "value": "製品仕様に合わせて選択された型抜きと仕上げ。",
+      "status": "needs_review",
+      "sourceHash": "ff1b243cd9c7e106"
+    },
+    "index.dimensional_objects_and_scenes_developed_through_structural": {
+      "value": "構造設計、金型、印刷生産を通じて開発された立体物とシーン。",
+      "status": "needs_review",
+      "sourceHash": "7f27fd50a774a01b"
+    },
+    "index.discuss_a_reference_sample": {
+      "value": "参考サンプルの相談",
+      "status": "needs_review",
+      "sourceHash": "9a2549d4851c3af8"
+    },
+    "index.dongguan_manufacturer_established_1998": {
+      "value": "東莞のメーカー / 1998年設立",
+      "status": "needs_review",
+      "sourceHash": "5217d7e162f2702c"
+    },
+    "index.dongguan_manufacturer_of_custom_puzzles_paper_games": {
+      "value": "カスタムパズル、ペーパーゲーム、印刷ギフトパッケージの東莞メーカー。デザイン、印刷、型抜き、組立、梱包をサポート。",
+      "status": "needs_review",
+      "sourceHash": "07c16b163ccdab48"
+    },
+    "index.dongguan_manufacturer_of_custom_puzzles_paper_games_2": {
+      "value": "カスタムパズル、ペーパーゲーム、印刷ギフトパッケージの東莞メーカー。",
+      "status": "needs_review",
+      "sourceHash": "51015d7f98a8920a"
+    },
+    "index.en": {
+      "value": "en",
+      "status": "needs_review",
+      "sourceHash": "dbd3a49d0d906b4e"
+    },
+    "index.explore_3d_puzzles": {
+      "value": "3Dパズルを見る",
+      "status": "needs_review",
+      "sourceHash": "e8af1b89dbf4f8d3"
+    },
+    "index.explore_games": {
+      "value": "ゲームを見る",
+      "status": "needs_review",
+      "sourceHash": "8c8dd53bb9dec4e7"
+    },
+    "index.factory_profile": {
+      "value": "工場プロフィール",
+      "status": "needs_review",
+      "sourceHash": "9fe768f9c153a5fc"
+    },
+    "index.finish_study_01": {
+      "value": "スタディ完了 / 01",
+      "status": "needs_review",
+      "sourceHash": "affc23b59c5bfd53"
+    },
+    "index.for_projects_within_our_regular_jigsaw_product": {
+      "value": "通常のジグソー製品範囲内のプロジェクトの場合、300セットが標準的な開始数量です。MOQとリードタイムは、寸法、素材、仕上げ、包装、組み立て、注文数量によって異なり、仕様確認後に確定します。",
+      "status": "needs_review",
+      "sourceHash": "5d51b56a59c9865d"
+    },
+    "index.format_use_case_target_market_quantity_and": {
+      "value": "フォーマット、使用用途、ターゲット市場、数量、希望納期。",
+      "status": "needs_review",
+      "sourceHash": "b5a8665525a095a9"
+    },
+    "index.from_artwork_and_structure_to_printing_die": {
+      "value": "中国・東莞にて、アートワークと構造設計から印刷、型抜き、組み立て、包装まで一貫対応。",
+      "status": "needs_review",
+      "sourceHash": "6bf5b51073053a5c"
+    },
+    "index.game_cards_playing_cards_gift_boxes_color": {
+      "value": "ゲームカード、トランプ、ギフトボックス、カラーボックス、紙袋、タグ、および関連する印刷インサート。",
+      "status": "needs_review",
+      "sourceHash": "09675dd8057eff9d"
+    },
+    "index.game_publishers_private_label": {
+      "value": "ゲーム出版社 & プライベートラベル",
+      "status": "needs_review",
+      "sourceHash": "5f23abcf38b3ace2"
+    },
+    "index.have_artwork_or_a_product_brief_ready": {
+      "value": "アートワークまたは製品概要はお済みですか？",
+      "status": "needs_review",
+      "sourceHash": "9210025de2596757"
+    },
+    "index.holographic_art_puzzle_and_matching_printed_box": {
+      "value": "ホログラフィックアートパズルとマッチング印刷ボックス",
+      "status": "needs_review",
+      "sourceHash": "26edb4c0e2dfe432"
+    },
+    "index.inspect_factory_scope": {
+      "value": "工場の対応範囲を確認",
+      "status": "needs_review",
+      "sourceHash": "be9abdea225c8f8e"
+    },
+    "index.its_stated_process_scope_includes_design_and": {
+      "value": "明示された工程範囲には、設計・開発、プリプレス、印刷、金型製作、型抜き、表面仕上げ、組み立て、包装が含まれます。正確な範囲はレビュー後に確定します。",
+      "status": "needs_review",
+      "sourceHash": "bc0395ed1049b140"
+    },
+    "index.jigsaw_art_puzzles": {
+      "value": "ジグソー & アートパズル",
+      "status": "needs_review",
+      "sourceHash": "043db0c3ecf39850"
+    },
+    "index.made_in_dongguan": {
+      "value": "東莞製",
+      "status": "needs_review",
+      "sourceHash": "c4da35de153d3e68"
+    },
+    "index.manufacturing_in_dongguan_since_1998": {
+      "value": "1998年より東莞で製造。",
+      "status": "needs_review",
+      "sourceHash": "916244a4f5923cbc"
+    },
+    "index.markets": {
+      "value": "市場",
+      "status": "needs_review",
+      "sourceHash": "97f5c16fcbfb4d9d"
+    },
+    "index.multi_component": {
+      "value": "マルチコンポーネント",
+      "status": "needs_review",
+      "sourceHash": "f1a56f123e06f063"
+    },
+    "index.object_study_001_custom_keepsake_puzzle": {
+      "value": "オブジェクトスタディ 001 / カスタム記念品パズル",
+      "status": "needs_review",
+      "sourceHash": "e247213389f1bb82"
+    },
+    "index.offset_printing_press_inside_qinyi_s_dongguan": {
+      "value": "Qinyi Printingの東莞工場内のオフセット印刷機",
+      "status": "needs_review",
+      "sourceHash": "18ca17c4283f764c"
+    },
+    "index.one_brief_carried_all_the_way_through": {
+      "value": "一つの概要を最後まで一貫対応。",
+      "status": "needs_review",
+      "sourceHash": "26541b8753531050"
+    },
+    "index.original_art_licensed_imagery_and_campaign_creative": {
+      "value": "オリジナルアート、ライセンス画像、キャンペーンクリエイティブを、ギャラリー、美術館、ブランド、出版社向けの触感製品に変換。",
+      "status": "needs_review",
+      "sourceHash": "bf84077e7935c045"
+    },
+    "index.paper_formats_shaped_around_learning_themes_and": {
+      "value": "学習テーマと年齢層に合わせた紙のフォーマット。",
+      "status": "needs_review",
+      "sourceHash": "050926512c6e1c22"
+    },
+    "index.plate_making_and_production_preparation_based_on": {
+      "value": "承認済みファイルに基づく製版と生産準備。",
+      "status": "needs_review",
+      "sourceHash": "1450c40e608580d5"
+    },
+    "index.print_into_form": {
+      "value": "印刷を形に",
+      "status": "needs_review",
+      "sourceHash": "8ebf0da14546215d"
+    },
+    "index.print_surface_and_structure_in_one_object": {
+      "value": "印刷、表面、構造を一つのオブジェクトに。",
+      "status": "needs_review",
+      "sourceHash": "f6d1d984358be09b"
+    },
+    "index.printed_boards_cards_instructions_packaging_and_paper": {
+      "value": "印刷ボード、カード、説明書、包装、紙コンポーネントを一つの生産ワークフローで調整。",
+      "status": "needs_review",
+      "sourceHash": "39a8472b2b269248"
+    },
+    "index.printed_packaging": {
+      "value": "＆印刷包装。",
+      "status": "needs_review",
+      "sourceHash": "4517a32905fd8896"
+    },
+    "index.process_06_stages": {
+      "value": "工程 / 06段階",
+      "status": "needs_review",
+      "sourceHash": "bdc75dd92a417980"
+    },
+    "index.product_brief": {
+      "value": "製品概要",
+      "status": "needs_review",
+      "sourceHash": "c49005519a180640"
+    },
+    "index.product_design_changes_with_the_audience_retail": {
+      "value": "製品デザインは、対象者、小売環境、用途に応じて変わります。汎用的なカタログ品ではなく、ユースケースから始めてください。",
+      "status": "needs_review",
+      "sourceHash": "fd647a011cec76dc"
+    },
+    "index.product_studio": {
+      "value": "製品スタジオ",
+      "status": "needs_review",
+      "sourceHash": "548590c802ac157e"
+    },
+    "index.production_using_the_factory_s_roland_and": {
+      "value": "工場のRolandおよびHeidelberg設備を使用した生産。",
+      "status": "needs_review",
+      "sourceHash": "a57de7b1d19e4a62"
+    },
+    "index.qinyi_capabilities": {
+      "value": "Qinyi Printingのケイパビリティ",
+      "status": "needs_review",
+      "sourceHash": "6411ba1867430741"
+    },
+    "index.qinyi_custom_puzzles_paper_games_and_gift": {
+      "value": "Qinyi Printing - カスタムパズル、ペーパーゲーム、ギフト包装",
+      "status": "needs_review",
+      "sourceHash": "4179ff24f67f09f4"
+    },
+    "index.qinyi_develops_and_manufactures_jigsaw_and_3d": {
+      "value": "Qinyi Printingは、ジグソーパズルや3Dペーパーパズル、ボードゲーム、カードゲーム、ギフトボックス、および関連する印刷紙製品の開発・製造を行っています。社内では、プリプレス、印刷、型抜き、仕上げ、組立、梱包まで対応しています。",
+      "status": "needs_review",
+      "sourceHash": "b6a6560216d2053c"
+    },
+    "index.qinyi_staff_assembling_and_packing_printed_products": {
+      "value": "Qinyi Printingのスタッフが東莞工場で印刷製品の組立と梱包を行っている様子",
+      "status": "needs_review",
+      "sourceHash": "03c7c28e910b8ede"
+    },
+    "index.quote_from_your_files": {
+      "value": "お客様のファイルから見積もり",
+      "status": "needs_review",
+      "sourceHash": "f402b5af64c06dc9"
+    },
+    "index.read_all_manufacturing_questions": {
+      "value": "製造に関するすべての質問を読む",
+      "status": "needs_review",
+      "sourceHash": "9c912597d27011ed"
+    },
+    "index.request_a_manufacturing_review": {
+      "value": "製造レビューを依頼する",
+      "status": "needs_review",
+      "sourceHash": "170bc6a01e54bb85"
+    },
+    "index.review_product_range": {
+      "value": "製品範囲を確認する",
+      "status": "needs_review",
+      "sourceHash": "26eb87894c7b48a2"
+    },
+    "index.see_custom_solutions": {
+      "value": "カスタムソリューションを見る",
+      "status": "needs_review",
+      "sourceHash": "8ff67b5b7008240f"
+    },
+    "index.see_development_support": {
+      "value": "開発サポートを見る",
+      "status": "needs_review",
+      "sourceHash": "f2ca28d140daddc5"
+    },
+    "index.see_manufacturing_quality": {
+      "value": "製造と品質を見る",
+      "status": "needs_review",
+      "sourceHash": "f20a34ac90c79ad8"
+    },
+    "index.send_artwork_dimensions_piece_count_quantity_packaging": {
+      "value": "製造レビューのために、アートワーク、寸法、ピース数、数量、包装、販売市場を送信してください。",
+      "status": "needs_review",
+      "sourceHash": "5a84b7d86dc46ba1"
+    },
+    "index.send_available_artwork_drawings_dielines_reference_images": {
+      "value": "利用可能なアートワーク、図面、ダイライン、参考画像、仕様書、および使用目的、市場、数量、希望納期を送信してください。",
+      "status": "needs_review",
+      "sourceHash": "3c7cabc4eb328978"
+    },
+    "index.send_your_rfq": {
+      "value": "RFQを送信する",
+      "status": "needs_review",
+      "sourceHash": "b2f7e265602927e6"
+    },
+    "index.seven_product_families_for_creative_educational_and": {
+      "value": "クリエイティブ、教育、商業向けの紙製品を7つの製品ファミリーで提供。仕様はプロジェクトごとに確認します。",
+      "status": "needs_review",
+      "sourceHash": "91829c722e7c7eca"
+    },
+    "index.share_photos_or_a_physical_sample_we": {
+      "value": "写真や実物サンプルをお送りください。構造、素材、印刷、仕上げ、梱包要件を評価できます。",
+      "status": "needs_review",
+      "sourceHash": "276b75dc7c802fe3"
+    },
+    "index.share_what_you_already_have_we_will": {
+      "value": "お持ちの情報を共有してください。製品範囲を確認し、条件に合うRFQには1営業日以内に返信します。",
+      "status": "needs_review",
+      "sourceHash": "36bb661ca8552ccb"
+    },
+    "index.start_a_project": {
+      "value": "プロジェクトを開始する",
+      "status": "needs_review",
+      "sourceHash": "58265cc0115114af"
+    },
+    "index.start_with_the_audience_use_case_target": {
+      "value": "対象者、ユースケース、目標価格、数量、発売日から始め、生産可能な仕様を確定します。",
+      "status": "needs_review",
+      "sourceHash": "99e8b50fd54299b6"
+    },
+    "index.submit_an_rfq": {
+      "value": "RFQを提出する",
+      "status": "needs_review",
+      "sourceHash": "47d5bbd0f0b0f36f"
+    },
+    "index.the_approximately_5_000_m_facility_has": {
+      "value": "約5,000m²の施設には80名以上のチームメンバーが在籍し、プリプレス、印刷、型抜き、仕上げ、組立、梱包までの社内ワークフローを備えています。",
+      "status": "needs_review",
+      "sourceHash": "1e76476251bad68b"
+    },
+    "index.three_practical_ways_to_work_with_us": {
+      "value": "当社と協業する3つの実践的な方法。",
+      "status": "needs_review",
+      "sourceHash": "0ebc0d5f2b5badef"
+    },
+    "index.tooling_finishing": {
+      "value": "金型と仕上げ",
+      "status": "needs_review",
+      "sourceHash": "69366a6daa467997"
+    },
+    "index.view_printed_products": {
+      "value": "印刷製品を見る",
+      "status": "needs_review",
+      "sourceHash": "2c0b2d3ad88318eb"
+    },
+    "index.view_puzzle_formats": {
+      "value": "パズルフォーマットを見る",
+      "status": "needs_review",
+      "sourceHash": "93bad817bd429a0c"
+    },
+    "index.what_are_the_moq_and_production_lead": {
+      "value": "MOQと生産リードタイムは？",
+      "status": "needs_review",
+      "sourceHash": "15599dae8b6d3ccf"
+    },
+    "index.worldwide": {
+      "value": "全世界",
+      "status": "needs_review",
+      "sourceHash": "42605c01fa5d32a5"
+    },
+    "industries.a_product_performs_better_when_the_user": {
+      "value": "製品の性能は、素材や仕上げを選ぶ前に、ユーザー、チャネル、目的を明確にすることで向上します。",
+      "status": "needs_review",
+      "sourceHash": "b68799ce3d5637ec"
+    },
+    "industries.align_complexity_and_physical_format_with_the": {
+      "value": "複雑さと物理的なフォーマットを、対象年齢層と学習目的に合わせて調整します。",
+      "status": "needs_review",
+      "sourceHash": "b314d695990b20ab"
+    },
+    "industries.applications": {
+      "value": "用途",
+      "status": "needs_review",
+      "sourceHash": "98e33b0f3104fcf1"
+    },
+    "industries.art_culture": {
+      "value": "アート＆カルチャー",
+      "status": "needs_review",
+      "sourceHash": "fbd8a14d44236884"
+    },
+    "industries.artwork_density_piece_count_materials_packaging_and": {
+      "value": "アートワークの密度、ピース数、素材、パッケージ、テスト要件は、想定されるユーザー、販売環境、市場によって変わります。初回レビューで、これらの要件を実現可能な生産フォーマットに結び付けます。",
+      "status": "needs_review",
+      "sourceHash": "683f702f4d8288ad"
+    },
+    "industries.board_game_publishers": {
+      "value": "ボードゲーム出版社",
+      "status": "needs_review",
+      "sourceHash": "73f6ffcd5eea5553"
+    },
+    "industries.build_branded_puzzles_games_and_presentation_packaging": {
+      "value": "企業プログラム向けに、ブランド化されたパズル、ゲーム、プレゼンテーションパッケージを制作します。",
+      "status": "needs_review",
+      "sourceHash": "e7841bc09b5bd29b"
+    },
+    "industries.coordinate_multiple_components_instructions_packing_sequence_and": {
+      "value": "複数のコンポーネント、説明書、梱包順序、最終的なプレゼンテーションを調整します。",
+      "status": "needs_review",
+      "sourceHash": "c75d0e88d5715bcf"
+    },
+    "industries.corporate_gifts_team_building": {
+      "value": "法人ギフト＆チームビルディング",
+      "status": "needs_review",
+      "sourceHash": "e163d80ff60dbbee"
+    },
+    "industries.create_puzzle_and_paper_game_formats_around": {
+      "value": "学習目標と対象年齢層に合わせて、パズルやペーパーゲームのフォーマットを開発します。",
+      "status": "needs_review",
+      "sourceHash": "3acafc9a7aec4557"
+    },
+    "industries.custom_paper_products_by_industry_qinyi": {
+      "value": "業界別カスタム紙製品 | Qinyi",
+      "status": "needs_review",
+      "sourceHash": "303246c5d36c0a6a"
+    },
+    "industries.custom_puzzles_games_and_packaging_for_artists": {
+      "value": "アーティスト、美術館、教育機関、観光業、法人ギフト、ゲーム出版社、プライベートラベルプログラム向けのカスタムパズル、ゲーム、パッケージ。",
+      "status": "needs_review",
+      "sourceHash": "bb67c43360186507"
+    },
+    "industries.develop_coordinated_paper_products_and_packaging_for": {
+      "value": "ブランドコレクション向けに、統一感のある紙製品とパッケージを開発します。",
+      "status": "needs_review",
+      "sourceHash": "14a0c6439c291c62"
+    },
+    "industries.develop_destination_led_paper_products_for_attractions": {
+      "value": "観光地、文化プログラム、小売向けに、デスティネーション主導の紙製品を開発します。",
+      "status": "needs_review",
+      "sourceHash": "e86b27ce26f0cea2"
+    },
+    "industries.education_programs": {
+      "value": "教育プログラム",
+      "status": "needs_review",
+      "sourceHash": "4cc47ea8a89e41df"
+    },
+    "industries.enquire_about_artist_and_museum_products": {
+      "value": "アーティスト・美術館向け製品についてお問い合わせ",
+      "status": "needs_review",
+      "sourceHash": "3196a53f7f503c7f"
+    },
+    "industries.enquire_about_board_games": {
+      "value": "ボードゲームについてお問い合わせ",
+      "status": "needs_review",
+      "sourceHash": "8a1e89492ed3360e"
+    },
+    "industries.enquire_about_corporate_gifts": {
+      "value": "法人ギフトについてお問い合わせ",
+      "status": "needs_review",
+      "sourceHash": "18791426ed440605"
+    },
+    "industries.enquire_about_educational_products": {
+      "value": "教育用製品についてお問い合わせ",
+      "status": "needs_review",
+      "sourceHash": "1c5dcaa1253d9908"
+    },
+    "industries.enquire_about_private_label_products": {
+      "value": "プライベートラベル製品についてお問い合わせ",
+      "status": "needs_review",
+      "sourceHash": "4aa434d31fba1abf"
+    },
+    "industries.enquire_about_tourism_products": {
+      "value": "観光向け製品についてお問い合わせ",
+      "status": "needs_review",
+      "sourceHash": "aaf736ad4823ec90"
+    },
+    "industries.explore_art_puzzles": {
+      "value": "アートパズルを見る",
+      "status": "needs_review",
+      "sourceHash": "f8482c15fd0f1b74"
+    },
+    "industries.find_the_right_product_format": {
+      "value": "適切な製品フォーマットを見つける",
+      "status": "needs_review",
+      "sourceHash": "08e19e76f2bcb364"
+    },
+    "industries.games_private_label": {
+      "value": "ゲーム＆プライベートラベル",
+      "status": "needs_review",
+      "sourceHash": "b457e439326a2d45"
+    },
+    "industries.how_to_choose": {
+      "value": "選び方",
+      "status": "needs_review",
+      "sourceHash": "7429aafc0285db21"
+    },
+    "industries.learning": {
+      "value": "学習",
+      "status": "needs_review",
+      "sourceHash": "8b45bb20e0775c30"
+    },
+    "industries.make_the_image_something_people_can_hold": {
+      "value": "画像を手に取れるものに。",
+      "status": "needs_review",
+      "sourceHash": "488123ff6c054f60"
+    },
+    "industries.match_format_to_audience": {
+      "value": "フォーマットを対象者に合わせる。",
+      "status": "needs_review",
+      "sourceHash": "f677077a9eac639a"
+    },
+    "industries.match_the_product_to_its_audience_and": {
+      "value": "製品を対象者とチャネルに合わせる。",
+      "status": "needs_review",
+      "sourceHash": "962706f563505eb5"
+    },
+    "industries.museum_destination_shops": {
+      "value": "美術館・観光地ショップ",
+      "status": "needs_review",
+      "sourceHash": "01943dadd5ecde00"
+    },
+    "industries.paper_products_made_for_context": {
+      "value": "コンテキストに合わせた紙製品",
+      "status": "needs_review",
+      "sourceHash": "cdf4b52fff5cae58"
+    },
+    "industries.prioritize_imagery_shelf_presence_gifting_and_clear": {
+      "value": "イメージ、店頭での存在感、ギフト用途、明確な商品情報を優先",
+      "status": "needs_review",
+      "sourceHash": "ae1ec13154be1a1d"
+    },
+    "industries.private_label_promotions": {
+      "value": "プライベートブランド＆プロモーション",
+      "status": "needs_review",
+      "sourceHash": "e8aa2274629191e5"
+    },
+    "industries.produce_printed_paper_components_cards_instructions_and": {
+      "value": "提供された仕様に基づき、印刷紙部品、カード、説明書、パッケージを製造",
+      "status": "needs_review",
+      "sourceHash": "e9216bae78a2f295"
+    },
+    "industries.publishing": {
+      "value": "出版",
+      "status": "needs_review",
+      "sourceHash": "26c81739396ded64"
+    },
+    "industries.puzzles_offer_artists_museums_and_cultural_organisations": {
+      "value": "パズルは、アーティスト、美術館、文化機関に、ビジュアルストーリーテリング、参加型体験、小売を結びつけるフォーマットを提供します。アートワークの再現性、ピース数、製品サイズ、パッケージは一体的に設計されます。",
+      "status": "needs_review",
+      "sourceHash": "c9c7b78e4ea9060f"
+    },
+    "industries.qinyi_produces_custom_puzzles_games_and_packaging": {
+      "value": "Qinyi Printingは、クリエイティブ市場および商業市場向けにカスタムパズル、ゲーム、パッケージを製造しています。各ソリューションは、アートワーク、使用用途、対象者、パッケージ形式、購入者の要件に基づいて開発されます。",
+      "status": "needs_review",
+      "sourceHash": "ff45ef0eb36dd277"
+    },
+    "industries.retail": {
+      "value": "小売",
+      "status": "needs_review",
+      "sourceHash": "cdb38c8dc89ad6b4"
+    },
+    "industries.sector_fit": {
+      "value": "セクター適合性",
+      "status": "needs_review",
+      "sourceHash": "5b47cd1911e60700"
+    },
+    "industries.translate_artwork_or_collection_imagery_into_puzzles": {
+      "value": "アートワークやコレクションのイメージをパズル、カード、ギフト製品に変換",
+      "status": "needs_review",
+      "sourceHash": "db5d09b3e38d8cc5"
+    },
+    "industries.which_audience_are_you_designing_for": {
+      "value": "どのオーディエンス向けにデザインしていますか？",
+      "status": "needs_review",
+      "sourceHash": "e114c7a425ec7c12"
+    },
+    "insights.before_files_are_shared": {
+      "value": "ファイル共有前の確認事項",
+      "status": "needs_review",
+      "sourceHash": "b3dbcd5f7ec0cc4c"
+    },
+    "insights.check_game_scope": {
+      "value": "ゲームの範囲を確認",
+      "status": "needs_review",
+      "sourceHash": "f65371892eaeffaf"
+    },
+    "insights.check_puzzle_formats": {
+      "value": "パズルフォーマットを確認",
+      "status": "needs_review",
+      "sourceHash": "52c2fd6799248f8f"
+    },
+    "insights.component_and_version_checklist": {
+      "value": "コンポーネントとバージョンのチェックリスト",
+      "status": "needs_review",
+      "sourceHash": "d21a3131fe6919c6"
+    },
+    "insights.custom_jigsaw_puzzle_brief": {
+      "value": "カスタムジグソーパズル概要",
+      "status": "needs_review",
+      "sourceHash": "0aee23a202b50554"
+    },
+    "insights.games_cards": {
+      "value": "ゲーム＆カード",
+      "status": "needs_review",
+      "sourceHash": "434e19345cb5af0d"
+    },
+    "insights.guidance_updated_26_july_2026": {
+      "value": "ガイダンス更新日：2026年7月26日",
+      "status": "needs_review",
+      "sourceHash": "c979a9b179fccfa4"
+    },
+    "insights.have_the_core_project_information_ready": {
+      "value": "プロジェクトの中核情報は準備できていますか？",
+      "status": "needs_review",
+      "sourceHash": "e33d2a945ef2aeff"
+    },
+    "insights.list_every_board_card_deck_token_rule": {
+      "value": "すべてのボード、カードデッキ、トークン、ルールシート、インサート、ボックスをリストアップ。各ファイルにバージョン名を付け、カード表面、共通裏面、言語版を分けてください。",
+      "status": "needs_review",
+      "sourceHash": "aa1755a34bff1abe"
+    },
+    "insights.packaging": {
+      "value": "パッケージ",
+      "status": "needs_review",
+      "sourceHash": "0d62bb01df4edd95"
+    },
+    "insights.practical_rfq_checklists_for_custom_puzzles_games": {
+      "value": "カスタムパズル、ゲーム、カード、印刷パッケージのための実用的RFQチェックリスト",
+      "status": "needs_review",
+      "sourceHash": "492c359d0151708e"
+    },
+    "insights.prepared_by_the_qinyi_project_team_from": {
+      "value": "Qinyiプロジェクトチームが、一次段階のパズル、ゲーム、パッケージ問い合わせで使用される情報をもとに作成しました。",
+      "status": "needs_review",
+      "sourceHash": "30a8c87b3700bdb2"
+    },
+    "insights.printed_box_rfq_checklist": {
+      "value": "印刷ボックスRFQチェックリスト",
+      "status": "needs_review",
+      "sourceHash": "7dc348c950e5649b"
+    },
+    "insights.provide_the_product_dimensions_contents_paper_or": {
+      "value": "製品寸法、内容物、紙または板紙の指定、構造参照、印刷、表面仕上げ、インサート、数量、納入先を提供してください。",
+      "status": "needs_review",
+      "sourceHash": "4126ea6a1cf995d3"
+    },
+    "insights.puzzles": {
+      "value": "パズル",
+      "status": "needs_review",
+      "sourceHash": "1318ec245f4ac8d3"
+    },
+    "insights.read_file_security_guidance": {
+      "value": "ファイルセキュリティガイダンスを読む",
+      "status": "needs_review",
+      "sourceHash": "ea9b279df016b597"
+    },
+    "insights.reviewed_26_july_2026": {
+      "value": "レビュー日：2026年7月26日",
+      "status": "needs_review",
+      "sourceHash": "9c0e8281acfe7889"
+    },
+    "insights.rfq_guides": {
+      "value": "RFQガイド",
+      "status": "needs_review",
+      "sourceHash": "af78e0f2d418da5e"
+    },
+    "insights.rfq_planning_guides_qinyi": {
+      "value": "RFQ計画ガイド | Qinyi Printing",
+      "status": "needs_review",
+      "sourceHash": "79fb1ca1c91ae6ce"
+    },
+    "insights.separate_the_commercial_brief_from_confidential_production": {
+      "value": "商業概要と機密の生産ファイルを分離する。",
+      "status": "needs_review",
+      "sourceHash": "92a8cb8cd630ab82"
+    },
+    "insights.start_the_rfq": {
+      "value": "RFQを開始する",
+      "status": "needs_review",
+      "sourceHash": "185d88f5bd146f59"
+    },
+    "insights.state_the_finished_size_piece_count_quantity": {
+      "value": "完成サイズ、ピース数、数量、ターゲットオーディエンス、販売市場、梱包の希望を明記する。アートワークの寸法を含め、固定色参照を特定する。",
+      "status": "needs_review",
+      "sourceHash": "59508a1a68d14112"
+    },
+    "insights.the_first_enquiry_should_establish_manufacturing_fit": {
+      "value": "最初の問い合わせで製造適合性を確認する。アートワーク、ダイライン、非公開プロジェクト資料は、受取人、転送チャネル、およびNDA要件を確認した後にのみ送信する。",
+      "status": "needs_review",
+      "sourceHash": "d15111e9b295e755"
+    },
+    "insights.three_checklists_for_a_faster_manufacturing_review": {
+      "value": "製造レビューを迅速化するための3つのチェックリスト",
+      "status": "needs_review",
+      "sourceHash": "58131925358847af"
+    },
+    "manufacturing.01_production_floor": {
+      "value": "01 / 生産フロア",
+      "status": "needs_review",
+      "sourceHash": "bc841ce350dace82"
+    },
+    "manufacturing.02_converting": {
+      "value": "02 / 加工",
+      "status": "needs_review",
+      "sourceHash": "ef53dd80ff7a68bd"
+    },
+    "manufacturing.03_pack_out": {
+      "value": "03 / 梱包",
+      "status": "needs_review",
+      "sourceHash": "530764f747e49554"
+    },
+    "manufacturing.agree_the_acceptance_criteria_before_the_run": {
+      "value": "生産開始前に受入基準に合意する。",
+      "status": "needs_review",
+      "sourceHash": "9e90d1178a781bed"
+    },
+    "manufacturing.applicable_evidence": {
+      "value": "該当する証拠",
+      "status": "needs_review",
+      "sourceHash": "8ee57b0eed00d203"
+    },
+    "manufacturing.approved_artwork_is_prepared_for_the_selected": {
+      "value": "承認されたアートワークは、選択された素材、印刷方法、仕上げ工程に合わせて準備される。",
+      "status": "needs_review",
+      "sourceHash": "568f2f48f0cec5a5"
+    },
+    "manufacturing.approved_specifications_move_from_prepress_into_printing": {
+      "value": "承認された仕様は、プリプレスから印刷、およびその後の加工工程に移行する。",
+      "status": "needs_review",
+      "sourceHash": "b0832a29ef18bd11"
+    },
+    "manufacturing.artwork_dielines_structure_and_agreed_reference_samples": {
+      "value": "アートワーク、ダイライン、構造、合意された参考サンプルは、生産開始前に確認される。",
+      "status": "needs_review",
+      "sourceHash": "598350f7e4ad9c27"
+    },
+    "manufacturing.assembly_and_packing": {
+      "value": "組立と梱包",
+      "status": "needs_review",
+      "sourceHash": "d0d6f829e5a08cb1"
+    },
+    "manufacturing.assembly_checks": {
+      "value": "組立チェック",
+      "status": "needs_review",
+      "sourceHash": "4f6f2cbc8e083656"
+    },
+    "manufacturing.brief_artwork_review": {
+      "value": "概要とアートワークレビュー",
+      "status": "needs_review",
+      "sourceHash": "8912847f7098b0a2"
+    },
+    "manufacturing.business_compliance_documents": {
+      "value": "ビジネスおよびコンプライアンス文書",
+      "status": "needs_review",
+      "sourceHash": "a95bb499f9f3dcf9"
+    },
+    "manufacturing.business_identity": {
+      "value": "ビジネスアイデンティティ",
+      "status": "needs_review",
+      "sourceHash": "6f104becb0c82385"
+    },
+    "manufacturing.components_instructions_and_retail_packaging_are_assembled": {
+      "value": "コンポーネント、取扱説明書、小売包装は合意された順序で組み立てられる。",
+      "status": "needs_review",
+      "sourceHash": "b988f4674b59589d"
+    },
+    "manufacturing.connected_stages_under_one_project_brief": {
+      "value": "1つのプロジェクト概要の下で連結された工程。",
+      "status": "needs_review",
+      "sourceHash": "755a10a88ea81629"
+    },
+    "manufacturing.converting_finishing": {
+      "value": "加工と仕上げ",
+      "status": "needs_review",
+      "sourceHash": "d86e89c44edb55d0"
+    },
+    "manufacturing.current_documents_for_the_actual_project": {
+      "value": "実際のプロジェクトの最新文書。",
+      "status": "needs_review",
+      "sourceHash": "f361906b18775ca6"
+    },
+    "manufacturing.current_scope_confirmed": {
+      "value": "現在の範囲が確認済み",
+      "status": "needs_review",
+      "sourceHash": "174a1fcb07072a83"
+    },
+    "manufacturing.cut_geometry_and_component_fit_are_reviewed": {
+      "value": "切断形状とコンポーネントの適合性が製品構造に対してレビューされる。",
+      "status": "needs_review",
+      "sourceHash": "e6ca1b1cd8c9ec15"
+    },
+    "manufacturing.cutting_and_die_cutting": {
+      "value": "切断と型抜き",
+      "status": "needs_review",
+      "sourceHash": "a656a2ebaccc1113"
+    },
+    "manufacturing.define_your_product_and_quality_requirements": {
+      "value": "製品と品質要件を定義する。",
+      "status": "needs_review",
+      "sourceHash": "e8d07ce41d17f239"
+    },
+    "manufacturing.die_cutting_workbench_used_for_printed_paper": {
+      "value": "印刷紙製品の生産に使用される型抜き作業台",
+      "status": "needs_review",
+      "sourceHash": "e91e0b046885b99f"
+    },
+    "manufacturing.dielines_construction_component_fit_and_die_cutting": {
+      "value": "ダイライン、構造、コンポーネントの適合性、型抜き要件が製品に対して確立される。",
+      "status": "needs_review",
+      "sourceHash": "0598d037773a43ce"
+    },
+    "manufacturing.dimensions_materials_piece_count_print_finish_packaging": {
+      "value": "寸法、素材、ピース数、印刷、仕上げ、梱包、許容差、販売市場のニーズが記録される。",
+      "status": "needs_review",
+      "sourceHash": "fc03db8b6992b219"
+    },
+    "manufacturing.dongguan": {
+      "value": "東莞",
+      "status": "needs_review",
+      "sourceHash": "3b9a72055103c1f7"
+    },
+    "manufacturing.dongguan_production": {
+      "value": "東莞生産",
+      "status": "needs_review",
+      "sourceHash": "287a5500fd795e6a"
+    },
+    "manufacturing.factory_facts": {
+      "value": "工場の実績",
+      "status": "needs_review",
+      "sourceHash": "c7c0a5cf67e9de68"
+    },
+    "manufacturing.factory_floor": {
+      "value": "工場フロア",
+      "status": "needs_review",
+      "sourceHash": "b1e966515e534c20"
+    },
+    "manufacturing.final_release": {
+      "value": "最終出荷",
+      "status": "needs_review",
+      "sourceHash": "aa25bbb2be28694c"
+    },
+    "manufacturing.finished_goods_and_packing_requirements_are_assessed": {
+      "value": "完成品と梱包要件は、出荷前に合意されたプロジェクト基準に照らして評価されます。",
+      "status": "needs_review",
+      "sourceHash": "5a765d5edbe0f198"
+    },
+    "manufacturing.historic_certificates_or_reports_do_not_establish": {
+      "value": "過去の証明書や報告書は現在の適用範囲を証明するものではありません。プロジェクトに書類が提出された際に、有効性、発行機関、適用性が確認されます。",
+      "status": "needs_review",
+      "sourceHash": "99e82c453f88dc15"
+    },
+    "manufacturing.in_house_production_path": {
+      "value": "社内生産工程",
+      "status": "needs_review",
+      "sourceHash": "6a34c38e9b43f627"
+    },
+    "manufacturing.in_process_checks": {
+      "value": "工程内検査",
+      "status": "needs_review",
+      "sourceHash": "acc97e4a67f2f038"
+    },
+    "manufacturing.manual_assembly": {
+      "value": "手作業による組立",
+      "status": "needs_review",
+      "sourceHash": "727814b3fc2756e7"
+    },
+    "manufacturing.manufacturing_quality": {
+      "value": "製造と品質",
+      "status": "needs_review",
+      "sourceHash": "75d312776e9696fd"
+    },
+    "manufacturing.offset_print_production_is_supported_by_roland": {
+      "value": "オフセット印刷生産は、会社概要に記載されているRolandおよびHeidelbergの設備によって支えられています。",
+      "status": "needs_review",
+      "sourceHash": "6715c5ff3efd63fe"
+    },
+    "manufacturing.offset_printing_press_inside_qinyi_s_dongguan": {
+      "value": "Qinyi Printingの東莞工場内のオフセット印刷機",
+      "status": "needs_review",
+      "sourceHash": "a421742639d46e99"
+    },
+    "manufacturing.one_workflow_from_prepress_through_packing": {
+      "value": "プリプレスから梱包までの一貫したワークフロー",
+      "status": "needs_review",
+      "sourceHash": "c42d23352e2ed067"
+    },
+    "manufacturing.paper_cutting_die_cutting_and_applicable_surface": {
+      "value": "断裁、型抜き、および該当する表面加工は、承認された仕様に従って行われます。",
+      "status": "needs_review",
+      "sourceHash": "1ed0064d7a8f001f"
+    },
+    "manufacturing.piece_count_inserts_packing_sequence_and_presentation": {
+      "value": "部品点数、インサート、梱包順序、プレゼンテーションは組立中に確認されます。",
+      "status": "needs_review",
+      "sourceHash": "a086576491206e7d"
+    },
+    "manufacturing.pre_production_approval": {
+      "value": "生産前承認",
+      "status": "needs_review",
+      "sourceHash": "3ea06cc107d930b5"
+    },
+    "manufacturing.print_and_production_coordination": {
+      "value": "印刷と生産の調整",
+      "status": "needs_review",
+      "sourceHash": "010132db0c853ab0"
+    },
+    "manufacturing.print_convert_assemble_and_pack": {
+      "value": "印刷、加工、組立、梱包。",
+      "status": "needs_review",
+      "sourceHash": "997d7be8193767d0"
+    },
+    "manufacturing.print_cutting_component_fit_and_finishing_are": {
+      "value": "印刷、断裁、部品の適合、仕上げは、該当する生産段階でチェックされます。",
+      "status": "needs_review",
+      "sourceHash": "adf58e3e476efcb1"
+    },
+    "manufacturing.printed_paper_product_finishing_workstation_at_qinyi": {
+      "value": "Qinyi Printingの印刷紙製品仕上げ作業台",
+      "status": "needs_review",
+      "sourceHash": "3a46572b0d8881c7"
+    },
+    "manufacturing.printing_converting_assembly_in_dongguan_qinyi": {
+      "value": "東莞での印刷、加工、組立 | Qinyi Printing",
+      "status": "needs_review",
+      "sourceHash": "f00dc92248e55c9f"
+    },
+    "manufacturing.printing_paper_converting_and_manual_packing_each": {
+      "value": "印刷、紙加工、手作業による梱包はそれぞれ、多部品製品の最終的な適合性、仕上がり、プレゼンテーションに影響を与えます。",
+      "status": "needs_review",
+      "sourceHash": "98eb41c2a28a58a1"
+    },
+    "manufacturing.production_workshop_inside_qinyi_s_dongguan_facility": {
+      "value": "Qinyi Printingの東莞工場内の生産ワークショップ",
+      "status": "needs_review",
+      "sourceHash": "138577462a26a4e9"
+    },
+    "manufacturing.project": {
+      "value": "プロジェクト",
+      "status": "needs_review",
+      "sourceHash": "9859597853197476"
+    },
+    "manufacturing.puzzles_game_parts_inserts_and_packaging_are": {
+      "value": "パズル、ゲーム部品、インサート、パッケージは、合意されたパックアウトにまとめられます。",
+      "status": "needs_review",
+      "sourceHash": "8833590956cf4dda"
+    },
+    "manufacturing.qinyi_can_provide_applicable_company_registration_and": {
+      "value": "Qinyiは、プロジェクトレビュー中に、該当する会社登録および関連コンプライアンス書類を資格のあるバイヤーに提供できます。入手可能性と範囲は、特定の製品、材料、および市場先に基づいて確認されます。",
+      "status": "needs_review",
+      "sourceHash": "7be0df512d4c9c47"
+    },
+    "manufacturing.qinyi_operates_an_approximately_5_000_m": {
+      "value": "Qinyi Printingは、約5,000m²の施設で80名以上のチームメンバーを擁しています。社内ワークフローは、承認されたファイルから梱包された製品まで、カスタムパズル、紙ゲーム、印刷パッケージをサポートしています。",
+      "status": "needs_review",
+      "sourceHash": "4a6c17526c658f73"
+    },
+    "manufacturing.quality_checkpoints": {
+      "value": "品質チェックポイント",
+      "status": "needs_review",
+      "sourceHash": "99041e6d7db71eb6"
+    },
+    "manufacturing.quality_control_begins_with_a_complete_product": {
+      "value": "品質管理は完全な製品仕様から始まり、生産から最終パックアウトまで継続されます。",
+      "status": "needs_review",
+      "sourceHash": "2d840bf4e41b0f9d"
+    },
+    "manufacturing.real_production_shown_by_stage": {
+      "value": "実際の生産を段階ごとに表示。",
+      "status": "needs_review",
+      "sourceHash": "eb1d8a48727b783f"
+    },
+    "manufacturing.registered_company_dongguan_qinyi_co_ltd_located": {
+      "value": "登記会社：東莞市勤益印刷有限公司 / Dongguan Qinyi Printing Co., Ltd.、所在地は東莞市茶山鎮。",
+      "status": "needs_review",
+      "sourceHash": "06652e52698849c6"
+    },
+    "manufacturing.request_project_documents": {
+      "value": "プロジェクト資料をリクエスト",
+      "status": "needs_review",
+      "sourceHash": "7412d95de2ffdf3c"
+    },
+    "manufacturing.review_qinyi_s_approximately_5_000_m": {
+      "value": "Qinyi Printingの約5,000m²の東莞工場、社内生産工程、品質チェックポイント、プロジェクト資料プロセスを確認。",
+      "status": "needs_review",
+      "sourceHash": "718abf8bb7b9bcfc"
+    },
+    "manufacturing.specification_review": {
+      "value": "仕様レビュー",
+      "status": "needs_review",
+      "sourceHash": "ce7f3eaf37f6639e"
+    },
+    "manufacturing.structure_tooling": {
+      "value": "構造・金型",
+      "status": "needs_review",
+      "sourceHash": "6d8d0533e9c6bb90"
+    },
+    "manufacturing.submit_requirements_for_review": {
+      "value": "レビュー用に要件を提出",
+      "status": "needs_review",
+      "sourceHash": "ca64ec71e932c0c3"
+    },
+    "manufacturing.team_members_assembling_and_packing_printed_products": {
+      "value": "印刷製品を組み立て・梱包するチームメンバー",
+      "status": "needs_review",
+      "sourceHash": "fbe4c385c890c73d"
+    },
+    "manufacturing.tell_us_the_product_category_sales_market": {
+      "value": "製品カテゴリー、販売市場、バイヤー要件をお知らせください。関連する現行資料を特定できます。",
+      "status": "needs_review",
+      "sourceHash": "18a2b3a207c77407"
+    },
+    "manufacturing.the_exact_route_depends_on_the_approved": {
+      "value": "正確な工程は承認された仕様によりますが、中核となる紙製品の生産は東莞工場内で調整可能です。",
+      "status": "needs_review",
+      "sourceHash": "a8a1798c38c5eb4e"
+    },
+    "manufacturing.use_case_destination_market_quantity_timing_and": {
+      "value": "使用用途、販売市場、数量、納期、支給ファイルを生産計画前に確認します。",
+      "status": "needs_review",
+      "sourceHash": "19fbb338d211a8e2"
+    },
+    "manufacturing.validity": {
+      "value": "有効期間",
+      "status": "needs_review",
+      "sourceHash": "9c3050e867bfd4ac"
+    },
+    "privacy.ask_about_your_information": {
+      "value": "お客様の情報についてお問い合わせ",
+      "status": "needs_review",
+      "sourceHash": "b58411d74d40a5e6"
+    },
+    "privacy.authorized_qinyi_personnel_and_service_providers_needed": {
+      "value": "業務上の電子メール、ファイル転送、ホスティング、ITサポート、プロジェクト納品に必要な権限のあるQinyi社員およびサービスプロバイダー。法律で要求される場合には情報開示を行うこともあります。",
+      "status": "needs_review",
+      "sourceHash": "78aaa039bcb20613"
+    },
+    "privacy.business_enquiries": {
+      "value": "ビジネスに関するお問い合わせ",
+      "status": "needs_review",
+      "sourceHash": "1ebd74e5d880af17"
+    },
+    "privacy.choices_and_requests": {
+      "value": "選択肢とリクエスト",
+      "status": "needs_review",
+      "sourceHash": "fb7df23cb54909f3"
+    },
+    "privacy.confirm_the_channel_before_sending_production_files": {
+      "value": "生産ファイルを送信する前にチャネルを確認してください。",
+      "status": "needs_review",
+      "sourceHash": "4e65c39c9309c86f"
+    },
+    "privacy.do_not_enter_passwords_payment_card_information": {
+      "value": "パスワード、クレジットカード情報、公的身分証明番号、非公開の顧客リスト、認証情報、機密の生産ファイルをWebフォームやAIサポートチャットに入力しないでください。",
+      "status": "needs_review",
+      "sourceHash": "520aeb04bd1bc12d"
+    },
+    "privacy.effective_26_july_2026": {
+      "value": "2026年7月26日発効",
+      "status": "needs_review",
+      "sourceHash": "c1cff78cee56275e"
+    },
+    "privacy.file_security": {
+      "value": "ファイルセキュリティ",
+      "status": "needs_review",
+      "sourceHash": "712226760957fa06"
+    },
+    "privacy.how_can_i_reduce_file_transfer_risk": {
+      "value": "ファイル転送のリスクを減らすにはどうすればよいですか？",
+      "status": "needs_review",
+      "sourceHash": "fa291f4af3a00d11"
+    },
+    "privacy.how_qinyi_handles_enquiry_details_project_files": {
+      "value": "Qinyi Printingが、見込み顧客やビジネスコンタクトからの問い合わせ詳細、プロジェクトファイル、プライバシーリクエストをどのように取り扱うか。",
+      "status": "needs_review",
+      "sourceHash": "ebf8d8110850dcdf"
+    },
+    "privacy.how_the_web_form_works": {
+      "value": "カスタマイズスタジオでの情報の扱い",
+      "status": "reviewed",
+      "sourceHash": "bc19db130213e082"
+    },
+    "privacy.how_the_web_form_works_2": {
+      "value": "ウェブフォームでの情報の扱い",
+      "status": "reviewed",
+      "sourceHash": "43e60c675ce6d04c"
+    },
+    "privacy.information_is_kept_only_for_as_long": {
+      "value": "情報は、問い合わせ、ビジネス関係、紛争処理、および該当する記録保存義務に合理的に必要な期間のみ保持されます。保存期間はプロジェクトの性質や状況により異なります。",
+      "status": "needs_review",
+      "sourceHash": "2aa69f29acb69520"
+    },
+    "privacy.information_you_provide": {
+      "value": "お客様が提供する情報",
+      "status": "needs_review",
+      "sourceHash": "2e00ec80bb9c5ee3"
+    },
+    "privacy.international_enquiries": {
+      "value": "海外からのお問い合わせ",
+      "status": "needs_review",
+      "sourceHash": "07b3274e623c2ac7"
+    },
+    "privacy.name_company_business_contact_details_country_product": {
+      "value": "氏名、会社名、ビジネス連絡先、国、製品関心事項、プロジェクト要件、および通信内容。詳細なプロジェクトファイルは、初期レビュー後にのみ要求されます。",
+      "status": "needs_review",
+      "sourceHash": "235bacbd2c53d565"
+    },
+    "privacy.privacy_and_project_file_handling": {
+      "value": "プライバシーとプロジェクトファイルの取り扱い。",
+      "status": "needs_review",
+      "sourceHash": "8502d51aa8dca203"
+    },
+    "privacy.privacy_file_security_qinyi": {
+      "value": "プライバシーとファイルセキュリティ | Qinyi Printing",
+      "status": "needs_review",
+      "sourceHash": "8f34a921f788ad18"
+    },
+    "privacy.purpose": {
+      "value": "目的",
+      "status": "needs_review",
+      "sourceHash": "d4e8830a71c73edf"
+    },
+    "privacy.qinyi_operates_in_dongguan_china_information_sent": {
+      "value": "Qinyiは中国東莞で事業を展開しています。他国のバイヤーから送信された情報は中国に転送・処理され、バイヤーおよびQinyiのサービスプロバイダーのシステムを経由する場合があります。",
+      "status": "needs_review",
+      "sourceHash": "4b45f00cbdc4c53e"
+    },
+    "privacy.ready_to_share_a_basic_project_outline": {
+      "value": "基本的なプロジェクト概要を共有する準備はできていますか？",
+      "status": "needs_review",
+      "sourceHash": "08faca959b670342"
+    },
+    "privacy.remove_unnecessary_personal_data_use_access_controls": {
+      "value": "不要な個人データを削除し、転送サービスがサポートする場合はアクセス制御と有効期限を使用し、パスワードは別のチャネルで送信し、送信前に受信者アドレスを確認してください。",
+      "status": "needs_review",
+      "sourceHash": "823938b4c19f55ca"
+    },
+    "privacy.retention": {
+      "value": "保存期間",
+      "status": "needs_review",
+      "sourceHash": "3b1f58d94eacf04f"
+    },
+    "privacy.send_only_the_basic_product_category_estimated": {
+      "value": "基本製品カテゴリ、推定数量、仕向地、目標日のみを送信してください。公開参照リンクを含めても構いませんが、機密情報を含んではいけません。",
+      "status": "needs_review",
+      "sourceHash": "2514aeb0555faeee"
+    },
+    "privacy.the_quote_and_contact_forms_prepare_an": {
+      "value": "コンセプトの検討中、選択内容と編集可能な概要はブラウザ内に保持されます。見積もりフォームに追加しても送信はされません。「その他のアイデア」を選んだ後に担当者との共同企画を依頼した場合、概要はサポートサービスに送信され、担当者相談が作成され、権限を持つ Qinyi の担当者が閲覧できます。",
+      "status": "reviewed",
+      "sourceHash": "a3bbac2687499901"
+    },
+    "privacy.the_quote_and_contact_forms_prepare_an_2": {
+      "value": "見積もり・お問い合わせフォームは、お使いのメールアプリで送信用メールを作成します。ウェブサイト自体は入力内容をアップロードまたは保存しません。Qinyi が情報を受け取るのは、内容を確認してメールを送信した後です。ただし、上記の共同企画操作で明示的に送信した概要は除きます。",
+      "status": "reviewed",
+      "sourceHash": "529053a269caf698"
+    },
+    "privacy.this_notice_explains_what_happens_when_a": {
+      "value": "この通知は、見込み顧客またはビジネスコンタクトがQinyi Printingにお問い合わせやプロジェクト資料を送信した場合の取り扱いについて説明します。",
+      "status": "needs_review",
+      "sourceHash": "0a9549f0d39f3a09"
+    },
+    "privacy.to_respond_to_enquiries_assess_manufacturing_fit": {
+      "value": "お問い合わせへの対応、製造適合性の評価、見積書の作成、サンプルや生産に関する連絡、合意された契約上および法的義務の履行、正当な事業記録の保護のため。",
+      "status": "needs_review",
+      "sourceHash": "4ade8cc6a9e14d3f"
+    },
+    "privacy.using_the_english_site_name_qinyi_is": {
+      "value": "英語サイト名Qinyi Printingを使用する、はお問い合わせ情報を受け取る事業体です。連絡先：Ms. Xiao、",
+      "status": "needs_review",
+      "sourceHash": "8e5f64ac72654858"
+    },
+    "privacy.wait_until_a_qinyi_contact_has_replied": {
+      "value": "Qinyiの担当者が返信し、意図された受信者と転送方法を確認するまでお待ちください。機密資料を共有する前に、機密保持要件の範囲について合意してください。",
+      "status": "needs_review",
+      "sourceHash": "048ef1cfe6f9e87a"
+    },
+    "privacy.what_should_i_send_in_the_first": {
+      "value": "最初のお問い合わせでは何を送るべきですか？",
+      "status": "needs_review",
+      "sourceHash": "0a4919788625e183"
+    },
+    "privacy.what_should_not_be_submitted_through_the": {
+      "value": "ウェブサイトを通じて送信すべきでないものは何ですか？",
+      "status": "needs_review",
+      "sourceHash": "ab02c9f909bfd61c"
+    },
+    "privacy.when_should_i_send_artwork_or_dielines": {
+      "value": "アートワークやダイラインはいつ送るべきですか？",
+      "status": "needs_review",
+      "sourceHash": "5a9565ad55147a3e"
+    },
+    "privacy.who_handles_your_information": {
+      "value": "お客様の情報を取り扱う事業者",
+      "status": "needs_review",
+      "sourceHash": "a1100ee5fa0f7a20"
+    },
+    "privacy.who_may_receive_it": {
+      "value": "情報を受け取る可能性のある者",
+      "status": "needs_review",
+      "sourceHash": "165c26da6a6804d6"
+    },
+    "privacy.with_the_subject_privacy_request_qinyi_may": {
+      "value": "件名「Privacy request」でご連絡ください。Qinyiはリクエストに対応する前に本人確認が必要な場合があります。",
+      "status": "needs_review",
+      "sourceHash": "868077e098d366d0"
+    },
+    "privacy.you_may_contact_qinyi_to_ask_what": {
+      "value": "Qinyiに連絡して、当社が保有するお客様のビジネスコンタクト情報を確認したり、該当する場合は訂正や削除を要求したり、今後の問い合わせ連絡に対する同意を撤回したりすることができます。法的、契約上、または紛争処理の理由により、一部の情報を保持する必要がある場合があります。",
+      "status": "needs_review",
+      "sourceHash": "3be736a1425818c1"
+    },
+    "products.1000_pieces": {
+      "value": "1000個",
+      "status": "needs_review",
+      "sourceHash": "84a7c99940a7cb04"
+    },
+    "products.100_150_pieces": {
+      "value": "100～150個",
+      "status": "needs_review",
+      "sourceHash": "277091c8c41ce57a"
+    },
+    "products.100_300_pieces": {
+      "value": "100～300個",
+      "status": "needs_review",
+      "sourceHash": "3063b9b42650c5ab"
+    },
+    "products.100_pcs_20_x_20_or_25": {
+      "value": "100個：20×20または25×36 cm；108個：25.8×18.2 cm；126個：42×28.5 cm；150個：20×27、25×20または36×12 cm。",
+      "status": "needs_review",
+      "sourceHash": "0157f30c7906e6e8"
+    },
+    "products.240_300_pieces": {
+      "value": "240～300個",
+      "status": "needs_review",
+      "sourceHash": "3046675b114d6e11"
+    },
+    "products.240_pcs_40_x_40_cm_250": {
+      "value": "240個：40×40 cm；250個：45.7×30.4または49×36 cm；256個：31×31 cm；300個：38×26 cm。",
+      "status": "needs_review",
+      "sourceHash": "742f2b6ad18b5a7a"
+    },
+    "products.24_56_pieces": {
+      "value": "24～56個",
+      "status": "needs_review",
+      "sourceHash": "1ed99a6b260dffa2"
+    },
+    "products.24_pcs_20_x_14_21_x": {
+      "value": "24個：20×14、21×29.7または35×25 cm；50個：26×18または30×14 cm；54個：14×14 cm；56個：35×25 cm。",
+      "status": "needs_review",
+      "sourceHash": "316ae6a154fa4c47"
+    },
+    "products.250_pcs_50_5_cm_diameter_1000": {
+      "value": "250個：直径50.5 cm；1000個：直径67.5 cm。",
+      "status": "needs_review",
+      "sourceHash": "4329eb5b71d8ee01"
+    },
+    "products.3d_paper_puzzles": {
+      "value": "3Dペーパーパズル。",
+      "status": "needs_review",
+      "sourceHash": "04f3a09c20e265f0"
+    },
+    "products.40_x_58_42_x_57_46": {
+      "value": "40×58、42×57、46×46、53×38または75×55 cm。",
+      "status": "needs_review",
+      "sourceHash": "e5ac53f3bd763def"
+    },
+    "products.500_1000_pieces": {
+      "value": "500～1000個",
+      "status": "needs_review",
+      "sourceHash": "5348d54f076e35ae"
+    },
+    "products.500_pieces": {
+      "value": "500個",
+      "status": "needs_review",
+      "sourceHash": "4de618990339850b"
+    },
+    "products.50_8_x_50_8_55_8": {
+      "value": "50.8×50.8、55.8×55.8、70×50、73.5×51、75×52または75.8×50.5 cm。",
+      "status": "needs_review",
+      "sourceHash": "abd4c68762c66895"
+    },
+    "products.art_puzzle_with_coordinated_holographic_printed_box": {
+      "value": "アートパズル（ホログラム印刷ボックス付き）",
+      "status": "needs_review",
+      "sourceHash": "e20188e473c28b81"
+    },
+    "products.art_retail_collector_editions": {
+      "value": "アート、リテール、コレクターズエディション",
+      "status": "needs_review",
+      "sourceHash": "a9d996b7f0f51a5c"
+    },
+    "products.artwork_coverage_cmyk_or_named_spot_colours": {
+      "value": "アートワークカバレッジ、CMYKまたは指定スポットカラー、カラーリファレンス、重要なブランドカラー、校正方法。",
+      "status": "needs_review",
+      "sourceHash": "7dbf06b1ee6d7d61"
+    },
+    "products.board_game_systems": {
+      "value": "ボードゲームシステム",
+      "status": "needs_review",
+      "sourceHash": "f4d28ddff73d4c52"
+    },
+    "products.board_games_cards": {
+      "value": "ボードゲーム＆カード。",
+      "status": "needs_review",
+      "sourceHash": "e7bab3e355374011"
+    },
+    "products.boards": {
+      "value": "ボード",
+      "status": "needs_review",
+      "sourceHash": "4fcd39dd9263c46f"
+    },
+    "products.boxes_inserts_bags_paper_components_and_buyer": {
+      "value": "ボックス、インサート、バッグ、紙部品、および買い手支給または調達されたアクセサリーは、承認されたBOMに従ってカウントされ梱包されます。",
+      "status": "needs_review",
+      "sourceHash": "848053aeee2ff213"
+    },
+    "products.card_size_deck_count_corner_profile_face": {
+      "value": "カードサイズ、デッキ数、コーナープロファイル、表面/裏面の順序、仕上げ、照合、パックスタイルは、生産ファイルレジスターで定義されます。",
+      "status": "needs_review",
+      "sourceHash": "271f4a338967e8de"
+    },
+    "products.cards_deck_packaging": {
+      "value": "カード＆デッキパッケージ",
+      "status": "needs_review",
+      "sourceHash": "bc91c4720a29318d"
+    },
+    "products.complete_kit_assembly": {
+      "value": "完全なキット組み立て",
+      "status": "needs_review",
+      "sourceHash": "c2eb71a04d0931c2"
+    },
+    "products.coordinate_every_printed_component_under_one_bom": {
+      "value": "すべての印刷コンポーネントを1つのBOMと承認された梱包順序で調整します。",
+      "status": "needs_review",
+      "sourceHash": "3d08a2d7c5f927c9"
+    },
+    "products.cultural_editions": {
+      "value": "カルチャーエディション",
+      "status": "needs_review",
+      "sourceHash": "5a4b5ceda96e6b19"
+    },
+    "products.cultural_puzzle_gift_set_with_coordinated_printed": {
+      "value": "カルチャーパズルギフトセット（印刷パッケージ付き）",
+      "status": "needs_review",
+      "sourceHash": "a23237f9b2b847e3"
+    },
+    "products.custom_board_game_kit_with_folding_board": {
+      "value": "カスタムボードゲームキット（折りたたみボード、カード、紙部品、リテールボックス付き）",
+      "status": "needs_review",
+      "sourceHash": "e03260a1f4268726"
+    },
+    "products.custom_card_game_deck_with_illustrated_cards": {
+      "value": "カスタムカードゲームデッキ（イラストカードと印刷ボックス付き）",
+      "status": "needs_review",
+      "sourceHash": "99a031c36fee299f"
+    },
+    "products.custom_puzzles_games_paper_packaging_qinyi": {
+      "value": "カスタムパズル、ゲーム、紙パッケージ | Qinyi Printing",
+      "status": "needs_review",
+      "sourceHash": "326dd956769b81ac"
+    },
+    "products.decks": {
+      "value": "デッキ",
+      "status": "needs_review",
+      "sourceHash": "3e9aa4f07223251c"
+    },
+    "products.destination_country_intended_age_required_tests_or": {
+      "value": "仕向国、対象年齢、必要なテストまたは書類、検査計画、許容公差、欠陥基準。",
+      "status": "needs_review",
+      "sourceHash": "24928fe6cdc675db"
+    },
+    "products.dimensions_describe_documented_cutting_formats_not_a": {
+      "value": "寸法は文書化されたカットフォーマットを示し、すべてのアートワーク、素材、またはピース形状がそのフォーマットに適合することを保証するものではありません。ツールの状態、正確なダイライン、および可用性は見積もり前に再確認されます。",
+      "status": "needs_review",
+      "sourceHash": "d66ef9e138358783"
+    },
+    "products.documented_finished_side_range_14_to_91": {
+      "value": "文書化された完成品サイズ範囲：14～91.3 cm",
+      "status": "needs_review",
+      "sourceHash": "a2b23f6b3b4c3cb8"
+    },
+    "products.documented_finished_size_examples": {
+      "value": "文書化された完成品サイズ例",
+      "status": "needs_review",
+      "sourceHash": "ec5505345129909b"
+    },
+    "products.documented_formats_custom_production": {
+      "value": "文書化されたフォーマット / カスタム生産",
+      "status": "needs_review",
+      "sourceHash": "f18beafcf2795003"
+    },
+    "products.documented_formats_include_14_x_14_20": {
+      "value": "文書化されたフォーマットには、14 x 14、20 x 14、21 x 29.7、26 x 18、30 x 14、35 x 25 cmが含まれます。大ピース形状と年齢区分は、対象市場から確認されます。",
+      "status": "needs_review",
+      "sourceHash": "1aa3d309bb177536"
+    },
+    "products.documented_range_24_to_1_000_pieces": {
+      "value": "文書化された範囲：24～1,000ピース",
+      "status": "needs_review",
+      "sourceHash": "0dcecfbff04f49a7"
+    },
+    "products.early_learning_shaped_sets": {
+      "value": "幼児学習＆形状セット",
+      "status": "needs_review",
+      "sourceHash": "e98d7bdcc0ab133e"
+    },
+    "products.education_gifts_promotions": {
+      "value": "教育、ギフト、プロモーション",
+      "status": "needs_review",
+      "sourceHash": "751296524d83c9b2"
+    },
+    "products.existing_500_piece_formats_span_40_x": {
+      "value": "既存の500ピースフォーマットは40 x 58～75 x 55 cmに及びます。文書化された1000ピースフォーマットには、正方形、長方形、67.5 cmの円形エディションが含まれます。",
+      "status": "needs_review",
+      "sourceHash": "bb8e65639745d26b"
+    },
+    "products.existing_examples_span_20_x_20_to": {
+      "value": "既存の例は20 x 20～49 x 36 cmに及び、正方形、長方形、形状オプションがあります。48ピースの91.3 x 61.3 cmフロアパズルフォーマットも文書化されています。",
+      "status": "needs_review",
+      "sourceHash": "1fc5b5fb58e46900"
+    },
+    "products.existing_jigsaw_tooling": {
+      "value": "既存のジグソー工具",
+      "status": "needs_review",
+      "sourceHash": "04f6c41a59630013"
+    },
+    "products.finished_dimensions_piece_or_card_count_assembled": {
+      "value": "完成品寸法、ピースまたはカード数、組み立てサイズ、コンポーネントリスト、対象ユーザー。",
+      "status": "needs_review",
+      "sourceHash": "f96a459ede61add4"
+    },
+    "products.folding_boards_printed_tiles_paper_tokens_score": {
+      "value": "折り畳みボード、印刷タイル、紙トークン、スコアパッド、仕切り、説明書をセットで指定できます。",
+      "status": "needs_review",
+      "sourceHash": "e947a22674e3c14b"
+    },
+    "products.game_boards_paper_components": {
+      "value": "ゲームボード＆紙部品",
+      "status": "needs_review",
+      "sourceHash": "b020b63c293251e0"
+    },
+    "products.game_playing_cards": {
+      "value": "ゲーム＆トランプ",
+      "status": "needs_review",
+      "sourceHash": "f0bcd6d53865618d"
+    },
+    "products.jigsaw_art_puzzles": {
+      "value": "ジグソー＆アートパズル",
+      "status": "needs_review",
+      "sourceHash": "698d23b1e88bc9c7"
+    },
+    "products.lamination_or_coating_direction_special_effects_die": {
+      "value": "ラミネート・コーティングの方向、特殊効果、型抜き、スコアリング、折り、接着、エッジ品質の要件。実際の構造から実現可能性を確認します。",
+      "status": "needs_review",
+      "sourceHash": "171a5c7c4baefdcc"
+    },
+    "products.market_quality": {
+      "value": "市場と品質",
+      "status": "needs_review",
+      "sourceHash": "7414245ce7aa9168"
+    },
+    "products.need_a_complete_product_or_only_one": {
+      "value": "完成品が必要ですか、それとも一つの生産工程のみですか？",
+      "status": "needs_review",
+      "sourceHash": "e6ff6a279360e3ee"
+    },
+    "products.packaging_assembly": {
+      "value": "包装と組立",
+      "status": "needs_review",
+      "sourceHash": "113f0e457228f0ed"
+    },
+    "products.packing": {
+      "value": "梱包",
+      "status": "needs_review",
+      "sourceHash": "e14fc9d661dc86a8"
+    },
+    "products.paper_or_board_direction_stiffness_and_thickness": {
+      "value": "紙・ボードの方向、剛性、厚さの目標値、および規制物質や持続可能性に関する要件。最終的な材料はサンプルと在庫状況で確認します。",
+      "status": "needs_review",
+      "sourceHash": "8c9697088d2a1f9e"
+    },
+    "products.piece_count": {
+      "value": "ピース数",
+      "status": "needs_review",
+      "sourceHash": "e122a9dcfa7ab6cb"
+    },
+    "products.piece_counts_and_finished_sizes_in_the": {
+      "value": "提供された会社ポートフォリオ内のピース数と完成サイズ。",
+      "status": "needs_review",
+      "sourceHash": "92489a2c60a20533"
+    },
+    "products.print_colour": {
+      "value": "印刷と色",
+      "status": "needs_review",
+      "sourceHash": "16b5a4c5da8ffb89"
+    },
+    "products.printed_die_cut_3d_paper_pirate_ship": {
+      "value": "印刷・型抜きされた3D紙製海賊船パズル（組立部品付き）",
+      "status": "needs_review",
+      "sourceHash": "c6dde3124b95648c"
+    },
+    "products.printed_die_cut_sheets_can_be_engineered": {
+      "value": "印刷・型抜きシートは、乗り物、建築物、動物、展示シーンに加工可能です。実用的な概要には、組立寸法、部品数、スロットとタブのロジック、材料方向、組立手順、説明書、対象年齢、パックサイズを定義します。既存のアートワークや参考サンプルを出発点として使用できます。",
+      "status": "needs_review",
+      "sourceHash": "d6527390890f5c4b"
+    },
+    "products.printed_gift_packaging": {
+      "value": "印刷ギフト包装",
+      "status": "needs_review",
+      "sourceHash": "01f4fdbdb94301ea"
+    },
+    "products.product_family_01": {
+      "value": "製品ファミリー01",
+      "status": "needs_review",
+      "sourceHash": "c6f14574c81cceab"
+    },
+    "products.product_family_02": {
+      "value": "製品ファミリー02",
+      "status": "needs_review",
+      "sourceHash": "667aadbb818b24cd"
+    },
+    "products.product_family_03": {
+      "value": "製品ファミリー03",
+      "status": "needs_review",
+      "sourceHash": "dcf1da75ffef9e0a"
+    },
+    "products.product_family_04": {
+      "value": "製品ファミリー04",
+      "status": "needs_review",
+      "sourceHash": "4b2e0f863fca7f3f"
+    },
+    "products.qinyi_custom_puzzle_portfolio_showing_boxed_art": {
+      "value": "Qinyi Printing カスタムパズルポートフォリオ：箱入りアート、教育用、ギフト用パズル形式",
+      "status": "needs_review",
+      "sourceHash": "19f728a7dc2c9b60"
+    },
+    "products.qinyi_manufactures_jigsaw_and_3d_paper_puzzles": {
+      "value": "Qinyi Printing はジグソーパズル、3D紙パズル、ボードゲーム、カードゲーム、印刷ギフト包装を製造しています。以下の範囲は、既存のジグソー金型とプロジェクト固有のオプションを分けており、バイヤーは見積もり依頼前に概要を確認できます。",
+      "status": "needs_review",
+      "sourceHash": "6fb57f42cc861b6b"
+    },
+    "products.quantity_timing": {
+      "value": "数量と納期",
+      "status": "needs_review",
+      "sourceHash": "5f39d6995ff21247"
+    },
+    "products.quote_packaging_with_the_product": {
+      "value": "製品と一緒に包装を見積もる",
+      "status": "needs_review",
+      "sourceHash": "79cf566fbffb8879"
+    },
+    "products.regular_jigsaw_projects_typically_start_at_300": {
+      "value": "通常のジグソープロジェクトは最低300セットから。その他の製品、サンプル、生産スケジュールは、完全な仕様とファイルを確認後にお見積もりします。",
+      "status": "needs_review",
+      "sourceHash": "cb83fa96ddd6afc0"
+    },
+    "products.regular_jigsaw_range": {
+      "value": "通常ジグソー範囲",
+      "status": "needs_review",
+      "sourceHash": "2cfe444be29d23f7"
+    },
+    "products.request_a_product_review": {
+      "value": "製品レビューを依頼する",
+      "status": "needs_review",
+      "sourceHash": "1196fc8f182f8033"
+    },
+    "products.retail_pack_insert_instructions_component_collation_barcode": {
+      "value": "小売パック、インサート、説明書、部品照合、バーコード、カートンマーク、マスターカートン制限。",
+      "status": "needs_review",
+      "sourceHash": "c7316c06e2cd296c"
+    },
+    "products.review_documented_jigsaw_tooling_common_product_configurations": {
+      "value": "文書化されたジグソー金型、一般的な製品構成、カスタムパズル、紙ゲーム、カード、印刷包装のRFQ要件を確認する。",
+      "status": "needs_review",
+      "sourceHash": "0f5798f81bf76b50"
+    },
+    "products.rfq_specification_matrix": {
+      "value": "RFQ仕様マトリックス",
+      "status": "needs_review",
+      "sourceHash": "087b767d952158c9"
+    },
+    "products.round_formats": {
+      "value": "ラウンドフォーマット",
+      "status": "needs_review",
+      "sourceHash": "06d22324f03d1755"
+    },
+    "products.send_your_product_specification": {
+      "value": "製品仕様を送信する",
+      "status": "needs_review",
+      "sourceHash": "e155b3031e0e7af1"
+    },
+    "products.start_with_a_proven_format_or_a": {
+      "value": "実績のあるフォーマットか、新しい構造から始める。",
+      "status": "needs_review",
+      "sourceHash": "3fd79fd8ea291d65"
+    },
+    "products.submit_a_3d_puzzle_brief": {
+      "value": "3Dパズルの概要を提出する",
+      "status": "needs_review",
+      "sourceHash": "c955466f6fcf1a10"
+    },
+    "products.surface_conversion": {
+      "value": "表面加工・変換",
+      "status": "needs_review",
+      "sourceHash": "e97bd0ce3a5112f8"
+    },
+    "products.the_300_set_figure_applies_to_the": {
+      "value": "* 300セットという数字は、当社の通常ジグソーパズルシリーズに適用されるものであり、普遍的なMOQではありません。価格、生産能力、金型状況、サンプリング、リードタイムはプロジェクトごとに異なります。",
+      "status": "needs_review",
+      "sourceHash": "274f69166207cda1"
+    },
+    "products.the_documented_company_scope_includes_colour_and": {
+      "value": "当社の対応範囲は、カラーボックス、ギフトボックス、折り畳みカートン、紙袋、タグ、説明書を含みます。構造、ボードまたは紙の方向、インサート、開閉方法、印刷仕上げ、カートン包装は、包装される製品に合わせて調整されます。",
+      "status": "needs_review",
+      "sourceHash": "250b1088a3e6bf83"
+    },
+    "products.two_stock_round_diameters_shown_in_the": {
+      "value": "ポートフォリオに掲載されている2つの在庫ラウンド直径",
+      "status": "needs_review",
+      "sourceHash": "05eb780c1dc50fc5"
+    },
+    "products.typical_starting_quantity_300_sets_for_regular": {
+      "value": "通常開始数量：通常ジグソーパズルは300セット*",
+      "status": "needs_review",
+      "sourceHash": "96d4c6449fce7a16"
+    },
+    "products.use_an_existing_cutting_format_for_an": {
+      "value": "既存の抜型フォーマットを使用して効率的に開始するか、エンジニアリングレビュー後にカスタムの輪郭とピースシステムを発注する。",
+      "status": "needs_review",
+      "sourceHash": "93ff1f6000a8a49d"
+    },
+    "products.what_to_define_before_price_and_schedule": {
+      "value": "価格とスケジュールの前に定義すべきこと。",
+      "status": "needs_review",
+      "sourceHash": "66740f6ba707beab"
+    },
+    "projects.a_3d_paper_puzzle_adds_structural_testing": {
+      "value": "3Dペーパーパズルは、通常の印刷と型抜き工程に加え、構造テスト、スロットフィット、組立説明書が必要です。",
+      "status": "needs_review",
+      "sourceHash": "6915fb0be3e9d742"
+    },
+    "projects.a_puzzle_designed_as_a_complete_gift": {
+      "value": "完全なギフトオブジェクトとしてデザインされたパズル。",
+      "status": "needs_review",
+      "sourceHash": "fea696af078db0e5"
+    },
+    "projects.artists_museums_cultural_retail_and_branded_gifts": {
+      "value": "アーティスト、美術館、文化小売、ブランドギフト",
+      "status": "needs_review",
+      "sourceHash": "0990495ecdf184fd"
+    },
+    "projects.artwork_adaptation_size_and_piece_count_selection": {
+      "value": "アートワークの適応、サイズとピース数の選択、ダイラインのレビュー",
+      "status": "needs_review",
+      "sourceHash": "85638a21e712f26a"
+    },
+    "projects.artwork_color_piece_separation_edge_quality_component": {
+      "value": "アートワークの色、ピース分離、エッジ品質、コンポーネント数、パッケージの一致",
+      "status": "needs_review",
+      "sourceHash": "e4db91bed8893904"
+    },
+    "projects.brand_color_reference_image_registration_cut_consistency": {
+      "value": "ブランドカラーリファレンス、画像レジストレーション、カットの一貫性、パックアウト",
+      "status": "needs_review",
+      "sourceHash": "b714819c37dd42fb"
+    },
+    "projects.bring_us_a_file_a_reference_or": {
+      "value": "ファイル、参考資料、または初期コンセプトをお持ちください。",
+      "status": "needs_review",
+      "sourceHash": "e965d5d90b00dc5c"
+    },
+    "projects.buyer_fit": {
+      "value": "バイヤーフィット",
+      "status": "needs_review",
+      "sourceHash": "90275916e64093b8"
+    },
+    "projects.campaign_artwork_turned_into_a_tactile_format": {
+      "value": "キャンペーンアートワークを触覚フォーマットに変換。",
+      "status": "needs_review",
+      "sourceHash": "c1289349e7e9e97c"
+    },
+    "projects.case_01_art_cultural_retail": {
+      "value": "ケース01 / アート＆カルチャー小売",
+      "status": "needs_review",
+      "sourceHash": "f8b3eb8b2d554bd5"
+    },
+    "projects.case_02_corporate_communication": {
+      "value": "ケース02 / コーポレートコミュニケーション",
+      "status": "needs_review",
+      "sourceHash": "e1c5d8f2b5ea26bd"
+    },
+    "projects.case_03_structural_paper_play": {
+      "value": "ケース03 / 構造的なペーパープレイ",
+      "status": "needs_review",
+      "sourceHash": "bc3391a92bf7816a"
+    },
+    "projects.case_studies": {
+      "value": "事例紹介",
+      "status": "needs_review",
+      "sourceHash": "6b1df2ba950cf6e7"
+    },
+    "projects.corporate_campaigns_destinations_events_and_employee_gifts": {
+      "value": "企業キャンペーン、デスティネーション、イベント、従業員ギフト",
+      "status": "needs_review",
+      "sourceHash": "8fb1233db6eb4485"
+    },
+    "projects.custom_jigsaw_puzzle_and_coordinated_printed_box": {
+      "value": "カスタムジグソーパズルと調和した印刷ボックス",
+      "status": "needs_review",
+      "sourceHash": "62176747bf62d85d"
+    },
+    "projects.custom_puzzle_paper_product_case_studies_qinyi": {
+      "value": "カスタムパズル＆ペーパー製品の事例 | Qinyi",
+      "status": "needs_review",
+      "sourceHash": "1eee297ecb54ab89"
+    },
+    "projects.development": {
+      "value": "開発",
+      "status": "needs_review",
+      "sourceHash": "21b6a798321a49f7"
+    },
+    "projects.documented_formats": {
+      "value": "文書化されたフォーマット",
+      "status": "needs_review",
+      "sourceHash": "2b0e5f5736caee7d"
+    },
+    "projects.education_aviation_tourism_museums_and_licensed_themes": {
+      "value": "教育、航空、観光、博物館、ライセンステーマ",
+      "status": "needs_review",
+      "sourceHash": "4d645470f86149fd"
+    },
+    "projects.examples_of_corporate_and_destination_promotional_puzzles": {
+      "value": "企業・観光地プロモーションパズルの事例",
+      "status": "needs_review",
+      "sourceHash": "107ab1f07ac777a7"
+    },
+    "projects.factory_scope": {
+      "value": "工場の規模",
+      "status": "needs_review",
+      "sourceHash": "f4f5993cf80e92cc"
+    },
+    "projects.flat_jigsaw_puzzle_with_printed_retail_or": {
+      "value": "印刷済み小売用またはプレゼンテーション用パッケージ入りフラットジグソーパズル",
+      "status": "needs_review",
+      "sourceHash": "5cb549d41ebb3a64"
+    },
+    "projects.flat_printed_parts_engineered_for_assembly": {
+      "value": "組み立て用に設計されたフラット印刷部品",
+      "status": "needs_review",
+      "sourceHash": "823d7f252c0a8d6e"
+    },
+    "projects.floral_keepsake_puzzle_with_matching_box_and": {
+      "value": "花柄の記念パズル（マッチングボックス＆額装プレゼンテーション付き）",
+      "status": "needs_review",
+      "sourceHash": "91091a26d6fdd7e3"
+    },
+    "projects.need_a_closer_technical_reference": {
+      "value": "より詳細な技術リファレンスが必要ですか？",
+      "status": "needs_review",
+      "sourceHash": "199218aa7bc7d640"
+    },
+    "projects.part_identification_slot_tolerance_fold_integrity_and": {
+      "value": "部品識別、スロット公差、折り目強度、完全セット",
+      "status": "needs_review",
+      "sourceHash": "2c37c30b9bfdc591"
+    },
+    "projects.prepress_printing_mounting_die_cutting_finishing_assembly": {
+      "value": "プリプレス、印刷、マウント、型抜き、仕上げ、組立、梱包",
+      "status": "needs_review",
+      "sourceHash": "15ed4acdee4dad8a"
+    },
+    "projects.printed_3d_paper_models_and_assembly_components": {
+      "value": "印刷された3Dペーパーモデルと組立部品",
+      "status": "needs_review",
+      "sourceHash": "63bf13e1facd72e4"
+    },
+    "projects.printed_die_cut_paper_components_instructions_and": {
+      "value": "印刷・型抜きされたペーパー部品、説明書、ボックス",
+      "status": "needs_review",
+      "sourceHash": "3479cc5b1b1bf9d5"
+    },
+    "projects.products_made_for_art_campaigns_and_play": {
+      "value": "アート、キャンペーン、遊びのために作られた製品",
+      "status": "needs_review",
+      "sourceHash": "65ba1e0feb8181d9"
+    },
+    "projects.project_details_are_confirmed_against_the_approved": {
+      "value": "プロジェクト詳細は承認された仕様に基づき確認されます。",
+      "status": "needs_review",
+      "sourceHash": "c953c09d90fcadb9"
+    },
+    "projects.project_evidence": {
+      "value": "プロジェクト実績",
+      "status": "needs_review",
+      "sourceHash": "c62e4989bec0f5b9"
+    },
+    "projects.qinyi_s_supplied_portfolio_documents_corporate_and": {
+      "value": "Qinyi Printingが提供するポートフォリオ資料には、ブランドアートワーク、パズル構造、外装パッケージが一つのビジュアルシステムとして機能する企業向け・観光地マーケティングパズルが記載されています。",
+      "status": "needs_review",
+      "sourceHash": "143cb94192641cec"
+    },
+    "projects.quality_focus": {
+      "value": "品質重視",
+      "status": "needs_review",
+      "sourceHash": "31e27193138d550a"
+    },
+    "projects.representative_puzzle_corporate_gift_and_3d_paper": {
+      "value": "Qinyi Printingが記録した代表的なパズル、法人ギフト、3Dペーパー製品プログラム。",
+      "status": "needs_review",
+      "sourceHash": "d18a9bbb41ba459a"
+    },
+    "projects.review_partnership_routes": {
+      "value": "パートナーシップの選択肢を確認",
+      "status": "needs_review",
+      "sourceHash": "07192a9b89b21fd0"
+    },
+    "projects.send_the_product_type_target_quantity_destination": {
+      "value": "製品タイプ、目標数量、仕向け地、検証が必要な側面をお送りください。Qinyiは適切な機密保持契約のもと、関連するフォーマットを特定し、入手可能なサンプルやプロジェクト資料についてご相談いただけます。",
+      "status": "needs_review",
+      "sourceHash": "64c79faaed2bae57"
+    },
+    "projects.structure_review_fit_testing_tooling_and_assembly": {
+      "value": "構造レビュー、フィットテスト、治具、組立順序",
+      "status": "needs_review",
+      "sourceHash": "dd64e63a3539f71e"
+    },
+    "projects.submit_a_comparable_brief": {
+      "value": "同等の概要を提出",
+      "status": "needs_review",
+      "sourceHash": "770c2757d3197ca3"
+    },
+    "projects.the_program_combines_printed_puzzle_pieces_a": {
+      "value": "このプログラムは、印刷されたパズルピース、マッチングする小売用ボックス、アートワークを中心に据えたプレゼンテーション形式を組み合わせています。",
+      "status": "needs_review",
+      "sourceHash": "2ec8e3be5b755f1c"
+    },
+    "projects.these_examples_use_product_and_factory_photography": {
+      "value": "これらの事例はQinyi提供の製品写真と工場写真を使用しています。商用数量や顧客機密情報は、資格のあるバイヤーとのみ協議されます。",
+      "status": "needs_review",
+      "sourceHash": "7f3111faec5dbf23"
+    },
+    "quote.1000_piece_art_puzzle": {
+      "value": "1000ピース / アートパズル",
+      "status": "needs_review",
+      "sourceHash": "21ff79a316d75500"
+    },
+    "quote.3d_composition": {
+      "value": "3D composition",
+      "status": "needs_review",
+      "sourceHash": "3f9815e20135ed17"
+    },
+    "quote.3d_paper_puzzle": {
+      "value": "3Dペーパーパズル",
+      "status": "needs_review",
+      "sourceHash": "6edaa2e170b7def6"
+    },
+    "quote.a_concise_first_review": {
+      "value": "簡潔な初回確認。",
+      "status": "reviewed",
+      "sourceHash": "90fbf706fc995653"
+    },
+    "quote.a_concise_first_review_2": {
+      "value": "A concise first review.",
+      "status": "needs_review",
+      "sourceHash": "90fbf706fc995653"
+    },
+    "quote.and_consent_to_qinyi_using_these_details": {
+      "value": "Qinyi Printingがこれらの詳細を本問い合わせの確認・返答に使用することに同意する",
+      "status": "needs_review",
+      "sourceHash": "d6457cfc17b21c9f"
+    },
+    "quote.approximate_size_intended_use_audience_or_packaging": {
+      "value": "おおよそのサイズ、使用目的、対象者、パッケージの希望",
+      "status": "needs_review",
+      "sourceHash": "3ee865275a5c4769"
+    },
+    "quote.artwork_dielines_or_reference_files_shared_through": {
+      "value": "アートワーク、ダイライン、参考ファイルは、相互に合意したメールまたはファイル転送方法で共有",
+      "status": "needs_review",
+      "sourceHash": "159f6e0ad29b16c0"
+    },
+    "quote.available": {
+      "value": "Available",
+      "status": "needs_review",
+      "sourceHash": "e674447337e83c13"
+    },
+    "quote.brief_note": {
+      "value": "簡単なメモ",
+      "status": "needs_review",
+      "sourceHash": "17df7cf689c673fd"
+    },
+    "quote.budget_range": {
+      "value": "Budget range",
+      "status": "needs_review",
+      "sourceHash": "fa6e8433c609a567"
+    },
+    "quote.cards_playing_cards": {
+      "value": "カード / トランプ",
+      "status": "needs_review",
+      "sourceHash": "a9e719d71b7f21a9"
+    },
+    "quote.commercial_scope": {
+      "value": "商業範囲",
+      "status": "needs_review",
+      "sourceHash": "21c6032ee0fc1038"
+    },
+    "quote.company_contact_details": {
+      "value": "会社連絡先",
+      "status": "needs_review",
+      "sourceHash": "2478dab110615414"
+    },
+    "quote.custom_board_game": {
+      "value": "カスタムボードゲーム",
+      "status": "needs_review",
+      "sourceHash": "e73d83aebcc4f7b7"
+    },
+    "quote.custom_jigsaw_puzzle": {
+      "value": "カスタムジグソーパズル",
+      "status": "needs_review",
+      "sourceHash": "1893081a5ca88224"
+    },
+    "quote.destination_country": {
+      "value": "仕向国",
+      "status": "needs_review",
+      "sourceHash": "b41d5f37c0dde1b1"
+    },
+    "quote.destination_country_and_target_date": {
+      "value": "仕向国と目標日",
+      "status": "needs_review",
+      "sourceHash": "81c9dee8f1fda817"
+    },
+    "quote.detailed_specification_after_initial_review": {
+      "value": "初期レビュー後の詳細仕様。",
+      "status": "needs_review",
+      "sourceHash": "a4c89c09a3416e3e"
+    },
+    "quote.dimensions": {
+      "value": "Dimensions",
+      "status": "needs_review",
+      "sourceHash": "914182d5e25f69e1"
+    },
+    "quote.direct_contact": {
+      "value": "直接連絡",
+      "status": "needs_review",
+      "sourceHash": "9aa984a61d7a7180"
+    },
+    "quote.do_not_send_confidential_production_files_until": {
+      "value": "機密生産ファイルは、受信者と転送方法が確認されるまで送信しないでください。参照",
+      "status": "needs_review",
+      "sourceHash": "ed55adcf1b1fef39"
+    },
+    "quote.e_g_2_000_units": {
+      "value": "例：2,000ユニット",
+      "status": "needs_review",
+      "sourceHash": "e85a9c19071fe068"
+    },
+    "quote.e_g_300_300_mm": {
+      "value": "e.g. 300 × 300 mm",
+      "status": "needs_review",
+      "sourceHash": "16bc5fe49d03b8fd"
+    },
+    "quote.e_g_greyboard_coated_paper_recommendation_needed": {
+      "value": "e.g. greyboard, coated paper, recommendation needed",
+      "status": "needs_review",
+      "sourceHash": "0f45d1c172aebb7c"
+    },
+    "quote.e_g_matte_lamination_foil_recommendation_needed": {
+      "value": "e.g. matte lamination, foil, recommendation needed",
+      "status": "needs_review",
+      "sourceHash": "ae9b5337e6a6d865"
+    },
+    "quote.estimated_quantity": {
+      "value": "推定数量",
+      "status": "needs_review",
+      "sourceHash": "275a7d6941090108"
+    },
+    "quote.feasibility_missing_information_sampling_moq_price_and": {
+      "value": "実現可能性、不足情報、サンプリング、MOQ、価格、納期はレビューされた仕様から確認されます。",
+      "status": "needs_review",
+      "sourceHash": "cf72969a66ade7f2"
+    },
+    "quote.file_security_guidance": {
+      "value": "ファイルセキュリティガイダンス",
+      "status": "needs_review",
+      "sourceHash": "61ec345502905424"
+    },
+    "quote.finished_dimensions": {
+      "value": "Finished dimensions",
+      "status": "needs_review",
+      "sourceHash": "5158597f638c61fd"
+    },
+    "quote.finished_dimensions_piece_or_card_count_materials": {
+      "value": "完成寸法、ピースまたはカード数、素材、構造、パッケージ。",
+      "status": "needs_review",
+      "sourceHash": "ca02698fa043bee9"
+    },
+    "quote.generate_preview": {
+      "value": "Generate preview",
+      "status": "needs_review",
+      "sourceHash": "f82333b89a5dc903"
+    },
+    "quote.gift_box_printed_packaging": {
+      "value": "ギフトボックス/印刷パッケージ",
+      "status": "needs_review",
+      "sourceHash": "a4825a4bfebb50a2"
+    },
+    "quote.guided_studio": {
+      "value": "Guided studio",
+      "status": "needs_review",
+      "sourceHash": "15b99054f8fae9e8"
+    },
+    "quote.https": {
+      "value": "https://",
+      "status": "needs_review",
+      "sourceHash": "66dfeeedabf1f022"
+    },
+    "quote.if_the_project_is_a_potential_fit": {
+      "value": "プロジェクトが適合する可能性がある場合、Ms. XiaoまたはQinyiチームメンバーが返信し、見積もり作成に必要な情報を求めます。",
+      "status": "needs_review",
+      "sourceHash": "60c39eefb66ec0e2"
+    },
+    "quote.image_reference": {
+      "value": "Image reference",
+      "status": "needs_review",
+      "sourceHash": "24f4a48a2efa645f"
+    },
+    "quote.kids_educational_puzzle": {
+      "value": "子供向け教育パズル",
+      "status": "needs_review",
+      "sourceHash": "1938f843b4e8c6f3"
+    },
+    "quote.material": {
+      "value": "Material",
+      "status": "needs_review",
+      "sourceHash": "616cb218a65b982f"
+    },
+    "quote.material_preference": {
+      "value": "Material preference",
+      "status": "needs_review",
+      "sourceHash": "785fcccfa22e3a1d"
+    },
+    "quote.model_engine_viewport_controls_and_generation_adapter": {
+      "value": "Model engine, viewport controls and generation adapter pending input.",
+      "status": "needs_review",
+      "sourceHash": "cf3d275fcaefb8db"
+    },
+    "quote.model_parameters": {
+      "value": "Model parameters",
+      "status": "needs_review",
+      "sourceHash": "be1179e7fc3cb11f"
+    },
+    "quote.only_share_a_link_that_is_safe": {
+      "value": "公開しても安全なリンクのみを共有してください。機密のアートワーク、認証情報、個人データを含めないでください。",
+      "status": "needs_review",
+      "sourceHash": "8ac043a096477a00"
+    },
+    "quote.optional_public_reference_link": {
+      "value": "オプションの公開参考リンク",
+      "status": "needs_review",
+      "sourceHash": "d188cb55cb2eb131"
+    },
+    "quote.optional_recommendation_needed": {
+      "value": "Optional / recommendation needed",
+      "status": "needs_review",
+      "sourceHash": "f41a490bf01d622a"
+    },
+    "quote.other_paper_product": {
+      "value": "その他の紙製品",
+      "status": "needs_review",
+      "sourceHash": "18ad0cf847ef7f65"
+    },
+    "quote.output_mode": {
+      "value": "Output mode",
+      "status": "needs_review",
+      "sourceHash": "d7ac94557d427580"
+    },
+    "quote.parametric_modeling": {
+      "value": "Parametric modeling",
+      "status": "needs_review",
+      "sourceHash": "ad6e5ce1940eeabc"
+    },
+    "quote.pdf_jpg_png_or_webp_up_to": {
+      "value": "PDF, JPG, PNG or WebP, up to 25MB. Do not upload passwords, payment data, identity documents or confidential production files.",
+      "status": "needs_review",
+      "sourceHash": "2c53004cb37e02ba"
+    },
+    "quote.pending_input": {
+      "value": "Pending input",
+      "status": "needs_review",
+      "sourceHash": "bc6e0973dfa1a086"
+    },
+    "quote.phone_whatsapp": {
+      "value": "電話/WhatsApp",
+      "status": "needs_review",
+      "sourceHash": "2e2c97ab4237fe1b"
+    },
+    "quote.print_finishing": {
+      "value": "Print & finishing",
+      "status": "needs_review",
+      "sourceHash": "6d3e8e28c6061f73"
+    },
+    "quote.product_category_and_estimated_quantity": {
+      "value": "製品カテゴリと推定数量",
+      "status": "needs_review",
+      "sourceHash": "91e25dfb0ec0d02e"
+    },
+    "quote.product_specification": {
+      "value": "製品仕様",
+      "status": "needs_review",
+      "sourceHash": "a5af9591079ea7a1"
+    },
+    "quote.product_type": {
+      "value": "製品タイプ",
+      "status": "needs_review",
+      "sourceHash": "6fee4ea29a0798dd"
+    },
+    "quote.public_reference_link": {
+      "value": "公開参考リンク",
+      "status": "needs_review",
+      "sourceHash": "5235d0c2faa46a32"
+    },
+    "quote.quantity_tiers_destination_target_date_and_any": {
+      "value": "数量段階、仕向地、目標日、および購入者固有の要件。",
+      "status": "needs_review",
+      "sourceHash": "7577a5a98323aaf3"
+    },
+    "quote.reference_file_optional": {
+      "value": "Reference file (optional)",
+      "status": "needs_review",
+      "sourceHash": "804da7b1b282548c"
+    },
+    "quote.request_a_custom_manufacturing_quote": {
+      "value": "カスタマイズと見積もり",
+      "status": "reviewed",
+      "sourceHash": "ef32ec984a6986ba"
+    },
+    "quote.request_a_custom_manufacturing_quote_qinyi": {
+      "value": "カスタマイズと見積もり | Qinyi Printing",
+      "status": "reviewed",
+      "sourceHash": "827d1573efcaee66"
+    },
+    "quote.review_result": {
+      "value": "レビュー結果",
+      "status": "needs_review",
+      "sourceHash": "d67dd3c4888586f4"
+    },
+    "quote.select_a_product": {
+      "value": "製品を選択",
+      "status": "needs_review",
+      "sourceHash": "5994bea3d662c0b7"
+    },
+    "quote.send_a_short_project_outline_first_qinyi": {
+      "value": "まず簡単なプロジェクト概要をお送りください。Qinyi が製造適合性を確認し、価格算出に必要な図面、アートワーク、詳細仕様を後ほど依頼します。",
+      "status": "reviewed",
+      "sourceHash": "732dd3c1a0565ed2"
+    },
+    "quote.source_asset": {
+      "value": "Source asset",
+      "status": "needs_review",
+      "sourceHash": "b1187c58ac5f17a8"
+    },
+    "quote.start_a_two_step_manufacturing_rfq_for": {
+      "value": "編集可能な製品コンセプトを作成し、オリジナルパズル、紙製ゲーム、印刷パッケージの製造 RFQ に進めます。",
+      "status": "reviewed",
+      "sourceHash": "eae7cb2bbcc61b8f"
+    },
+    "quote.start_a_two_step_rfq_for_custom": {
+      "value": "ガイド付き製品コンセプトを検討し、編集可能なカスタマイズ概要を作成して、Qinyi Printing に製造見積もりを依頼できます。",
+      "status": "reviewed",
+      "sourceHash": "6b6ef5c33a94f362"
+    },
+    "quote.start_with_the_essentials": {
+      "value": "基本情報から始めます。",
+      "status": "reviewed",
+      "sourceHash": "b662c6f4326ee3a4"
+    },
+    "quote.step_1_of_2": {
+      "value": "2 ステップ中 1 ステップ目",
+      "status": "reviewed",
+      "sourceHash": "e32a2b28a767ef5e"
+    },
+    "quote.step_1_of_2_2": {
+      "value": "Step 1 of 2",
+      "status": "needs_review",
+      "sourceHash": "e32a2b28a767ef5e"
+    },
+    "quote.step_2_of_2": {
+      "value": "ステップ2/2",
+      "status": "needs_review",
+      "sourceHash": "933ec51f8cba96a5"
+    },
+    "quote.submit_quote_details": {
+      "value": "Submit quote details",
+      "status": "needs_review",
+      "sourceHash": "191d767a0f2a41dc"
+    },
+    "quote.target_delivery_date": {
+      "value": "希望納期",
+      "status": "needs_review",
+      "sourceHash": "7783bea7bc8f5b1d"
+    },
+    "quote.two_step_rfq": {
+      "value": "2 段階 RFQ",
+      "status": "reviewed",
+      "sourceHash": "76ab0cd93471b22f"
+    },
+    "quote.your_project_details_remain_editable_before_submission": {
+      "value": "Your project details remain editable before submission. An optional PDF or image is uploaded through Qinyi's protected quote channel and identified by a reference number.",
+      "status": "needs_review",
+      "sourceHash": "d22a8f6fa43d5318"
+    },
+    "solutions.a_clearer_handoff": {
+      "value": "より明確な引き継ぎ",
+      "status": "needs_review",
+      "sourceHash": "ec75cb9d6c047267"
+    },
+    "solutions.a_milestone_schedule_is_issued_after_artwork": {
+      "value": "アートワーク、構造、仕上げ、梱包が確定した後、マイルストーンスケジュールが発行されます。",
+      "status": "needs_review",
+      "sourceHash": "0cb6ca50c7f9bad7"
+    },
+    "solutions.artwork_product_development": {
+      "value": "アートワーク＆製品開発",
+      "status": "needs_review",
+      "sourceHash": "39dda9642fda855e"
+    },
+    "solutions.artwork_reference_or_written_brief": {
+      "value": "アートワーク、参考資料、または文章による概要。",
+      "status": "needs_review",
+      "sourceHash": "b738a728593f247c"
+    },
+    "solutions.artwork_structure_dielines_tooling_and_material_direction": {
+      "value": "アートワーク、構造、ダイライン、工具、材料の方向性をまとめてレビュー。",
+      "status": "needs_review",
+      "sourceHash": "442ab17790a68adf"
+    },
+    "solutions.assembly_instructions_and_packaging_brought_into_the": {
+      "value": "組み立て、取扱説明書、パッケージを最終製品に統合。",
+      "status": "needs_review",
+      "sourceHash": "c327d3fdeb7c3b0c"
+    },
+    "solutions.assembly_packaging": {
+      "value": "組み立て＆パッケージング",
+      "status": "needs_review",
+      "sourceHash": "3c770d957546b544"
+    },
+    "solutions.bring_us_the_product_you_want_to": {
+      "value": "作りたい製品をお持ちください。",
+      "status": "needs_review",
+      "sourceHash": "0cb0cbc3217efa88"
+    },
+    "solutions.buyers_do_not_need_every_production_detail": {
+      "value": "バイヤーは初日からすべての生産詳細を決める必要はありません。既存のものから始め、実現可能性とサンプリングに必要な決定事項を特定します。",
+      "status": "needs_review",
+      "sourceHash": "28870f3c807600aa"
+    },
+    "solutions.choose_the_stages_your_product_needs": {
+      "value": "製品に必要なステージを選択してください。",
+      "status": "needs_review",
+      "sourceHash": "aef584c523634403"
+    },
+    "solutions.coordinate_components_instructions_and_final_presentation": {
+      "value": "コンポーネント、取扱説明書、最終プレゼンテーションを調整します。",
+      "status": "needs_review",
+      "sourceHash": "4da885679df28b59"
+    },
+    "solutions.custom_solutions": {
+      "value": "カスタムソリューション",
+      "status": "needs_review",
+      "sourceHash": "5805b6d334099513"
+    },
+    "solutions.define": {
+      "value": "定義",
+      "status": "needs_review",
+      "sourceHash": "73a5f5b59101cf3d"
+    },
+    "solutions.define_the_specification_before_production": {
+      "value": "生産前に仕様を定義します。",
+      "status": "needs_review",
+      "sourceHash": "4191d2cfe63f9483"
+    },
+    "solutions.destination_market_requirements_and_current_applicable_records": {
+      "value": "目的地市場の要件と現在の該当記録を注文に照合します。",
+      "status": "needs_review",
+      "sourceHash": "c188f5c7c3129e61"
+    },
+    "solutions.die_cutting_finishing": {
+      "value": "型抜き＆仕上げ",
+      "status": "needs_review",
+      "sourceHash": "ad91c557c289aad2"
+    },
+    "solutions.die_cutting_surface_finishing_and_component_preparation": {
+      "value": "型抜き、表面仕上げ、コンポーネント準備。",
+      "status": "needs_review",
+      "sourceHash": "5913adfd6bd57d71"
+    },
+    "solutions.discuss_a_custom_solution": {
+      "value": "カスタムソリューションについて相談する",
+      "status": "needs_review",
+      "sourceHash": "f9c15c2b3e71dedc"
+    },
+    "solutions.finish": {
+      "value": "仕上げ",
+      "status": "needs_review",
+      "sourceHash": "a6c7a84baa6750fc"
+    },
+    "solutions.manufacture_paper_products_around_supplied_brand_and": {
+      "value": "供給されたブランドと市場要件に基づいて紙製品を製造します。",
+      "status": "needs_review",
+      "sourceHash": "53aab50f58f8289b"
+    },
+    "solutions.manufacturing_fit": {
+      "value": "製造適合性",
+      "status": "needs_review",
+      "sourceHash": "9f81d667716c9b40"
+    },
+    "solutions.oem_private_label": {
+      "value": "OEM & プライベートラベル",
+      "status": "needs_review",
+      "sourceHash": "d0a799dc8768c78c"
+    },
+    "solutions.oem_private_label_2": {
+      "value": "OEM / プライベートラベル",
+      "status": "needs_review",
+      "sourceHash": "e3814cf8e9eb3a45"
+    },
+    "solutions.oem_puzzle_paper_product_solutions_qinyi": {
+      "value": "OEMパズル・紙製品ソリューション | Qinyi",
+      "status": "needs_review",
+      "sourceHash": "85e90c7a66496328"
+    },
+    "solutions.one_idea_one_connected_workflow": {
+      "value": "一つのアイデア。一つの統合ワークフロー。",
+      "status": "needs_review",
+      "sourceHash": "d7d178a16ed13aa8"
+    },
+    "solutions.pack": {
+      "value": "梱包",
+      "status": "needs_review",
+      "sourceHash": "80dc21673e554c7b"
+    },
+    "solutions.portfolio_of_custom_puzzle_formats_and_printed": {
+      "value": "カスタムパズルフォーマットと印刷パッケージのポートフォリオ",
+      "status": "needs_review",
+      "sourceHash": "cea53e28eb8d569a"
+    },
+    "solutions.prepare": {
+      "value": "準備",
+      "status": "needs_review",
+      "sourceHash": "ee820467e916f34a"
+    },
+    "solutions.prepare_approved_files_for_the_specified_print": {
+      "value": "承認済みファイルを指定の印刷生産ワークフロー用に準備します。",
+      "status": "needs_review",
+      "sourceHash": "ec7b5ef5acc2c2ca"
+    },
+    "solutions.prepress_and_plate_making_begin_from_approved": {
+      "value": "プリプレスと製版は承認済み生産ファイルから開始します。",
+      "status": "needs_review",
+      "sourceHash": "03af0e1346774dd4"
+    },
+    "solutions.prepress_printing": {
+      "value": "プリプレス & 印刷",
+      "status": "needs_review",
+      "sourceHash": "3686da261b6fe719"
+    },
+    "solutions.print": {
+      "value": "印刷",
+      "status": "needs_review",
+      "sourceHash": "df0fe79898ef413e"
+    },
+    "solutions.printed_components_produced_on_the_agreed_configuration": {
+      "value": "合意された構成で印刷部品を生産します。",
+      "status": "needs_review",
+      "sourceHash": "288465c02ef2b808"
+    },
+    "solutions.product_type_use_case_audience_target_market": {
+      "value": "製品タイプ、使用用途、対象者、ターゲット市場、想定数量。",
+      "status": "needs_review",
+      "sourceHash": "fac37a16654f30e9"
+    },
+    "solutions.project_variables": {
+      "value": "プロジェクト変数",
+      "status": "needs_review",
+      "sourceHash": "919f284d4c45dbc6"
+    },
+    "solutions.provide_the_product_type_dimensions_quantity_target": {
+      "value": "製品タイプ、寸法、数量、ターゲット市場、使用目的、素材の希望、包装要件、希望納期、利用可能なファイルをご提供ください。Qinyiが実現可能性を確認し、不足情報を特定します。",
+      "status": "needs_review",
+      "sourceHash": "0dab509046b6b37b"
+    },
+    "solutions.qinyi_supports_custom_puzzle_paper_game_and": {
+      "value": "Qinyiは、カスタムパズル、紙ゲーム、包装プロジェクトを、デザイン開発、プリプレス、印刷、金型製作、型抜き、表面加工、組立、梱包にわたってサポートします。",
+      "status": "needs_review",
+      "sourceHash": "9265294d8ab06be1"
+    },
+    "solutions.regular_jigsaw_projects_typically_start_at_300": {
+      "value": "通常のジグソーパズルプロジェクトは最低300セットから対応可能です。その他のフォーマットは生産構成によります。",
+      "status": "needs_review",
+      "sourceHash": "b13d7a13c9492f12"
+    },
+    "solutions.resolve_construction_dielines_and_tooling_requirements_for": {
+      "value": "意図した体験に合わせて、構造、ダイライン、金型要件を解決します。",
+      "status": "needs_review",
+      "sourceHash": "f3ec23e2fdbc1d9f"
+    },
+    "solutions.review_source_artwork_and_translate_the_brief": {
+      "value": "ソースアートワークを確認し、概要を生産可能な紙フォーマットに変換します。",
+      "status": "needs_review",
+      "sourceHash": "eb5fbdec29978881"
+    },
+    "solutions.reviewed_from_intended_use_structure_materials_quantity": {
+      "value": "使用目的、構造、素材、数量、市場からレビュー済み。",
+      "status": "needs_review",
+      "sourceHash": "dd8d14ff11ebfc33"
+    },
+    "solutions.sampling": {
+      "value": "サンプリング",
+      "status": "needs_review",
+      "sourceHash": "e41f08d35dd171fa"
+    },
+    "solutions.send_a_project_brief": {
+      "value": "プロジェクト概要を送信",
+      "status": "needs_review",
+      "sourceHash": "c83b049eb7610c4f"
+    },
+    "solutions.shape_and_finish_components_according_to_the": {
+      "value": "承認された仕様に従って部品を成形・仕上げます。",
+      "status": "needs_review",
+      "sourceHash": "2e07ed072f455ae2"
+    },
+    "solutions.start_where_you_are": {
+      "value": "現状からスタート",
+      "status": "needs_review",
+      "sourceHash": "3f3873713f5379a3"
+    },
+    "solutions.structural_development_tooling": {
+      "value": "構造開発 & 金型製作",
+      "status": "needs_review",
+      "sourceHash": "9305730d4cafc6b9"
+    },
+    "solutions.support_scope": {
+      "value": "サポート範囲",
+      "status": "needs_review",
+      "sourceHash": "fc85a4ce013b967a"
+    },
+    "solutions.testing_documents": {
+      "value": "テスト & 書類",
+      "status": "needs_review",
+      "sourceHash": "eb899c481e187821"
+    },
+    "solutions.the_quote_identifies_the_sample_type_purpose": {
+      "value": "見積書にはサンプルの種類、目的、費用、スケジュールが記載されます。",
+      "status": "needs_review",
+      "sourceHash": "60cb5af1b0947235"
+    },
+    "solutions.timing": {
+      "value": "タイミング",
+      "status": "needs_review",
+      "sourceHash": "fc4e84255a41a3a2"
+    },
+    "solutions.turn_artwork_and_product_ideas_into_custom": {
+      "value": "アートワークや製品アイデアを、デザイン、印刷、仕上げ、組立、梱包のサポートにより、カスタムパズル、ペーパーゲーム、パッケージに変えます。",
+      "status": "needs_review",
+      "sourceHash": "4a78b425613d2527"
+    },
+    "solutions.what_to_send_with_your_enquiry": {
+      "value": "お問い合わせ時に送付いただくもの",
+      "status": "needs_review",
+      "sourceHash": "61c64773c86d92eb"
+    },
+    "stats.established": {
+      "value": "{year}年設立",
+      "status": "needs_review",
+      "sourceHash": "21acea387d52ad3d"
+    },
+    "stats.facility": {
+      "value": "約{area}㎡の施設",
+      "status": "needs_review",
+      "sourceHash": "59a13edc1855b601"
+    },
+    "stats.standard_moq": {
+      "value": "標準MOQ: ジグソーパズルプロジェクトの場合{count}セット*",
+      "status": "needs_review",
+      "sourceHash": "12d3566d19a5e020"
+    },
+    "stats.team_members": {
+      "value": "{count}名以上のチームメンバー",
+      "status": "needs_review",
+      "sourceHash": "466b07d727bd36c0"
+    },
+    "trade.01_complete_order": {
+      "value": "01 / 完全受注",
+      "status": "needs_review",
+      "sourceHash": "6d67b220de93248b"
+    },
+    "trade.02_overflow": {
+      "value": "02 / オーバーフロー",
+      "status": "needs_review",
+      "sourceHash": "dd682d0694a58de4"
+    },
+    "trade.03_long_term": {
+      "value": "03 / 長期",
+      "status": "needs_review",
+      "sourceHash": "9e4540ad4a2fc556"
+    },
+    "trade.04_print_convert": {
+      "value": "04 / 印刷・加工",
+      "status": "needs_review",
+      "sourceHash": "be0e632220e33728"
+    },
+    "trade.05_post_press": {
+      "value": "05 / 後加工",
+      "status": "needs_review",
+      "sourceHash": "f0ad64921359a1f9"
+    },
+    "trade.06_neutral_delivery": {
+      "value": "06 / ニュートラル配送",
+      "status": "needs_review",
+      "sourceHash": "e69eb0f1ff5259c8"
+    },
+    "trade.a_controlled_handoff_for_full_order_overflow": {
+      "value": "完全受注、オーバーフロー、単一工程のパズル、ゲーム、紙製品製造のための管理された引き継ぎ。",
+      "status": "needs_review",
+      "sourceHash": "c3ef6f1daaa71120"
+    },
+    "trade.a_defined_quantity_or_production_stage_can": {
+      "value": "リード工場がスケジュール回復や一時的なサポートを必要とする場合、定義された数量または生産段階をレビューできます。受け入れはライブキャパシティチェックに従います。",
+      "status": "needs_review",
+      "sourceHash": "f58703b01d54ff1e"
+    },
+    "trade.account_for_physical_assets": {
+      "value": "物理的資産の計上",
+      "status": "needs_review",
+      "sourceHash": "f91f38e455aaa857"
+    },
+    "trade.agree_nda_protected_accounts_authorised_recipients_and": {
+      "value": "機密開示前に、NDA、保護アカウント、承認された受取人、ファイル転送ルートに同意します。",
+      "status": "needs_review",
+      "sourceHash": "4dd59e1068ce3c8f"
+    },
+    "trade.agree_the_evidence_before_a_defect_occurs": {
+      "value": "欠陥が発生する前に証拠に同意します。",
+      "status": "needs_review",
+      "sourceHash": "e9f9d64cc321c403"
+    },
+    "trade.approval_before_portfolio_use": {
+      "value": "ポートフォリオ使用前の承認",
+      "status": "needs_review",
+      "sourceHash": "35c06da7555f0ecb"
+    },
+    "trade.approved_product_marks_factory_identification_shipper_name": {
+      "value": "承認された製品マーク、工場識別、荷送人名、カートンラベル、梱包明細詳細、禁止参照。",
+      "status": "needs_review",
+      "sourceHash": "d1afd14a67ddbef4"
+    },
+    "trade.artwork_licences": {
+      "value": "アートワークとライセンス",
+      "status": "needs_review",
+      "sourceHash": "c9c1ebf6672cd327"
+    },
+    "trade.assign_adaptations_explicitly": {
+      "value": "適応を明示的に割り当てる",
+      "status": "needs_review",
+      "sourceHash": "7e746f9ffc6dd4ac"
+    },
+    "trade.background_ip": {
+      "value": "バックグラウンドIP",
+      "status": "needs_review",
+      "sourceHash": "2cf1847a9583ce4f"
+    },
+    "trade.bring_a_complete_order_an_overflow_need": {
+      "value": "完全受注、オーバーフローニーズ、または1つの生産段階を持ち込みます。",
+      "status": "needs_review",
+      "sourceHash": "40a4814ea4cf945f"
+    },
+    "trade.buyer_or_seller_forwarder_booking_cut_off": {
+      "value": "買い手または売り手のフォワーダー、ブッキングカットオフ、集荷ポイント、指定場所または港、Incoterms 2020ルール、現地費用責任。",
+      "status": "needs_review",
+      "sourceHash": "5de15aa7541dc7a2"
+    },
+    "trade.commercial_invoice_packing_list_transport_document_and": {
+      "value": "商業送り状、梱包明細書、運送書類、および合意された原産地、申告、試験文書。輸入者またはブローカーが仕向地要件を確認します。",
+      "status": "needs_review",
+      "sourceHash": "3d39f55d808603af"
+    },
+    "trade.component_count_sequence_protective_material_insert_instruction": {
+      "value": "部品数、順序、保護材、インサート、取扱説明書の言語、バーコード、シール方法。",
+      "status": "needs_review",
+      "sourceHash": "2171fd2a2f87cd6b"
+    },
+    "trade.confidential_files": {
+      "value": "機密ファイル",
+      "status": "needs_review",
+      "sourceHash": "47c889570137efb7"
+    },
+    "trade.confidentiality": {
+      "value": "機密保持",
+      "status": "needs_review",
+      "sourceHash": "fbe3cdfd721911e4"
+    },
+    "trade.confirm_process_fit_quantity_materials_schedule_supplied": {
+      "value": "プロセス適合性、数量、材料、スケジュール、供給品、外部プロセスを確認します。",
+      "status": "needs_review",
+      "sourceHash": "fb28401061155b70"
+    },
+    "trade.contract_manufacturing_for_complete_or_partial_puzzle": {
+      "value": "パズル、ゲーム、印刷紙製品の全体または一部の受託製造。",
+      "status": "needs_review",
+      "sourceHash": "92302cd947491e9d"
+    },
+    "trade.contract_manufacturing_for_puzzle_game_and_paper": {
+      "value": "パズル、ゲーム、紙製品工場向け受託製造：全注文または指定された印刷、型抜き、仕上げ、組立、ホワイトレーベル梱包工程。",
+      "status": "needs_review",
+      "sourceHash": "58be4d06048acfe5"
+    },
+    "trade.contract_manufacturing_program": {
+      "value": "受託製造プログラム",
+      "status": "needs_review",
+      "sourceHash": "47b0ac79254d9e1f"
+    },
+    "trade.control_point": {
+      "value": "管理ポイント",
+      "status": "needs_review",
+      "sourceHash": "54e338a0cad4982c"
+    },
+    "trade.controlled_handoff": {
+      "value": "管理された引き渡し",
+      "status": "needs_review",
+      "sourceHash": "b66eef6063244f1e"
+    },
+    "trade.decide_who_controls_every_input_and_output": {
+      "value": "すべてのインプットとアウトプットを誰が管理するかを決定する。",
+      "status": "needs_review",
+      "sourceHash": "bc54c0474138aed4"
+    },
+    "trade.define_confidential_information_authorised_project_recipients_storage": {
+      "value": "機密情報、承認されたプロジェクト受領者、保管および転送方法、保持期間、返却または削除、違反通知を定義する。",
+      "status": "needs_review",
+      "sourceHash": "a63661a2bd552f83"
+    },
+    "trade.each_party_identifies_pre_existing_artwork_know": {
+      "value": "各当事者は既存のアートワーク、ノウハウ、生産資産を特定する。注文は承認されたジョブの製造に必要な権利のみを付与する。",
+      "status": "needs_review",
+      "sourceHash": "66befe2755cc47d2"
+    },
+    "trade.entity_address": {
+      "value": "事業体および住所",
+      "status": "needs_review",
+      "sourceHash": "d720eec746c46e45"
+    },
+    "trade.every_trade_enquiry_receives_a_responsibility_matrix": {
+      "value": "すべての取引照会には責任マトリックスが付与される。どの工程も想定せず、仕様に必要な外部プロセスは承認前に特定されなければならない。",
+      "status": "needs_review",
+      "sourceHash": "3910fd73fad66c4a"
+    },
+    "trade.factory_to_factory_white_label": {
+      "value": "工場間／ホワイトレーベル",
+      "status": "needs_review",
+      "sourceHash": "cad77ef9d4f7ff3d"
+    },
+    "trade.file_register": {
+      "value": "ファイル登録簿",
+      "status": "needs_review",
+      "sourceHash": "601968a82f5b899e"
+    },
+    "trade.finishing_assembly_and_packing": {
+      "value": "仕上げ、組立、梱包",
+      "status": "needs_review",
+      "sourceHash": "8e062f31d8b1bc90"
+    },
+    "trade.freight_handoff": {
+      "value": "貨物引き渡し",
+      "status": "needs_review",
+      "sourceHash": "4b749acc2b23f7a1"
+    },
+    "trade.full_or_partial_manufacturing_scope": {
+      "value": "全体または一部の製造範囲",
+      "status": "needs_review",
+      "sourceHash": "3139f9c3081a4d39"
+    },
+    "trade.funding_title_unique_identification_storage_location_authorised": {
+      "value": "資金調達、所有権、固有識別、保管場所、許可された使用、保守、再注文アクセス、転送、廃棄。",
+      "status": "needs_review",
+      "sourceHash": "708a666a6154ed07"
+    },
+    "trade.golden_sample_or_proof_tolerances_defect_classes": {
+      "value": "ゴールデンサンプルまたは校正、許容差、欠陥クラス、サンプリングまたはAQL、機能チェック、レポート所有者、リリース権限。",
+      "status": "needs_review",
+      "sourceHash": "3160a88c7849237f"
+    },
+    "trade.identify_dies_plates_moulds_samples_overruns_and": {
+      "value": "金型、版、鋳型、サンプル、過剰生産、余剰材料を特定し、保管期間、数量、再注文使用、返却、許可された廃棄を含む。",
+      "status": "needs_review",
+      "sourceHash": "0ff127af362bb4be"
+    },
+    "trade.identify_the_end_product_required_process_stage": {
+      "value": "最終製品、必要な工程段階、寸法、基材、数量、印刷と仕上げ、供給材料、送付先、必要な引き渡し日、ファイルを特定する。管理サンプル、色目標、BOM、検査基準、および制限された顧客情報は、合意されたNDAと転送方法が整った後にのみ含める。",
+      "status": "needs_review",
+      "sourceHash": "41e66e93457e3dcd"
+    },
+    "trade.identify_which_test_inspection_material_or_traceability": {
+      "value": "実際の注文に同梱または保管する必要がある試験、検査、材料、トレーサビリティ文書を特定する。",
+      "status": "needs_review",
+      "sourceHash": "f86c91928c7a1203"
+    },
+    "trade.keep_the_white_label_handoff_unambiguous": {
+      "value": "ホワイトレーベルの引き渡しを明確にする。",
+      "status": "needs_review",
+      "sourceHash": "1fd5fa83a9eda63a"
+    },
+    "trade.legal": {
+      "value": "法的",
+      "status": "needs_review",
+      "sourceHash": "4787eaf7c938045f"
+    },
+    "trade.limited_project_use": {
+      "value": "限定プロジェクト使用",
+      "status": "needs_review",
+      "sourceHash": "44d7dbcf689623a6"
+    },
+    "trade.lock_filenames_revisions_dielines_bom_colour_references": {
+      "value": "ファイル名、リビジョン、ダイライン、BOM、色参照、検査基準を固定する。",
+      "status": "needs_review",
+      "sourceHash": "855c46703d745a5c"
+    },
+    "trade.management_systems": {
+      "value": "マネジメントシステム",
+      "status": "needs_review",
+      "sourceHash": "3fb04c256b74ff4c"
+    },
+    "trade.master_cartons": {
+      "value": "マスターカートン",
+      "status": "needs_review",
+      "sourceHash": "680ebe96a89c8207"
+    },
+    "trade.match_the_business_licence_quotation_contract_invoice": {
+      "value": "Dongguan Qinyi Printing Co., Ltd.の営業許可証、見積書、契約書、請求書、受益者取り決めと一致させる。",
+      "status": "needs_review",
+      "sourceHash": "983309309bddcb3a"
+    },
+    "trade.name_the_protected_accounts_introduced_contacts_and": {
+      "value": "保護されたアカウント、紹介された連絡先、禁止された直接アプローチ、期間、許可された例外、準拠法、救済策を指定する。",
+      "status": "needs_review",
+      "sourceHash": "cb975a4681bac448"
+    },
+    "trade.nda_before_sensitive_information_handoff": {
+      "value": "機密情報の引き渡し前にNDA",
+      "status": "needs_review",
+      "sourceHash": "8e4b548e5f71601b"
+    },
+    "trade.nda_channel_ip": {
+      "value": "NDA、チャネル、IP",
+      "status": "needs_review",
+      "sourceHash": "a5920bdffa66b4a3"
+    },
+    "trade.neutral_delivery": {
+      "value": "ニュートラル配送",
+      "status": "needs_review",
+      "sourceHash": "b4a05e3a267d3c86"
+    },
+    "trade.new_work_product": {
+      "value": "新規ワーク製品",
+      "status": "needs_review",
+      "sourceHash": "4c497c648cc7096f"
+    },
+    "trade.no_publicity_by_default": {
+      "value": "デフォルトで非公開",
+      "status": "needs_review",
+      "sourceHash": "2e12a278d6c53c7c"
+    },
+    "trade.non_circumvention": {
+      "value": "非迂回契約",
+      "status": "needs_review",
+      "sourceHash": "0aec776d14c8ae02"
+    },
+    "trade.offset_printing_press_used_for_printed_paper": {
+      "value": "Qinyiで印刷紙製品の生産に使用されるオフセット印刷機",
+      "status": "needs_review",
+      "sourceHash": "b13c85a23b6e30aa"
+    },
+    "trade.one_named_owner_coordinates_the_project": {
+      "value": "指名された1名のオーナーがプロジェクトを調整",
+      "status": "needs_review",
+      "sourceHash": "c9401c1dc465b103"
+    },
+    "trade.order_evidence": {
+      "value": "注文証拠",
+      "status": "needs_review",
+      "sourceHash": "5bdba578397bf0de"
+    },
+    "trade.outside_processes": {
+      "value": "外部工程",
+      "status": "needs_review",
+      "sourceHash": "b6c1d20eeb68fcc9"
+    },
+    "trade.owner_of_source_ip_authorised_production_use": {
+      "value": "ソースIPの所有者、認可された生産使用、地域、言語、有効期限、ポートフォリオ使用の禁止有無。",
+      "status": "needs_review",
+      "sourceHash": "cc7be61f3dd0dd58"
+    },
+    "trade.ownership_stays_with_its_owner": {
+      "value": "所有権はその所有者に留まる",
+      "status": "needs_review",
+      "sourceHash": "38c514db97d928d5"
+    },
+    "trade.pack_handoff": {
+      "value": "梱包・引き渡し",
+      "status": "needs_review",
+      "sourceHash": "f206e108996c1f21"
+    },
+    "trade.packing_delivery": {
+      "value": "梱包・配送",
+      "status": "needs_review",
+      "sourceHash": "49070a5ecb56b165"
+    },
+    "trade.packing_logistics": {
+      "value": "梱包・物流",
+      "status": "needs_review",
+      "sourceHash": "7a8d625fc9eaad7f"
+    },
+    "trade.prepress_printing_tooling_conversion_finishing_assembly_and": {
+      "value": "承認された仕様書とBOMに基づき、プリプレス、印刷、治工具、加工、仕上げ、組立、梱包を調整。",
+      "status": "needs_review",
+      "sourceHash": "9f71935e2865da4d"
+    },
+    "trade.print_ready_files_to_packed_goods": {
+      "value": "印刷可能ファイルから梱包済み製品まで",
+      "status": "needs_review",
+      "sourceHash": "bb919d0a4bfd1ce5"
+    },
+    "trade.printing_tooling_and_die_cutting": {
+      "value": "印刷、治工具、型抜き",
+      "status": "needs_review",
+      "sourceHash": "f7a9638704cbfe03"
+    },
+    "trade.product_branding_factory_identification_carton_marks_paperwork": {
+      "value": "製品ブランディング、工場識別、カートンマーク、書類、認可された受取人情報は、承認された梱包・出荷指示書により管理。",
+      "status": "needs_review",
+      "sourceHash": "8bc92f8bf2c0486f"
+    },
+    "trade.product_specific_records": {
+      "value": "製品固有の記録",
+      "status": "needs_review",
+      "sourceHash": "5d81a5dc37d1aba4"
+    },
+    "trade.production_control": {
+      "value": "生産管理",
+      "status": "needs_review",
+      "sourceHash": "f68f02007a144b38"
+    },
+    "trade.production_scope": {
+      "value": "生産範囲",
+      "status": "needs_review",
+      "sourceHash": "83198e242cda81f1"
+    },
+    "trade.protected_customer_relationships": {
+      "value": "保護された顧客関係",
+      "status": "needs_review",
+      "sourceHash": "6b7e589c6002081d"
+    },
+    "trade.put_protection_in_the_agreement_not_in": {
+      "value": "保護は契約に盛り込み、想定に頼らない。",
+      "status": "needs_review",
+      "sourceHash": "0528f28aa7339181"
+    },
+    "trade.qinyi_production_workshop_in_dongguan_with_paper": {
+      "value": "東莞にあるQinyi Printingの生産工場、紙製品加工中",
+      "status": "needs_review",
+      "sourceHash": "f1dc977579f28728"
+    },
+    "trade.qinyi_staff_assembling_and_packing_printed_products": {
+      "value": "Qinyiスタッフが管理された生産ラインで印刷製品を組立・梱包",
+      "status": "needs_review",
+      "sourceHash": "8659b1f564702938"
+    },
+    "trade.qinyi_supports_other_manufacturers_print_partners_sourcing": {
+      "value": "Qinyiは他メーカー、印刷パートナー、調達チーム、出版社に対し、完全な注文または特定の印刷、型抜き、仕上げ、組立、梱包工程をサポート。範囲と能力は稼働中の生産計画に基づき確認。",
+      "status": "needs_review",
+      "sourceHash": "3c4d1d241d10e0f6"
+    },
+    "trade.quality_exceptions": {
+      "value": "品質と例外",
+      "status": "needs_review",
+      "sourceHash": "631709a1821a15a7"
+    },
+    "trade.record_what_the_proof_or_sample_approves": {
+      "value": "プルーフまたはサンプルが承認した内容と、生産検証に残る事項を記録。",
+      "status": "needs_review",
+      "sourceHash": "d8029282bd9692d4"
+    },
+    "trade.release_only_the_approved_version_record_material": {
+      "value": "承認されたバージョンのみリリース。材料、ロット、チェックポイント、逸脱、処置を記録。",
+      "status": "needs_review",
+      "sourceHash": "2c1546131eedcc6d"
+    },
+    "trade.repeat_work_can_use_controlled_masters_agreed": {
+      "value": "リピートワークは管理されたマスター、合意された再注文チェック、変動予測、文書化された変更管理を使用可能。",
+      "status": "needs_review",
+      "sourceHash": "3b38603df758778a"
+    },
+    "trade.request_the_controlled_due_diligence_pack": {
+      "value": "管理されたデューデリジェンスパックを請求。",
+      "status": "needs_review",
+      "sourceHash": "0d7d72b57f974058"
+    },
+    "trade.required_written_decision": {
+      "value": "必要な書面による決定",
+      "status": "needs_review",
+      "sourceHash": "992d2883ec656214"
+    },
+    "trade.responsibility_matrix": {
+      "value": "責任マトリックス",
+      "status": "needs_review",
+      "sourceHash": "127bb9e0aeb798ca"
+    },
+    "trade.review_buyer_faq": {
+      "value": "バイヤーFAQを確認",
+      "status": "needs_review",
+      "sourceHash": "6b69443c5e75cac0"
+    },
+    "trade.review_certificate_number_legal_name_site_product": {
+      "value": "管理されたコピー上の証明書番号、法的名称、サイト、製品範囲、発行日および有効期限を確認する。",
+      "status": "needs_review",
+      "sourceHash": "b1bdad2246c5b1c4"
+    },
+    "trade.sample_approval": {
+      "value": "サンプル承認",
+      "status": "needs_review",
+      "sourceHash": "6f8b02af634a1c1c"
+    },
+    "trade.scope_and_current_status": {
+      "value": "範囲と現在のステータス",
+      "status": "needs_review",
+      "sourceHash": "e9e76637b16deb3d"
+    },
+    "trade.scope_review": {
+      "value": "範囲レビュー",
+      "status": "needs_review",
+      "sourceHash": "568997e3da2dd074"
+    },
+    "trade.send_printed_components_with_counts_and_acceptance": {
+      "value": "印刷部品を数量と受入ステータスとともに送付するか、生産計画で上流サプライの引き継ぎを定義する。",
+      "status": "needs_review",
+      "sourceHash": "f04969ad77694b2d"
+    },
+    "trade.shipping_file": {
+      "value": "出荷ファイル",
+      "status": "needs_review",
+      "sourceHash": "7c858bd96cfe8ac5"
+    },
+    "trade.short_term_production_support": {
+      "value": "短期生産サポート",
+      "status": "needs_review",
+      "sourceHash": "956151153203f296"
+    },
+    "trade.six_gates_from_brief_to_release": {
+      "value": "ブリーフからリリースまでの6つのゲート。",
+      "status": "needs_review",
+      "sourceHash": "a9f6d7832a825794"
+    },
+    "trade.state_ownership_and_permitted_reuse_of_new": {
+      "value": "新しいダイライン、構造設計、プリプレスファイル、指示、および設計変更の所有権と再利用の許可を明記する。",
+      "status": "needs_review",
+      "sourceHash": "32b33d0684828d0c"
+    },
+    "trade.submit_a_trade_brief": {
+      "value": "トレードブリーフを提出",
+      "status": "needs_review",
+      "sourceHash": "6330d8307047939c"
+    },
+    "trade.submit_a_trade_production_brief": {
+      "value": "トレード生産ブリーフを提出",
+      "status": "needs_review",
+      "sourceHash": "4ad765e048995663"
+    },
+    "trade.supplier_onboarding": {
+      "value": "サプライヤーオンボーディング",
+      "status": "needs_review",
+      "sourceHash": "81bf9aa01873362b"
+    },
+    "trade.supply_imposed_or_production_ready_files_or": {
+      "value": "面付け済みまたは生産準備完了ファイルを提供するか、プリプレスレビューを含める。プレート、ダイ、材料、出力の責任はリリース前に項目化される。",
+      "status": "needs_review",
+      "sourceHash": "6d41c943919e2f85"
+    },
+    "trade.the_items_below_are_negotiation_points_for": {
+      "value": "以下の項目は、署名済みNDA、治工具スケジュール、またはトレード製造契約の交渉ポイントです。これらはウェブサイトのコピーに代わるものではありません。",
+      "status": "needs_review",
+      "sourceHash": "ee7241c31c39ec9c"
+    },
+    "trade.the_production_record_should_let_either_party": {
+      "value": "生産記録により、どちらの当事者も各ロットを管理したファイル、サンプル、材料、品質ルールを特定できるようにする必要があります。",
+      "status": "needs_review",
+      "sourceHash": "01b26f000d93af98"
+    },
+    "trade.the_quality_plan_should_identify_incoming_checks": {
+      "value": "品質計画では、受入検査、初品またはサンプルリリース、工程内チェックポイント、最終サンプリング、機能試験または組立試験、欠陥の定義、報告書形式を特定する必要があります。逸脱には、書面による説明、影響を受ける数量、封じ込め、提案された処分、および使用前の承認が必要です。手直し、交換、再製作、またはクレジットは、署名された契約と検証された証拠に従います。",
+      "status": "needs_review",
+      "sourceHash": "42afec99d6ced627"
+    },
+    "trade.the_supplied_company_portfolio_includes_a_business": {
+      "value": "提供された会社ポートフォリオには、営業許可証、ISO 9001品質管理、FSCコーオブカストディ、SMETA是正措置文書、および製品試験記録への参照が含まれています。現在の範囲と有効性は、提案された注文に対して管理されたコピーから確認されます。",
+      "status": "needs_review",
+      "sourceHash": "8f46b155285178f1"
+    },
+    "trade.tools_surplus": {
+      "value": "治工具と余剰",
+      "status": "needs_review",
+      "sourceHash": "465486fc1397c678"
+    },
+    "trade.trade_contract_manufacturing": {
+      "value": "トレード＆コントラクト製造",
+      "status": "needs_review",
+      "sourceHash": "a39f0f790179767f"
+    },
+    "trade.trade_contract_manufacturing_2": {
+      "value": "トレード＆コントラクト製造",
+      "status": "needs_review",
+      "sourceHash": "d5329b22e9e03c91"
+    },
+    "trade.trade_contract_manufacturing_qinyi": {
+      "value": "トレード＆コントラクト製造 | Qinyi Printing",
+      "status": "needs_review",
+      "sourceHash": "ef6d0613e0f1ae4a"
+    },
+    "trade.trade_desk": {
+      "value": "トレードデスク",
+      "status": "needs_review",
+      "sourceHash": "c2e80b9b2f1a1c50"
+    },
+    "trade.trade_fit": {
+      "value": "トレード適合性",
+      "status": "needs_review",
+      "sourceHash": "a431f66710fd26cc"
+    },
+    "trade.trade_project_principles": {
+      "value": "トレードプロジェクトの原則",
+      "status": "needs_review",
+      "sourceHash": "af3e2c6a120e6d9f"
+    },
+    "trade.trade_scope_confidentiality_tooling_quality_and_delivery": {
+      "value": "トレードの範囲、機密保持、治工具、品質、納期条件には書面による合意が必要です。",
+      "status": "needs_review",
+      "sourceHash": "6e081aafd992f745"
+    },
+    "trade.unit_and_carton_packing_neutral_or_branded": {
+      "value": "ユニットおよびカートン梱包、ニュートラルまたはブランドマーク、書類、フォワーダー、Incoterms 2020ルール、指定場所、リスク移転ポイント。",
+      "status": "needs_review",
+      "sourceHash": "e573753cef8b150d"
+    },
+    "trade.unit_packing": {
+      "value": "ユニット梱包",
+      "status": "needs_review",
+      "sourceHash": "457f5cbf84896b52"
+    },
+    "trade.units_per_carton_dimension_or_gross_weight": {
+      "value": "1カートンあたりのユニット数、寸法または総重量制限、向き、カートンの強度方向、パレット要件、および指定されている場合は落下試験または輸送試験。",
+      "status": "needs_review",
+      "sourceHash": "3e91fbe1f4c2f93d"
+    },
+    "trade.unreleased_products_customer_names_artwork_and_production": {
+      "value": "未発表の製品、顧客名、アートワーク、生産画像は、契約に書面による許可が含まれていない限り、マーケティング目的で使用することはできません。",
+      "status": "needs_review",
+      "sourceHash": "4b5065f8658ceba0"
+    },
+    "trade.use_the_whole_workflow_or_one_defined": {
+      "value": "ワークフロー全体または定義された1つの工程を使用します。",
+      "status": "needs_review",
+      "sourceHash": "00d0a26fa1de576a"
+    },
+    "trade.verify_counts_carton_marks_documents_and_delivery": {
+      "value": "合意されたインコタームズに基づき、数量、カートンマーク、書類、および配送責任を確認します。",
+      "status": "needs_review",
+      "sourceHash": "609681be5625cd76"
+    },
+    "trade.what_to_send_for_a_first_review": {
+      "value": "初回レビューのために送付するもの。",
+      "status": "needs_review",
+      "sourceHash": "734c17511800541f"
+    },
+    "trade.which_steps_may_be_subcontracted_approval_requirement": {
+      "value": "外注可能な工程、承認要件、トレーサビリティ、検査、および適合性に対する責任者。",
+      "status": "needs_review",
+      "sourceHash": "bc32329bd000624e"
+    },
+    "trade.white_label_channel_fulfilment": {
+      "value": "ホワイトレーベルおよびチャネルフルフィルメント",
+      "status": "needs_review",
+      "sourceHash": "c5c2c0f84dbd5fab"
+    },
+    "trade.white_label_neutral_packing_available_by_brief": {
+      "value": "概要に基づき、ホワイトレーベルの中立包装が利用可能",
+      "status": "needs_review",
+      "sourceHash": "55930342c6f97a76"
+    },
+    "trade.who_purchases_supplies_and_approves_each_substrate": {
+      "value": "各基材または付属品の購入、供給、承認を行う者、受入検査、許可される代替品、不足および超過の処理。",
+      "status": "needs_review",
+      "sourceHash": "d172d21e2b18705c"
+    },
+    "trade.who_supplies_or_adapts_dielines_and_impositions": {
+      "value": "ダイラインおよび面付けの供給または適応、改訂管理、承認権限、変更要求ルートを担当する者。",
+      "status": "needs_review",
+      "sourceHash": "a39c2d365d6c51d2"
+    },
+    "trade.your_customer_stays_yours_the_production_brief": {
+      "value": "お客様はあなたの顧客のままです。生産概要は管理下に置かれます。",
+      "status": "needs_review",
+      "sourceHash": "3e22675354142fe9"
+    }
+  }
+}
