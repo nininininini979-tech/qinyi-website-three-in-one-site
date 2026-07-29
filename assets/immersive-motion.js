@@ -10,6 +10,7 @@
     puzzleOn: '关闭拼图波交互',
     puzzleOff: '开启拼图波交互',
     puzzleReduced: '系统已启用减少动态效果',
+    puzzleHint: '开启后，按住并拖动页面',
     puzzleLevel: '拼图波强度',
     puzzleLevels: ['轻柔', '标准', '明显'],
   } : {
@@ -20,6 +21,7 @@
     puzzleOn: 'Turn off puzzle-wave interaction',
     puzzleOff: 'Turn on puzzle-wave interaction',
     puzzleReduced: 'Motion is reduced by your system settings',
+    puzzleHint: 'Turn on, then press and drag',
     puzzleLevel: 'Puzzle-wave intensity',
     puzzleLevels: ['Subtle', 'Balanced', 'Defined'],
   };
@@ -239,11 +241,12 @@
     const controls = document.createElement('div');
     controls.className = 'qinyi-puzzle-controls';
     controls.setAttribute('data-html2canvas-ignore', 'true');
-    controls.innerHTML = `<div class="qinyi-puzzle-levels" role="group" aria-label="${copy.puzzleLevel}">${copy.puzzleLevels.map((label, index) => `<button type="button" data-puzzle-level="${index}" aria-label="${copy.puzzleLevel}：${label}" title="${label}"><span aria-hidden="true">${'<i></i>'.repeat(index + 1)}</span></button>`).join('')}</div><button class="qinyi-puzzle-toggle" type="button"><svg class="qinyi-puzzle-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 4h9.2a3.8 3.8 0 1 0 5.6 0H28v9.2a3.8 3.8 0 1 0 0 5.6V28h-9.2a3.8 3.8 0 1 0-5.6 0H4v-9.2a3.8 3.8 0 1 0 0-5.6V4Z"/></svg></button>`;
+    controls.innerHTML = `<div class="qinyi-puzzle-levels" role="group" aria-label="${copy.puzzleLevel}">${copy.puzzleLevels.map((label, index) => `<button type="button" data-puzzle-level="${index}" aria-label="${copy.puzzleLevel}：${label}" title="${label}"><span aria-hidden="true">${'<i></i>'.repeat(index + 1)}</span></button>`).join('')}</div><p class="qinyi-puzzle-hint" aria-hidden="true">${copy.puzzleHint}</p><button class="qinyi-puzzle-toggle" type="button"><svg class="qinyi-puzzle-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 4h9.2a3.8 3.8 0 1 0 5.6 0H28v9.2a3.8 3.8 0 1 0 0 5.6V28h-9.2a3.8 3.8 0 1 0-5.6 0H4v-9.2a3.8 3.8 0 1 0 0-5.6V4Z"/></svg></button>`;
     document.body.append(canvas, controls);
 
     const context = canvas.getContext('2d', { alpha: true, desynchronized: true });
     const button = controls.querySelector('.qinyi-puzzle-toggle');
+    const hint = controls.querySelector('.qinyi-puzzle-hint');
     const levelButtons = Array.from(controls.querySelectorAll('[data-puzzle-level]'));
     let enabled = false;
     let activePointer = null;
@@ -262,6 +265,7 @@
     let canvasHeight = 0;
     let pixelRatio = 1;
     let locked = false;
+    let hintTimer = 0;
 
     function resizeCanvas() {
       pixelRatio = lowPower || window.innerWidth <= 760 ? 1 : Math.min(window.devicePixelRatio || 1, 1.35);
@@ -282,11 +286,22 @@
       button.classList.toggle('is-active', enabled);
       button.disabled = reducedMotion.matches;
       controls.classList.toggle('is-enabled', enabled);
+      hint.textContent = reducedMotion.matches ? copy.puzzleReduced : copy.puzzleHint;
       levelButtons.forEach((levelButton, index) => {
         const selected = index === level;
         levelButton.classList.toggle('is-selected', selected);
         levelButton.setAttribute('aria-pressed', String(selected));
       });
+    }
+
+    function showHint(duration = 4200, remember = false) {
+      window.clearTimeout(hintTimer);
+      controls.classList.add('is-hint-visible');
+      if (remember) {
+        try { window.localStorage.setItem('qinyi-puzzle-hint-seen', 'true'); }
+        catch (_error) { /* The hint can still be shown when storage is blocked. */ }
+      }
+      hintTimer = window.setTimeout(() => controls.classList.remove('is-hint-visible'), duration);
     }
 
     function ensureCaptureLibrary() {
@@ -302,32 +317,65 @@
       return libraryPromise;
     }
 
-    function addHorizontalTab(path, fromX, toX, y, outward) {
+    function seededUnit(...values) {
+      let seed = 2166136261;
+      values.forEach((value) => {
+        seed ^= Number(value) + 0x9e3779b9 + (seed << 6) + (seed >>> 2);
+        seed = Math.imul(seed, 16777619);
+      });
+      return (seed >>> 0) / 4294967295;
+    }
+
+    function edgeProfile(axis, boundary, index) {
+      const axisSeed = axis === 'horizontal' ? 41 : 83;
+      return {
+        centerRatio: 0.43 + seededUnit(axisSeed, boundary, index, 1) * 0.14,
+        baseRatio: 0.165 + seededUnit(axisSeed, boundary, index, 2) * 0.025,
+        neckRatio: 0.044 + seededUnit(axisSeed, boundary, index, 3) * 0.014,
+        headRatio: 0.118 + seededUnit(axisSeed, boundary, index, 4) * 0.018,
+        depthRatio: 0.185 + seededUnit(axisSeed, boundary, index, 5) * 0.035,
+        normal: seededUnit(axisSeed, boundary, index, 6) >= 0.5 ? 1 : -1,
+      };
+    }
+
+    function addHorizontalTab(path, fromX, toX, y, profile) {
       const direction = Math.sign(toX - fromX);
-      const center = (fromX + toX) / 2;
-      const span = Math.abs(toX - fromX) * 0.2;
-      const depth = Math.min(Math.abs(toX - fromX) * 0.18, 22) * outward;
-      path.lineTo(center - direction * span, y);
-      path.bezierCurveTo(center - direction * span * 0.55, y, center - direction * span * 0.78, y + depth * 0.52, center - direction * span * 0.42, y + depth * 0.64);
-      path.bezierCurveTo(center - direction * span * 0.34, y + depth, center + direction * span * 0.34, y + depth, center + direction * span * 0.42, y + depth * 0.64);
-      path.bezierCurveTo(center + direction * span * 0.78, y + depth * 0.52, center + direction * span * 0.55, y, center + direction * span, y);
+      const length = Math.abs(toX - fromX);
+      const minimum = Math.min(fromX, toX);
+      const center = minimum + length * profile.centerRatio;
+      const base = length * profile.baseRatio;
+      const neck = length * profile.neckRatio;
+      const head = length * profile.headRatio;
+      const depth = Math.min(length * profile.depthRatio, 25) * profile.normal;
+      path.lineTo(center - direction * base, y);
+      path.bezierCurveTo(center - direction * base * 0.72, y, center - direction * neck * 1.55, y + depth * 0.04, center - direction * neck, y + depth * 0.13);
+      path.bezierCurveTo(center - direction * head * 0.96, y + depth * 0.2, center - direction * head * 1.08, y + depth * 0.7, center - direction * head * 0.68, y + depth * 0.91);
+      path.bezierCurveTo(center - direction * head * 0.38, y + depth * 1.08, center + direction * head * 0.38, y + depth * 1.08, center + direction * head * 0.68, y + depth * 0.91);
+      path.bezierCurveTo(center + direction * head * 1.08, y + depth * 0.7, center + direction * head * 0.96, y + depth * 0.2, center + direction * neck, y + depth * 0.13);
+      path.bezierCurveTo(center + direction * neck * 1.55, y + depth * 0.04, center + direction * base * 0.72, y, center + direction * base, y);
       path.lineTo(toX, y);
     }
 
-    function addVerticalTab(path, x, fromY, toY, outward) {
+    function addVerticalTab(path, x, fromY, toY, profile) {
       const direction = Math.sign(toY - fromY);
-      const center = (fromY + toY) / 2;
-      const span = Math.abs(toY - fromY) * 0.2;
-      const depth = Math.min(Math.abs(toY - fromY) * 0.18, 22) * outward;
-      path.lineTo(x, center - direction * span);
-      path.bezierCurveTo(x, center - direction * span * 0.55, x + depth * 0.52, center - direction * span * 0.78, x + depth * 0.64, center - direction * span * 0.42);
-      path.bezierCurveTo(x + depth, center - direction * span * 0.34, x + depth, center + direction * span * 0.34, x + depth * 0.64, center + direction * span * 0.42);
-      path.bezierCurveTo(x + depth * 0.52, center + direction * span * 0.78, x, center + direction * span * 0.55, x, center + direction * span);
+      const length = Math.abs(toY - fromY);
+      const minimum = Math.min(fromY, toY);
+      const center = minimum + length * profile.centerRatio;
+      const base = length * profile.baseRatio;
+      const neck = length * profile.neckRatio;
+      const head = length * profile.headRatio;
+      const depth = Math.min(length * profile.depthRatio, 25) * profile.normal;
+      path.lineTo(x, center - direction * base);
+      path.bezierCurveTo(x, center - direction * base * 0.72, x + depth * 0.04, center - direction * neck * 1.55, x + depth * 0.13, center - direction * neck);
+      path.bezierCurveTo(x + depth * 0.2, center - direction * head * 0.96, x + depth * 0.7, center - direction * head * 1.08, x + depth * 0.91, center - direction * head * 0.68);
+      path.bezierCurveTo(x + depth * 1.08, center - direction * head * 0.38, x + depth * 1.08, center + direction * head * 0.38, x + depth * 0.91, center + direction * head * 0.68);
+      path.bezierCurveTo(x + depth * 0.7, center + direction * head * 1.08, x + depth * 0.2, center + direction * head * 0.96, x + depth * 0.13, center + direction * neck);
+      path.bezierCurveTo(x + depth * 0.04, center + direction * neck * 1.55, x, center + direction * base * 0.72, x, center + direction * base);
       path.lineTo(x, toY);
     }
 
     function buildPieces() {
-      const columns = lowPower ? 4 : (canvasWidth <= 760 ? 4 : 7);
+      const columns = lowPower ? 4 : (canvasWidth <= 520 ? 6 : (canvasWidth <= 900 ? 8 : 10));
       const cellWidth = canvasWidth / columns;
       const rows = Math.max(3, Math.ceil(canvasHeight / cellWidth));
       const cellHeight = canvasHeight / rows;
@@ -341,13 +389,13 @@
           const path = new Path2D();
           path.moveTo(x0, y0);
           if (row === 0) path.lineTo(x1, y0);
-          else addHorizontalTab(path, x0, x1, y0, ((row + column) % 2 ? 1 : -1));
+          else addHorizontalTab(path, x0, x1, y0, edgeProfile('horizontal', row, column));
           if (column === columns - 1) path.lineTo(x1, y1);
-          else addVerticalTab(path, x1, y0, y1, ((row + column) % 2 ? 1 : -1));
+          else addVerticalTab(path, x1, y0, y1, edgeProfile('vertical', column + 1, row));
           if (row === rows - 1) path.lineTo(x0, y1);
-          else addHorizontalTab(path, x1, x0, y1, ((row + column + 1) % 2 ? -1 : 1));
+          else addHorizontalTab(path, x1, x0, y1, edgeProfile('horizontal', row + 1, column));
           if (column === 0) path.lineTo(x0, y0);
-          else addVerticalTab(path, x0, y1, y0, ((row + column + 1) % 2 ? -1 : 1));
+          else addVerticalTab(path, x0, y1, y0, edgeProfile('vertical', column, row));
           path.closePath();
           const margin = Math.min(cellWidth, cellHeight) * 0.24;
           result.push({
@@ -526,8 +574,8 @@
         context.translate(piece.centerX + offsetX, piece.centerY + offsetY);
         context.rotate(rotation * Math.PI / 180);
         context.translate(-piece.centerX, -piece.centerY);
-        context.strokeStyle = `rgba(255, 255, 255, ${Math.min(0.3, energy * 0.16)})`;
-        context.lineWidth = 0.7;
+        context.strokeStyle = `rgba(17, 20, 18, ${Math.min(0.34, 0.08 + energy * 0.13)})`;
+        context.lineWidth = 0.85;
         context.stroke(piece.path);
         context.restore();
       }
@@ -599,7 +647,7 @@
       updateControls();
     }
 
-    function setEnabled(nextEnabled) {
+    function setEnabled(nextEnabled, showInstruction = true) {
       enabled = Boolean(nextEnabled) && !reducedMotion.matches;
       document.body.classList.toggle('qinyi-puzzle-enabled', enabled);
       if (!enabled) {
@@ -609,7 +657,8 @@
         dragging = false;
         resetEffect(true);
       } else {
-        ensureCaptureLibrary().catch(() => setEnabled(false));
+        ensureCaptureLibrary().catch(() => setEnabled(false, false));
+        if (showInstruction) showHint(4200, true);
       }
       try { window.localStorage.setItem('qinyi-puzzle-enabled', String(enabled)); }
       catch (_error) { /* The control remains usable when storage is blocked. */ }
@@ -654,7 +703,11 @@
     resizeCanvas();
     setLevel(level);
     updateControls();
-    if (savedPreference && !reducedMotion.matches) setEnabled(true);
+    if (savedPreference && !reducedMotion.matches) setEnabled(true, false);
+    let hintSeen = false;
+    try { hintSeen = window.localStorage.getItem('qinyi-puzzle-hint-seen') === 'true'; }
+    catch (_error) { /* A first-visit hint is still useful when storage is blocked. */ }
+    if (!hintSeen) window.setTimeout(() => showHint(6000, true), 700);
   }
 
   installHeroCarousel();
