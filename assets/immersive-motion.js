@@ -7,17 +7,21 @@
     previous: '上一张推荐图片',
     next: '下一张推荐图片',
     slide: (current, total, title) => `第 ${current} 张，共 ${total} 张：${title}`,
-    waterOn: '关闭水流交互',
-    waterOff: '开启水流交互',
-    waterReduced: '系统已启用减少动态效果',
+    puzzleOn: '关闭拼图波交互',
+    puzzleOff: '开启拼图波交互',
+    puzzleReduced: '系统已启用减少动态效果',
+    puzzleLevel: '拼图波强度',
+    puzzleLevels: ['轻柔', '标准', '明显'],
   } : {
     carousel: 'Featured products',
     previous: 'Previous featured image',
     next: 'Next featured image',
     slide: (current, total, title) => `Slide ${current} of ${total}: ${title}`,
-    waterOn: 'Turn off water interaction',
-    waterOff: 'Turn on water interaction',
-    waterReduced: 'Motion is reduced by your system settings',
+    puzzleOn: 'Turn off puzzle-wave interaction',
+    puzzleOff: 'Turn on puzzle-wave interaction',
+    puzzleReduced: 'Motion is reduced by your system settings',
+    puzzleLevel: 'Puzzle-wave intensity',
+    puzzleLevels: ['Subtle', 'Balanced', 'Defined'],
   };
 
   const clamp = (value, min = 0, max = 1) => Math.min(max, Math.max(min, value));
@@ -206,140 +210,342 @@
     scheduleAutoplay();
   }
 
-  function installWaterInteraction() {
+  function installPuzzleInteraction() {
+    if (!window.Path2D || !HTMLCanvasElement.prototype.getContext) return;
+
     const lowPower = typeof navigator.hardwareConcurrency === 'number' && navigator.hardwareConcurrency <= 2;
-    const supportsSvgFilter = window.CSS?.supports?.('filter', 'url("#qinyi-water-displacement")') !== false;
-    const useDisplacement = supportsSvgFilter && !lowPower && !reducedMotion.matches;
+    const motionAssetBase = new URL('.', document.currentScript?.src || window.location.href);
+    const settings = [
+      { offset: 6.5, rotation: 0.65, baseOpacity: 0.32 },
+      { offset: 11, rotation: 1.15, baseOpacity: 0.26 },
+      { offset: 17, rotation: 2.05, baseOpacity: 0.2 },
+    ];
     const savedPreference = (() => {
-      try { return window.localStorage.getItem('qinyi-water-enabled') === 'true'; }
+      try { return window.localStorage.getItem('qinyi-puzzle-enabled') === 'true'; }
       catch (_error) { return false; }
     })();
-
-    const filterHost = document.createElement('div');
-    filterHost.className = 'qinyi-water-filter-host';
-    filterHost.setAttribute('aria-hidden', 'true');
-    filterHost.setAttribute('data-html2canvas-ignore', 'true');
-    filterHost.innerHTML = `<svg width="0" height="0"><filter id="qinyi-water-displacement" x="-8%" y="-8%" width="116%" height="116%" color-interpolation-filters="sRGB"><feTurbulence id="qinyi-water-noise" type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" seed="8" result="noise"/><feGaussianBlur in="noise" stdDeviation="0.7" result="softNoise"/><feDisplacementMap id="qinyi-water-map" in="SourceGraphic" in2="softNoise" scale="0" xChannelSelector="R" yChannelSelector="B"/></filter></svg>`;
+    let level = (() => {
+      try {
+        const savedLevel = Number(window.localStorage.getItem('qinyi-puzzle-level') || 1);
+        return Number.isFinite(savedLevel) ? clamp(savedLevel, 0, 2) : 1;
+      }
+      catch (_error) { return 1; }
+    })();
 
     const canvas = document.createElement('canvas');
-    canvas.className = 'qinyi-water-canvas';
+    canvas.className = 'qinyi-puzzle-canvas';
     canvas.setAttribute('aria-hidden', 'true');
     canvas.setAttribute('data-html2canvas-ignore', 'true');
-    const button = document.createElement('button');
-    button.className = 'qinyi-water-toggle';
-    button.type = 'button';
-    button.setAttribute('data-html2canvas-ignore', 'true');
-    button.innerHTML = '<span class="qinyi-water-icon" aria-hidden="true"><i></i><i></i><i></i></span>';
-    document.body.append(filterHost, canvas, button);
+    const controls = document.createElement('div');
+    controls.className = 'qinyi-puzzle-controls';
+    controls.setAttribute('data-html2canvas-ignore', 'true');
+    controls.innerHTML = `<div class="qinyi-puzzle-levels" role="group" aria-label="${copy.puzzleLevel}">${copy.puzzleLevels.map((label, index) => `<button type="button" data-puzzle-level="${index}" aria-label="${copy.puzzleLevel}：${label}" title="${label}"><span aria-hidden="true">${'<i></i>'.repeat(index + 1)}</span></button>`).join('')}</div><button class="qinyi-puzzle-toggle" type="button"><svg class="qinyi-puzzle-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 4h9.2a3.8 3.8 0 1 0 5.6 0H28v9.2a3.8 3.8 0 1 0 0 5.6V28h-9.2a3.8 3.8 0 1 0-5.6 0H4v-9.2a3.8 3.8 0 1 0 0-5.6V4Z"/></svg></button>`;
+    document.body.append(canvas, controls);
 
-    const noise = filterHost.querySelector('#qinyi-water-noise');
-    const displacement = filterHost.querySelector('#qinyi-water-map');
-    const context = canvas.getContext('2d', { alpha: true });
-    const images = new Set();
-    const observer = 'IntersectionObserver' in window
-      ? new IntersectionObserver((entries) => entries.forEach((entry) => {
-          entry.target.classList.toggle('qinyi-water-visible', entry.isIntersecting);
-          if (entry.isIntersecting) images.add(entry.target);
-          else images.delete(entry.target);
-        }), { rootMargin: '120px' })
-      : null;
-    document.querySelectorAll('img').forEach((image) => {
-      if (observer) observer.observe(image);
-      else {
-        image.classList.add('qinyi-water-visible');
-        images.add(image);
-      }
-    });
-
+    const context = canvas.getContext('2d', { alpha: true, desynchronized: true });
+    const button = controls.querySelector('.qinyi-puzzle-toggle');
+    const levelButtons = Array.from(controls.querySelectorAll('[data-puzzle-level]'));
     let enabled = false;
     let activePointer = null;
-    let dragging = false;
+    let startPoint = null;
     let lastPoint = null;
-    let currentIntensity = 0;
-    let releaseIntensity = 0;
-    let releaseStarted = 0;
+    let dragging = false;
+    let snapshot = null;
+    let pieces = [];
+    let waves = [];
+    let queuedWaves = [];
     let animationFrame = 0;
-    let ripples = [];
+    let captureGeneration = 0;
+    let capturePromise = null;
+    let libraryPromise = null;
     let canvasWidth = 0;
     let canvasHeight = 0;
+    let pixelRatio = 1;
+    let locked = false;
 
     function resizeCanvas() {
-      const ratio = Math.min(window.devicePixelRatio || 1, 1.5);
+      pixelRatio = lowPower || window.innerWidth <= 760 ? 1 : Math.min(window.devicePixelRatio || 1, 1.35);
       canvasWidth = window.innerWidth;
       canvasHeight = window.innerHeight;
-      canvas.width = Math.round(canvasWidth * ratio);
-      canvas.height = Math.round(canvasHeight * ratio);
+      canvas.width = Math.round(canvasWidth * pixelRatio);
+      canvas.height = Math.round(canvasHeight * pixelRatio);
       canvas.style.width = `${canvasWidth}px`;
       canvas.style.height = `${canvasHeight}px`;
-      context?.setTransform(ratio, 0, 0, ratio, 0, 0);
+      context?.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
     }
 
-    function updateButton() {
-      const label = reducedMotion.matches ? copy.waterReduced : (enabled ? copy.waterOn : copy.waterOff);
+    function updateControls() {
+      const label = reducedMotion.matches ? copy.puzzleReduced : (enabled ? copy.puzzleOn : copy.puzzleOff);
       button.setAttribute('aria-label', label);
       button.setAttribute('title', label);
       button.setAttribute('aria-pressed', String(enabled));
       button.classList.toggle('is-active', enabled);
       button.disabled = reducedMotion.matches;
-    }
-
-    function setFilter(intensity, directionX = 0, directionY = 0) {
-      if (!useDisplacement) return;
-      const horizontalFrequency = 0.011 + Math.abs(directionY) * 0.006;
-      const verticalFrequency = 0.016 + Math.abs(directionX) * 0.008;
-      noise.setAttribute('baseFrequency', `${horizontalFrequency.toFixed(4)} ${verticalFrequency.toFixed(4)}`);
-      displacement.setAttribute('scale', String((intensity * 13).toFixed(2)));
-    }
-
-    function addRipple(point, strength, angle) {
-      const previous = ripples[ripples.length - 1];
-      if (previous && Math.hypot(point.x - previous.x, point.y - previous.y) < 18 && point.time - previous.born < 48) return;
-      ripples.push({ x: point.x, y: point.y, born: point.time, strength, angle });
-      if (ripples.length > 28) ripples = ripples.slice(-28);
-    }
-
-    function drawRipples(now) {
-      if (!context) return;
-      context.clearRect(0, 0, canvasWidth, canvasHeight);
-      ripples = ripples.filter((ripple) => now - ripple.born < 2000);
-      ripples.forEach((ripple) => {
-        const progress = clamp((now - ripple.born) / 2000);
-        const alpha = (1 - progress) * (0.05 + ripple.strength * 0.11);
-        const radius = 10 + progress * (46 + ripple.strength * 38);
-        context.save();
-        context.translate(ripple.x, ripple.y);
-        context.rotate(ripple.angle);
-        context.scale(1.35, 0.72);
-        context.beginPath();
-        context.arc(0, 0, radius, 0, Math.PI * 2);
-        context.strokeStyle = `rgba(240, 252, 248, ${alpha.toFixed(3)})`;
-        context.lineWidth = 1.15;
-        context.stroke();
-        context.beginPath();
-        context.arc(0, 0, radius * 0.72, 0, Math.PI * 2);
-        context.strokeStyle = `rgba(34, 88, 91, ${(alpha * 0.52).toFixed(3)})`;
-        context.lineWidth = 0.75;
-        context.stroke();
-        context.restore();
+      controls.classList.toggle('is-enabled', enabled);
+      levelButtons.forEach((levelButton, index) => {
+        const selected = index === level;
+        levelButton.classList.toggle('is-selected', selected);
+        levelButton.setAttribute('aria-pressed', String(selected));
       });
     }
 
-    function render(now) {
-      if (!enabled) return;
-      if (activePointer === null && releaseStarted) {
-        const progress = clamp((now - releaseStarted) / 2000);
-        currentIntensity = releaseIntensity * Math.pow(1 - progress, 2.2);
-        setFilter(currentIntensity);
-        if (progress >= 1) {
-          currentIntensity = 0;
-          releaseStarted = 0;
-          document.body.classList.remove('qinyi-water-dragging');
-          setFilter(0);
+    function ensureCaptureLibrary() {
+      if (window.html2canvas) return Promise.resolve(window.html2canvas);
+      if (libraryPromise) return libraryPromise;
+      libraryPromise = new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.src = new URL('./vendor/html2canvas.min.js', motionAssetBase).href;
+        script.onload = () => window.html2canvas ? resolve(window.html2canvas) : reject(new Error('html2canvas unavailable'));
+        script.onerror = reject;
+        document.head.appendChild(script);
+      });
+      return libraryPromise;
+    }
+
+    function addHorizontalTab(path, fromX, toX, y, outward) {
+      const direction = Math.sign(toX - fromX);
+      const center = (fromX + toX) / 2;
+      const span = Math.abs(toX - fromX) * 0.2;
+      const depth = Math.min(Math.abs(toX - fromX) * 0.18, 22) * outward;
+      path.lineTo(center - direction * span, y);
+      path.bezierCurveTo(center - direction * span * 0.55, y, center - direction * span * 0.78, y + depth * 0.52, center - direction * span * 0.42, y + depth * 0.64);
+      path.bezierCurveTo(center - direction * span * 0.34, y + depth, center + direction * span * 0.34, y + depth, center + direction * span * 0.42, y + depth * 0.64);
+      path.bezierCurveTo(center + direction * span * 0.78, y + depth * 0.52, center + direction * span * 0.55, y, center + direction * span, y);
+      path.lineTo(toX, y);
+    }
+
+    function addVerticalTab(path, x, fromY, toY, outward) {
+      const direction = Math.sign(toY - fromY);
+      const center = (fromY + toY) / 2;
+      const span = Math.abs(toY - fromY) * 0.2;
+      const depth = Math.min(Math.abs(toY - fromY) * 0.18, 22) * outward;
+      path.lineTo(x, center - direction * span);
+      path.bezierCurveTo(x, center - direction * span * 0.55, x + depth * 0.52, center - direction * span * 0.78, x + depth * 0.64, center - direction * span * 0.42);
+      path.bezierCurveTo(x + depth, center - direction * span * 0.34, x + depth, center + direction * span * 0.34, x + depth * 0.64, center + direction * span * 0.42);
+      path.bezierCurveTo(x + depth * 0.52, center + direction * span * 0.78, x, center + direction * span * 0.55, x, center + direction * span);
+      path.lineTo(x, toY);
+    }
+
+    function buildPieces() {
+      const columns = lowPower ? 4 : (canvasWidth <= 760 ? 4 : 7);
+      const cellWidth = canvasWidth / columns;
+      const rows = Math.max(3, Math.ceil(canvasHeight / cellWidth));
+      const cellHeight = canvasHeight / rows;
+      const result = [];
+      for (let row = 0; row < rows; row += 1) {
+        for (let column = 0; column < columns; column += 1) {
+          const x0 = column * cellWidth;
+          const y0 = row * cellHeight;
+          const x1 = column === columns - 1 ? canvasWidth : (column + 1) * cellWidth;
+          const y1 = row === rows - 1 ? canvasHeight : (row + 1) * cellHeight;
+          const path = new Path2D();
+          path.moveTo(x0, y0);
+          if (row === 0) path.lineTo(x1, y0);
+          else addHorizontalTab(path, x0, x1, y0, ((row + column) % 2 ? 1 : -1));
+          if (column === columns - 1) path.lineTo(x1, y1);
+          else addVerticalTab(path, x1, y0, y1, ((row + column) % 2 ? 1 : -1));
+          if (row === rows - 1) path.lineTo(x0, y1);
+          else addHorizontalTab(path, x1, x0, y1, ((row + column + 1) % 2 ? -1 : 1));
+          if (column === 0) path.lineTo(x0, y0);
+          else addVerticalTab(path, x0, y1, y0, ((row + column + 1) % 2 ? -1 : 1));
+          path.closePath();
+          const margin = Math.min(cellWidth, cellHeight) * 0.24;
+          result.push({
+            path,
+            centerX: (x0 + x1) / 2,
+            centerY: (y0 + y1) / 2,
+            sourceX: Math.max(0, x0 - margin),
+            sourceY: Math.max(0, y0 - margin),
+            sourceWidth: Math.min(canvasWidth, x1 + margin) - Math.max(0, x0 - margin),
+            sourceHeight: Math.min(canvasHeight, y1 + margin) - Math.max(0, y0 - margin),
+            spin: ((row * 7 + column * 11) % 2 ? 1 : -1) * (0.72 + ((row * 3 + column * 5) % 5) * 0.07),
+          });
         }
       }
-      drawRipples(now);
-      if (activePointer !== null || releaseStarted || ripples.length) animationFrame = requestAnimationFrame(render);
-      else animationFrame = 0;
+      return result;
+    }
+
+    function setLocked(nextLocked) {
+      locked = nextLocked;
+      document.body.classList.toggle('qinyi-puzzle-fragmented', locked);
+      canvas.classList.toggle('is-visible', locked);
+    }
+
+    function resetEffect(immediate = false) {
+      waves = [];
+      queuedWaves = [];
+      snapshot = null;
+      pieces = [];
+      dragging = false;
+      captureGeneration += 1;
+      capturePromise = null;
+      if (animationFrame) cancelAnimationFrame(animationFrame);
+      animationFrame = 0;
+      if (immediate) {
+        if (context) context.clearRect(0, 0, canvasWidth, canvasHeight);
+        setLocked(false);
+      }
+      else {
+        canvas.classList.add('is-releasing');
+        window.setTimeout(() => {
+          if (context) context.clearRect(0, 0, canvasWidth, canvasHeight);
+          canvas.classList.remove('is-releasing');
+          setLocked(false);
+        }, 160);
+      }
+    }
+
+    async function captureViewport(generation) {
+      try {
+        const capture = await ensureCaptureLibrary();
+        if (!enabled || generation !== captureGeneration) return;
+        const scrollX = window.scrollX;
+        const scrollY = window.scrollY;
+        const image = await capture(document.documentElement, {
+          backgroundColor: null,
+          scale: pixelRatio,
+          useCORS: true,
+          logging: false,
+          x: 0,
+          y: 0,
+          width: canvasWidth,
+          height: canvasHeight,
+          scrollX: -scrollX,
+          scrollY: -scrollY,
+          windowWidth: canvasWidth,
+          windowHeight: canvasHeight,
+          ignoreElements: (element) => element.hasAttribute?.('data-html2canvas-ignore'),
+          onclone: (clonedDocument) => {
+            if (scrollY <= 0) return;
+            const stickyHeader = clonedDocument.querySelector('.site-header');
+            if (!stickyHeader) return;
+            const headerOverlay = stickyHeader.cloneNode(true);
+            headerOverlay.setAttribute('aria-hidden', 'true');
+            headerOverlay.style.position = 'absolute';
+            headerOverlay.style.inset = `${scrollY}px 0 auto`;
+            headerOverlay.style.width = '100%';
+            clonedDocument.body.appendChild(headerOverlay);
+          },
+        });
+        if (!enabled || generation !== captureGeneration || !dragging) return;
+        snapshot = image;
+        pieces = buildPieces();
+        if (queuedWaves.length) {
+          const shift = performance.now() - queuedWaves[queuedWaves.length - 1].born;
+          waves = queuedWaves.map((wave) => ({ ...wave, born: wave.born + shift }));
+          queuedWaves = [];
+        }
+        setLocked(true);
+        ensureAnimation();
+      } catch (_error) {
+        resetEffect(true);
+      } finally {
+        capturePromise = null;
+      }
+    }
+
+    function queueWave(point, deltaX, deltaY, elapsed) {
+      const target = snapshot ? waves : queuedWaves;
+      const previous = target[target.length - 1];
+      if (previous && Math.hypot(point.x - previous.x, point.y - previous.y) < 30 && point.time - previous.born < 76) return;
+      const distance = Math.hypot(deltaX, deltaY);
+      target.push({
+        x: point.x,
+        y: point.y,
+        born: point.time,
+        strength: clamp(distance / Math.max(8, elapsed) / 0.8, 0.28, 1),
+        directionX: distance ? deltaX / distance : 0,
+        directionY: distance ? deltaY / distance : 0,
+      });
+      if (target.length > 20) target.splice(0, target.length - 20);
+    }
+
+    function drawPiece(piece, now) {
+      const configuration = settings[level];
+      const maximumRadius = Math.hypot(canvasWidth, canvasHeight);
+      let offsetX = 0;
+      let offsetY = 0;
+      let rotation = 0;
+      let energy = 0;
+      waves.forEach((wave) => {
+        const deltaX = piece.centerX - wave.x;
+        const deltaY = piece.centerY - wave.y;
+        const distance = Math.hypot(deltaX, deltaY);
+        const arrival = (distance / maximumRadius) * 620;
+        const age = now - wave.born - arrival;
+        const duration = Math.max(900, 2000 - arrival);
+        if (age < 0 || age > duration) return;
+        const attack = clamp(age / 115);
+        const decay = Math.pow(1 - clamp(age / duration), 1.45);
+        const envelope = attack * decay * wave.strength;
+        const radialX = distance ? deltaX / distance : wave.directionX;
+        const radialY = distance ? deltaY / distance : wave.directionY;
+        offsetX += (radialX * 0.76 + wave.directionX * 0.24) * envelope * configuration.offset;
+        offsetY += (radialY * 0.76 + wave.directionY * 0.24) * envelope * configuration.offset;
+        rotation += piece.spin * envelope * configuration.rotation;
+        energy += envelope;
+      });
+      const maximumOffset = configuration.offset * 1.55;
+      const magnitude = Math.hypot(offsetX, offsetY);
+      if (magnitude > maximumOffset) {
+        offsetX *= maximumOffset / magnitude;
+        offsetY *= maximumOffset / magnitude;
+      }
+      rotation = clamp(rotation, -configuration.rotation * 1.45, configuration.rotation * 1.45);
+
+      context.save();
+      context.translate(piece.centerX + offsetX, piece.centerY + offsetY);
+      context.rotate(rotation * Math.PI / 180);
+      context.translate(-piece.centerX, -piece.centerY);
+      if (energy > 0.035) {
+        context.save();
+        context.shadowColor = `rgba(18, 20, 17, ${Math.min(0.2, energy * 0.08)})`;
+        context.shadowBlur = Math.min(9, 3 + energy * 3);
+        context.shadowOffsetX = offsetX * 0.18;
+        context.shadowOffsetY = offsetY * 0.18 + 2;
+        context.fillStyle = 'rgba(255,255,255,.01)';
+        context.fill(piece.path);
+        context.restore();
+      }
+      context.clip(piece.path);
+      context.drawImage(
+        snapshot,
+        piece.sourceX * pixelRatio,
+        piece.sourceY * pixelRatio,
+        piece.sourceWidth * pixelRatio,
+        piece.sourceHeight * pixelRatio,
+        piece.sourceX,
+        piece.sourceY,
+        piece.sourceWidth,
+        piece.sourceHeight,
+      );
+      context.restore();
+
+      if (energy > 0.025) {
+        context.save();
+        context.translate(piece.centerX + offsetX, piece.centerY + offsetY);
+        context.rotate(rotation * Math.PI / 180);
+        context.translate(-piece.centerX, -piece.centerY);
+        context.strokeStyle = `rgba(255, 255, 255, ${Math.min(0.3, energy * 0.16)})`;
+        context.lineWidth = 0.7;
+        context.stroke(piece.path);
+        context.restore();
+      }
+    }
+
+    function render(now) {
+      animationFrame = 0;
+      if (!enabled || !locked || !snapshot || !context) return;
+      waves = waves.filter((wave) => now - wave.born < 2000);
+      context.clearRect(0, 0, canvasWidth, canvasHeight);
+      context.fillStyle = 'rgba(18, 20, 17, .2)';
+      context.fillRect(0, 0, canvasWidth, canvasHeight);
+      context.globalAlpha = settings[level].baseOpacity;
+      context.drawImage(snapshot, 0, 0, canvasWidth, canvasHeight);
+      context.globalAlpha = 1;
+      pieces.forEach((piece) => drawPiece(piece, now));
+      if (waves.length || activePointer !== null) ensureAnimation();
+      else resetEffect(false);
     }
 
     function ensureAnimation() {
@@ -347,95 +553,110 @@
     }
 
     function begin(point, pointerId) {
-      if (!enabled || reducedMotion.matches || point.target?.closest?.('.qinyi-water-toggle')) return;
+      if (!enabled || reducedMotion.matches || point.target?.closest?.('.qinyi-puzzle-controls') || locked) return;
       activePointer = pointerId;
-      dragging = false;
+      startPoint = point;
       lastPoint = point;
-      releaseStarted = 0;
+      dragging = false;
+      queuedWaves = [];
+      captureGeneration += 1;
+      const generation = captureGeneration;
+      capturePromise = captureViewport(generation);
     }
 
-    function move(point, pointerId) {
+    function move(point, pointerId, event) {
       if (!enabled || activePointer !== pointerId || !lastPoint) return;
-      const elapsed = Math.max(8, point.time - lastPoint.time);
       const deltaX = point.x - lastPoint.x;
       const deltaY = point.y - lastPoint.y;
-      const distance = Math.hypot(deltaX, deltaY);
-      if (!dragging && distance < 3) return;
-      if (!dragging) {
-        dragging = true;
-        document.body.classList.add('qinyi-water-dragging');
-      }
-      const strength = clamp(distance / elapsed / 1.25, 0.12, 1);
-      currentIntensity += (strength - currentIntensity) * 0.48;
-      const directionX = distance ? deltaX / distance : 0;
-      const directionY = distance ? deltaY / distance : 0;
-      setFilter(currentIntensity, directionX, directionY);
-      document.documentElement.style.setProperty('--water-shift-x', `${(directionX * currentIntensity * 1.8).toFixed(2)}px`);
-      document.documentElement.style.setProperty('--water-shift-y', `${(directionY * currentIntensity * 1.8).toFixed(2)}px`);
-      addRipple(point, strength, Math.atan2(deltaY, deltaX));
+      const distanceFromStart = Math.hypot(point.x - startPoint.x, point.y - startPoint.y);
+      if (!dragging && distanceFromStart < (point.pointerType === 'touch' ? 9 : 5)) return;
+      if (!dragging) dragging = true;
+      event.preventDefault();
+      queueWave(point, deltaX, deltaY, point.time - lastPoint.time);
       lastPoint = point;
-      ensureAnimation();
+      if (snapshot) ensureAnimation();
     }
 
     function release(pointerId) {
       if (activePointer !== pointerId) return;
       activePointer = null;
+      startPoint = null;
       lastPoint = null;
-      if (!dragging) return;
-      dragging = false;
-      releaseIntensity = Math.max(currentIntensity, 0.18);
-      releaseStarted = performance.now();
-      ensureAnimation();
+      if (!dragging) {
+        captureGeneration += 1;
+        capturePromise = null;
+        queuedWaves = [];
+        return;
+      }
+      if (snapshot) ensureAnimation();
+    }
+
+    function setLevel(nextLevel) {
+      const parsedLevel = Number(nextLevel);
+      level = Number.isFinite(parsedLevel) ? clamp(parsedLevel, 0, 2) : 1;
+      try { window.localStorage.setItem('qinyi-puzzle-level', String(level)); }
+      catch (_error) { /* The control remains usable when storage is blocked. */ }
+      updateControls();
     }
 
     function setEnabled(nextEnabled) {
       enabled = Boolean(nextEnabled) && !reducedMotion.matches;
-      document.body.classList.toggle('qinyi-water-enabled', enabled);
-      document.body.classList.toggle('qinyi-water-fallback', enabled && !useDisplacement);
+      document.body.classList.toggle('qinyi-puzzle-enabled', enabled);
       if (!enabled) {
         activePointer = null;
-        dragging = false;
+        startPoint = null;
         lastPoint = null;
-        releaseStarted = 0;
-        currentIntensity = 0;
-        ripples = [];
-        document.body.classList.remove('qinyi-water-dragging');
-        context?.clearRect(0, 0, canvasWidth, canvasHeight);
-        setFilter(0);
-        if (animationFrame) cancelAnimationFrame(animationFrame);
-        animationFrame = 0;
+        dragging = false;
+        resetEffect(true);
+      } else {
+        ensureCaptureLibrary().catch(() => setEnabled(false));
       }
-      try { window.localStorage.setItem('qinyi-water-enabled', String(enabled)); }
+      try { window.localStorage.setItem('qinyi-puzzle-enabled', String(enabled)); }
       catch (_error) { /* The control remains usable when storage is blocked. */ }
-      updateButton();
+      updateControls();
     }
 
     button.addEventListener('click', () => setEnabled(!enabled));
+    levelButtons.forEach((levelButton) => levelButton.addEventListener('click', () => setLevel(levelButton.dataset.puzzleLevel)));
+    document.addEventListener('click', (event) => {
+      if (locked && !event.target.closest?.('.qinyi-puzzle-controls')) {
+        event.preventDefault();
+        event.stopImmediatePropagation();
+      }
+    }, true);
     document.addEventListener('dragstart', (event) => {
       if (enabled && event.target instanceof HTMLImageElement) event.preventDefault();
     });
     document.addEventListener('pointerdown', (event) => {
       if (!event.isPrimary || event.button > 0) return;
-      begin({ x: event.clientX, y: event.clientY, time: performance.now(), target: event.target }, event.pointerId);
+      try { event.target.setPointerCapture?.(event.pointerId); }
+      catch (_error) { /* Pointer capture is optional. */ }
+      begin({ x: event.clientX, y: event.clientY, time: performance.now(), target: event.target, pointerType: event.pointerType }, event.pointerId);
     }, { passive: true });
     document.addEventListener('pointermove', (event) => {
       if (!event.isPrimary) return;
-      move({ x: event.clientX, y: event.clientY, time: performance.now(), target: event.target }, event.pointerId);
-    }, { passive: true });
+      move({ x: event.clientX, y: event.clientY, time: performance.now(), target: event.target, pointerType: event.pointerType }, event.pointerId, event);
+    }, { passive: false });
     document.addEventListener('pointerup', (event) => release(event.pointerId), { passive: true });
     document.addEventListener('pointercancel', (event) => release(event.pointerId), { passive: true });
     window.addEventListener('blur', () => { if (activePointer !== null) release(activePointer); });
-    window.addEventListener('resize', resizeCanvas, { passive: true });
+    window.addEventListener('resize', () => {
+      resetEffect(true);
+      resizeCanvas();
+    }, { passive: true });
+    window.addEventListener('scroll', () => { if (locked) resetEffect(false); }, { passive: true });
+    document.addEventListener('visibilitychange', () => { if (document.hidden && locked) resetEffect(true); });
     reducedMotion.addEventListener?.('change', () => {
       if (reducedMotion.matches) setEnabled(false);
-      updateButton();
+      updateControls();
     });
 
     resizeCanvas();
-    updateButton();
+    setLevel(level);
+    updateControls();
     if (savedPreference && !reducedMotion.matches) setEnabled(true);
   }
 
   installHeroCarousel();
-  installWaterInteraction();
+  installPuzzleInteraction();
 })();

@@ -523,7 +523,7 @@ body.support-open { overflow: hidden; }
   body.support-open .mobile-rfq { display: none; }
 }
 
-/* Featured carousel and opt-in water interaction. */
+/* Featured carousel and opt-in full-page puzzle-wave interaction. */
 .hero-carousel,
 .hero-carousel-viewport,
 .hero-carousel-slide,
@@ -550,24 +550,28 @@ body.support-open { overflow: hidden; }
   to { transform: scale(1.012) translate3d(.25%,-.18%,0); }
 }
 
-.qinyi-water-filter-host { position: fixed; width: 0; height: 0; overflow: hidden; pointer-events: none; }
-.qinyi-water-canvas { position: fixed; inset: 0; z-index: 145; width: 100vw; height: 100vh; pointer-events: none; mix-blend-mode: soft-light; }
-.qinyi-water-toggle { position: fixed; inset-inline-end: 25px; bottom: 94px; z-index: 157; display: grid; place-items: center; width: 48px; height: 48px; padding: 0; border: 1px solid rgba(23,25,22,.68); border-radius: 50%; background: rgba(255,254,250,.94); color: var(--ink); box-shadow: 0 8px 24px rgba(23,25,22,.16); cursor: pointer; backdrop-filter: blur(10px); transition: transform .2s ease, background .2s ease, color .2s ease, box-shadow .2s ease; }
-.qinyi-water-toggle:hover { transform: translateY(-2px); box-shadow: 0 11px 28px rgba(23,25,22,.2); }
-.qinyi-water-toggle.is-active { border-color: var(--blue); background: var(--blue); color: white; box-shadow: 0 0 0 4px rgba(48,84,160,.12), 0 10px 28px rgba(23,25,22,.2); }
-.qinyi-water-toggle:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
-.qinyi-water-toggle:disabled { opacity: .45; cursor: not-allowed; transform: none; }
-.qinyi-water-icon { display: grid; gap: 3px; width: 25px; }
-.qinyi-water-icon i { display: block; width: 100%; height: 5px; border-top: 2px solid currentColor; border-radius: 50%; transform-origin: center; }
-.qinyi-water-icon i:nth-child(1) { transform: scaleX(.72) translateX(-2px); }
-.qinyi-water-icon i:nth-child(2) { transform: scaleX(1); }
-.qinyi-water-icon i:nth-child(3) { transform: scaleX(.72) translateX(2px); }
-.qinyi-water-toggle.is-active .qinyi-water-icon i { animation: qinyi-water-icon 1.7s ease-in-out infinite alternate; }
-.qinyi-water-toggle.is-active .qinyi-water-icon i:nth-child(2) { animation-delay: -.42s; }
-.qinyi-water-toggle.is-active .qinyi-water-icon i:nth-child(3) { animation-delay: -.8s; }
-body.qinyi-water-dragging img.qinyi-water-visible { filter: url('#qinyi-water-displacement'); will-change: filter; }
-body.qinyi-water-dragging.qinyi-water-fallback img.qinyi-water-visible { filter: saturate(1.03) contrast(1.015); translate: var(--water-shift-x) var(--water-shift-y); }
-@keyframes qinyi-water-icon { to { transform: translateX(3px) scaleX(.78); } }
+.qinyi-puzzle-canvas { position: fixed; inset: 0; z-index: 150; width: 100vw; height: 100vh; visibility: hidden; opacity: 0; pointer-events: none; touch-action: none; transition: opacity .16s ease; }
+.qinyi-puzzle-canvas.is-visible { visibility: visible; opacity: 1; pointer-events: auto; }
+.qinyi-puzzle-canvas.is-releasing { opacity: 0; }
+.qinyi-puzzle-controls { position: fixed; inset-inline-end: 25px; bottom: 94px; z-index: 157; display: flex; align-items: center; gap: 8px; direction: ltr; }
+.qinyi-puzzle-toggle { display: grid; place-items: center; width: 48px; height: 48px; padding: 0; border: 1px solid rgba(23,25,22,.68); border-radius: 50%; background: rgba(255,254,250,.94); color: var(--ink); box-shadow: 0 8px 24px rgba(23,25,22,.16); cursor: pointer; backdrop-filter: blur(10px); transition: transform .2s ease, background .2s ease, color .2s ease, box-shadow .2s ease; }
+.qinyi-puzzle-toggle:hover { transform: translateY(-2px); box-shadow: 0 11px 28px rgba(23,25,22,.2); }
+.qinyi-puzzle-toggle.is-active { border-color: var(--blue); background: var(--blue); color: white; box-shadow: 0 0 0 4px rgba(48,84,160,.12), 0 10px 28px rgba(23,25,22,.2); }
+.qinyi-puzzle-toggle:focus-visible,
+.qinyi-puzzle-levels button:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
+.qinyi-puzzle-toggle:disabled { opacity: .45; cursor: not-allowed; transform: none; }
+.qinyi-puzzle-icon { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.qinyi-puzzle-levels { display: flex; gap: 3px; padding: 4px; border: 1px solid rgba(23,25,22,.24); border-radius: 6px; background: rgba(255,254,250,.94); box-shadow: 0 7px 20px rgba(23,25,22,.12); opacity: 0; visibility: hidden; transform: translateX(8px); pointer-events: none; backdrop-filter: blur(10px); transition: opacity .18s ease, transform .18s ease, visibility .18s; }
+.qinyi-puzzle-controls.is-enabled .qinyi-puzzle-levels { opacity: 1; visibility: visible; transform: translateX(0); pointer-events: auto; }
+.qinyi-puzzle-levels button { display: grid; place-items: center; width: 30px; height: 30px; padding: 0; border: 1px solid transparent; border-radius: 3px; background: transparent; color: rgba(23,25,22,.58); cursor: pointer; }
+.qinyi-puzzle-levels button:hover { border-color: var(--line); background: var(--paper); color: var(--ink); }
+.qinyi-puzzle-levels button.is-selected { border-color: var(--ink); background: var(--ink); color: white; }
+.qinyi-puzzle-levels button span { display: flex; align-items: end; gap: 2px; height: 12px; }
+.qinyi-puzzle-levels button i { display: block; width: 3px; height: 6px; background: currentColor; }
+.qinyi-puzzle-levels button i:nth-child(2) { height: 9px; }
+.qinyi-puzzle-levels button i:nth-child(3) { height: 12px; }
+body.qinyi-puzzle-enabled { cursor: grab; }
+body.qinyi-puzzle-fragmented { cursor: grabbing; user-select: none; }
 
 @media (max-width: 760px) {
   .hero-carousel { clip-path: none; }
@@ -577,11 +581,15 @@ body.qinyi-water-dragging.qinyi-water-fallback img.qinyi-water-visible { filter:
   .hero-carousel-caption { inset-inline: 12px auto; bottom: 12px; max-width: calc(100% - 24px); font-size: .6rem; }
   .hero-carousel-controls { inset-inline-start: 12px; inset-inline-end: auto; top: 12px; }
   .hero-carousel-arrow { width: 44px; height: 44px; }
-  .qinyi-water-toggle { inset-inline-end: 13px; bottom: 126px; width: 44px; height: 44px; }
+  .qinyi-puzzle-controls { inset-inline-end: 13px; bottom: 126px; gap: 6px; }
+  .qinyi-puzzle-toggle { width: 44px; height: 44px; }
+  .qinyi-puzzle-levels { padding: 3px; }
+  .qinyi-puzzle-levels button { width: 28px; height: 28px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .hero-carousel-slide.is-active .hero-carousel-image { animation: none; transform: none; }
   .hero-puzzle-layer { display: none; }
-  .qinyi-water-canvas { display: none; }
+  .qinyi-puzzle-canvas { display: none; }
+  .qinyi-puzzle-levels { display: none; }
 }

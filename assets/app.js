@@ -667,6 +667,6 @@ function installOrderPortal() {
 installOrderPortal();
 
 const immersiveMotionScript = document.createElement('script');
-immersiveMotionScript.src = new URL('./immersive-motion.js?v=20260729-water-v1', scriptUrl).href;
+immersiveMotionScript.src = new URL('./immersive-motion.js?v=20260729-puzzle-v2', scriptUrl).href;
 immersiveMotionScript.async = false;
 document.head.appendChild(immersiveMotionScript);
