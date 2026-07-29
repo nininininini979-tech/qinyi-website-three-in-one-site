@@ -10,6 +10,7 @@
     puzzleOn: '关闭拼图波交互',
     puzzleOff: '开启拼图波交互',
     puzzleReduced: '系统已启用减少动态效果',
+    puzzlePreparing: '正在准备拼图画面…',
     puzzleHint: '开启后，按住并拖动页面',
     puzzleLevel: '拼图波强度',
     puzzleLevels: ['轻柔', '标准', '明显'],
@@ -21,6 +22,7 @@
     puzzleOn: 'Turn off puzzle-wave interaction',
     puzzleOff: 'Turn on puzzle-wave interaction',
     puzzleReduced: 'Motion is reduced by your system settings',
+    puzzlePreparing: 'Preparing the puzzle view…',
     puzzleHint: 'Turn on, then press and drag',
     puzzleLevel: 'Puzzle-wave intensity',
     puzzleLevels: ['Subtle', 'Balanced', 'Defined'],
@@ -82,6 +84,7 @@
     const puzzleLayer = document.createElement('div');
     puzzleLayer.className = 'hero-puzzle-layer';
     puzzleLayer.setAttribute('aria-hidden', 'true');
+    puzzleLayer.setAttribute('data-html2canvas-ignore', 'true');
     const controls = document.createElement('div');
     controls.className = 'hero-carousel-controls';
     controls.innerHTML = `<button class="hero-carousel-arrow hero-carousel-previous" type="button" aria-label="${copy.previous}" title="${copy.previous}"><span aria-hidden="true">&#8592;</span></button><button class="hero-carousel-arrow hero-carousel-next" type="button" aria-label="${copy.next}" title="${copy.next}"><span aria-hidden="true">&#8594;</span></button>`;
@@ -147,6 +150,7 @@
       });
       currentIndex = nextIndex;
       if (announce) status.textContent = copy.slide(currentIndex + 1, slides.length, slides[currentIndex].title);
+      document.dispatchEvent(new Event('qinyi:visual-change'));
     }
 
     function scheduleAutoplay(delay = autoplayDelay) {
@@ -254,6 +258,7 @@
     let lastPoint = null;
     let dragging = false;
     let snapshot = null;
+    let snapshotMeta = null;
     let pieces = [];
     let waves = [];
     let queuedWaves = [];
@@ -266,9 +271,14 @@
     let pixelRatio = 1;
     let locked = false;
     let hintTimer = 0;
+    let releaseTimer = 0;
+    let snapshotRefreshTimer = 0;
+    let snapshotRefreshPending = false;
+    let preparing = false;
+    let preparationStartedAt = 0;
 
     function resizeCanvas() {
-      pixelRatio = lowPower || window.innerWidth <= 760 ? 1 : Math.min(window.devicePixelRatio || 1, 1.35);
+      pixelRatio = lowPower || window.innerWidth <= 760 ? 1 : Math.min(window.devicePixelRatio || 1, 1.2);
       canvasWidth = window.innerWidth;
       canvasHeight = window.innerHeight;
       canvas.width = Math.round(canvasWidth * pixelRatio);
@@ -279,14 +289,17 @@
     }
 
     function updateControls() {
-      const label = reducedMotion.matches ? copy.puzzleReduced : (enabled ? copy.puzzleOn : copy.puzzleOff);
+      const label = reducedMotion.matches ? copy.puzzleReduced : (preparing ? copy.puzzlePreparing : (enabled ? copy.puzzleOn : copy.puzzleOff));
       button.setAttribute('aria-label', label);
       button.setAttribute('title', label);
       button.setAttribute('aria-pressed', String(enabled));
+      button.setAttribute('aria-busy', String(preparing));
       button.classList.toggle('is-active', enabled);
       button.disabled = reducedMotion.matches;
       controls.classList.toggle('is-enabled', enabled);
-      hint.textContent = reducedMotion.matches ? copy.puzzleReduced : copy.puzzleHint;
+      controls.classList.toggle('is-preparing', preparing);
+      controls.dataset.puzzleReady = String(snapshotMatchesViewport());
+      hint.textContent = reducedMotion.matches ? copy.puzzleReduced : (preparing ? copy.puzzlePreparing : copy.puzzleHint);
       levelButtons.forEach((levelButton, index) => {
         const selected = index === level;
         levelButton.classList.toggle('is-selected', selected);
@@ -304,17 +317,100 @@
       hintTimer = window.setTimeout(() => controls.classList.remove('is-hint-visible'), duration);
     }
 
+    function setPreparing(nextPreparing) {
+      const next = Boolean(nextPreparing);
+      if (next && !preparing) preparationStartedAt = performance.now();
+      if (!next && preparing && preparationStartedAt) {
+        controls.dataset.puzzlePrepareMs = String(Math.round(performance.now() - preparationStartedAt));
+        preparationStartedAt = 0;
+      }
+      preparing = next;
+      updateControls();
+    }
+
     function ensureCaptureLibrary() {
       if (window.html2canvas) return Promise.resolve(window.html2canvas);
       if (libraryPromise) return libraryPromise;
       libraryPromise = new Promise((resolve, reject) => {
         const script = document.createElement('script');
         script.src = new URL('./vendor/html2canvas.min.js', motionAssetBase).href;
-        script.onload = () => window.html2canvas ? resolve(window.html2canvas) : reject(new Error('html2canvas unavailable'));
-        script.onerror = reject;
+        script.onload = () => {
+          if (window.html2canvas) resolve(window.html2canvas);
+          else {
+            libraryPromise = null;
+            reject(new Error('html2canvas unavailable'));
+          }
+        };
+        script.onerror = (error) => {
+          libraryPromise = null;
+          reject(error);
+        };
         document.head.appendChild(script);
       });
       return libraryPromise;
+    }
+
+    function snapshotMatchesViewport() {
+      return Boolean(
+        snapshot
+        && snapshotMeta
+        && snapshotMeta.width === canvasWidth
+        && snapshotMeta.height === canvasHeight
+        && Math.abs(snapshotMeta.scrollX - window.scrollX) < 1
+        && Math.abs(snapshotMeta.scrollY - window.scrollY) < 1
+      );
+    }
+
+    function invalidateSnapshot() {
+      snapshot = null;
+      snapshotMeta = null;
+      pieces = [];
+      captureGeneration += 1;
+      setPreparing(false);
+    }
+
+    function scheduleSnapshotRefresh(delay = 120, force = false) {
+      window.clearTimeout(snapshotRefreshTimer);
+      if (!enabled || reducedMotion.matches || document.hidden) return;
+      snapshotRefreshTimer = window.setTimeout(() => {
+        snapshotRefreshTimer = 0;
+        if (document.body.classList.contains('intro-running')) {
+          scheduleSnapshotRefresh(260, force);
+          return;
+        }
+        if (locked || dragging) {
+          snapshotRefreshPending = true;
+          return;
+        }
+        snapshotRefreshPending = false;
+        prepareSnapshot(force);
+      }, delay);
+    }
+
+    function prepareSnapshot(force = false) {
+      if (!enabled || reducedMotion.matches || document.hidden) return Promise.resolve(null);
+      if (!force && snapshotMatchesViewport()) {
+        setPreparing(false);
+        return Promise.resolve(snapshot);
+      }
+      if (capturePromise) return capturePromise;
+
+      const generation = ++captureGeneration;
+      if (!snapshotMatchesViewport()) setPreparing(true);
+      const job = captureViewport(generation);
+      capturePromise = job;
+      job.catch(() => {
+        if (generation !== captureGeneration) return;
+        waves = [];
+        queuedWaves = [];
+        dragging = false;
+        setLocked(false);
+      }).finally(() => {
+        if (capturePromise === job) capturePromise = null;
+        if (generation === captureGeneration) setPreparing(false);
+        else if (enabled) scheduleSnapshotRefresh(60);
+      });
+      return job;
     }
 
     function seededUnit(...values) {
@@ -419,51 +515,108 @@
       canvas.classList.toggle('is-visible', locked);
     }
 
-    function resetEffect(immediate = false) {
+    function finishRelease() {
+      window.clearTimeout(releaseTimer);
+      releaseTimer = 0;
+      if (context) context.clearRect(0, 0, canvasWidth, canvasHeight);
+      canvas.classList.remove('is-releasing');
+      setLocked(false);
+    }
+
+    function resetEffect(immediate = false, discardSnapshot = false) {
       waves = [];
       queuedWaves = [];
-      snapshot = null;
-      pieces = [];
       dragging = false;
-      captureGeneration += 1;
-      capturePromise = null;
       if (animationFrame) cancelAnimationFrame(animationFrame);
       animationFrame = 0;
+      if (discardSnapshot) invalidateSnapshot();
       if (immediate) {
-        if (context) context.clearRect(0, 0, canvasWidth, canvasHeight);
-        setLocked(false);
+        finishRelease();
       }
       else {
+        window.clearTimeout(releaseTimer);
         canvas.classList.add('is-releasing');
-        window.setTimeout(() => {
-          if (context) context.clearRect(0, 0, canvasWidth, canvasHeight);
-          canvas.classList.remove('is-releasing');
-          setLocked(false);
+        releaseTimer = window.setTimeout(() => {
+          finishRelease();
+          if (enabled && snapshotRefreshPending) scheduleSnapshotRefresh(240, true);
         }, 160);
       }
     }
 
     async function captureViewport(generation) {
+      const capture = await ensureCaptureLibrary();
+      if (!enabled || generation !== captureGeneration) return null;
+      const scrollX = window.scrollX;
+      const scrollY = window.scrollY;
+      const capturedWidth = canvasWidth;
+      const capturedHeight = canvasHeight;
+      const captureBlocks = Array.from(document.querySelector('main')?.children || []).map((element, index) => {
+        const rect = element.getBoundingClientRect();
+        const style = window.getComputedStyle(element);
+        return {
+          element,
+          index,
+          height: rect.height,
+          display: style.display,
+          margin: style.margin,
+          visible: rect.bottom >= -120 && rect.top <= capturedHeight + 120,
+        };
+      });
+      const prunedBlocks = [];
+      captureBlocks.forEach((block) => {
+        if (block.visible) return;
+        const placeholder = document.createElement(block.element.tagName);
+        placeholder.setAttribute('aria-hidden', 'true');
+        placeholder.style.boxSizing = 'border-box';
+        placeholder.style.display = block.display;
+        placeholder.style.height = `${block.height}px`;
+        placeholder.style.minHeight = `${block.height}px`;
+        placeholder.style.margin = block.margin;
+        placeholder.style.padding = '0';
+        placeholder.style.border = '0';
+        block.element.replaceWith(placeholder);
+        prunedBlocks.push({ element: block.element, placeholder });
+      });
+      let pageRestored = false;
+      const restorePageBlocks = () => {
+        if (pageRestored) return;
+        pageRestored = true;
+        prunedBlocks.forEach(({ element, placeholder }) => {
+          if (placeholder.isConnected) placeholder.replaceWith(element);
+        });
+      };
+
+      let image;
       try {
-        const capture = await ensureCaptureLibrary();
-        if (!enabled || generation !== captureGeneration) return;
-        const scrollX = window.scrollX;
-        const scrollY = window.scrollY;
-        const image = await capture(document.documentElement, {
+        image = await capture(document.documentElement, {
           backgroundColor: null,
           scale: pixelRatio,
           useCORS: true,
           logging: false,
           x: 0,
           y: 0,
-          width: canvasWidth,
-          height: canvasHeight,
+          width: capturedWidth,
+          height: capturedHeight,
           scrollX: -scrollX,
           scrollY: -scrollY,
-          windowWidth: canvasWidth,
-          windowHeight: canvasHeight,
-          ignoreElements: (element) => element.hasAttribute?.('data-html2canvas-ignore'),
+          windowWidth: capturedWidth,
+          windowHeight: capturedHeight,
+          ignoreElements: (element) => (
+            element.hasAttribute?.('data-html2canvas-ignore')
+            || element.classList?.contains('intro-boot-curtain')
+            || (element.classList?.contains('hero-carousel-slide') && !element.classList.contains('is-active'))
+            || (element.classList?.contains('qinyi-support-layer') && !document.body.classList.contains('support-open'))
+            || (element.classList?.contains('order-portal-layer') && !document.body.classList.contains('order-portal-open'))
+          ),
           onclone: (clonedDocument) => {
+            restorePageBlocks();
+            const clonedBlocks = clonedDocument.querySelector('main')?.children;
+            captureBlocks.forEach((block) => {
+              if (block.visible || !clonedBlocks?.[block.index]) return;
+              const clonedBlock = clonedBlocks[block.index];
+              clonedBlock.style.visibility = 'hidden';
+              clonedBlock.style.overflow = 'hidden';
+            });
             if (scrollY <= 0) return;
             const stickyHeader = clonedDocument.querySelector('.site-header');
             if (!stickyHeader) return;
@@ -475,21 +628,36 @@
             clonedDocument.body.appendChild(headerOverlay);
           },
         });
-        if (!enabled || generation !== captureGeneration || !dragging) return;
-        snapshot = image;
-        pieces = buildPieces();
-        if (queuedWaves.length) {
-          const shift = performance.now() - queuedWaves[queuedWaves.length - 1].born;
-          waves = queuedWaves.map((wave) => ({ ...wave, born: wave.born + shift }));
-          queuedWaves = [];
-        }
-        setLocked(true);
-        ensureAnimation();
-      } catch (_error) {
-        resetEffect(true);
       } finally {
-        capturePromise = null;
+        restorePageBlocks();
       }
+      if (
+        !enabled
+        || generation !== captureGeneration
+        || capturedWidth !== canvasWidth
+        || capturedHeight !== canvasHeight
+        || Math.abs(scrollX - window.scrollX) >= 1
+        || Math.abs(scrollY - window.scrollY) >= 1
+      ) return null;
+
+      snapshot = image;
+      snapshotMeta = { width: capturedWidth, height: capturedHeight, scrollX, scrollY };
+      pieces = buildPieces();
+      updateControls();
+      activateSnapshot();
+      return image;
+    }
+
+    function activateSnapshot() {
+      if (!dragging || !snapshot) return;
+      if (queuedWaves.length) {
+        const shift = performance.now() - queuedWaves[queuedWaves.length - 1].born;
+        waves.push(...queuedWaves.map((wave) => ({ ...wave, born: wave.born + shift })));
+        queuedWaves = [];
+      }
+      if (!waves.length) return;
+      setLocked(true);
+      ensureAnimation();
     }
 
     function queueWave(point, deltaX, deltaY, elapsed) {
@@ -601,15 +769,21 @@
     }
 
     function begin(point, pointerId) {
+      if (locked && canvas.classList.contains('is-releasing')) finishRelease();
       if (!enabled || reducedMotion.matches || point.target?.closest?.('.qinyi-puzzle-controls') || locked) return;
+      window.clearTimeout(snapshotRefreshTimer);
+      snapshotRefreshTimer = 0;
+      if (!snapshotMatchesViewport()) invalidateSnapshot();
+      else if (capturePromise) {
+        captureGeneration += 1;
+        setPreparing(false);
+      }
       activePointer = pointerId;
       startPoint = point;
       lastPoint = point;
       dragging = false;
       queuedWaves = [];
-      captureGeneration += 1;
-      const generation = captureGeneration;
-      capturePromise = captureViewport(generation);
+      if (!snapshot) prepareSnapshot();
     }
 
     function move(point, pointerId, event) {
@@ -622,7 +796,7 @@
       event.preventDefault();
       queueWave(point, deltaX, deltaY, point.time - lastPoint.time);
       lastPoint = point;
-      if (snapshot) ensureAnimation();
+      if (snapshot) activateSnapshot();
     }
 
     function release(pointerId) {
@@ -631,12 +805,10 @@
       startPoint = null;
       lastPoint = null;
       if (!dragging) {
-        captureGeneration += 1;
-        capturePromise = null;
         queuedWaves = [];
         return;
       }
-      if (snapshot) ensureAnimation();
+      if (snapshot) activateSnapshot();
     }
 
     function setLevel(nextLevel) {
@@ -651,13 +823,19 @@
       enabled = Boolean(nextEnabled) && !reducedMotion.matches;
       document.body.classList.toggle('qinyi-puzzle-enabled', enabled);
       if (!enabled) {
+        window.clearTimeout(snapshotRefreshTimer);
+        snapshotRefreshTimer = 0;
         activePointer = null;
         startPoint = null;
         lastPoint = null;
         dragging = false;
         resetEffect(true);
+        setPreparing(false);
       } else {
-        ensureCaptureLibrary().catch(() => setEnabled(false, false));
+        if (!snapshotMatchesViewport()) setPreparing(true);
+        ensureCaptureLibrary()
+          .then(() => scheduleSnapshotRefresh(0))
+          .catch(() => setEnabled(false, false));
         if (showInstruction) showHint(4200, true);
       }
       try { window.localStorage.setItem('qinyi-puzzle-enabled', String(enabled)); }
@@ -690,11 +868,30 @@
     document.addEventListener('pointercancel', (event) => release(event.pointerId), { passive: true });
     window.addEventListener('blur', () => { if (activePointer !== null) release(activePointer); });
     window.addEventListener('resize', () => {
-      resetEffect(true);
+      resetEffect(true, true);
       resizeCanvas();
+      scheduleSnapshotRefresh(160);
     }, { passive: true });
-    window.addEventListener('scroll', () => { if (locked) resetEffect(false); }, { passive: true });
-    document.addEventListener('visibilitychange', () => { if (document.hidden && locked) resetEffect(true); });
+    window.addEventListener('scroll', () => {
+      if (locked) resetEffect(false, true);
+      else invalidateSnapshot();
+      scheduleSnapshotRefresh(180);
+    }, { passive: true });
+    document.addEventListener('qinyi:visual-change', () => {
+      if (locked || dragging) {
+        snapshotRefreshPending = true;
+        return;
+      }
+      scheduleSnapshotRefresh(220, true);
+    });
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden) {
+        if (locked) resetEffect(true, true);
+        return;
+      }
+      invalidateSnapshot();
+      scheduleSnapshotRefresh(120);
+    });
     reducedMotion.addEventListener?.('change', () => {
       if (reducedMotion.matches) setEnabled(false);
       updateControls();
@@ -704,6 +901,13 @@
     setLevel(level);
     updateControls();
     if (savedPreference && !reducedMotion.matches) setEnabled(true, false);
+    else {
+      const warmCaptureLibrary = () => window.setTimeout(() => {
+        ensureCaptureLibrary().catch(() => { libraryPromise = null; });
+      }, 700);
+      if (document.readyState === 'complete') warmCaptureLibrary();
+      else window.addEventListener('load', warmCaptureLibrary, { once: true });
+    }
     let hintSeen = false;
     try { hintSeen = window.localStorage.getItem('qinyi-puzzle-hint-seen') === 'true'; }
     catch (_error) { /* A first-visit hint is still useful when storage is blocked. */ }

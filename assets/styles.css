@@ -557,6 +557,7 @@ body.support-open { overflow: hidden; }
 .qinyi-puzzle-hint { position: absolute; inset-inline-end: 0; bottom: calc(100% + 11px); width: max-content; max-width: min(220px, calc(100vw - 28px)); margin: 0; padding: 8px 11px; border-radius: 4px; background: rgba(23,25,22,.9); color: white; box-shadow: 0 7px 20px rgba(23,25,22,.16); font-size: .72rem; font-weight: 650; line-height: 1.35; letter-spacing: 0; text-align: start; opacity: 0; visibility: hidden; transform: translateY(5px); pointer-events: none; backdrop-filter: blur(9px); transition: opacity .2s ease, transform .2s ease, visibility .2s; }
 .qinyi-puzzle-hint::after { content: ''; position: absolute; inset-inline-end: 18px; top: 100%; border: 5px solid transparent; border-top-color: rgba(23,25,22,.9); }
 .qinyi-puzzle-controls.is-hint-visible .qinyi-puzzle-hint,
+.qinyi-puzzle-controls.is-preparing .qinyi-puzzle-hint,
 .qinyi-puzzle-controls:hover .qinyi-puzzle-hint,
 .qinyi-puzzle-controls:focus-within .qinyi-puzzle-hint { opacity: 1; visibility: visible; transform: translateY(0); }
 .qinyi-puzzle-toggle { display: grid; place-items: center; width: 48px; height: 48px; padding: 0; border: 1px solid rgba(23,25,22,.68); border-radius: 50%; background: rgba(255,254,250,.94); color: var(--ink); box-shadow: 0 8px 24px rgba(23,25,22,.16); cursor: pointer; backdrop-filter: blur(10px); transition: transform .2s ease, background .2s ease, color .2s ease, box-shadow .2s ease; }
@@ -566,6 +567,7 @@ body.support-open { overflow: hidden; }
 .qinyi-puzzle-levels button:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
 .qinyi-puzzle-toggle:disabled { opacity: .45; cursor: not-allowed; transform: none; }
 .qinyi-puzzle-icon { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.qinyi-puzzle-controls.is-preparing .qinyi-puzzle-icon { animation: qinyi-puzzle-preparing .72s ease-in-out infinite alternate; }
 .qinyi-puzzle-levels { display: flex; gap: 3px; padding: 4px; border: 1px solid rgba(23,25,22,.24); border-radius: 6px; background: rgba(255,254,250,.94); box-shadow: 0 7px 20px rgba(23,25,22,.12); opacity: 0; visibility: hidden; transform: translateX(8px); pointer-events: none; backdrop-filter: blur(10px); transition: opacity .18s ease, transform .18s ease, visibility .18s; }
 .qinyi-puzzle-controls.is-enabled .qinyi-puzzle-levels { opacity: 1; visibility: visible; transform: translateX(0); pointer-events: auto; }
 .qinyi-puzzle-levels button { display: grid; place-items: center; width: 30px; height: 30px; padding: 0; border: 1px solid transparent; border-radius: 3px; background: transparent; color: rgba(23,25,22,.58); cursor: pointer; }
@@ -577,6 +579,10 @@ body.support-open { overflow: hidden; }
 .qinyi-puzzle-levels button i:nth-child(3) { height: 12px; }
 body.qinyi-puzzle-enabled { cursor: grab; }
 body.qinyi-puzzle-fragmented { cursor: grabbing; user-select: none; }
+@keyframes qinyi-puzzle-preparing {
+  from { opacity: .58; transform: scale(.91); }
+  to { opacity: 1; transform: scale(1); }
+}
 
 @media (max-width: 760px) {
   .hero-carousel { clip-path: none; }
