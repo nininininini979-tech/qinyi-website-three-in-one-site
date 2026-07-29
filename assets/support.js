@@ -114,6 +114,11 @@
     "X-Tenant-Id": "demo-tenant",
   };
 
+  function supportHeaders() {
+    const customerToken = storageRead(window.sessionStorage, "qinyi-customer-order-token");
+    return customerToken ? { ...API_HEADERS, Authorization: `Bearer ${customerToken}` } : API_HEADERS;
+  }
+
   const state = {
     sessionId: storageRead(window.sessionStorage, "qinyi-support-session-id"),
     pending: false,
@@ -860,7 +865,7 @@
 
       let response = await fetch(apiUrl("/api/support/chat"), {
         method: "POST",
-        headers: API_HEADERS,
+        headers: supportHeaders(),
         body: JSON.stringify(payload),
         signal: controller.signal,
       });
@@ -872,7 +877,7 @@
         delete payload.sessionId;
         response = await fetch(apiUrl("/api/support/chat"), {
           method: "POST",
-          headers: API_HEADERS,
+          headers: supportHeaders(),
           body: JSON.stringify(payload),
           signal: controller.signal,
         });

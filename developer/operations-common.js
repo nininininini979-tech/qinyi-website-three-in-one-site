@@ -3,7 +3,7 @@
 
   const DEFAULT_TIMEOUT_MS = 12_000;
   const statusLabels = {
-    healthy: "正常", online: "在线", ready: "就绪", active: "进行中", open: "待处理",
+    healthy: "正常", online: "在线", ready: "就绪", active: "进行中", open: "待处理", configured_not_probed: "已配置，未探测",
     success: "成功", complete: "已完成", published: "已发布",
     warning: "需关注", degraded: "性能下降", pending: "待确认", queued: "排队中", draft: "草稿",
     error: "异常", offline: "离线", failed: "失败", blocked: "已阻止", paused: "已暂停",
@@ -49,6 +49,16 @@
   function storeSessionToken(token) {
     try { window.sessionStorage.setItem("qinyi-operations-token", token); }
     catch (_error) { /* Private browsing can disable session storage. */ }
+  }
+
+  function operationsApiIsCrossOrigin() {
+    const base = configuredApiBase();
+    if (!base) return false;
+    try {
+      return new URL(base, window.location.href).origin !== window.location.origin;
+    } catch (_error) {
+      return true;
+    }
   }
 
   function clearSessionToken() {
@@ -143,7 +153,10 @@
         });
         enforcePortal(payload);
         if (!payload.cookieSession && !payload.token) throw new Error("认证服务未返回登录会话。");
-        if (payload.token && !payload.cookieSession) storeSessionToken(payload.token);
+        // Same-origin deployments keep the token in an HttpOnly cookie. A static frontend
+        // on another origin cannot send SameSite=Strict cookies, so retain the short-lived
+        // bearer token only for that explicit cross-origin deployment.
+        if (payload.token && (!payload.cookieSession || operationsApiIsCrossOrigin())) storeSessionToken(payload.token);
         window.location.reload();
       } catch (error) {
         showError(error.message || "登录失败。");
