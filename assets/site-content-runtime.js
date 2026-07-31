@@ -152,6 +152,7 @@
   }
 
   async function load() {
+    if (!apiBase) return;
     try {
       const response = await fetch(`${apiBase}/api/public/site-content`, { headers: { Accept: "application/json" }, credentials: "omit" });
       if (!response.ok) return;

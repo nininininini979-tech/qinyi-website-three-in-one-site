@@ -170,9 +170,13 @@
     }
 
     function showSlide(nextIndex, direction, manual) {
-      if (transitioning || nextIndex === currentIndex) return;
       window.clearTimeout(autoplayTimer);
       if (manual) pausedUntil = Date.now() + manualPause;
+      if (transitioning) return;
+      if (nextIndex === currentIndex) {
+        scheduleAutoplay(manual ? manualPause : autoplayDelay);
+        return;
+      }
 
       if (reducedMotion.matches) {
         setActiveSlide(nextIndex, manual);
@@ -276,6 +280,7 @@
     let snapshotRefreshPending = false;
     let preparing = false;
     let preparationStartedAt = 0;
+    const touchActivationDelay = 160;
 
     function resizeCanvas() {
       pixelRatio = lowPower || window.innerWidth <= 760 ? 1 : Math.min(window.devicePixelRatio || 1, 1.2);
@@ -471,7 +476,7 @@
     }
 
     function buildPieces() {
-      const columns = lowPower ? 4 : (canvasWidth <= 520 ? 6 : (canvasWidth <= 900 ? 8 : 10));
+      const columns = lowPower ? 4 : (canvasWidth <= 520 ? 5 : (canvasWidth <= 900 ? 8 : 10));
       const cellWidth = canvasWidth / columns;
       const rows = Math.max(3, Math.ceil(canvasHeight / cellWidth));
       const cellHeight = canvasHeight / rows;
@@ -673,12 +678,11 @@
         directionX: distance ? deltaX / distance : 0,
         directionY: distance ? deltaY / distance : 0,
       });
-      if (target.length > 20) target.splice(0, target.length - 20);
+      const maximumWaves = canvasWidth <= 520 ? 12 : 20;
+      if (target.length > maximumWaves) target.splice(0, target.length - maximumWaves);
     }
 
-    function drawPiece(piece, now) {
-      const configuration = settings[level];
-      const maximumRadius = Math.hypot(canvasWidth, canvasHeight);
+    function drawPiece(piece, now, configuration, maximumRadius) {
       let offsetX = 0;
       let offsetY = 0;
       let rotation = 0;
@@ -713,7 +717,7 @@
       context.translate(piece.centerX + offsetX, piece.centerY + offsetY);
       context.rotate(rotation * Math.PI / 180);
       context.translate(-piece.centerX, -piece.centerY);
-      if (energy > 0.035) {
+      if (energy > 0.035 && !lowPower && canvasWidth > 520) {
         context.save();
         context.shadowColor = `rgba(18, 20, 17, ${Math.min(0.2, energy * 0.08)})`;
         context.shadowBlur = Math.min(9, 3 + energy * 3);
@@ -759,7 +763,9 @@
       context.globalAlpha = settings[level].baseOpacity;
       context.drawImage(snapshot, 0, 0, canvasWidth, canvasHeight);
       context.globalAlpha = 1;
-      pieces.forEach((piece) => drawPiece(piece, now));
+      const configuration = settings[level];
+      const maximumRadius = Math.hypot(canvasWidth, canvasHeight);
+      pieces.forEach((piece) => drawPiece(piece, now, configuration, maximumRadius));
       if (waves.length || activePointer !== null) ensureAnimation();
       else resetEffect(false);
     }
@@ -783,7 +789,7 @@
       lastPoint = point;
       dragging = false;
       queuedWaves = [];
-      if (!snapshot) prepareSnapshot();
+      if (!snapshot && point.pointerType !== 'touch') prepareSnapshot();
     }
 
     function move(point, pointerId, event) {
@@ -791,8 +797,20 @@
       const deltaX = point.x - lastPoint.x;
       const deltaY = point.y - lastPoint.y;
       const distanceFromStart = Math.hypot(point.x - startPoint.x, point.y - startPoint.y);
+      if (point.pointerType === 'touch' && !dragging && point.time - startPoint.time < touchActivationDelay) {
+        if (distanceFromStart > 10) {
+          activePointer = null;
+          startPoint = null;
+          lastPoint = null;
+          queuedWaves = [];
+        }
+        return;
+      }
       if (!dragging && distanceFromStart < (point.pointerType === 'touch' ? 9 : 5)) return;
-      if (!dragging) dragging = true;
+      if (!dragging) {
+        dragging = true;
+        if (!snapshot) prepareSnapshot();
+      }
       event.preventDefault();
       queueWave(point, deltaX, deltaY, point.time - lastPoint.time);
       lastPoint = point;
@@ -806,6 +824,7 @@
       lastPoint = null;
       if (!dragging) {
         queuedWaves = [];
+        if (enabled && !snapshot) scheduleSnapshotRefresh(80);
         return;
       }
       if (snapshot) activateSnapshot();
@@ -846,7 +865,7 @@
     button.addEventListener('click', () => setEnabled(!enabled));
     levelButtons.forEach((levelButton) => levelButton.addEventListener('click', () => setLevel(levelButton.dataset.puzzleLevel)));
     document.addEventListener('click', (event) => {
-      if (locked && !event.target.closest?.('.qinyi-puzzle-controls')) {
+      if ((locked || dragging) && !event.target.closest?.('.qinyi-puzzle-controls')) {
         event.preventDefault();
         event.stopImmediatePropagation();
       }
@@ -856,6 +875,7 @@
     });
     document.addEventListener('pointerdown', (event) => {
       if (!event.isPrimary || event.button > 0) return;
+      if (!enabled || reducedMotion.matches || event.target.closest?.('.qinyi-puzzle-controls')) return;
       try { event.target.setPointerCapture?.(event.pointerId); }
       catch (_error) { /* Pointer capture is optional. */ }
       begin({ x: event.clientX, y: event.clientY, time: performance.now(), target: event.target, pointerType: event.pointerType }, event.pointerId);

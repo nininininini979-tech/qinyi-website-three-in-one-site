@@ -73,6 +73,7 @@ function visitorClientId() {
 
 function trackAnonymous(type, targetId = '', surface = 'other') {
   const apiBase = (window.__QINYI_SUPPORT_CONFIG__?.apiBaseUrl || '').replace(/\/+$/, '');
+  if (!apiBase) return;
   const width = window.innerWidth || 0;
   const deviceClass = width < 640 ? 'mobile' : width < 1024 ? 'tablet' : 'desktop';
   const payload = { type, dimensions: { path: window.location.pathname, locale: i18n.locale, surface, deviceClass, source: document.referrer ? 'referral' : 'direct', ...(targetId ? { targetId: String(targetId).slice(0, 80) } : {}) } };
@@ -152,7 +153,7 @@ if (menuButton) {
   let menuBackground = [];
   const setMenuBackground = (isOpen) => {
     if (isOpen) {
-      menuBackground = Array.from(document.querySelectorAll('main, footer, .mobile-rfq, .qinyi-support-launcher'))
+      menuBackground = Array.from(document.querySelectorAll('main, footer, .mobile-rfq, .qinyi-support-launcher, .qinyi-puzzle-controls'))
         .map((node) => ({ node, inert: node.inert }));
       menuBackground.forEach(({ node }) => { node.inert = true; });
       return;
@@ -667,6 +668,6 @@ function installOrderPortal() {
 installOrderPortal();
 
 const immersiveMotionScript = document.createElement('script');
-immersiveMotionScript.src = new URL('./immersive-motion.js?v=20260729-puzzle-v9', scriptUrl).href;
+immersiveMotionScript.src = new URL('./immersive-motion.js?v=20260731-mobile-v17', scriptUrl).href;
 immersiveMotionScript.async = false;
 document.head.appendChild(immersiveMotionScript);
