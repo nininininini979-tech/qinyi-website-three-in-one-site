@@ -135,7 +135,7 @@
       "sourceHash": "8f1f17218cb16cb4"
     },
     "about.no_10_jianmin_1st_road_shangyuan_village": {
-      "value": "广东省东莞市沙田镇上元村第10号1998年印刷产品制造",
+      "value": "중국 광둥성 둥관시 차산진에서 1998년부터 종이 제품을 제조하고 있습니다.",
       "status": "needs_review",
       "sourceHash": "36aa73125c99ac2d"
     },
@@ -160,7 +160,7 @@
       "sourceHash": "acc43608f0aa6d5a"
     },
     "about.qinyi_is_located_at_no_10_jianmin": {
-      "value": "Qinyi Printing은 중국 광둥성 동관시 차산진 상위안촌 지앤민 1로 10번지에 위치해 있습니다. 제품 상세 정보를 다음으로 보내주세요:",
+      "value": "Qinyi Printing은 중국 광둥성 둥관시 차산진에 위치해 있습니다. 제품 상세 정보를 다음으로 보내주세요:",
       "status": "needs_review",
       "sourceHash": "341301e4c4fac022"
     },
@@ -420,7 +420,7 @@
       "sourceHash": "b40b3713b43dc702"
     },
     "common.ms_xiao": {
-      "value": "미스. 소 Xiao",
+      "value": "친이 인쇄 영업팀",
       "status": "needs_review",
       "sourceHash": "b0e857b0af3be591"
     },
@@ -475,12 +475,12 @@
       "sourceHash": "8618b518cedc08b3"
     },
     "common.no_10_jianmin_1st_road_shangyuan_village": {
-      "value": "중국 광둥성 둥관시 차산진 상위안촌 지앤민 1로 10번지",
+      "value": "중국 광둥성 둥관시 차산진",
       "status": "needs_review",
       "sourceHash": "2906014578fa3553"
     },
     "common.no_10_jianmin_1st_road_shangyuan_village_2": {
-      "value": "지앤민 1로 10번지, 상위안촌, 차산진",
+      "value": "중국 광둥성 둥관시 차산진",
       "status": "needs_review",
       "sourceHash": "e3efb6276cfdf649"
     },
@@ -1655,7 +1655,7 @@
       "sourceHash": "41e076efe1340b69"
     },
     "faq.dongguan_qinyi_co_ltd_is_located_at": {
-      "value": "Dongguan Qinyi Printing Co., Ltd.는 중국 광둥성 동관시 차산진 상위안촌 지앤민 1로 10번지에 위치해 있습니다.",
+      "value": "Dongguan Qinyi Printing Co., Ltd.는 중국 광둥성 둥관시 차산진에 위치해 있습니다.",
       "status": "needs_review",
       "sourceHash": "e0ce8747edcbad7d"
     },
@@ -1875,7 +1875,7 @@
       "sourceHash": "a4cd602ba48fa33a"
     },
     "faq.the_supplied_business_materials_identify_dongguan_qinyi": {
-      "value": "제 supply business materials identify Dongguan Qinyi Printing Co., Ltd. at No. 10 Jianmin 1st Road, Shangyuan Village, Chashan Town, Dongguan, Guangdong, China. When completing supplier onboarding, request a controlled business license copy.",
+      "value": "제공된 사업 자료에는 Dongguan Qinyi Printing Co., Ltd.가 중국 광둥성 둥관시에 소재한 것으로 기재되어 있습니다. 공급업체 등록 시 관리된 사업자등록증 사본을 요청하십시오.",
       "status": "needs_review",
       "sourceHash": "26071e4d3f000476"
     },
@@ -3375,7 +3375,7 @@
       "sourceHash": "4ade8cc6a9e14d3f"
     },
     "privacy.using_the_english_site_name_qinyi_is": {
-      "value": "영문 사이트명 Qinyi Printing을 사용하는 는 수신한 문의 정보에 대한 책임이 있는 사업체입니다. 연락처: Ms. Xiao,",
+      "value": "영문 사이트명 Qinyi Printing을 사용하는 사업체가 수신한 문의 정보를 처리합니다. 연락처: 친이 인쇄 영업팀,",
       "status": "needs_review",
       "sourceHash": "8e5f64ac72654858"
     },
@@ -4225,7 +4225,7 @@
       "sourceHash": "66dfeeedabf1f022"
     },
     "quote.if_the_project_is_a_potential_fit": {
-      "value": "프로젝트가 적합할 경우, Ms. Xiao 또는 Qinyi 팀원이 답변하여 견적 개발에 필요한 정보를 요청할 것입니다.",
+      "value": "프로젝트가 적합할 경우, 친이 인쇄 영업팀 담당자가 답변하여 견적 개발에 필요한 정보를 요청할 것입니다.",
       "status": "needs_review",
       "sourceHash": "60c39eefb66ec0e2"
     },
@@ -4415,7 +4415,7 @@
       "sourceHash": "76ab0cd93471b22f"
     },
     "quote.your_project_details_remain_editable_before_submission": {
-      "value": "Your project details remain editable before submission. An optional PDF or image is uploaded through Qinyi's protected quote channel and identified by a reference number.",
+      "value": "Your project details remain editable. Submitting prepares a referenced email draft; add any reference file manually in your mail app.",
       "status": "needs_review",
       "sourceHash": "d22a8f6fa43d5318"
     },

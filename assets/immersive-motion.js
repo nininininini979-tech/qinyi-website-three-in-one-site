@@ -336,22 +336,37 @@
     function ensureCaptureLibrary() {
       if (window.html2canvas) return Promise.resolve(window.html2canvas);
       if (libraryPromise) return libraryPromise;
-      libraryPromise = new Promise((resolve, reject) => {
-        const script = document.createElement('script');
-        script.src = new URL('./vendor/html2canvas.min.js', motionAssetBase).href;
-        script.onload = () => {
-          if (window.html2canvas) resolve(window.html2canvas);
-          else {
-            libraryPromise = null;
-            reject(new Error('html2canvas unavailable'));
+      const source = new URL('./vendor/html2canvas.min.js', motionAssetBase).href;
+      const registry = window.__qinyiVendorLoads ||= {};
+      if (!registry[source]) {
+        const request = new Promise((resolve, reject) => {
+          const existing = Array.from(document.scripts).find((script) => script.src === source);
+          const script = existing || document.createElement('script');
+          script.addEventListener('load', () => {
+            if (window.html2canvas) resolve(window.html2canvas);
+            else reject(new Error('html2canvas unavailable'));
+          }, { once: true });
+          script.addEventListener('error', () => reject(new Error('html2canvas failed to load')), { once: true });
+          if (!existing) {
+            script.src = source;
+            script.async = true;
+            document.head.appendChild(script);
           }
-        };
-        script.onerror = (error) => {
+        });
+        registry[source] = request.catch((error) => {
+          delete registry[source];
+          throw error;
+        });
+      }
+      libraryPromise = registry[source]
+        .then(() => {
+          if (!window.html2canvas) throw new Error('html2canvas unavailable');
+          return window.html2canvas;
+        })
+        .catch((error) => {
           libraryPromise = null;
-          reject(error);
-        };
-        document.head.appendChild(script);
-      });
+          throw error;
+        });
       return libraryPromise;
     }
 

@@ -38,6 +38,8 @@
     online: "Online", onlineTitle: "Qinyi AI is online", onlineDetail: "The approved knowledge and conversation services are connected.",
     aiMode: "AI support", statusUnknown: "Status unavailable", statusUnknownTitle: "Service status unavailable",
     statusUnknownDetail: "The service status could not be read. You can still try sending a message.", waiting: "Waiting for connection",
+    unconfiguredLabel: "Not available", unconfiguredTitle: "AI support is not enabled",
+    unconfiguredDetail: "Prepare an email enquiry from the quote form, or email hello@qinyiprinting.com directly.", unconfiguredMode: "Email contact",
     professionalOn: "Professional consultation enabled", professionalOff: "Standard consultation enabled",
     humanSupport: "Qinyi human support", system: "System",
     waitingHumanTitle: "Connecting you with human support", waitingHumanBadge: "Waiting",
@@ -66,6 +68,7 @@
   const API_BASE_URL = typeof runtimeConfig.apiBaseUrl === "string"
     ? runtimeConfig.apiBaseUrl.trim().replace(/\/+$/, "")
     : "";
+  const SUPPORT_API_AVAILABLE = Boolean(API_BASE_URL);
 
   function apiUrl(path) {
     return `${API_BASE_URL}${path}`;
@@ -110,8 +113,6 @@
   const API_HEADERS = {
     "Content-Type": "application/json",
     "X-Client-Id": visitorId(),
-    "X-Demo-User-Id": "demo-user-1",
-    "X-Tenant-Id": "demo-tenant",
   };
 
   function supportHeaders() {
@@ -179,7 +180,7 @@
   }
 
   function updateSendButton() {
-    elements.sendButton.disabled = state.pending || !elements.messageInput.value.trim();
+    elements.sendButton.disabled = !SUPPORT_API_AVAILABLE || state.pending || !elements.messageInput.value.trim();
   }
 
   function resizeComposer() {
@@ -787,8 +788,6 @@
         method: "GET",
         headers: {
           "X-Client-Id": API_HEADERS["X-Client-Id"],
-          "X-Demo-User-Id": API_HEADERS["X-Demo-User-Id"],
-          "X-Tenant-Id": API_HEADERS["X-Tenant-Id"],
         },
         signal: controller.signal,
       });
@@ -829,6 +828,14 @@
   }
 
   async function sendMessage(rawMessage, options) {
+    if (!SUPPORT_API_AVAILABLE) {
+      showError(
+        copy("unconfiguredTitle", "智能客服暂未开放"),
+        copy("unconfiguredDetail", "请通过报价表生成邮件询价，或直接发送邮件至 hello@qinyiprinting.com。"),
+        false,
+      );
+      return;
+    }
     const settings = options || {};
     const message = String(rawMessage || "").trim();
     if (!message || state.pending) {
@@ -1000,8 +1007,6 @@
         method: "DELETE",
         headers: {
           "X-Client-Id": API_HEADERS["X-Client-Id"],
-          "X-Demo-User-Id": API_HEADERS["X-Demo-User-Id"],
-          "X-Tenant-Id": API_HEADERS["X-Tenant-Id"],
         },
       });
       if (!response.ok) {
@@ -1027,6 +1032,16 @@
   }
 
   async function loadServiceStatus() {
+    if (!SUPPORT_API_AVAILABLE) {
+      setServiceStatus(
+        "offline",
+        copy("unconfiguredLabel", "暂未开放"),
+        copy("unconfiguredTitle", "智能客服暂未开放"),
+        copy("unconfiguredDetail", "请通过报价表生成邮件询价，或直接发送邮件至 hello@qinyiprinting.com。"),
+        copy("unconfiguredMode", "邮件联系"),
+      );
+      return;
+    }
     const controller = new AbortController();
     const timeout = window.setTimeout(function () {
       controller.abort();
@@ -1037,8 +1052,6 @@
         method: "GET",
         headers: {
           "X-Client-Id": API_HEADERS["X-Client-Id"],
-          "X-Demo-User-Id": API_HEADERS["X-Demo-User-Id"],
-          "X-Tenant-Id": API_HEADERS["X-Tenant-Id"],
         },
         signal: controller.signal,
       };
@@ -1118,9 +1131,7 @@
       const response = await fetch(apiUrl("/api/support/uploads"), {
         method: "POST",
         headers: {
-          "X-Client-Id": API_HEADERS["X-Client-Id"],
-          "X-Demo-User-Id": API_HEADERS["X-Demo-User-Id"],
-          "X-Tenant-Id": API_HEADERS["X-Tenant-Id"]
+          "X-Client-Id": API_HEADERS["X-Client-Id"]
         },
         body: form,
         credentials: "omit"
@@ -1182,10 +1193,18 @@
   if (state.ticketId) {
     applyHandoff({ ticketId: state.ticketId, status: state.handoffStatus }, { announce: false });
   }
-  window.addEventListener("online", startEventPolling);
-  document.addEventListener("visibilitychange", function () {
-    if (!document.hidden) startEventPolling();
-  });
+  if (!SUPPORT_API_AVAILABLE) {
+    elements.messageInput.disabled = true;
+    elements.fileInput.disabled = true;
+    elements.newConversationButton.disabled = true;
+    elements.professionalConsultationButton.disabled = true;
+    document.querySelectorAll("[data-question]").forEach(function (button) { button.disabled = true; });
+  } else {
+    window.addEventListener("online", startEventPolling);
+    document.addEventListener("visibilitychange", function () {
+      if (!document.hidden) startEventPolling();
+    });
+  }
   loadServiceStatus();
-  window.setInterval(loadServiceStatus, 60_000);
+  if (SUPPORT_API_AVAILABLE) window.setInterval(loadServiceStatus, 60_000);
 })();

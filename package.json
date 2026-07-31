@@ -1,0 +1,7 @@
+{
+  "name": "qinyi-website-three-in-one-site",
+  "private": true,
+  "scripts": {
+    "test": "node scripts/site-smoke.mjs"
+  }
+}

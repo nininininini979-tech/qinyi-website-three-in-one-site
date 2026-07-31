@@ -3,6 +3,7 @@
 
   const HANDOFF_REQUEST_TIMEOUT_MS = 20_000;
   const locale = window.QINYI_I18N?.locale || document.documentElement.lang || "en";
+  const SUPPORT_API_AVAILABLE = Boolean(window.__QINYI_SUPPORT_CONFIG__?.apiBaseUrl);
   const messages = window.QINYI_I18N?.messages || {};
   const text = (key, fallback) => {
     const direct = messages[`customizer.${key}`];
@@ -367,6 +368,7 @@
 
   async function apiRequest(path, options) {
     const apiBase = window.__QINYI_SUPPORT_CONFIG__?.apiBaseUrl || "";
+    if (!apiBase) throw new Error("Support API unavailable");
     const controller = new AbortController();
     const timeout = window.setTimeout(() => controller.abort(), 25_000);
     try {
@@ -376,8 +378,6 @@
         headers: {
           "Content-Type": "application/json",
           "X-Client-Id": createClientId(),
-          "X-Demo-User-Id": "demo-user-1",
-          "X-Tenant-Id": "demo-tenant",
           ...(options?.headers || {}),
         },
       });
@@ -638,7 +638,7 @@
       nodes.progressFill.style.width = "100%";
       const openCount = state.answers.filter((answer) => answer.kind === "more").length;
       nodes.finalSubtitle.textContent = openCount ? copy.finalOpen : copy.finalComplete;
-      nodes.human.hidden = openCount === 0;
+      nodes.human.hidden = openCount === 0 || !SUPPORT_API_AVAILABLE;
       nodes.summary.replaceChildren(...state.answers.map((answer) => {
         const row = document.createElement("div");
         row.className = "customizer-summary-row";

@@ -135,7 +135,7 @@
       "sourceHash": "8f1f17218cb16cb4"
     },
     "about.no_10_jianmin_1st_road_shangyuan_village": {
-      "value": "中国广东省东莞市沙田镇上渊村第10号101国道",
+      "value": "中国広東省東莞市茶山鎮",
       "status": "needs_review",
       "sourceHash": "36aa73125c99ac2d"
     },
@@ -160,7 +160,7 @@
       "sourceHash": "acc43608f0aa6d5a"
     },
     "about.qinyi_is_located_at_no_10_jianmin": {
-      "value": "Qinyi Printingは中国広東省東莞市茶山鎮上元村建民一路10号に所在しています。製品詳細を以下に送付してください",
+      "value": "Qinyi Printingは中国広東省東莞市茶山鎮に所在しています。製品詳細を以下に送付してください",
       "status": "needs_review",
       "sourceHash": "341301e4c4fac022"
     },
@@ -475,12 +475,12 @@
       "sourceHash": "8618b518cedc08b3"
     },
     "common.no_10_jianmin_1st_road_shangyuan_village": {
-      "value": "中国広東省東莞市茶山鎮上元村建民一路10号",
+      "value": "中国広東省東莞市茶山鎮",
       "status": "needs_review",
       "sourceHash": "2906014578fa3553"
     },
     "common.no_10_jianmin_1st_road_shangyuan_village_2": {
-      "value": "建民一路10号、上元村、茶山鎮",
+      "value": "中国広東省東莞市茶山鎮",
       "status": "needs_review",
       "sourceHash": "e3efb6276cfdf649"
     },
@@ -1655,7 +1655,7 @@
       "sourceHash": "41e076efe1340b69"
     },
     "faq.dongguan_qinyi_co_ltd_is_located_at": {
-      "value": "Dongguan Qinyi Printing Co., Ltd.は中国広東省東莞市茶山鎮上元村建民一路10号に所在しています。",
+      "value": "Dongguan Qinyi Printing Co., Ltd.は中国広東省東莞市茶山鎮に所在しています。",
       "status": "needs_review",
       "sourceHash": "e0ce8747edcbad7d"
     },
@@ -1875,7 +1875,7 @@
       "sourceHash": "a4cd602ba48fa33a"
     },
     "faq.the_supplied_business_materials_identify_dongguan_qinyi": {
-      "value": "提供される事業資料には、Dongguan Qinyi Printing Co., Ltd.、所在地：No. 10 Jianmin 1st Road, Shangyuan Village, Chashan Town, Dongguan, Guangdong, Chinaと記載されています。サプライヤーオンボーディング時には、管理された営業許可証の写しを請求してください。",
+      "value": "提供される事業資料には、Dongguan Qinyi Printing Co., Ltd.が中国広東省東莞市に所在すると記載されています。サプライヤーオンボーディング時には、管理された営業許可証の写しを請求してください。",
       "status": "needs_review",
       "sourceHash": "26071e4d3f000476"
     },
@@ -3375,7 +3375,7 @@
       "sourceHash": "4ade8cc6a9e14d3f"
     },
     "privacy.using_the_english_site_name_qinyi_is": {
-      "value": "英語サイト名Qinyi Printingを使用する、はお問い合わせ情報を受け取る事業体です。連絡先：Ms. Xiao、",
+      "value": "英語サイト名Qinyi Printingを使用する事業体が、お問い合わせ情報を取り扱います。連絡先：勤益印刷営業チーム、",
       "status": "needs_review",
       "sourceHash": "8e5f64ac72654858"
     },
@@ -4225,7 +4225,7 @@
       "sourceHash": "66dfeeedabf1f022"
     },
     "quote.if_the_project_is_a_potential_fit": {
-      "value": "プロジェクトが適合する可能性がある場合、Ms. XiaoまたはQinyiチームメンバーが返信し、見積もり作成に必要な情報を求めます。",
+      "value": "プロジェクトが適合する可能性がある場合、勤益印刷営業チームの担当者が返信し、見積もり作成に必要な情報を求めます。",
       "status": "needs_review",
       "sourceHash": "60c39eefb66ec0e2"
     },
@@ -4415,7 +4415,7 @@
       "sourceHash": "76ab0cd93471b22f"
     },
     "quote.your_project_details_remain_editable_before_submission": {
-      "value": "Your project details remain editable before submission. An optional PDF or image is uploaded through Qinyi's protected quote channel and identified by a reference number.",
+      "value": "Your project details remain editable. Submitting prepares a referenced email draft; add any reference file manually in your mail app.",
       "status": "needs_review",
       "sourceHash": "d22a8f6fa43d5318"
     },

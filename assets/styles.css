@@ -301,6 +301,7 @@ p { margin: 0; }
 .quote-aside li { padding: 15px 0; border-bottom: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
 .form-panel { position: relative; padding: 52px 38px 38px; background: var(--white); border: 0; border-top: 4px solid var(--ink); box-shadow: none; }
 .form-panel::before { content: var(--rfq-production-brief, "RFQ / Production brief"); position: absolute; inset-inline-end: 38px; top: 15px; color: var(--muted); font-size: .68rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+.form-delivery-notice { margin: 0 0 24px; padding: 12px 14px; border-inline-start: 3px solid var(--blue); background: #eef4f7; color: #244450; font-size: .85rem; line-height: 1.55; }
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .field { display: grid; gap: 7px; }
 .field.full { grid-column: 1 / -1; }
@@ -312,6 +313,8 @@ p { margin: 0; }
 .check input { flex: 0 0 18px; width: 18px; min-width: 18px; height: 18px; min-height: 18px; margin-top: 3px; }
 .form-status { display: none; margin-top: 18px; padding: 14px; background: #e6f4ed; color: var(--green); font-weight: 700; }
 .form-status.visible { display: block; }
+.form-status a { color: currentColor; text-decoration: underline; text-underline-offset: 3px; }
+.form-email-action { display: inline-block; margin-inline-start: 8px; }
 
 .faq-list { border-top: 1px solid var(--line); }
 .faq-list details { border-bottom: 1px solid var(--line); }
@@ -606,8 +609,7 @@ body.qinyi-puzzle-fragmented { cursor: grabbing; user-select: none; }
   .qinyi-puzzle-hint { inset-inline-start: 0; inset-inline-end: auto; max-width: min(200px, calc(100vw - 24px)); font-size: .7rem; }
   .qinyi-puzzle-hint::after { inset-inline-start: 18px; inset-inline-end: auto; }
   .qinyi-puzzle-toggle { width: 44px; height: 44px; }
-  .qinyi-puzzle-levels { padding: 3px; }
-  .qinyi-puzzle-levels button { width: 28px; height: 28px; }
+  .qinyi-puzzle-levels { display: none; }
 }
 
 @media (max-width: 380px) {

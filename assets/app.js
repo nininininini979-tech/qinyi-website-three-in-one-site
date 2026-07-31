@@ -10,7 +10,7 @@ const t = (key, variables = {}) => {
 };
 const languages = [
   ['en', 'English'], ['zh-CN', '中文'], ['es', 'Español'], ['de', 'Deutsch'],
-  ['fr', 'Français'], ['ja', '日本語'], ['ko', '한국어'], ['ar', 'العربية'],
+  ['fr', 'Français'], ['ja', '日本語'], ['ko', '한국어'],
 ];
 const availableLanguages = window.QINYI_MANAGED_PAGE
   ? languages.filter(([code]) => code === 'en' || code === 'zh-CN')
@@ -21,6 +21,8 @@ const currentPage = window.location.pathname.split('/').filter(Boolean).pop()?.e
 const scriptUrl = new URL(document.currentScript.src);
 const siteRoot = new URL('../', scriptUrl);
 const API_BASE_URL = (window.__QINYI_SUPPORT_CONFIG__?.apiBaseUrl || '').replace(/\/+$/, '');
+const SUPPORT_API_AVAILABLE = Boolean(API_BASE_URL);
+const SALES_EMAIL = 'hello@qinyiprinting.com';
 const focusableSelector = 'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),iframe,[tabindex]:not([tabindex="-1"])';
 
 function createModalFocusManager(layer, dialog) {
@@ -257,21 +259,113 @@ document.querySelectorAll('[data-intro-replay]').forEach((link) => {
 });
 
 document.querySelectorAll('[data-model-mode-workbench]').forEach((workbench) => {
+  workbench.querySelectorAll('[data-model-mode]').forEach((button) => {
+    const available = button.dataset.modelMode === 'studio';
+    button.hidden = !available;
+    button.classList.toggle('is-active', available);
+  });
+  workbench.querySelector('[data-model-mode-placeholder]')?.remove();
   const studio = workbench.querySelector('[data-qinyi-customizer]');
-  const placeholder = workbench.querySelector('[data-model-mode-placeholder]');
-  const title = workbench.querySelector('[data-model-mode-title]');
-  workbench.querySelectorAll('[data-model-mode]').forEach((button) => button.addEventListener('click', () => {
-    const active = button.dataset.modelMode === 'studio';
-    workbench.querySelectorAll('[data-model-mode]').forEach((item) => item.classList.toggle('is-active', item === button));
-    studio.hidden = !active;
-    placeholder.hidden = active;
-    if (!active) title.textContent = `${i18n.locale === 'zh-CN' ? button.dataset.modeLabelZh : button.dataset.modeLabelEn} · ${i18n.locale === 'zh-CN' ? '待补充' : 'Pending input'}`;
-  }));
+  if (studio) studio.hidden = false;
 });
 
 function localizedFieldValue(field) {
   if (field instanceof HTMLSelectElement) return field.selectedOptions[0]?.textContent?.trim() || field.value;
   return field.value;
+}
+
+function enquiryReference(prefix) {
+  const date = new Date();
+  const stamp = [date.getFullYear(), String(date.getMonth() + 1).padStart(2, '0'), String(date.getDate()).padStart(2, '0')].join('');
+  const random = Math.floor(1000 + Math.random() * 9000);
+  return `${prefix}-${stamp}-${random}`;
+}
+
+function mailtoUrl(subject, rows) {
+  const body = rows
+    .filter(([, value]) => String(value || '').trim())
+    .map(([label, value]) => `${label}: ${String(value).trim()}`)
+    .join('\n')
+    .slice(0, 6000);
+  return `mailto:${SALES_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+function showEmailDraft(form, status, href, reference) {
+  const isZh = i18n.locale === 'zh-CN';
+  const action = document.createElement('a');
+  action.className = 'form-email-action';
+  action.href = href;
+  action.textContent = isZh ? '打开邮件并发送' : 'Open email and send';
+  const direct = document.createElement('a');
+  direct.href = `mailto:${SALES_EMAIL}`;
+  direct.textContent = SALES_EMAIL;
+  const message = document.createElement('span');
+  message.textContent = isZh
+    ? `已生成询价编号 ${reference}。发送邮件后才算正式提交；如未打开邮件应用，请直接联系 `
+    : `Reference ${reference} is ready. The enquiry is submitted only after you send the email. If no mail app opens, contact `;
+  status?.replaceChildren(message, direct, document.createTextNode(isZh ? '。 ' : '. '), action);
+  status?.classList.add('visible', 'is-email-fallback');
+  form.dataset.emailDraftReady = 'true';
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'enquiry_email_prepared', reference });
+  action.click();
+}
+
+function prepareQuoteEmail(form, quote, fileInput, status) {
+  const isZh = i18n.locale === 'zh-CN';
+  const reference = enquiryReference('QY-RFQ');
+  const subject = isZh
+    ? `[${reference}] 生产询价 - ${quote.company || quote.name}`
+    : `[${reference}] Production enquiry - ${quote.company || quote.name}`;
+  const attachment = fileInput?.files?.[0]?.name;
+  const rows = isZh ? [
+    ['询价编号', reference], ['姓名', quote.name], ['公司', quote.company], ['邮箱', quote.contact.email], ['电话 / WhatsApp', quote.contact.phone],
+    ['产品类型', quote.product], ['预计数量', quote.quantity], ['成品尺寸', quote.finishedDimensions], ['材质偏好', quote.material],
+    ['印刷与工艺', quote.process], ['预算范围', quote.budget], ['目的地国', quote.destinationCountry], ['目标交付日期', quote.delivery],
+    ['公共参考链接', quote.publicReferenceUrl], ['定制需求摘要', quote.customizerSummary], ['补充说明', quote.notes],
+    ['需手动添加的附件', attachment], ['来源页面', window.location.href],
+  ] : [
+    ['Reference', reference], ['Name', quote.name], ['Company', quote.company], ['Email', quote.contact.email], ['Phone / WhatsApp', quote.contact.phone],
+    ['Product', quote.product], ['Estimated quantity', quote.quantity], ['Finished dimensions', quote.finishedDimensions], ['Material', quote.material],
+    ['Print and finishing', quote.process], ['Budget', quote.budget], ['Destination country', quote.destinationCountry], ['Target delivery date', quote.delivery],
+    ['Public reference URL', quote.publicReferenceUrl], ['Customization brief', quote.customizerSummary], ['Notes', quote.notes],
+    ['Attachment to add manually', attachment], ['Source page', window.location.href],
+  ];
+  showEmailDraft(form, status, mailtoUrl(subject, rows), reference);
+}
+
+function prepareContactEmail(form, inquiry, status) {
+  const isZh = i18n.locale === 'zh-CN';
+  const reference = enquiryReference('QY-CONTACT');
+  const subject = isZh
+    ? `[${reference}] 网站联系询盘 - ${inquiry.company || inquiry.name}`
+    : `[${reference}] Website enquiry - ${inquiry.company || inquiry.name}`;
+  const rows = isZh ? [
+    ['联系编号', reference], ['姓名', inquiry.name], ['公司', inquiry.company], ['邮箱', inquiry.email], ['国家/地区', inquiry.country],
+    ['咨询主题', inquiry.topic], ['留言', inquiry.message], ['来源页面', window.location.href],
+  ] : [
+    ['Reference', reference], ['Name', inquiry.name], ['Company', inquiry.company], ['Email', inquiry.email], ['Country / region', inquiry.country],
+    ['Topic', inquiry.topic], ['Message', inquiry.message], ['Source page', window.location.href],
+  ];
+  showEmailDraft(form, status, mailtoUrl(subject, rows), reference);
+}
+
+if (!SUPPORT_API_AVAILABLE) {
+  document.querySelectorAll('[data-enquiry-form]').forEach((form) => {
+    form.classList.add('is-email-fallback');
+    const submitButton = form.querySelector('button[type="submit"]');
+    if (submitButton) submitButton.textContent = i18n.locale === 'zh-CN' ? '生成邮件询价' : 'Prepare email enquiry';
+    const notice = document.createElement('p');
+    notice.className = 'form-delivery-notice';
+    notice.textContent = i18n.locale === 'zh-CN'
+      ? '当前通过业务邮箱接收询价。提交后会生成带编号的邮件草稿，请确认并发送。'
+      : 'Enquiries are currently received by business email. Submitting prepares a referenced email draft for you to review and send.';
+    form.prepend(notice);
+    const fileHint = form.querySelector('input[type="file"]')?.closest('.field')?.querySelector('small');
+    if (fileHint) fileHint.textContent = i18n.locale === 'zh-CN'
+      ? '可先选择文件；生成邮件后请在邮件应用中手动添加附件。请勿发送密码、付款资料或身份证件。'
+      : 'You may select a file as a reminder; add it manually in your mail app. Do not send passwords, payment data or identity documents.';
+  });
 }
 
 document.querySelectorAll('[data-enquiry-form]').forEach((form) => {
@@ -286,7 +380,7 @@ document.querySelectorAll('[data-enquiry-form]').forEach((form) => {
     const clientId = isQuote ? visitorClientId() : '';
     let uploadedFile;
     if (isQuote || isContact) submitButton.disabled = true;
-    if (isQuote && fileInput?.files?.[0]) {
+    if (SUPPORT_API_AVAILABLE && isQuote && fileInput?.files?.[0]) {
       const upload = new FormData();
       upload.append('purpose', 'quote');
       upload.append('file', fileInput.files[0], fileInput.files[0].name);
@@ -298,7 +392,7 @@ document.querySelectorAll('[data-enquiry-form]').forEach((form) => {
       try {
         const response = await fetch(`${API_BASE_URL}/api/support/uploads`, {
           method: 'POST',
-          headers: { 'X-Client-Id': clientId, 'X-Demo-User-Id': 'demo-user-1', 'X-Tenant-Id': 'demo-tenant' },
+          headers: { 'X-Client-Id': clientId },
           body: upload,
           credentials: 'omit',
         });
@@ -336,6 +430,11 @@ document.querySelectorAll('[data-enquiry-form]').forEach((form) => {
           privacyVersion: consentField instanceof HTMLElement ? consentField.dataset.privacyVersion || '' : '',
         },
       };
+      if (!SUPPORT_API_AVAILABLE) {
+        prepareQuoteEmail(form, quote, fileInput, status);
+        submitButton.disabled = false;
+        return;
+      }
       if (status) {
         status.textContent = i18n.locale === 'zh-CN' ? '正在提交询价资料…' : 'Submitting your quote request…';
         status.classList.add('visible');
@@ -346,8 +445,6 @@ document.querySelectorAll('[data-enquiry-form]').forEach((form) => {
           headers: {
             'Content-Type': 'application/json',
             'X-Client-Id': clientId,
-            'X-Demo-User-Id': 'demo-user-1',
-            'X-Tenant-Id': 'demo-tenant',
           },
           body: JSON.stringify(quote),
           credentials: 'omit',
@@ -362,7 +459,7 @@ document.querySelectorAll('[data-enquiry-form]').forEach((form) => {
         trackAnonymous('quote_submitted', payload.id, 'quote');
         form.reset();
       } catch (error) {
-        if (status) status.textContent = `${i18n.locale === 'zh-CN' ? '询价提交失败，请稍后重试' : 'Quote submission failed. Please try again'}：${error.message}`;
+        prepareQuoteEmail(form, quote, fileInput, status);
       } finally {
         submitButton.disabled = false;
       }
@@ -383,6 +480,11 @@ document.querySelectorAll('[data-enquiry-form]').forEach((form) => {
         sourcePage: window.location.pathname,
         locale: i18n.locale,
       };
+      if (!SUPPORT_API_AVAILABLE) {
+        prepareContactEmail(form, inquiry, status);
+        submitButton.disabled = false;
+        return;
+      }
       if (status) {
         status.textContent = i18n.locale === 'zh-CN' ? '正在提交联系信息…' : 'Submitting your contact enquiry…';
         status.classList.add('visible');
@@ -402,14 +504,12 @@ document.querySelectorAll('[data-enquiry-form]').forEach((form) => {
         trackAnonymous('contact_submitted', payload.id, 'contact');
         form.reset();
       } catch (error) {
-        if (status) status.textContent = `${i18n.locale === 'zh-CN' ? '提交失败，请稍后重试' : 'Submission failed. Please try again'}：${error.message}`;
+        prepareContactEmail(form, inquiry, status);
       } finally {
         submitButton.disabled = false;
       }
       return;
     }
-    // Every supported enquiry form has an explicit API branch above. Keep
-    // unsupported forms inert so they cannot silently fall back to email.
     submitButton.disabled = false;
   });
 });
@@ -513,7 +613,7 @@ function installSupportWidget() {
   document.body.append(layer, launcher);
 }
 
-installSupportWidget();
+if (SUPPORT_API_AVAILABLE) installSupportWidget();
 
 function installOrderPortal() {
   const isZh = String(i18n.locale || '').toLowerCase().startsWith('zh');
@@ -665,9 +765,9 @@ function installOrderPortal() {
   document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && !layer.hidden) close(); });
 }
 
-installOrderPortal();
+if (SUPPORT_API_AVAILABLE) installOrderPortal();
 
 const immersiveMotionScript = document.createElement('script');
-immersiveMotionScript.src = new URL('./immersive-motion.js?v=20260731-mobile-v17', scriptUrl).href;
+immersiveMotionScript.src = new URL('./immersive-motion.js?v=20260731-stability-v20', scriptUrl).href;
 immersiveMotionScript.async = false;
 document.head.appendChild(immersiveMotionScript);

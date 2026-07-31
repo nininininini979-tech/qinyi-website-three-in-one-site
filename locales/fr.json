@@ -135,7 +135,7 @@
       "sourceHash": "8f1f17218cb16cb4"
     },
     "about.no_10_jianmin_1st_road_shangyuan_village": {
-      "value": "Rue No. 10 Jianmin 1er Road, Shangyuan Village, Chashan Town, Dongguan, Guangdong, China.",
+      "value": "Chashan, Dongguan, Guangdong, Chine.",
       "status": "needs_review",
       "sourceHash": "36aa73125c99ac2d"
     },
@@ -160,7 +160,7 @@
       "sourceHash": "acc43608f0aa6d5a"
     },
     "about.qinyi_is_located_at_no_10_jianmin": {
-      "value": "Qinyi Printing est situé sur la rue No. 10 Jiamin, Village Shangyuan, Town Chashan, Dongguan, Guangdong, Chine. Envoyez les détails du produit à",
+      "value": "Qinyi Printing est situé à Chashan, Dongguan, Guangdong, Chine. Envoyez les détails du produit à",
       "status": "needs_review",
       "sourceHash": "341301e4c4fac022"
     },
@@ -420,7 +420,7 @@
       "sourceHash": "b40b3713b43dc702"
     },
     "common.ms_xiao": {
-      "value": "Madame Xiao",
+      "value": "équipe commerciale de Qinyi",
       "status": "needs_review",
       "sourceHash": "b0e857b0af3be591"
     },
@@ -475,12 +475,12 @@
       "sourceHash": "8618b518cedc08b3"
     },
     "common.no_10_jianmin_1st_road_shangyuan_village": {
-      "value": "Rue 10 Jienmin, Village Shangyuan, Township Chashan, Dongguan, Guangdong, China",
+      "value": "Chashan, Dongguan, Guangdong, Chine",
       "status": "needs_review",
       "sourceHash": "2906014578fa3553"
     },
     "common.no_10_jianmin_1st_road_shangyuan_village_2": {
-      "value": "Rue 10 Jienmin, Village Shangyuan, Township Chashan",
+      "value": "Chashan, Dongguan, Guangdong, Chine",
       "status": "needs_review",
       "sourceHash": "e3efb6276cfdf649"
     },
@@ -690,7 +690,7 @@
       "sourceHash": "c3d73b4b66d43974"
     },
     "contact.for_a_manufacturing_quotation_use_the_two": {
-      "value": "Pour une demande de fabrication, utilisez la méthode RFQ. Pour questions d'entreprise, documentaires ou produits généraux, contactez Madame Xiao directement.",
+      "value": "Pour une demande de fabrication, utilisez la procédure RFQ. Pour les questions sur l'entreprise, les documents ou les produits, contactez directement l'équipe commerciale de Qinyi.",
       "status": "needs_review",
       "sourceHash": "928e36c51f2e739a"
     },
@@ -1655,7 +1655,7 @@
       "sourceHash": "41e076efe1340b69"
     },
     "faq.dongguan_qinyi_co_ltd_is_located_at": {
-      "value": "Dongguan Qinyi Printing Co., Ltd. est situé au No. 10 Jianmin 1st Road, Shangyuan Village, Chashan Town, Dongguan, Guangdong, Chine.",
+      "value": "Dongguan Qinyi Printing Co., Ltd. est situé à Chashan, Dongguan, Guangdong, Chine.",
       "status": "needs_review",
       "sourceHash": "e0ce8747edcbad7d"
     },
@@ -1875,7 +1875,7 @@
       "sourceHash": "a4cd602ba48fa33a"
     },
     "faq.the_supplied_business_materials_identify_dongguan_qinyi": {
-      "value": "Les documents commerciaux fournis identifient Dongguan Qinyi Printing Co., Ltd., au No. 10 Jianmin 1st Road, Shangyuan Village, Chashan Town, Dongguan, Guangdong, China. Demandez une copie contrôlée du certificat d'enregistrement lors de l'intégration du fournisseur.",
+      "value": "Les documents commerciaux fournis identifient Dongguan Qinyi Printing Co., Ltd. à Dongguan, Guangdong, Chine. Demandez une copie contrôlée du certificat d'enregistrement lors de l'intégration du fournisseur.",
       "status": "needs_review",
       "sourceHash": "26071e4d3f000476"
     },
@@ -3375,7 +3375,7 @@
       "sourceHash": "4ade8cc6a9e14d3f"
     },
     "privacy.using_the_english_site_name_qinyi_is": {
-      "value": ", utilisant le nom anglais Qinyi Printing, est l'entreprise responsable des informations de demande qu'elle reçoit. Contact : Mme Xiao,",
+      "value": ", utilisant le nom anglais Qinyi Printing, est l'entreprise responsable des informations de demande qu'elle reçoit. Contact : équipe commerciale de Qinyi,",
       "status": "needs_review",
       "sourceHash": "8e5f64ac72654858"
     },
@@ -4225,7 +4225,7 @@
       "sourceHash": "66dfeeedabf1f022"
     },
     "quote.if_the_project_is_a_potential_fit": {
-      "value": "Si le projet est potentiellement adapté, Mme Xiao ou un membre de l'équipe Qinyi répondra et demandera les informations nécessaires pour établir un devis.",
+      "value": "Si le projet est potentiellement adapté, un membre de l'équipe commerciale de Qinyi répondra et demandera les informations nécessaires pour établir un devis.",
       "status": "needs_review",
       "sourceHash": "60c39eefb66ec0e2"
     },
@@ -4415,7 +4415,7 @@
       "sourceHash": "76ab0cd93471b22f"
     },
     "quote.your_project_details_remain_editable_before_submission": {
-      "value": "Your project details remain editable before submission. An optional PDF or image is uploaded through Qinyi's protected quote channel and identified by a reference number.",
+      "value": "Your project details remain editable. Submitting prepares a referenced email draft; add any reference file manually in your mail app.",
       "status": "needs_review",
       "sourceHash": "d22a8f6fa43d5318"
     },

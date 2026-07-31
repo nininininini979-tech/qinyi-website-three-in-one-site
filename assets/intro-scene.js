@@ -1,4 +1,4 @@
-import * as THREE from './vendor/three.min.js';
+let THREE;
 
 const CONFIG = {
   scrollDistance: 2.2,
@@ -51,6 +51,43 @@ function supportsWebGL() {
   } catch {
     return false;
   }
+}
+
+function loadClassicScript(relativeUrl, globalName) {
+  if (window[globalName]) return Promise.resolve(window[globalName]);
+  const source = new URL(relativeUrl, import.meta.url).href;
+  const registry = window.__qinyiVendorLoads ||= {};
+  if (!registry[source]) {
+    const request = new Promise((resolve, reject) => {
+      const existing = Array.from(document.scripts).find((script) => script.src === source);
+      const script = existing || document.createElement('script');
+      const finish = () => window[globalName]
+        ? resolve(window[globalName])
+        : reject(new Error(`${globalName} unavailable`));
+      script.addEventListener('load', finish, { once: true });
+      script.addEventListener('error', () => reject(new Error(`${globalName} failed to load`)), { once: true });
+      if (!existing) {
+        script.src = source;
+        script.async = true;
+        document.head.appendChild(script);
+      }
+    });
+    registry[source] = request.catch((error) => {
+      delete registry[source];
+      throw error;
+    });
+  }
+  return registry[source];
+}
+
+async function loadIntroDependencies() {
+  const [threeModule] = await Promise.all([
+    import('./vendor/three.min.js'),
+    loadClassicScript('./vendor/html2canvas.min.js', 'html2canvas'),
+    loadClassicScript('./vendor/gsap.min.js', 'gsap'),
+  ]);
+  THREE = threeModule;
+  await loadClassicScript('./vendor/ScrollTrigger.min.js', 'ScrollTrigger');
 }
 
 function waitForFrame() {
@@ -784,15 +821,15 @@ async function startIntro() {
   const mobile = window.innerWidth <= 760;
   const hero = document.querySelector('.hero');
   const header = document.querySelector('.site-header');
-  const dependenciesReady = window.html2canvas && window.gsap && window.ScrollTrigger;
   const preRevealed = document.documentElement.classList.contains('intro-ready');
 
-  if ((!forceIntro && (preRevealed || mobile || sessionIntroSeen())) || reducedMotion || location.hash || !hero || !header || !dependenciesReady || !supportsWebGL()) {
+  if ((!forceIntro && (preRevealed || mobile || sessionIntroSeen())) || reducedMotion || location.hash || !hero || !header || !supportsWebGL()) {
     revealPage();
     return;
   }
 
   try {
+    await loadIntroDependencies();
     await waitForPageAssets();
     const snapshot = await captureViewport();
     const stage = createStage();

@@ -135,7 +135,7 @@
       "sourceHash": "8f1f17218cb16cb4"
     },
     "about.no_10_jianmin_1st_road_shangyuan_village": {
-      "value": "رقم 10 جيانمين 1 أكتوبر، شانصرة، تشانغشا، دوونغغوان، الصين.",
+      "value": "بلدة تشاشان، دونغقوان، غوانغدونغ، الصين.",
       "status": "needs_review",
       "sourceHash": "36aa73125c99ac2d"
     },
@@ -160,7 +160,7 @@
       "sourceHash": "acc43608f0aa6d5a"
     },
     "about.qinyi_is_located_at_no_10_jianmin": {
-      "value": "يقع Qinyi Printing في رقم 10 طريق جيانمين الأول، قرية شانغيوان، بلدة تشاشان، دونغقوان، قوانغدونغ، الصين. أرسل تفاصيل المنتج إلى",
+      "value": "يقع Qinyi Printing في بلدة تشاشان، دونغقوان، غوانغدونغ، الصين. أرسل تفاصيل المنتج إلى",
       "status": "needs_review",
       "sourceHash": "341301e4c4fac022"
     },
@@ -420,7 +420,7 @@
       "sourceHash": "b40b3713b43dc702"
     },
     "common.ms_xiao": {
-      "value": "سيدة Xiao",
+      "value": "فريق مبيعات Qinyi",
       "status": "needs_review",
       "sourceHash": "b0e857b0af3be591"
     },
@@ -475,12 +475,12 @@
       "sourceHash": "8618b518cedc08b3"
     },
     "common.no_10_jianmin_1st_road_shangyuan_village": {
-      "value": "رقم 10 طريق جيانمين الأول، قرية شانغيوان، بلدة تشاشان، دونغقوان، غوانغدونغ، الصين",
+      "value": "بلدة تشاشان، دونغقوان، غوانغدونغ، الصين",
       "status": "needs_review",
       "sourceHash": "2906014578fa3553"
     },
     "common.no_10_jianmin_1st_road_shangyuan_village_2": {
-      "value": "رقم 10 طريق جيانمين الأول، قرية شانغيوان، بلدة تشاشان",
+      "value": "بلدة تشاشان، دونغقوان، غوانغدونغ، الصين",
       "status": "needs_review",
       "sourceHash": "e3efb6276cfdf649"
     },
@@ -1655,7 +1655,7 @@
       "sourceHash": "41e076efe1340b69"
     },
     "faq.dongguan_qinyi_co_ltd_is_located_at": {
-      "value": "تقع شركة Dongguan Qinyi Printing Co., Ltd. في رقم 10 طريق Jianmin الأول، قرية Shangyuan، بلدة Chashan، Dongguan، Guangdong، الصين.",
+      "value": "تقع شركة Dongguan Qinyi Printing Co., Ltd. في بلدة Chashan، Dongguan، Guangdong، الصين.",
       "status": "needs_review",
       "sourceHash": "e0ce8747edcbad7d"
     },
@@ -1875,7 +1875,7 @@
       "sourceHash": "a4cd602ba48fa33a"
     },
     "faq.the_supplied_business_materials_identify_dongguan_qinyi": {
-      "value": "تحدد المواد التجارية المقدمة شركة Dongguan Qinyi Printing Co., Ltd.، الواقعة في No. 10 Jianmin 1st Road, Shangyuan Village, Chashan Town, Dongguan, Guangdong, China. اطلب نسخة خاضعة للرقابة من رخصة العمل عند إتمام تأهيل المورد.",
+      "value": "تحدد المواد التجارية المقدمة شركة Dongguan Qinyi Printing Co., Ltd. في Dongguan، Guangdong، الصين. اطلب نسخة خاضعة للرقابة من رخصة العمل عند إتمام تأهيل المورد.",
       "status": "needs_review",
       "sourceHash": "26071e4d3f000476"
     },
@@ -4415,7 +4415,7 @@
       "sourceHash": "76ab0cd93471b22f"
     },
     "quote.your_project_details_remain_editable_before_submission": {
-      "value": "Your project details remain editable before submission. An optional PDF or image is uploaded through Qinyi's protected quote channel and identified by a reference number.",
+      "value": "Your project details remain editable. Submitting prepares a referenced email draft; add any reference file manually in your mail app.",
       "status": "needs_review",
       "sourceHash": "d22a8f6fa43d5318"
     },

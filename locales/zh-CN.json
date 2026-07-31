@@ -135,7 +135,7 @@
       "sourceHash": "8f1f17218cb16cb4"
     },
     "about.no_10_jianmin_1st_road_shangyuan_village": {
-      "value": "中国广东省东莞市茶山镇上园村建民一路 10 号（村名待补充确认）",
+      "value": "中国广东省东莞市茶山镇",
       "status": "reviewed",
       "sourceHash": "36aa73125c99ac2d"
     },
@@ -160,7 +160,7 @@
       "sourceHash": "acc43608f0aa6d5a"
     },
     "about.qinyi_is_located_at_no_10_jianmin": {
-      "value": "勤益印刷位于中国广东省东莞市茶山镇上园村建民一路 10 号（村名待补充确认）。请将产品资料发送至",
+      "value": "勤益印刷位于中国广东省东莞市茶山镇。请将产品资料发送至",
       "status": "reviewed",
       "sourceHash": "341301e4c4fac022"
     },
@@ -420,7 +420,7 @@
       "sourceHash": "b40b3713b43dc702"
     },
     "common.ms_xiao": {
-      "value": "肖女士（中文姓名待补充确认）",
+      "value": "勤益印刷业务团队",
       "status": "reviewed",
       "sourceHash": "b0e857b0af3be591"
     },
@@ -475,12 +475,12 @@
       "sourceHash": "8618b518cedc08b3"
     },
     "common.no_10_jianmin_1st_road_shangyuan_village": {
-      "value": "中国广东省东莞市茶山镇上园村建民一路 10 号（村名待补充确认）",
+      "value": "中国广东省东莞市茶山镇",
       "status": "reviewed",
       "sourceHash": "2906014578fa3553"
     },
     "common.no_10_jianmin_1st_road_shangyuan_village_2": {
-      "value": "中国广东省东莞市茶山镇上园村建民一路 10 号（村名待补充确认）",
+      "value": "中国广东省东莞市茶山镇",
       "status": "reviewed",
       "sourceHash": "e3efb6276cfdf649"
     },
@@ -690,7 +690,7 @@
       "sourceHash": "c3d73b4b66d43974"
     },
     "contact.for_a_manufacturing_quotation_use_the_two": {
-      "value": "如需生产报价，请使用两步询价流程。公司资料、文件或一般产品问题可直接联系肖女士（中文姓名待补充确认）。",
+      "value": "如需生产报价，请使用两步询价流程。公司资料、文件或一般产品问题可直接联系勤益印刷业务团队。",
       "status": "reviewed",
       "sourceHash": "928e36c51f2e739a"
     },
@@ -1655,7 +1655,7 @@
       "sourceHash": "41e076efe1340b69"
     },
     "faq.dongguan_qinyi_co_ltd_is_located_at": {
-      "value": "东莞市勤益印刷有限公司位于中国广东省东莞市茶山镇上园村建民一路 10 号（村名待补充确认）。",
+      "value": "东莞市勤益印刷有限公司位于中国广东省东莞市茶山镇。",
       "status": "reviewed",
       "sourceHash": "e0ce8747edcbad7d"
     },
@@ -1875,7 +1875,7 @@
       "sourceHash": "a4cd602ba48fa33a"
     },
     "faq.the_supplied_business_materials_identify_dongguan_qinyi": {
-      "value": "现有商业资料将东莞市勤益印刷有限公司地址列为中国广东省东莞市茶山镇上园村建民一路 10 号（村名待补充确认）。完成供应商准入时，请索取受控的营业执照副本。",
+      "value": "现有商业资料将东莞市勤益印刷有限公司地址列为中国广东省东莞市茶山镇。完成供应商准入时，请索取受控的营业执照副本。",
       "status": "reviewed",
       "sourceHash": "26071e4d3f000476"
     },
@@ -3375,7 +3375,7 @@
       "sourceHash": "4ade8cc6a9e14d3f"
     },
     "privacy.using_the_english_site_name_qinyi_is": {
-      "value": "以英文网站名称“Qinyi Printing”运营，是所接收询价信息的负责企业。联系人：肖女士（中文姓名待补充确认），",
+      "value": "以英文网站名称“Qinyi Printing”运营，是所接收询价信息的负责企业。联系人：勤益印刷业务团队，",
       "status": "reviewed",
       "sourceHash": "8e5f64ac72654858"
     },
@@ -4225,7 +4225,7 @@
       "sourceHash": "66dfeeedabf1f022"
     },
     "quote.if_the_project_is_a_potential_fit": {
-      "value": "如果项目初步匹配，肖女士（中文姓名待补充确认）或勤益印刷团队成员将回复，并询问制定报价所需的信息。",
+      "value": "如果项目初步匹配，勤益印刷业务团队将回复，并询问制定报价所需的信息。",
       "status": "reviewed",
       "sourceHash": "60c39eefb66ec0e2"
     },
@@ -4415,7 +4415,7 @@
       "sourceHash": "76ab0cd93471b22f"
     },
     "quote.your_project_details_remain_editable_before_submission": {
-      "value": "项目资料在提交前仍可修改。可选 PDF 或图片将通过勤益印刷受保护的报价渠道上传，并以参考编号标识。",
+      "value": "提交前可继续编辑项目资料。提交后将生成带编号的邮件草稿；参考文件需要在邮件应用中手动添加。",
       "status": "reviewed",
       "sourceHash": "d22a8f6fa43d5318"
     },
