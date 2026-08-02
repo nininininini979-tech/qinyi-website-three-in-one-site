@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /developer/
 
-Sitemap: https://nininininini979-tech.github.io/qinyi-website-three-in-one-site/sitemap.xml
+Sitemap: https://qinyiprint.com/sitemap.xml

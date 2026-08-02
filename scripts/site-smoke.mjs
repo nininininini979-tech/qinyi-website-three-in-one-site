@@ -16,6 +16,10 @@ function filesBelow(directory) {
 
 const files = filesBelow(root);
 const sourceFiles = files.filter((file) => ['.html', '.js', '.json'].includes(extname(file)));
+const publicTextFiles = files.filter((file) => ['.html', '.js', '.json', '.xml', '.txt'].includes(extname(file)));
+const productionOrigin = 'https://qinyiprint.com';
+const legacyOrigin = 'https://nininininini979-tech.github.io/qinyi-website-three-in-one-site';
+const publicPages = ['index.html', 'products.html', 'solutions.html', 'industries.html', 'manufacturing.html', 'projects.html', 'quote.html', 'about.html', 'insights.html', 'faq.html', 'contact.html', 'trade.html', 'privacy.html'];
 const bannedText = [
   'X-Demo-User-Id',
   'X-Tenant-Id',
@@ -36,6 +40,34 @@ const bannedText = [
   "Qinyi's protected quote channel",
   '勤益印刷受保护的报价渠道',
 ];
+
+for (const file of publicTextFiles) {
+  if (readFileSync(file, 'utf8').includes(legacyOrigin)) {
+    failures.push(`${file.slice(root.length + 1)} still references the GitHub Pages origin`);
+  }
+}
+
+for (const page of publicPages) {
+  const rootPage = readFileSync(join(root, page), 'utf8');
+  const expectedPath = page === 'index.html' ? '/' : `/${page}`;
+  if (!rootPage.includes(`rel="canonical" href="${productionOrigin}${expectedPath}"`)) {
+    failures.push(`${page} must use the production English canonical URL`);
+  }
+  if (!rootPage.includes('"rootAlias": false')) {
+    failures.push(`${page} must remain an English page without automatic locale redirection`);
+  }
+
+  const englishAlias = readFileSync(join(root, 'en', page), 'utf8');
+  if (!englishAlias.includes(`rel="canonical" href="${productionOrigin}${expectedPath}"`)) {
+    failures.push(`en/${page} must canonicalize to the English root URL`);
+  }
+}
+
+const robots = readFileSync(join(root, 'robots.txt'), 'utf8');
+if (!robots.includes(`Sitemap: ${productionOrigin}/sitemap.xml`)) failures.push('robots.txt must reference the production sitemap');
+for (const privatePath of ['/admin/', '/developer/']) {
+  if (!robots.includes(`Disallow: ${privatePath}`)) failures.push(`robots.txt must disallow ${privatePath}`);
+}
 
 for (const file of sourceFiles) {
   const contents = readFileSync(file, 'utf8');
